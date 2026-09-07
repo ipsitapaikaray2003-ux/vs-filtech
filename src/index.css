@@ -1,0 +1,211 @@
+/* PREMIUM DESIGN SYSTEM - index.css */
+
+:root {
+  /* Color Palette */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-glass: rgba(18, 18, 18, 0.65);
+  
+  --accent-primary: #00e5ff; /* Vibrant Cyan */
+  --accent-secondary: #0055ff; /* Deep Blue */
+  --accent-gradient: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.4);
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --navbar-height: 80px;
+  --container-width: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+/* Gradients & Highlights */
+.text-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.text-gradient-animated {
+  background: linear-gradient(270deg, var(--accent-primary), var(--accent-secondary), var(--accent-primary));
+  background-size: 200% 200%;
+  animation: gradientFlow 5s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Common Section Styles */
+section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.section-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Global Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+  background: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 229, 255, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
