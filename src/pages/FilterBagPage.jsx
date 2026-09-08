@@ -19,8 +19,11 @@ import {
 } from 'lucide-react';
 import './FilterBagPage.css';
 
-// Product images downloaded from AKJ page
+// Product images downloaded from AKJ page & HD industrial assets
 import filterBagMainImg from '../assets/filter_bag_main.jpg';
+import filterBagHdImg from '../assets/filter_bag_hd.jpg';
+import pageBgImg from '../assets/filter_bag_page_bg.jpg';
+import plantStitchingImg from '../assets/slide_new_4.jpg';
 import dustCollectorImg from '../assets/dust_collector_system.webp';
 import idFanImg from '../assets/id_fan.jpg';
 import cycloneImg from '../assets/cyclone_dust_collector.webp';
@@ -226,6 +229,8 @@ const FilterBagPage = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [activeView, setActiveView] = useState('hd'); // 'hd' | 'plant' | 'ref'
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   useEffect(() => {
     if (window.location.hash) {
@@ -268,8 +273,16 @@ _Sent via vsfiltech.com_`;
 
   return (
     <div className="filter-bag-page">
-      {/* 1. HERO SECTION */}
-      <section className="fb-hero">
+      {/* 1. HERO SECTION WITH CINEMATIC INDUSTRIAL BACKGROUND */}
+      <section 
+        className="fb-hero"
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(6, 10, 18, 0.72) 0%, rgba(6, 10, 18, 0.93) 80%, #060a12 100%), url(${pageBgImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="fb-hero-ambient"></div>
         <div className="container relative z-10">
           <div className="fb-hero-badge">
@@ -297,11 +310,11 @@ _Sent via vsfiltech.com_`;
           </div>
 
           {/* Quick Metrics Bar */}
-            <div className="fb-metrics-ribbon">
-              <div className="metric-box">
-                <span className="metric-val">&gt;99.5%</span>
-                <span className="metric-lbl">Filtration Efficiency</span>
-              </div>
+          <div className="fb-metrics-ribbon">
+            <div className="metric-box">
+              <span className="metric-val">&gt;99.5%</span>
+              <span className="metric-lbl">Filtration Efficiency</span>
+            </div>
             <div className="metric-divider"></div>
             <div className="metric-box">
               <span className="metric-val">Up to 280°C</span>
@@ -325,20 +338,98 @@ _Sent via vsfiltech.com_`;
       <section className="fb-overview-section">
         <div className="container">
           <div className="fb-split-grid">
-            {/* Left: Product Imagery with CAD frame */}
+            {/* Left: Product Imagery with CAD frame & View Switcher */}
             <div className="fb-media-col">
-              <div className="fb-image-card">
+              <div className="fb-view-toggle-bar">
+                <button 
+                  type="button"
+                  className={`fb-toggle-btn ${activeView === 'hd' ? 'active' : ''}`}
+                  onClick={() => setActiveView('hd')}
+                >
+                  <Sparkles size={14} />
+                  <span>Ultra HD Studio (4K)</span>
+                </button>
+                <button 
+                  type="button"
+                  className={`fb-toggle-btn ${activeView === 'plant' ? 'active' : ''}`}
+                  onClick={() => setActiveView('plant')}
+                >
+                  <Cpu size={14} />
+                  <span>Stitching Floor</span>
+                </button>
+                <button 
+                  type="button"
+                  className={`fb-toggle-btn ${activeView === 'lineup' ? 'active' : ''}`}
+                  onClick={() => setActiveView('lineup')}
+                >
+                  <Layers size={14} />
+                  <span>Media Varieties</span>
+                </button>
+              </div>
+
+              <div className="fb-image-card" onClick={() => setLightboxOpen(true)}>
                 <img 
-                  src={filterBagMainImg} 
+                  src={
+                    activeView === 'hd' ? filterBagHdImg : 
+                    activeView === 'plant' ? plantStitchingImg : 
+                    filterBagMainImg
+                  } 
                   alt="Industrial Filter Bag Manufacturer - VS Filtech" 
-                  className="fb-featured-img" 
+                  className="fb-featured-img fb-featured-img-hd" 
                 />
+                
+                {/* Fullscreen HD trigger button */}
+                <button 
+                  type="button"
+                  className="fb-zoom-trigger"
+                  onClick={(e) => { e.stopPropagation(); setLightboxOpen(true); }}
+                  aria-label="View Fullscreen HD"
+                >
+                  <Maximize2 size={16} />
+                  <span>Full HD View</span>
+                </button>
+
+                {/* Top Badge */}
+                <div className="fb-image-top-tag">
+                  <span className="live-dot-cyan"></span>
+                  <span>
+                    {activeView === 'hd' && '4K Studio Photography'}
+                    {activeView === 'plant' && 'Multi-Needle Plant Floor'}
+                    {activeView === 'lineup' && 'Complete Media Range'}
+                  </span>
+                </div>
+
                 <div className="fb-image-overlay-card">
                   <ShieldCheck size={28} className="overlay-icon" />
                   <div>
                     <h4>Heavy-Duty Industrial Grade</h4>
                     <p>Woven scrim reinforcement & multi-needle chain stitch seams</p>
                   </div>
+                </div>
+              </div>
+
+              {/* Interactive Thumbnail Previews */}
+              <div className="fb-thumbnails-row">
+                <div 
+                  className={`fb-thumb-item ${activeView === 'hd' ? 'active' : ''}`}
+                  onClick={() => setActiveView('hd')}
+                >
+                  <img src={filterBagHdImg} alt="Ultra HD Studio View" />
+                  <span>Ultra HD Studio</span>
+                </div>
+                <div 
+                  className={`fb-thumb-item ${activeView === 'plant' ? 'active' : ''}`}
+                  onClick={() => setActiveView('plant')}
+                >
+                  <img src={plantStitchingImg} alt="Plant Stitching Floor" />
+                  <span>Factory Floor</span>
+                </div>
+                <div 
+                  className={`fb-thumb-item ${activeView === 'lineup' ? 'active' : ''}`}
+                  onClick={() => setActiveView('lineup')}
+                >
+                  <img src={filterBagMainImg} alt="Media Variety Range" />
+                  <span>Media Range</span>
                 </div>
               </div>
             </div>
@@ -354,6 +445,22 @@ _Sent via vsfiltech.com_`;
                 Manufactured using premium-quality materials and advanced engineering techniques, our bag filters provide excellent filtration efficiency, durability, and reliable performance. These systems are widely used in industries such as cement, pharmaceuticals, food processing, chemicals, power plants, steel, foundries, and manufacturing units.
               </p>
 
+              {/* Quick Quality Assurance Badges */}
+              <div className="fb-assurance-pills">
+                <div className="assurance-pill">
+                  <span className="assurance-dot"></span>
+                  <span>100% Leak-Proof Snap Bands</span>
+                </div>
+                <div className="assurance-pill">
+                  <span className="assurance-dot"></span>
+                  <span>Zero Particle Bypass</span>
+                </div>
+                <div className="assurance-pill">
+                  <span className="assurance-dot"></span>
+                  <span>OEM Precision Fit</span>
+                </div>
+              </div>
+
               {/* Bullet Features Grid */}
               <div className="fb-features-list">
                 <h3 className="features-list-title">Features of Dust Filter Bags:</h3>
@@ -365,6 +472,13 @@ _Sent via vsfiltech.com_`;
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="fb-overview-cta">
+                <a href="#filter-bag-rfq" className="btn btn-primary">
+                  <MessageCircle size={18} />
+                  <span>Get Custom Sizing & Quotation</span>
+                </a>
               </div>
             </div>
           </div>
@@ -656,6 +770,74 @@ _Sent via vsfiltech.com_`;
           </div>
         </div>
       </section>
+
+      {/* 8. ULTRA-HD LIGHTBOX MODAL */}
+      {lightboxOpen && (
+        <div className="fb-lightbox-overlay" onClick={() => setLightboxOpen(false)}>
+          <div className="fb-lightbox-modal" onClick={(e) => e.stopPropagation()}>
+            <button 
+              type="button" 
+              className="fb-lightbox-close" 
+              onClick={() => setLightboxOpen(false)}
+              aria-label="Close High Resolution View"
+            >
+              <X size={26} />
+            </button>
+            <div className="fb-lightbox-media-wrapper">
+              <img 
+                src={
+                  activeView === 'hd' ? filterBagHdImg : 
+                  activeView === 'plant' ? plantStitchingImg : 
+                  filterBagMainImg
+                } 
+                alt="High Resolution Filter Bag Inspection - VS Filtech" 
+                className="fb-lightbox-img" 
+              />
+            </div>
+            <div className="fb-lightbox-footer">
+              <div className="fb-lightbox-badge">
+                <Sparkles size={14} />
+                <span>ULTRA HIGH DEFINITION INSPECTION</span>
+              </div>
+              <h3 className="fb-lightbox-title">
+                {activeView === 'hd' && '4K Studio Photography: Heavy-Duty Industrial Filter Bags with Precision Snap-Band Collars'}
+                {activeView === 'plant' && 'Industrial Manufacturing Floor: Automated Multi-Needle Stitching Plant'}
+                {activeView === 'lineup' && 'Engineered Media Range: Nomex, Polyester, PTFE & Pleated Bag Configurations'}
+              </h3>
+              <p className="fb-lightbox-sub">
+                Manufactured by VS Filtech with reinforced triple-needle chain stitching, custom woven scrims, and certified heat & acid resilience.
+              </p>
+              <div className="fb-lightbox-actions">
+                <button 
+                  type="button" 
+                  className={`btn-lightbox-switch ${activeView === 'hd' ? 'active' : ''}`}
+                  onClick={() => setActiveView('hd')}
+                >
+                  Ultra HD Studio
+                </button>
+                <button 
+                  type="button" 
+                  className={`btn-lightbox-switch ${activeView === 'plant' ? 'active' : ''}`}
+                  onClick={() => setActiveView('plant')}
+                >
+                  Factory Floor
+                </button>
+                <button 
+                  type="button" 
+                  className={`btn-lightbox-switch ${activeView === 'lineup' ? 'active' : ''}`}
+                  onClick={() => setActiveView('lineup')}
+                >
+                  Media Lineup
+                </button>
+                <a href="#filter-bag-rfq" className="btn btn-primary" onClick={() => setLightboxOpen(false)}>
+                  <MessageCircle size={16} />
+                  <span>Get Quotation</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
