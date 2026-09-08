@@ -275,35 +275,7 @@
   right: 2rem;
 }
 
-/* Progress Indicators */
-.hero-indicators {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  gap: 10px;
-}
 
-.hero-indicator {
-  width: 36px;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.28);
-  position: relative;
-  overflow: hidden;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.3s ease;
-}
-
-.hero-indicator.active {
-  background-color: var(--accent-primary, #00e5ff);
-  box-shadow: 0 0 12px var(--accent-primary, #00e5ff);
-  width: 50px;
-}
 
 /* Bottom Stats Bar */
 .hero-stats-bar {
@@ -394,9 +366,6 @@
     width: 100%;
     padding: 0.85rem;
     justify-content: center;
-  }
-  .hero-indicators {
-    bottom: 95px;
   }
   .hero-slide-counter {
     display: none;

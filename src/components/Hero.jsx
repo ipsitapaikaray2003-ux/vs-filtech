@@ -155,18 +155,6 @@ const Hero = () => {
         <ChevronRight size={24} />
       </button>
 
-      {/* Indicators */}
-      <div className="hero-indicators">
-        {slides.map((_, index) => (
-          <button 
-            key={index} 
-            type="button"
-            className={`hero-indicator ${index === current ? 'active' : ''}`}
-            onClick={() => setCurrent(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
 
       {/* Bottom Floating Stats Bar */}
       <div className="hero-stats-bar">

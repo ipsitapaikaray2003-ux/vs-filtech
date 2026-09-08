@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Flame, Droplets, Layers } from 'lucide-react';
+import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/logo_dark_theme.png';
 import './Navbar.css';
 
@@ -25,23 +25,28 @@ const Navbar = () => {
     setDropdownOpen(false);
   }, [location]);
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setDropdownOpen(false);
+  };
+
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={logoImg} alt="VS Filtech - Cleaner Air Brighter Tomorrow" className="navbar-logo-img" />
         </Link>
 
         <nav className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
+          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={closeMobileMenu}>
             Home
           </Link>
           
-          <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}>
+          <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={closeMobileMenu}>
             About Us
           </Link>
 
-          <a href="/#services" className="nav-link">
+          <a href="/#services" className="nav-link" onClick={closeMobileMenu}>
             Services
           </a>
 
@@ -60,7 +65,7 @@ const Navbar = () => {
             </button>
             
             <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
-              <Link to="/products/filter-bag" className="dropdown-item">
+              <Link to="/products/filter-bag" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon" style={{ background: 'rgba(0, 229, 255, 0.12)', color: '#00e5ff' }}>
                   <Layers size={20} />
                 </div>
@@ -71,7 +76,7 @@ const Navbar = () => {
                 <span className="dropdown-tag">Featured</span>
               </Link>
 
-              <Link to="/products/high-temperature" className="dropdown-item">
+              <Link to="/products/high-temperature" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-flame">
                   <Flame size={20} />
                 </div>
@@ -82,7 +87,7 @@ const Navbar = () => {
                 <span className="dropdown-tag">Up to 280°C</span>
               </Link>
 
-              <Link to="/products/polypropylene" className="dropdown-item">
+              <Link to="/products/polypropylene" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-droplets">
                   <Droplets size={20} />
                 </div>
@@ -95,7 +100,7 @@ const Navbar = () => {
 
               <div className="dropdown-divider"></div>
 
-              <Link to="/#products" className="dropdown-item dropdown-item-sub">
+              <Link to="/#products" className="dropdown-item dropdown-item-sub" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-layers">
                   <Layers size={18} />
                 </div>
@@ -107,13 +112,19 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="/#contact" className="nav-link">
+          <a href="/#contact" className="nav-link" onClick={closeMobileMenu}>
             Contact
+          </a>
+
+          {/* Mobile Only: Get a Quote inside Hamburger Menu */}
+          <a href="/#contact" className="nav-mobile-quote-btn" onClick={closeMobileMenu}>
+            <span>Get a Quote</span>
+            <ArrowRight size={17} />
           </a>
         </nav>
 
         <div className="navbar-right">
-          <a href="/#contact" className="btn btn-outline nav-btn hide-mobile">
+          <a href="/#contact" className="btn btn-outline nav-btn desktop-quote-btn hide-mobile">
             Get a Quote
           </a>
           <button 
@@ -121,7 +132,7 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>

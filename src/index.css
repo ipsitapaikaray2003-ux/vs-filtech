@@ -38,11 +38,21 @@ html {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 /* Typography Defaults */
