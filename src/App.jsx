@@ -25,6 +25,7 @@ function App() {
             <Route path="/products/polypropylene-filter-bag" element={<ProductPoly />} />
             <Route path="/products/high-temperature" element={<ProductHighTemp />} />
             <Route path="/products/high-temperature-filter-bags" element={<ProductHighTemp />} />
+            <Route path="/high-temperature-filter-bags" element={<ProductHighTemp />} />
             {/* Fallback to Home */}
             <Route path="*" element={<Home />} />
           </Routes>
