@@ -60,8 +60,17 @@ const Navbar = () => {
             </button>
             
             <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
-              <div className="dropdown-header">Filter Bag Solutions</div>
-              
+              <Link to="/products/filter-bag" className="dropdown-item">
+                <div className="dropdown-item-icon" style={{ background: 'rgba(0, 229, 255, 0.12)', color: '#00e5ff' }}>
+                  <Layers size={20} />
+                </div>
+                <div className="dropdown-item-info">
+                  <span className="dropdown-item-title">Filter Bag Manufacturers</span>
+                  <span className="dropdown-item-subtitle">Bag Filter Manufacturers in India</span>
+                </div>
+                <span className="dropdown-tag">Featured</span>
+              </Link>
+
               <Link to="/products/high-temperature" className="dropdown-item">
                 <div className="dropdown-item-icon icon-flame">
                   <Flame size={20} />

@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage';
 import Contact from './pages/Contact';
 import ProductPoly from './pages/ProductPoly';
 import ProductHighTemp from './pages/ProductHighTemp';
+import FilterBagPage from './pages/FilterBagPage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products/filter-bag" element={<FilterBagPage />} />
+            <Route path="/products/bag-filter" element={<FilterBagPage />} />
+            <Route path="/products/filter-bag-manufacturers" element={<FilterBagPage />} />
             <Route path="/products/polypropylene" element={<ProductPoly />} />
             <Route path="/products/polypropylene-filter-bag" element={<ProductPoly />} />
             <Route path="/products/high-temperature" element={<ProductHighTemp />} />

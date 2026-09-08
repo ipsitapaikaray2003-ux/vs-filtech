@@ -31,10 +31,10 @@ const Footer = () => {
           <div className="footer-links-group">
             <h4 className="footer-title">Products</h4>
             <ul className="footer-links">
+              <li><Link to="/products/filter-bag">Filter Bag Manufacturers</Link></li>
               <li><Link to="/products/high-temperature">High Temperature Bags</Link></li>
-              <li><Link to="/products/polypropylene">Polypropylene Filter Bags</Link></li>
-              <li><a href="/#products">Filter Cages & Venturies</a></li>
-              <li><a href="/#products">Dust Collector Accessories</a></li>
+              <li><Link to="/products/polypropylene">Polypropylene Bags</Link></li>
+              <li><Link to="/products/filter-bag">Baghouse Spares & Cages</Link></li>
             </ul>
           </div>
 
