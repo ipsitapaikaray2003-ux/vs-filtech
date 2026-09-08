@@ -2,8 +2,19 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/logo_dark_theme.png';
 import './Footer.css';
+import { scrollToSection } from '../utils/scrollUtils';
 
 const Footer = () => {
+  const handleFooterAnchorClick = (e, targetId) => {
+    if (window.location.pathname === '/' || window.location.pathname === '/services') {
+      e.preventDefault();
+      const scrolled = scrollToSection(targetId);
+      if (scrolled) {
+        window.history.pushState(null, '', `/#${targetId}`);
+      }
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -22,8 +33,16 @@ const Footer = () => {
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
-              <li><a href="/#services">Manufacturing Services</a></li>
-              <li><a href="/#products">Products Catalog</a></li>
+              <li>
+                <Link to="/#services" onClick={(e) => handleFooterAnchorClick(e, 'services')}>
+                  Manufacturing Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/#products" onClick={(e) => handleFooterAnchorClick(e, 'products')}>
+                  Products Catalog
+                </Link>
+              </li>
               <li><Link to="/contact">Contact & RFQ</Link></li>
             </ul>
           </div>

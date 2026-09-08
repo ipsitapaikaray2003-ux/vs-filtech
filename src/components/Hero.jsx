@@ -7,6 +7,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import './Hero.css';
+import { scrollToSection } from '../utils/scrollUtils';
 
 import slideManufacturing from '../assets/hero_manufacturing.png';
 import slide2 from '../assets/slide_new_2.jpg';
@@ -86,6 +87,17 @@ const Hero = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
   };
 
+  const handleHeroLinkClick = (e, link) => {
+    if (link && (link.startsWith('/#') || link.startsWith('#'))) {
+      const targetId = link.replace('/#', '').replace('#', '');
+      e.preventDefault();
+      const scrolled = scrollToSection(targetId);
+      if (scrolled) {
+        window.history.pushState(null, '', `/#${targetId}`);
+      }
+    }
+  };
+
   return (
     <section className="hero">
       {/* Background Slides */}
@@ -116,10 +128,18 @@ const Hero = () => {
                 <p className="hero-subtitle">{slide.subtitle}</p>
 
                 <div className="hero-buttons">
-                  <Link to={slide.primaryLink} className="btn hero-btn-main">
+                  <Link 
+                    to={slide.primaryLink} 
+                    className="btn hero-btn-main"
+                    onClick={(e) => handleHeroLinkClick(e, slide.primaryLink)}
+                  >
                     {slide.primaryText} <ArrowRight size={18} style={{ marginLeft: 6 }} />
                   </Link>
-                  <Link to={slide.secondaryLink} className="btn hero-btn-sub">
+                  <Link 
+                    to={slide.secondaryLink} 
+                    className="btn hero-btn-sub"
+                    onClick={(e) => handleHeroLinkClick(e, slide.secondaryLink)}
+                  >
                     {slide.secondaryText}
                   </Link>
                 </div>

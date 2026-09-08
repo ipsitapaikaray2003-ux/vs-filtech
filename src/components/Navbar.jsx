@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/logo_dark_theme.png';
 import './Navbar.css';
+import { scrollToSection } from '../utils/scrollUtils';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,6 +31,17 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
 
+  const handleAnchorClick = (e, targetId) => {
+    closeMobileMenu();
+    if (location.pathname === '/' || location.pathname === '/services') {
+      e.preventDefault();
+      const scrolled = scrollToSection(targetId);
+      if (scrolled) {
+        window.history.pushState(null, '', `/#${targetId}`);
+      }
+    }
+  };
+
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
@@ -38,7 +50,7 @@ const Navbar = () => {
         </Link>
 
         <nav className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={closeMobileMenu}>
+          <Link to="/" className={`nav-link ${location.pathname === '/' && !location.hash ? 'active' : ''}`} onClick={closeMobileMenu}>
             Home
           </Link>
           
@@ -46,9 +58,13 @@ const Navbar = () => {
             About Us
           </Link>
 
-          <a href="/#services" className="nav-link" onClick={closeMobileMenu}>
+          <Link 
+            to="/#services" 
+            className={`nav-link ${location.hash === '#services' || location.pathname === '/services' ? 'active' : ''}`} 
+            onClick={(e) => handleAnchorClick(e, 'services')}
+          >
             Services
-          </a>
+          </Link>
 
           <div 
             className={`nav-dropdown-container ${dropdownOpen ? 'dropdown-active' : ''}`}
