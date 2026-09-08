@@ -1,6 +1,7 @@
 /* ==========================================================
    POLYPROPYLENE FILTER BAG PAGE - DARK LUXURY INDUSTRIAL
    VS Filtech - Premier Solid-Liquid Filtration Manufacturers
+   100% Mobile Responsive & Fluid Architecture
    ========================================================== */
 
 .poly-page {
@@ -9,6 +10,9 @@
   color: #ffffff;
   min-height: 100vh;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Cinematic Fixed Industrial Fluid Processing Background */
@@ -35,6 +39,7 @@
 .poly-page > * {
   position: relative;
   z-index: 1;
+  box-sizing: border-box;
 }
 
 /* 1. HERO SECTION */
@@ -44,7 +49,9 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
   min-height: auto;
-  overflow: visible;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-hero-ambient {
@@ -75,10 +82,13 @@
   margin-bottom: 1.5rem;
   backdrop-filter: blur(12px);
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-badge-icon {
   color: #00e5ff;
+  flex-shrink: 0;
   animation: pulseDroplet 2s infinite ease-in-out;
 }
 
@@ -92,12 +102,14 @@
   flex-direction: column;
   align-items: center;
   gap: 0.35rem;
-  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+  font-size: clamp(2rem, 4.4vw, 3.8rem);
   font-weight: 800;
   line-height: 1.18;
   max-width: 1050px;
   margin: 0 auto 1.5rem;
   letter-spacing: -0.02em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .pp-hero-title-white {
@@ -114,7 +126,7 @@
 }
 
 .pp-hero-subtitle {
-  font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+  font-size: clamp(0.98rem, 1.4vw, 1.22rem);
   color: rgba(255, 255, 255, 0.9);
   max-width: 820px;
   margin: 0 auto 2.2rem;
@@ -128,11 +140,13 @@
   gap: 1.25rem;
   flex-wrap: wrap;
   margin-bottom: 3.5rem;
+  width: 100%;
 }
 
 .pp-btn-rfq {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.65rem;
   background: linear-gradient(135deg, #00e5ff 0%, #0088ff 100%);
   color: #030712;
@@ -143,6 +157,7 @@
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 6px 25px rgba(0, 229, 255, 0.45);
+  box-sizing: border-box;
 }
 
 .pp-btn-rfq:hover {
@@ -155,6 +170,7 @@
 .pp-btn-specs {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.55rem;
   background: rgba(10, 18, 30, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -166,6 +182,7 @@
   text-decoration: none;
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .pp-btn-specs:hover {
@@ -183,6 +200,8 @@
   gap: 1.25rem;
   max-width: 1060px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-metric-card {
@@ -193,6 +212,8 @@
   backdrop-filter: blur(16px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .pp-metric-card:hover {
@@ -220,6 +241,8 @@
 /* 2. 4K SINGLE PRODUCT SHOWCASE */
 .pp-showcase-section {
   padding: 5rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-showcase-card {
@@ -230,9 +253,12 @@
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 229, 255, 0.12);
   backdrop-filter: blur(20px);
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   align-items: center;
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-showcase-card:hover {
@@ -245,6 +271,8 @@
   overflow: hidden;
   background: #000000;
   cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-featured-img {
@@ -291,6 +319,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .pp-tag-pill {
@@ -307,13 +337,15 @@
   padding: 0.35rem 0.95rem;
   border-radius: 50px;
   align-self: flex-start;
+  box-sizing: border-box;
 }
 
 .pp-showcase-title {
-  font-size: 2.1rem;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
   font-weight: 800;
   line-height: 1.25;
   color: #ffffff;
+  word-break: break-word;
 }
 
 .pp-showcase-desc {
@@ -326,6 +358,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 100%;
 }
 
 .pp-highlight-item {
@@ -334,12 +367,13 @@
   gap: 0.75rem;
   font-size: 0.92rem;
   color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
 }
 
 .pp-check-icon {
   color: #00e5ff;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .pp-showcase-footer {
@@ -347,17 +381,22 @@
   align-items: center;
   gap: 1.25rem;
   margin-top: 0.5rem;
+  flex-wrap: wrap;
 }
 
 /* 3. KEY FEATURES SECTION */
 .pp-section {
   padding: 5rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-section-header {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 3.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-section-tag {
@@ -370,11 +409,12 @@
 }
 
 .pp-section-title {
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  word-break: break-word;
 }
 
 .pp-section-desc {
@@ -387,6 +427,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-feature-card {
@@ -401,6 +443,8 @@
   gap: 1rem;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .pp-feature-card::before {
@@ -437,6 +481,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .pp-feature-card:hover .pp-feature-icon {
@@ -459,11 +504,13 @@
   line-height: 1.6;
 }
 
-/* 4. MEDIA VARIATIONS (Felt vs Mesh) */
+/* 4. MEDIA VARIATIONS */
 .pp-media-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-media-card {
@@ -476,6 +523,8 @@
   justify-content: space-between;
   backdrop-filter: blur(16px);
   transition: all 0.35s ease;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .pp-media-card:hover {
@@ -515,40 +564,59 @@
   padding: 0.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.85);
+  gap: 0.5rem;
 }
 
 .pp-media-specs-row span:last-child {
   color: #00e5ff;
   font-weight: 600;
+  text-align: right;
 }
 
-/* 5. STANDARD SIZES TABLE */
+/* Table Scroll Hint for Mobile */
+.pp-table-scroll-hint {
+  display: none;
+  font-size: 0.75rem;
+  color: #00e5ff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  text-align: right;
+  opacity: 0.9;
+}
+
+/* 5. STANDARD SIZES & SPECS TABLES */
 .pp-sizes-table-wrap,
 .pp-specs-table-wrap {
   background: rgba(10, 16, 28, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(16px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  min-width: 650px;
+  min-width: 600px;
 }
 
 .pp-table th {
   background: rgba(0, 229, 255, 0.1);
   color: #00e5ff;
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1.15rem 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
 }
 
 .pp-table td {
@@ -572,6 +640,7 @@
   border-radius: 6px;
   font-size: 0.82rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 /* 6. APPLICATIONS SECTION */
@@ -579,6 +648,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-app-card {
@@ -588,6 +659,8 @@
   padding: 2rem;
   backdrop-filter: blur(16px);
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .pp-app-card:hover {
@@ -618,7 +691,7 @@
   line-height: 1.6;
 }
 
-/* 7. TECHNICAL READMORE / DEEP DIVE */
+/* 7. TECHNICAL READMORE / ACCORDION */
 .pp-readmore-box {
   background: rgba(10, 16, 28, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -626,6 +699,8 @@
   padding: 2.5rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-accordion-item {
@@ -651,6 +726,7 @@
   text-align: left;
   transition: color 0.2s ease;
   padding: 0.5rem 0;
+  gap: 0.75rem;
 }
 
 .pp-accordion-header:hover {
@@ -659,6 +735,7 @@
 
 .pp-accordion-icon {
   color: #00e5ff;
+  flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
@@ -669,16 +746,19 @@
   line-height: 1.7;
 }
 
-/* 8. WHATSAPP RFQ DESK */
+/* 8. WHATSAPP RFQ DESK - BULLETPROOF FLUID BOX */
 .pp-rfq-wrap {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   background: rgba(10, 16, 28, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pp-rfq-info {
@@ -688,6 +768,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .pp-rfq-form {
@@ -695,18 +777,30 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .pp-form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .pp-form-group {
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .pp-form-label {
@@ -715,6 +809,7 @@
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: rgba(255, 255, 255, 0.8);
+  word-break: break-word;
 }
 
 .pp-form-input,
@@ -729,6 +824,17 @@
   font-family: inherit;
   transition: all 0.25s ease;
   outline: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.pp-form-select {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .pp-form-input:focus,
@@ -760,6 +866,10 @@
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 6px 25px rgba(0, 229, 255, 0.45);
   margin-top: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .pp-form-submit:hover {
@@ -782,8 +892,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem;
   animation: modalFadeIn 0.3s ease-out;
+  box-sizing: border-box;
 }
 
 @keyframes modalFadeIn {
@@ -800,6 +911,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 229, 255, 0.3);
+  box-sizing: border-box;
 }
 
 .pp-modal-img {
@@ -833,10 +945,13 @@
   border-color: #00e5ff;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
+/* ==========================================================
+   RESPONSIVE MEDIA QUERIES (TABLETS & MOBILE DEVICES)
+   ========================================================== */
+
 @media (max-width: 1024px) {
   .pp-showcase-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .pp-features-grid,
   .pp-app-grid {
@@ -849,35 +964,279 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .pp-rfq-wrap {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   .pp-rfq-info {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2.75rem 2.25rem;
+    width: 100%;
+  }
+  .pp-rfq-form {
+    padding: 2.75rem 2.25rem;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
+  /* Container Padding Optimization */
+  .poly-page .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  /* Hero Section */
   .pp-hero {
-    padding: 7.5rem 0 3.5rem;
+    padding: 6.5rem 0 3rem;
+  }
+  .pp-hero-ambient {
+    width: 100%;
+    max-width: 320px;
+    height: 240px;
+    filter: blur(70px);
+  }
+  .pp-hero-badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 1rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: 1.2px;
   }
   .pp-hero-title {
-    font-size: 2.1rem;
+    font-size: clamp(1.85rem, 6.5vw, 2.35rem);
+    margin-bottom: 1.15rem;
+  }
+  .pp-hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+    padding: 0 0.5rem;
+  }
+  .pp-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+  .pp-btn-rfq,
+  .pp-btn-specs {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Metrics Ribbon */
+  .pp-metrics-ribbon {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 0 0.5rem;
+  }
+  .pp-metric-card {
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pp-metric-val {
+    font-size: 1.55rem;
+  }
+  .pp-metric-lbl {
+    font-size: 0.72rem;
+  }
+
+  /* 4K Showcase */
+  .pp-showcase-section {
+    padding: 3.5rem 0;
+  }
+  .pp-showcase-card {
+    border-radius: 20px;
+  }
+  .pp-featured-img {
+    min-height: 280px;
+    max-height: 380px;
   }
   .pp-showcase-info {
-    padding: 2rem;
+    padding: 1.75rem 1.25rem;
+    gap: 1.2rem;
+  }
+  .pp-showcase-title {
+    font-size: 1.55rem;
+  }
+  .pp-showcase-desc {
+    font-size: 0.92rem;
+  }
+  .pp-highlights-list {
+    gap: 0.65rem;
+  }
+  .pp-highlight-item {
+    font-size: 0.88rem;
+  }
+  .pp-showcase-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+  .pp-showcase-footer .pp-btn-rfq {
+    width: 100%;
+  }
+
+  /* Grids & Cards */
+  .pp-section {
+    padding: 3.5rem 0;
+  }
+  .pp-section-header {
+    margin-bottom: 2.25rem;
+  }
+  .pp-section-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+  }
+  .pp-section-desc {
+    font-size: 0.92rem;
   }
   .pp-features-grid,
   .pp-app-grid,
-  .pp-media-grid,
-  .pp-metrics-ribbon {
+  .pp-media-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .pp-feature-card,
+  .pp-app-card,
+  .pp-media-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+  .pp-feature-title,
+  .pp-app-title,
+  .pp-media-name {
+    font-size: 1.15rem;
+  }
+
+  /* Tables & Horizontal Scroll Indicator */
+  .pp-table-scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem;
+  }
+  .pp-sizes-table-wrap,
+  .pp-specs-table-wrap {
+    border-radius: 16px;
+  }
+  .pp-table th,
+  .pp-table td {
+    padding: 0.95rem 1.15rem;
+    font-size: 0.85rem;
+  }
+
+  /* Technical Accordion */
+  .pp-readmore-box {
+    padding: 1.5rem 1.25rem;
+    border-radius: 18px;
+  }
+  .pp-accordion-header {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+  .pp-accordion-content {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* RFQ Form - Absolute Mobile Containment */
+  .pp-rfq-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  .pp-rfq-info {
+    padding: 1.75rem 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .pp-rfq-form {
+    padding: 1.75rem 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 1rem;
   }
   .pp-form-row {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+    box-sizing: border-box;
+  }
+  .pp-form-group {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .pp-form-input,
+  .pp-form-select,
+  .pp-form-textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+  .pp-form-submit {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.95rem 1.15rem;
+    font-size: 0.95rem;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .poly-page .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+  .pp-hero {
+    padding: 5.5rem 0 2.25rem;
+  }
+  .pp-hero-title {
+    font-size: 1.72rem;
+  }
+  .pp-hero-subtitle {
+    font-size: 0.88rem;
+    padding: 0;
+  }
+  .pp-hero-actions {
+    padding: 0;
+  }
+  .pp-metrics-ribbon {
+    padding: 0;
+  }
+  .pp-showcase-info {
+    padding: 1.4rem 1rem;
+  }
+  .pp-showcase-title {
+    font-size: 1.35rem;
+  }
+  .pp-section-title {
+    font-size: 1.55rem;
   }
   .pp-rfq-info,
   .pp-rfq-form {
-    padding: 2rem;
+    padding: 1.4rem 1rem;
+  }
+  .pp-form-submit {
+    font-size: 0.9rem;
+    padding: 0.85rem 1rem;
   }
 }

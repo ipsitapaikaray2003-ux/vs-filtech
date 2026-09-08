@@ -395,6 +395,10 @@ _Sent from VS Filtech Official Portal_`;
             </p>
           </div>
 
+          <div className="pp-table-scroll-hint">
+            <span>Scroll horizontally to view all specs &rarr;</span>
+          </div>
+
           <div className="pp-sizes-table-wrap">
             <table className="pp-table">
               <thead>
@@ -433,6 +437,10 @@ _Sent from VS Filtech Official Portal_`;
             <p className="pp-section-desc">
               Comprehensive physical, thermal, and chemical tolerance data for process engineering validation.
             </p>
+          </div>
+
+          <div className="pp-table-scroll-hint">
+            <span>Scroll horizontally to view certified parameters &rarr;</span>
           </div>
 
           <div className="pp-specs-table-wrap">
