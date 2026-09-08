@@ -20,7 +20,7 @@ import plantImg from '../assets/hero_manufacturing.png';
 
 const stats = [
   { value: '15+', label: 'Years Engineering Experience' },
-  { value: '500,000+', label: 'Filter Bags Fabricated' },
+  { value: '500K+', label: 'Filter Bags Fabricated' },
   { value: '99.8%', label: 'Particulate Separation Efficiency' },
   { value: '280°C', label: 'Max Thermal Resilience' }
 ];
