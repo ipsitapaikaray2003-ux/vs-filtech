@@ -149,13 +149,6 @@ const Hero = () => {
         );
       })}
 
-      {/* Slide Counter */}
-      <div className="hero-slide-counter">
-        <span className="counter-current">0{current + 1}</span>
-        <span className="counter-divider">/</span>
-        <span className="counter-total">0{slides.length}</span>
-      </div>
-
       {/* Prev / Next Navigation Arrows */}
       <button 
         type="button" 
