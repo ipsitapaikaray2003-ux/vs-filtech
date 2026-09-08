@@ -109,8 +109,8 @@ const Hero = () => {
                 </div>
 
                 <h1 className="hero-title">
-                  {slide.titlePrefix}
-                  <span className="text-gradient">{slide.titleHighlight}</span>
+                  <span className="hero-title-white">{slide.titlePrefix.trim()}</span>
+                  <span className="hero-title-highlight text-gradient">{slide.titleHighlight}</span>
                 </h1>
 
                 <p className="hero-subtitle">{slide.subtitle}</p>

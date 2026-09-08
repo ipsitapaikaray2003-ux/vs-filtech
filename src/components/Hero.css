@@ -125,24 +125,33 @@
   color: #ffd700;
 }
 
-/* Bold Clean Title */
+/* Bold Clean Title - Two Distinct Lines */
 .hero-title {
-  font-size: clamp(2.3rem, 4.6vw, 3.8rem);
-  line-height: 1.16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+  line-height: 1.15;
   font-weight: 800;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
+}
+
+.hero-title-white {
+  display: block;
   color: #ffffff;
   text-shadow: 0 4px 25px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
+.hero-title-highlight,
 .hero-title .text-gradient {
+  display: block;
   background: none !important;
   -webkit-background-clip: unset !important;
   -webkit-text-fill-color: #00f0ff !important;
   color: #00f0ff !important;
-  display: inline;
-  text-shadow: 0 0 25px rgba(0, 240, 255, 0.8), 0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+  text-shadow: 0 0 25px rgba(0, 240, 255, 0.85), 0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.9) !important;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.9));
 }
 
