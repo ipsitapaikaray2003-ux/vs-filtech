@@ -22,6 +22,7 @@ import {
 import './ProductHighTemp.css';
 
 // High definition assets
+import highTempFeaturedImg from '../assets/high_temp_featured.jpg';
 import highTempBagsHd from '../assets/high_temp_bags_hd.jpg';
 import highTempPageBg from '../assets/high_temp_page_bg.jpg';
 import plantFloorImg from '../assets/slide_new_4.jpg';
@@ -151,7 +152,6 @@ const applicationsList = [
 ];
 
 const ProductHighTemp = () => {
-  const [activeView, setActiveView] = useState('hd'); // 'hd' | 'plant' | 'akj'
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -264,43 +264,12 @@ _Sent via vsfiltech.com_`;
         <div className="container">
           <div className="ht-split-grid">
             
-            {/* Left: Product Imagery with CAD frame & View Switcher */}
+            {/* Left: Single Ultra-HD Product Photography Showcase */}
             <div className="ht-media-col">
-              <div className="ht-view-toggle-bar">
-                <button 
-                  type="button"
-                  className={`ht-toggle-btn ${activeView === 'hd' ? 'active' : ''}`}
-                  onClick={() => setActiveView('hd')}
-                >
-                  <Sparkles size={14} />
-                  <span>4K Studio Lineup</span>
-                </button>
-                <button 
-                  type="button"
-                  className={`ht-toggle-btn ${activeView === 'plant' ? 'active' : ''}`}
-                  onClick={() => setActiveView('plant')}
-                >
-                  <Cpu size={14} />
-                  <span>Stitching Floor</span>
-                </button>
-                <button 
-                  type="button"
-                  className={`ht-toggle-btn ${activeView === 'akj' ? 'active' : ''}`}
-                  onClick={() => setActiveView('akj')}
-                >
-                  <Layers size={14} />
-                  <span>AKJ Reference Spec</span>
-                </button>
-              </div>
-
               <div className="ht-image-card" onClick={() => setLightboxOpen(true)}>
                 <img 
-                  src={
-                    activeView === 'hd' ? highTempBagsHd : 
-                    activeView === 'plant' ? plantFloorImg : 
-                    highTempAkjImg
-                  } 
-                  alt="High Temperature Filter Bag Manufacturer - VS Filtech" 
+                  src={highTempFeaturedImg} 
+                  alt="High Temperature Dust Collector Filter Bag with Precision Snap-Band Collar - VS Filtech" 
                   className="ht-featured-img" 
                 />
                 
@@ -318,44 +287,15 @@ _Sent via vsfiltech.com_`;
                 {/* Top Badge */}
                 <div className="ht-image-top-tag">
                   <span className="live-dot-amber"></span>
-                  <span>
-                    {activeView === 'hd' && '4K High-Temp Media Lineup'}
-                    {activeView === 'plant' && 'Industrial Plant Stitching Floor'}
-                    {activeView === 'akj' && 'High Temperature Baghouse Media'}
-                  </span>
+                  <span>4K Ultra-HD Snap-Band Filter Bag</span>
                 </div>
 
                 <div className="ht-image-overlay-card">
                   <Flame size={28} className="ht-overlay-icon" />
                   <div>
-                    <h4>Certified High-Temperature Grade</h4>
-                    <p>Woven scrim, PTFE seam thread & laser snap-band collars</p>
+                    <h4>Heavy-Duty Industrial Grade (Up to 280°C)</h4>
+                    <p>Woven scrim, 100% PTFE seam thread & stainless steel snap band</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Interactive Thumbnail Previews */}
-              <div className="ht-thumbnails-row">
-                <div 
-                  className={`ht-thumb-item ${activeView === 'hd' ? 'active' : ''}`}
-                  onClick={() => setActiveView('hd')}
-                >
-                  <img src={highTempBagsHd} alt="4K Studio Lineup" />
-                  <span>4K Studio View</span>
-                </div>
-                <div 
-                  className={`ht-thumb-item ${activeView === 'plant' ? 'active' : ''}`}
-                  onClick={() => setActiveView('plant')}
-                >
-                  <img src={plantFloorImg} alt="Plant Stitching Floor" />
-                  <span>Factory Floor</span>
-                </div>
-                <div 
-                  className={`ht-thumb-item ${activeView === 'akj' ? 'active' : ''}`}
-                  onClick={() => setActiveView('akj')}
-                >
-                  <img src={highTempAkjImg} alt="AKJ Reference Spec" />
-                  <span>Reference Spec</span>
                 </div>
               </div>
             </div>
@@ -699,11 +639,7 @@ _Sent via vsfiltech.com_`;
             </button>
             <div className="ht-lightbox-media-wrapper">
               <img 
-                src={
-                  activeView === 'hd' ? highTempBagsHd : 
-                  activeView === 'plant' ? plantFloorImg : 
-                  highTempAkjImg
-                } 
+                src={highTempFeaturedImg} 
                 alt="High Resolution High Temperature Filter Bag Inspection - VS Filtech" 
                 className="ht-lightbox-img" 
               />
@@ -714,38 +650,15 @@ _Sent via vsfiltech.com_`;
                 <span>ULTRA HIGH DEFINITION INSPECTION</span>
               </div>
               <h3 className="ht-lightbox-title">
-                {activeView === 'hd' && '4K Studio Photography: High Temperature Filter Bags (Nomex, Fiberglass, PPS, PTFE, P84)'}
-                {activeView === 'plant' && 'Industrial Manufacturing Floor: Automated Multi-Needle Heavy-Duty Stitching'}
-                {activeView === 'akj' && 'High Temperature Bag Filter Media Construction'}
+                4K Ultra-HD: High-Temperature Dust Collector Filter Bag with Precision Snap-Band Collar
               </h3>
               <p className="ht-lightbox-sub">
-                Engineered by VS Filtech with thermal-resistant PTFE sewing thread, laser-welded snap bands, and reinforced double cuffs.
+                Engineered by VS Filtech with thermal-resistant PTFE sewing thread, spring steel snap band ring, and certified heat endurance up to 280°C continuous (290°C surge).
               </p>
               <div className="ht-lightbox-actions">
-                <button 
-                  type="button" 
-                  className={`btn-lightbox-switch ${activeView === 'hd' ? 'active' : ''}`}
-                  onClick={() => setActiveView('hd')}
-                >
-                  Ultra HD Studio
-                </button>
-                <button 
-                  type="button" 
-                  className={`btn-lightbox-switch ${activeView === 'plant' ? 'active' : ''}`}
-                  onClick={() => setActiveView('plant')}
-                >
-                  Factory Floor
-                </button>
-                <button 
-                  type="button" 
-                  className={`btn-lightbox-switch ${activeView === 'akj' ? 'active' : ''}`}
-                  onClick={() => setActiveView('akj')}
-                >
-                  AKJ Reference
-                </button>
                 <a href="#high-temp-rfq" className="btn btn-primary" onClick={() => setLightboxOpen(false)}>
                   <MessageCircle size={16} />
-                  <span>Get Quotation</span>
+                  <span>Get Technical Quotation</span>
                 </a>
               </div>
             </div>
