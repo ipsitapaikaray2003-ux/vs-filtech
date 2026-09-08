@@ -7,8 +7,8 @@
   --bg-glass: rgba(18, 18, 18, 0.65);
   
   --accent-primary: #00e5ff; /* Vibrant Cyan */
-  --accent-secondary: #0055ff; /* Deep Blue */
-  --accent-gradient: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  --accent-secondary: #38bdf8; /* Bright Sky Blue */
+  --accent-gradient: linear-gradient(135deg, #00e5ff 0%, #38bdf8 100%);
   
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
