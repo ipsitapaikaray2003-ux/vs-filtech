@@ -1,0 +1,92 @@
+/* MobileActionBar.css - Bottom Sticky Bar for Mobile Viewports */
+
+.mobile-action-bar-wrap {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(11, 17, 32, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 8px 12px;
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-action-bar-inner {
+  display: flex;
+  gap: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mob-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 8px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  user-select: none;
+}
+
+.mob-action-btn:active {
+  transform: scale(0.96);
+}
+
+/* Call Button (Dark Slate with Blue Tint) */
+.mob-btn-call {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+}
+
+.mob-btn-call:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+/* Inquiry Button (Brand Vibrant Orange) */
+.mob-btn-inquiry {
+  background: #ea580c;
+  border: 1px solid #f97316;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.35);
+}
+
+.mob-btn-inquiry:hover {
+  background: #c2410c;
+  color: #ffffff;
+}
+
+/* WhatsApp Button (Brand WhatsApp Green) */
+.mob-btn-whatsapp {
+  background: #16a34a;
+  border: 1px solid #22c55e;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(22, 163, 74, 0.35);
+}
+
+.mob-btn-whatsapp:hover {
+  background: #15803d;
+  color: #ffffff;
+}
+
+/* Display on mobile screens under 768px */
+@media (max-width: 768px) {
+  .mobile-action-bar-wrap {
+    display: block;
+  }
+  
+  /* Add padding to the footer so the sticky bar doesn't obscure footer content */
+  body {
+    padding-bottom: 60px;
+  }
+}

@@ -1,182 +1,146 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  ChevronLeft, 
-  ChevronRight,
-  Sparkles
-} from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Sparkles, Play } from 'lucide-react';
 import './Hero.css';
-import { scrollToSection } from '../utils/scrollUtils';
+import CountUpStat from './CountUpStat';
 
-import slideManufacturing from '../assets/hero_manufacturing.png';
-import slide2 from '../assets/slide_new_2.jpg';
-import slide3 from '../assets/slide_new_3.png';
+import slide1 from '../assets/factory_bagfilter_plant_hd.jpg';
+import slide2 from '../assets/hero_baghouse.jpg';
+import slide3 from '../assets/slide_new_1.png';
 import slide4 from '../assets/slide_new_4.jpg';
 
 const slides = [
   {
-    badge: 'WELCOME TO VS FILTECH',
-    titlePrefix: 'Design & Manufacturer of ',
-    titleHighlight: 'Industrial Bag Filters',
-    subtitle: 'Custom bag filter stitching, high-temperature thermal media, and zero-leakage filtration systems manufactured in Ghaziabad.',
-    primaryLink: '/contact',
-    primaryText: 'Get a Quote',
-    secondaryLink: '/about',
-    secondaryText: 'About Our Factory',
-    image: slideManufacturing
+    badge: 'DESIGN & MANUFACTURER · BAG FILTERS IN INDIA',
+    titleLine1: 'Industrial Pulse Jet',
+    titleHighlight: 'Bag Filters',
+    titleLine2: '& Dust Collectors',
+    subtitle: 'Premier manufacturer & turnkey supplier of Pulse Jet Bag Filters, Dust Collectors, ID Fans, Filter Bags, Cages, and complete Air Filtration Systems across India.',
+    primaryLink: '/products',
+    primaryText: 'Explore Products',
+    secondaryLink: '/contact',
+    secondaryText: 'Get a Quote',
+    image: slide1
   },
   {
-    badge: 'HIGH TEMPERATURE SPECIALISTS',
-    titlePrefix: 'High Temperature ',
-    titleHighlight: 'Filter Bags & Suppliers',
-    subtitle: 'Continuous 280°C thermal filtration media from Woven Fiberglass, Nomex, PPS, and PTFE for industrial kilns and boilers.',
-    primaryLink: '/products/high-temperature',
-    primaryText: 'View High Temp Bags',
-    secondaryLink: '/contact',
-    secondaryText: 'Request Quote',
+    badge: 'COMPLETE FILTRATION SOLUTIONS',
+    titleLine1: 'Design, Manufacture',
+    titleHighlight: 'Erect & Commission',
+    titleLine2: 'End-to-End',
+    subtitle: 'From engineering design to site commissioning — we deliver complete dust collection systems customized for your specific process, dust type, and temperature.',
+    primaryLink: '/services',
+    primaryText: 'Our Services',
+    secondaryLink: '/about',
+    secondaryText: 'Learn More',
     image: slide2
   },
   {
-    badge: 'SOLID-LIQUID FILTRATION',
-    titlePrefix: 'Polypropylene ',
-    titleHighlight: 'Filter Bag Manufacturers',
-    subtitle: '1 to 200 micron liquid clarification bags with ultrasonic welded seams and molded collar rings from Ghaziabad.',
-    primaryLink: '/products/polypropylene',
-    primaryText: 'View Polypropylene Bags',
+    badge: 'RETROFIT & UPGRADATION',
+    titleLine1: 'Upgrade Your Existing',
+    titleHighlight: 'Bag Filter System',
+    titleLine2: 'For Better Efficiency',
+    subtitle: 'We retrofit existing bag filters, replace aging filter media, upgrade control panels, and optimize your dust collection system for lower emissions and operational costs.',
+    primaryLink: '/products',
+    primaryText: 'View Products',
     secondaryLink: '/contact',
-    secondaryText: 'Request Sample',
-    image: slide4
+    secondaryText: 'Request Audit',
+    image: slide3
   },
   {
-    badge: 'STRUCTURAL SUPPORT & ACCESSORIES',
-    titlePrefix: 'Heavy-Duty ',
-    titleHighlight: 'Filter Cages & Spares',
-    subtitle: 'Precision 8 to 24-wire cages and baghouse accessories engineered to eliminate fabric wear and maximize lifespan.',
-    primaryLink: '/contact',
-    primaryText: 'Contact Us',
-    secondaryLink: '/#services',
-    secondaryText: 'Our Services',
-    image: slide3
+    badge: 'SPARES & ACCESSORIES',
+    titleLine1: 'All Bag Filter Spares',
+    titleHighlight: 'Under One Roof',
+    titleLine2: 'Ready to Supply',
+    subtitle: 'Filter bags, cages, solenoid valves, sequential timers, rotary air locks, screw conveyors, and all instrumentation — available for fast delivery across India.',
+    primaryLink: '/products',
+    primaryText: 'View Spares',
+    secondaryLink: '/contact',
+    secondaryText: 'Contact Us',
+    image: slide4
   }
 ];
 
 const stats = [
-  { label: 'Filtration Efficiency', value: '>99.5%' },
-  { label: 'Thermal Resistance', value: 'Up to 280°C' },
-  { label: 'Manufacturing Facility', value: 'Ghaziabad, India' },
-  { label: 'Custom Lengths', value: '1m to 12m' }
+  { label: 'Years Expertise', end: 15, suffix: '+', decimals: 0 },
+  { label: 'Industries Served', end: 20, suffix: '+', decimals: 0 },
+  { label: 'Custom Solutions', end: 100, suffix: '%', decimals: 0 },
+  { label: 'Filtration Efficiency', end: 99.9, suffix: '%', decimals: 1 }
 ];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
 
-  // Auto-advance slides every 6 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
+      setCurrent(prev => (prev + 1) % slides.length);
+    }, 7000);
     return () => clearInterval(timer);
   }, [current]);
 
-  const handlePrev = () => {
-    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const handleNext = () => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-  };
-
-  const handleHeroLinkClick = (e, link) => {
-    if (link && (link.startsWith('/#') || link.startsWith('#'))) {
-      const targetId = link.replace('/#', '').replace('#', '');
-      e.preventDefault();
-      const scrolled = scrollToSection(targetId);
-      if (scrolled) {
-        window.history.pushState(null, '', `/#${targetId}`);
-      }
-    }
-  };
+  const prev = () => setCurrent(p => (p - 1 + slides.length) % slides.length);
+  const next = () => setCurrent(p => (p + 1) % slides.length);
 
   return (
-    <section className="hero">
-      {/* Background Slides */}
-      {slides.map((slide, index) => {
-        const isActive = index === current;
-        return (
-          <div 
-            key={index} 
-            className={`hero-slide ${isActive ? 'active' : ''}`}
-            aria-hidden={!isActive}
-          >
-            <img src={slide.image} alt={slide.titleHighlight} className="hero-slide-img" />
-            <div className="hero-overlay"></div>
-            
+    <section className="hero" aria-label="Hero Slider">
+      {slides.map((slide, idx) => (
+        <div
+          key={idx}
+          className={`hero-slide${idx === current ? ' active' : ''}`}
+          aria-hidden={idx !== current}
+        >
+          <img src={slide.image} alt={slide.titleHighlight} className="hero-slide-img" loading={idx === 0 ? 'eager' : 'lazy'} />
+          <div className="hero-overlay" />
+
+          {idx === current && (
             <div className="container hero-container">
-              {/* Clean Content Without Box */}
-              <div className="hero-content">
+              <div key={current} className="hero-inner">
                 <div className="hero-badge">
-                  <Sparkles size={14} className="hero-badge-sparkle" />
+                  <Sparkles size={13} />
                   <span>{slide.badge}</span>
                 </div>
 
                 <h1 className="hero-title">
-                  <span className="hero-title-white">{slide.titlePrefix.trim()}</span>
-                  <span className="hero-title-highlight text-gradient">{slide.titleHighlight}</span>
+                  {slide.titleLine1}{' '}
+                  <span className="hero-title-highlight">{slide.titleHighlight}</span>{' '}
+                  {slide.titleLine2}
                 </h1>
 
                 <p className="hero-subtitle">{slide.subtitle}</p>
 
                 <div className="hero-buttons">
-                  <Link 
-                    to={slide.primaryLink} 
-                    className="btn hero-btn-main"
-                    onClick={(e) => handleHeroLinkClick(e, slide.primaryLink)}
-                  >
-                    {slide.primaryText} <ArrowRight size={18} style={{ marginLeft: 6 }} />
+                  <Link to={slide.primaryLink} className="hero-btn-primary">
+                    <span>{slide.primaryText}</span>
+                    <ArrowRight size={17} />
                   </Link>
-                  <Link 
-                    to={slide.secondaryLink} 
-                    className="btn hero-btn-sub"
-                    onClick={(e) => handleHeroLinkClick(e, slide.secondaryLink)}
-                  >
-                    {slide.secondaryText}
+                  <Link to={slide.secondaryLink} className="hero-btn-secondary">
+                    <span>{slide.secondaryText}</span>
                   </Link>
                 </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          )}
+        </div>
+      ))}
 
-      {/* Prev / Next Navigation Arrows */}
-      <button 
-        type="button" 
-        className="hero-arrow hero-arrow-left" 
-        onClick={handlePrev}
-        aria-label="Previous Slide"
-      >
-        <ChevronLeft size={24} />
+      {/* Arrows */}
+      <button type="button" className="hero-arrow hero-arrow-left" onClick={prev} aria-label="Previous">
+        <ChevronLeft size={22} />
       </button>
-
-      <button 
-        type="button" 
-        className="hero-arrow hero-arrow-right" 
-        onClick={handleNext}
-        aria-label="Next Slide"
-      >
-        <ChevronRight size={24} />
+      <button type="button" className="hero-arrow hero-arrow-right" onClick={next} aria-label="Next">
+        <ChevronRight size={22} />
       </button>
 
 
-      {/* Bottom Floating Stats Bar */}
+      {/* Stats Bar */}
       <div className="hero-stats-bar">
         <div className="container">
           <div className="hero-stats-inner">
-            {stats.map((stat, idx) => (
+            {stats.map((s, idx) => (
               <div key={idx} className="hero-stat-col">
-                <span className="hero-stat-val">{stat.value}</span>
-                <span className="hero-stat-lbl">{stat.label}</span>
+                <span className="hero-stat-val">
+                  <CountUpStat end={s.end} decimals={s.decimals} suffix={s.suffix} />
+                </span>
+                <span className="hero-stat-lbl">{s.label}</span>
               </div>
             ))}
           </div>

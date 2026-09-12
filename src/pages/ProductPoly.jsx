@@ -582,7 +582,7 @@ _Sent from VS Filtech Official Portal_`;
                   <input 
                     type="tel" 
                     required 
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 1234567890"
                     className="pp-form-input"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}

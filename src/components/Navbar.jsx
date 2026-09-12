@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight } from 'lucide-react';
-import logoImg from '../assets/logo_dark_theme.png';
+import logoColor from '../assets/logo_transparent.png';
+import logoWhite from '../assets/logo_white.png';
 import './Navbar.css';
-import { scrollToSection } from '../utils/scrollUtils';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 40);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -31,39 +31,56 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
 
-  const handleAnchorClick = (e, targetId) => {
-    closeMobileMenu();
-    if (location.pathname === '/' || location.pathname === '/services') {
-      e.preventDefault();
-      const scrolled = scrollToSection(targetId);
-      if (scrolled) {
-        window.history.pushState(null, '', `/#${targetId}`);
-      }
-    }
-  };
+  const isHomePage = location.pathname === '/';
+  const isTransparent = isHomePage && !scrolled;
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <header className={`navbar ${isTransparent ? 'navbar-transparent' : (scrolled ? 'navbar-scrolled' : 'navbar-solid')}`}>
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src={logoImg} alt="VS Filtech - Cleaner Air Brighter Tomorrow" className="navbar-logo-img" />
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu} aria-label="VS Filtech Home">
+          <img 
+            src={logoWhite} 
+            alt="VS Filtech - Cleaner Air Brighter Tomorrow" 
+            className="navbar-logo-img navbar-logo-white" 
+          />
+          <img 
+            src={logoColor} 
+            alt="VS Filtech - Cleaner Air Brighter Tomorrow" 
+            className="navbar-logo-img navbar-logo-color" 
+          />
         </Link>
 
         <nav className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/" className={`nav-link ${location.pathname === '/' && !location.hash ? 'active' : ''}`} onClick={closeMobileMenu}>
+          <Link 
+            to="/" 
+            className={`nav-link ${location.pathname === '/' && !location.hash ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
             Home
           </Link>
           
-          <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={closeMobileMenu}>
+          <Link 
+            to="/about" 
+            className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
             About Us
           </Link>
 
           <Link 
-            to="/#services" 
-            className={`nav-link ${location.hash === '#services' || location.pathname === '/services' ? 'active' : ''}`} 
-            onClick={(e) => handleAnchorClick(e, 'services')}
+            to="/services" 
+            className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
           >
             Services
+          </Link>
+
+          <Link 
+            to="/gallery" 
+            className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
+            Gallery
           </Link>
 
           <div 
@@ -75,80 +92,83 @@ const Navbar = () => {
               type="button"
               className={`nav-link dropdown-trigger ${location.pathname.startsWith('/products') ? 'active' : ''}`}
               onClick={() => setDropdownOpen(!dropdownOpen)}
+              aria-expanded={dropdownOpen}
             >
               <span>Products</span>
               <ChevronDown size={15} className={`chevron-icon ${dropdownOpen ? 'rotate' : ''}`} />
             </button>
             
             <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
-              <Link to="/products/filter-bag" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon" style={{ background: 'rgba(0, 229, 255, 0.12)', color: '#00e5ff' }}>
-                  <Layers size={20} />
-                </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Filter Bag Manufacturers</span>
-                  <span className="dropdown-item-subtitle">Bag Filter Manufacturers in India</span>
-                </div>
-                <span className="dropdown-tag">Featured</span>
-              </Link>
-
-              <Link to="/products/high-temperature" className="dropdown-item" onClick={closeMobileMenu}>
+              <Link to="/products/pulse-jet-filter" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-flame">
                   <Flame size={20} />
                 </div>
                 <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">High Temperature Filter Bag</span>
-                  <span className="dropdown-item-subtitle">Manufacturers, Suppliers</span>
+                  <span className="dropdown-item-title">Pulse Jet Bag Filters</span>
+                  <span className="dropdown-item-subtitle">High-Efficiency Dust Collection</span>
                 </div>
-                <span className="dropdown-tag">Up to 280°C</span>
+                <span className="dropdown-tag">Featured</span>
               </Link>
 
-              <Link to="/products/polypropylene" className="dropdown-item" onClick={closeMobileMenu}>
+              <Link to="/products/filter-bags-cages" className="dropdown-item" onClick={closeMobileMenu}>
+                <div className="dropdown-item-icon icon-layers">
+                  <Layers size={20} />
+                </div>
+                <div className="dropdown-item-info">
+                  <span className="dropdown-item-title">Filter Bags & Cages</span>
+                  <span className="dropdown-item-subtitle">Quality Filtration Media</span>
+                </div>
+              </Link>
+
+              <Link to="/products/control-panels" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-droplets">
                   <Droplets size={20} />
                 </div>
                 <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Polypropylene Filter Bag</span>
-                  <span className="dropdown-item-subtitle">Manufacturers from Ghaziabad, India</span>
+                  <span className="dropdown-item-title">Control Panels</span>
+                  <span className="dropdown-item-subtitle">Automation for Dust Collection</span>
                 </div>
-                <span className="dropdown-tag">1-200 µm</span>
               </Link>
 
               <div className="dropdown-divider"></div>
 
-              <Link to="/#products" className="dropdown-item dropdown-item-sub" onClick={closeMobileMenu}>
+              <Link to="/products" className="dropdown-item dropdown-item-sub" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-layers">
                   <Layers size={18} />
                 </div>
                 <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">All Bag Filter Systems</span>
-                  <span className="dropdown-item-subtitle">Cages, Venturies & Accessories</span>
+                  <span className="dropdown-item-title">All Products & Systems</span>
+                  <span className="dropdown-item-subtitle">View complete catalog</span>
                 </div>
               </Link>
             </div>
           </div>
 
-          <a href="/#contact" className="nav-link" onClick={closeMobileMenu}>
+          <Link 
+            to="/contact" 
+            className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
             Contact
-          </a>
+          </Link>
 
-          {/* Mobile Only: Get a Quote inside Hamburger Menu */}
-          <a href="/#contact" className="nav-mobile-quote-btn" onClick={closeMobileMenu}>
+          {/* Mobile Only: Get a Quote inside Mobile Menu Drawer */}
+          <Link to="/contact" className="nav-mobile-quote-btn" onClick={closeMobileMenu}>
             <span>Get a Quote</span>
             <ArrowRight size={17} />
-          </a>
+          </Link>
         </nav>
 
         <div className="navbar-right">
-          <a href="/#contact" className="btn btn-outline nav-btn desktop-quote-btn hide-mobile">
+          <Link to="/contact" className="nav-cta-btn hide-mobile">
             Get a Quote
-          </a>
+          </Link>
           <button 
             className="mobile-menu-toggle" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
