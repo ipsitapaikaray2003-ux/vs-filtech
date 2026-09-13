@@ -72,27 +72,27 @@ const designParameters = [
 
 const cleaningModes = [
   {
-    mode: 'Online Pulse Cleaning Mode',
-    badge: 'Continuous 24/7 Operation',
-    highlight: 'No Compartment Isolation Required',
-    desc: 'The filter bags are pulsed row-by-row with supersonic compressed air bursts while dust-laden airflow continues moving through the baghouse. Perfect for standard continuous industrial processes where production cannot be paused.',
+    mode: 'Online Mode',
+    badge: 'Continuous Cleaning',
+    highlight: 'Continuous cleaning during operation; no need for compartment isolation.',
+    desc: 'The filter bags are pulsed row-by-row with supersonic compressed air bursts while dust-laden airflow continues moving through the baghouse. Continuous cleaning during operation ensures constant process draft without needing compartment isolation.',
     features: [
+      'Continuous cleaning during operation; no need for compartment isolation',
       'Row-by-row automatic sequential pulsing without plant shutdown',
-      'Lower initial capital cost — no isolation poppet dampers needed',
-      'Constant airflow volume and static pressure regulation',
-      'Controlled by micro-processor sequential timer or DP switch'
+      'Lower initial capital cost & compact footprint',
+      'Controlled by micro-processor sequential pulse timer or differential pressure (DP)'
     ]
   },
   {
-    mode: 'Offline Compartmentalized Cleaning Mode',
-    badge: 'Deep Zero-Velocity Cleaning',
-    highlight: 'Isolated Chambers with Maintenance Access',
-    desc: 'The baghouse is divided into multiple independent airtight compartments fitted with pneumatic poppet dampers. When a compartment needs cleaning, its damper closes, stopping airflow so that pulse cleaning occurs in completely stagnant air.',
+    mode: 'Offline Mode',
+    badge: 'Compartmentalized Isolation',
+    highlight: 'Compartmentalized design with isolation dampers—ideal for intensive cleaning or maintenance while the plant remains in operation.',
+    desc: 'Compartmentalized design with isolation dampers—ideal for intensive cleaning or maintenance while the plant remains in operation. Cleaning occurs in zero-velocity stagnant air, ensuring maximum dust release without re-entrainment.',
     features: [
-      'Eliminates dust re-entrainment — dislodged cake drops immediately into hopper',
-      'Achieves up to 35% higher cleaning efficiency for light or sticky dusts',
-      'Enables online maintenance and bag inspection inside one isolated chamber while the rest of the plant operates at full capacity',
-      'Extends overall filter bag service life and reduces compressed air usage'
+      'Compartmentalized design with pneumatic isolation dampers',
+      'Ideal for intensive cleaning or maintenance while the plant remains in operation',
+      'Dislodged dust drops immediately into the hopper in zero-velocity air',
+      'Up to 35% higher cleaning efficiency for fine, light, or sticky dust particles'
     ]
   }
 ];
@@ -432,66 +432,147 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 3. Gas & Dust Distribution + Clean Air Top Access Architecture */}
+      {/* 3. Gas & Dust Distribution + Filter Bags & Cages Architecture */}
       <section className="light-graphic-dots" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px' }}>
+          <div style={{ textAlign: 'center', maxWidth: '860px', margin: '0 auto 40px' }}>
             <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               PROPRIETARY ENGINEERING
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
-              Gas Distribution &amp; <span style={{ color: '#1d4ed8' }}>Top-Access Media</span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '18px' }}>
+              GAS &amp; DUST <span style={{ color: '#1d4ed8' }}>DISTRIBUTION</span>
             </h2>
-            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
-              Engineered flow dynamics and ergonomic maintenance access ensure zero re-entrainment and seamless bag servicing.
-            </p>
+            
+            {/* Hallmark Feature Callout Box */}
+            <div style={{
+              background: '#ffffff',
+              border: '1.5px solid #bae6fd',
+              borderRadius: '16px',
+              padding: '24px 30px',
+              boxShadow: '0 4px 20px rgba(2, 132, 199, 0.08)',
+              textAlign: 'left'
+            }}>
+              <p style={{
+                color: '#1e293b',
+                fontSize: '1.1rem',
+                lineHeight: '1.75',
+                margin: 0,
+                fontWeight: '500'
+              }}>
+                A hallmark of VS Filtech engineering, our <strong style={{ color: '#0284c7' }}>distribution system</strong> ensures a uniform flow across the filter bags, creating a true negative can velocity. This prevents dust re-entrainment, reduces wear, and maximizes filter efficiency.
+              </p>
+            </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
-            {technicalHighlights.map((tech, idx) => {
-              const Icon = tech.icon;
-              return (
-                <div 
-                  key={idx}
-                  style={{
-                    background: '#ffffff',
-                    border: '1px solid #e2e8f0',
-                    borderRadius: '18px',
-                    padding: '32px 26px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)'
-                  }}
-                >
-                  <div style={{
-                    width: '50px',
-                    height: '50px',
-                    borderRadius: '12px',
-                    background: '#f0f7ff',
-                    border: '1px solid #bae6fd',
-                    color: '#0284c7',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '20px'
-                  }}>
-                    <Icon size={24} />
-                  </div>
-
-                  <span style={{ color: '#0284c7', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '6px' }}>
-                    {tech.subtitle}
+          {/* Cards for Filter Bags & Cages + Top-Access Replacement */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '28px' }}>
+            {/* Card 1: Filter Bags & Cages */}
+            <div style={{
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderRadius: '18px',
+              padding: '32px 28px',
+              display: 'flex',
+              flexDirection: 'column',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+              borderTop: '4px solid #0284c7'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '18px' }}>
+                <div style={{
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '12px',
+                  background: '#f0f7ff',
+                  border: '1px solid #bae6fd',
+                  color: '#0284c7',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <Layers size={22} />
+                </div>
+                <div>
+                  <span style={{ color: '#0284c7', fontSize: '0.76rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    MEDIA &amp; SUPPORT CAGES
                   </span>
-
-                  <h3 style={{ fontSize: '1.28rem', fontWeight: '700', color: '#0f172a', marginBottom: '12px' }}>
-                    {tech.title}
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#0f172a', margin: 0 }}>
+                    Filter Bags &amp; Cages
                   </h3>
+                </div>
+              </div>
 
-                  <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: '1.65', margin: 0 }}>
-                    {tech.desc}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0284c7', marginTop: '7px', flexShrink: 0 }} />
+                  <p style={{ margin: 0, color: '#334155', fontSize: '0.94rem', lineHeight: '1.6' }}>
+                    <strong style={{ color: '#0f172a' }}>Bags:</strong> High-quality fabrics with stainless steel snap rings for a dust-tight seal and easy installation.
                   </p>
                 </div>
-              );
-            })}
+
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0284c7', marginTop: '7px', flexShrink: 0 }} />
+                  <p style={{ margin: 0, color: '#334155', fontSize: '0.94rem', lineHeight: '1.6' }}>
+                    <strong style={{ color: '#0f172a' }}>Cages:</strong> Precision-welded mild steel or stainless steel frames that prevent abrasion, allow proper flexing, and ensure smooth dust release during cleaning.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Top-Access Snap-In/Snap-Out Replacement */}
+            <div style={{
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderRadius: '18px',
+              padding: '32px 28px',
+              display: 'flex',
+              flexDirection: 'column',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+              borderTop: '4px solid #10b981'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '18px' }}>
+                <div style={{
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '12px',
+                  background: '#ecfdf5',
+                  border: '1px solid #a7f3d0',
+                  color: '#059669',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <ShieldCheck size={22} />
+                </div>
+                <div>
+                  <span style={{ color: '#059669', fontSize: '0.76rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    CLEAN-AIR PLENUM SERVICING
+                  </span>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#0f172a', margin: 0 }}>
+                    Top-Access Maintenance
+                  </h3>
+                </div>
+              </div>
+
+              <p style={{ color: '#334155', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '16px' }}>
+                Top-access, snap-in/snap-out bag replacement from the clean air side through roof-mounted, gasketed doors. Designed for safe, quick maintenance without production losses.
+              </p>
+
+              <div style={{
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
+                borderRadius: '12px',
+                padding: '12px 16px',
+                marginTop: 'auto',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px'
+              }}>
+                <CheckCircle2 size={16} style={{ color: '#10b981', flexShrink: 0 }} />
+                <span style={{ fontSize: '0.86rem', color: '#475569', fontWeight: '500' }}>
+                  Zero technician exposure to hazardous interior hopper dust.
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

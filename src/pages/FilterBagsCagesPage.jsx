@@ -355,9 +355,41 @@ const FilterBagsCagesPage = () => {
             <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
               Support <span style={{ color: '#1d4ed8' }}>Filter Cages</span>
             </h2>
-            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65', marginBottom: '28px' }}>
               Support cages maintain bag shape during continuous suction and withstand supersonic pulse jet cleaning without flexing or puncturing the fabric. Supplied in tailored specifications:
             </p>
+
+            {/* Exact User Highlight Callout */}
+            <div style={{
+              background: '#ffffff',
+              border: '1.5px solid #bae6fd',
+              borderRadius: '16px',
+              padding: '24px 30px',
+              maxWidth: '820px',
+              margin: '0 auto 40px',
+              boxShadow: '0 4px 20px rgba(2, 132, 199, 0.08)',
+              textAlign: 'left'
+            }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0284c7', marginTop: '7px', flexShrink: 0 }} />
+                  <p style={{ margin: 0, color: '#334155', fontSize: '0.96rem', lineHeight: '1.6' }}>
+                    <strong style={{ color: '#0f172a' }}>Bags:</strong> High-quality fabrics with stainless steel snap rings for a dust-tight seal and easy installation.
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0284c7', marginTop: '7px', flexShrink: 0 }} />
+                  <p style={{ margin: 0, color: '#334155', fontSize: '0.96rem', lineHeight: '1.6' }}>
+                    <strong style={{ color: '#0f172a' }}>Cages:</strong> Precision-welded mild steel or stainless steel frames that prevent abrasion, allow proper flexing, and ensure smooth dust release during cleaning.
+                  </p>
+                </div>
+                <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: '12px', marginTop: '2px' }}>
+                  <p style={{ margin: 0, color: '#475569', fontSize: '0.92rem', lineHeight: '1.6' }}>
+                    Top-access, snap-in/snap-out bag replacement from the clean air side through roof-mounted, gasketed doors. Designed for safe, quick maintenance without production losses.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px', marginBottom: '50px' }}>

@@ -41,9 +41,9 @@ const systemProducts = [
     image: pulseJetImg,
     lead: 'Custom-engineered online and offline pulse jet bag filters for industrial dust collection applications.',
     bullets: [
-      'Continuous online or offline compartmentalized cleaning',
-      'Configured for high air volumes and process dust loads',
-      'Laser-cut tube sheets with clean-air plenum roof access'
+      'Online & Offline cleaning modes with pneumatic isolation dampers',
+      'Gas & dust distribution system creating true negative can velocity',
+      'Top-access snap-in/snap-out bag replacement through gasketed roof doors'
     ],
     detailsLink: '/products/pulse-jet-filter',
     quoteLink: '/contact?product=Pulse-Jet-Bag-Filters'
@@ -69,9 +69,9 @@ const systemProducts = [
     image: filterBagImg,
     lead: 'Replacement filter bags and cages selected according to application, temperature, dust characteristics and filtration requirements.',
     bullets: [
-      'Polyester, Aramid, PPS, PTFE, and Fiberglass media',
-      'Rigid 8 to 24-wire precision-welded anti-collapse cages',
-      'Airtight snap-band collar sealing with supersonic venturis'
+      'Bags: High-quality fabrics with stainless steel snap rings for a dust-tight seal',
+      'Cages: Precision-welded mild steel or stainless steel frames preventing abrasion',
+      'Smooth dust release and proper fabric flexing during pulse cleaning'
     ],
     detailsLink: '/products/filter-bags-cages',
     quoteLink: '/contact?product=Filter-Bags-Cages'
