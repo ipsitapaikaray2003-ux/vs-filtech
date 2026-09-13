@@ -16,6 +16,7 @@ import ControlPanelsPage from './pages/ControlPanelsPage';
 import ProductPoly from './pages/ProductPoly';
 import ProductHighTemp from './pages/ProductHighTemp';
 import FilterBagPage from './pages/FilterBagPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
             <Route path="/products/high-temperature" element={<ProductHighTemp />} />
             <Route path="/products/high-temperature-filter-bags" element={<ProductHighTemp />} />
             <Route path="/high-temperature-filter-bags" element={<ProductHighTemp />} />
+
+            {/* Dynamic Individual Product & Spare Detail Route */}
+            <Route path="/products/:slug" element={<ProductDetailPage />} />
             
             {/* Fallback to Home */}
             <Route path="*" element={<Home />} />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ShieldCheck, 
   Flame, 
@@ -558,23 +559,24 @@ _Sent via vsfiltech.com_`;
           <div className="promo-cards-grid">
             {promoProducts.map((prod) => (
               <div key={prod.id} className="promo-card">
-                <div className="promo-img-wrapper">
+                <Link to={`/products/${prod.id}`} className="promo-img-wrapper" style={{ display: 'block', textDecoration: 'none' }}>
                   <img src={prod.img} alt={prod.title} className="promo-img" />
                   <div className="promo-overlay-badge">Industrial Spares</div>
-                </div>
+                </Link>
 
                 <div className="promo-body">
-                  <h3 className="promo-title">{prod.title}</h3>
+                  <Link to={`/products/${prod.id}`} style={{ textDecoration: 'none' }}>
+                    <h3 className="promo-title">{prod.title}</h3>
+                  </Link>
                   <p className="promo-desc">{prod.shortDesc}</p>
 
-                  <button 
-                    type="button" 
+                  <Link 
+                    to={`/products/${prod.id}`}
                     className="btn-read-more"
-                    onClick={() => setSelectedProduct(prod)}
                   >
                     <span>Read More</span>
                     <ArrowRight size={15} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}

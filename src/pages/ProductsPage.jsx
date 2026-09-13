@@ -39,7 +39,7 @@ const products = [
     badge: 'Flagship Equipment',
     brief: 'Continuous online compressed-air automated pulse cleaning dust collectors. Engineered for heavy industrial continuous operations handling high air volumes and sub-micron particulate loads with <10 mg/Nm³ emissions.',
     specs: ['Airflow: 1,000 to 1,50,000+ CFM', 'Cleaning: Automatic pulse jet timer / DP mode', 'Efficiency: 99.9% particulate separation', 'Compliance: CPCB & State Pollution Board certified'],
-    link: '/products/pulse-jet-filter'
+    link: '/products/dust-collector-system'
   },
   {
     id: 'pleated-cartridge-bag-filter',
@@ -49,7 +49,7 @@ const products = [
     badge: 'Pleated Media',
     brief: 'Compact high-efficiency dust collector cartridges offering 2.5x to 3x greater filtration surface area than conventional tubular bags. Dramatically reduces baghouse footprint while handling high dust loads.',
     specs: ['Surface Area: 2.5x - 3x conventional bags', 'Cleaning: Reverse pulse-jet cleaning', 'Efficiency: 99.9%+ sub-micron capture', 'Installation: Direct retrofit into existing cell plates'],
-    link: '/products/filter-bags-cages'
+    link: '/products/pleated-filter-bag'
   },
   {
     id: 'dust-collector-baghouse-cyclone',
@@ -59,7 +59,7 @@ const products = [
     badge: 'Baghouse & Cyclone',
     brief: 'Integrated two-stage dust extraction system combining aerodynamic cyclone centrifugal pre-separation with a high-capacity multi-hopper fabric baghouse for extreme dust loads.',
     specs: ['Pre-Separation: 80%+ coarse particle removal', 'Casing: Heavy-duty 5mm/6mm IS 2062 plate', 'Hopper: Multi-trough with rotary airlock', 'Access: Clean-air plenum top walk-in doors'],
-    link: '/products/pulse-jet-filter'
+    link: '/products/dust-collector-system'
   },
   {
     id: 'silo-filters',
@@ -69,7 +69,7 @@ const products = [
     badge: 'Pneumatic Venting',
     brief: 'Top-mounted venting dust collector designed specifically for powder storage silos, cement bins, and pneumatic conveying receivers. Safely vents displaced air while capturing fine particles.',
     specs: ['Mounting: Direct circular / flanged silo top', 'Weatherproof: Heavy gauge outdoor casing', 'Cleaning: Integrated pulse-jet reverse air', 'Applications: Cement, Fly Ash, Lime, Flour'],
-    link: '/contact?product=Silo-Filters'
+    link: '/products/silo-filters'
   },
   {
     id: 'cyclone-filters',
@@ -79,7 +79,7 @@ const products = [
     badge: 'Pre-Separator',
     brief: 'High-efficiency aerodynamic centrifugal separators that extract heavy, coarse, and abrasive dust particles before the airstream enters the fabric baghouse, greatly extending filter bag service life.',
     specs: ['Design: High efficiency & high throughput cyclone profiles', 'Pressure Drop: Low static resistance (75-120 mm WG)', 'Particle Size: 10µm and larger coarse separation', 'Maintenance: Zero moving parts, high abrasion resistance'],
-    link: '/contact?product=Cyclone-Filters'
+    link: '/products/cyclone-dust-collector'
   },
   {
     id: 'id-fans',
@@ -89,7 +89,7 @@ const products = [
     badge: 'Heavy-Duty Blower',
     brief: 'Industrial heavy-duty centrifugal fans designed to draw flue gases and dust-laden air through ductwork and filter media, discharging clean air through the exhaust stack into the atmosphere.',
     specs: ['Capacity: Custom CFM matched to system static drop', 'Impeller: Backward curved / radial bladed with wear liners', 'Drive: Direct coupled or V-belt driven with vibration dampers', 'Temperature: Ambient up to 350°C continuous rating'],
-    link: '/contact?product=ID-Fans'
+    link: '/products/id-fans'
   },
   {
     id: 'filter-bags',
@@ -99,7 +99,7 @@ const products = [
     badge: 'OEM Filter Media',
     brief: 'Custom-manufactured filter bags in woven and non-woven needlefelt media. Available in Polyester, Nomex (Aramid), PPS (Ryton), PTFE (Teflon), Fiberglass, and Polypropylene with anti-adhesive ePTFE membranes.',
     specs: ['Treatments: Water & Oil Repellent, PTFE Membrane, Antistatic', 'Temperature Range: Up to 260°C continuous service', 'Configurations: Snap band, raw top, ring top, cord bottom', 'Pore Size: Sub-micron particle retention capability'],
-    link: '/products/filter-bags-cages'
+    link: '/products/filter-bag'
   },
   {
     id: 'cages-with-venturi',
@@ -109,7 +109,7 @@ const products = [
     badge: 'Structural Support',
     brief: 'Precision wire-mesh structural support cages fabricated from MS, GI, SS 304, or SS 316 wire. Equipped with integral cast aluminum or spun metal venturi to amplify cleaning sonic shockwaves.',
     specs: ['Wire Configuration: 8, 10, 12, 16, 20, or 24 longitudinal wires', 'Finish: Zinc electroplated, galvanized, silicone epoxy coated', 'Venturi: Cast aluminum / pressed steel for supersonic jet expansion', 'Fit: Close tolerance for bag fit without chafing'],
-    link: '/products/filter-bags-cages'
+    link: '/products/filter-cages'
   },
   {
     id: 'solenoid-valves',
@@ -119,7 +119,7 @@ const products = [
     badge: 'Fast Response',
     brief: 'High-speed pilot and integral diaphragm pulse jet valves engineered to discharge supersonic compressed air bursts in milliseconds, shocking filter bags clean while minimizing compressed air consumption.',
     specs: ['Port Sizes: 3/4", 1", 1.5", 2", 2.5", 3" BSP / Threaded / Dresser nut', 'Operating Pressure: 3 to 8 bar (45 to 115 psi)', 'Diaphragm: Durable molded Buna-N or Viton (high temp)', 'Control: Direct pilot solenoid or remote pneumatic pilot'],
-    link: '/products/control-panels'
+    link: '/products/solenoid-valve'
   },
   {
     id: 'rotary-air-lock',
@@ -129,7 +129,7 @@ const products = [
     badge: 'Airtight Discharge',
     brief: 'Precision-machined continuous rotary feeder valves installed beneath baghouse hoppers. Discharges accumulated dust continuously into collection bins while maintaining an airtight pressure barrier.',
     specs: ['Casing: Graded Cast Iron / Fabricated MS / SS 304', 'Rotor: 6 to 8 vane closed or open ended with replaceable tips', 'Drive: Geared motor with chain sprocket / direct drive', 'Pressure Seal: Holds vacuum up to ±500 mm WG without leakage'],
-    link: '/contact?product=Rotary-Air-Lock'
+    link: '/products/rotary-air-lock'
   },
   {
     id: 'screw-conveyor',
@@ -139,7 +139,7 @@ const products = [
     badge: 'Mechanical Handling',
     brief: 'Heavy-duty enclosed tubular and U-trough screw conveyors designed to transport collected fly ash and dust from multiple hopper collection troughs to a centralized discharge airlock or storage bin.',
     specs: ['Trough: Heavy gauge MS / SS with dust-tight gasketed covers', 'Flight: Continuous sectional spiral screw flights with hardfacing', 'Bearings: Dust-sealed external hanger and outboard end bearings', 'Length & Dia: Custom designed to baghouse footprint'],
-    link: '/contact?product=Screw-Conveyor'
+    link: '/products/screw-conveyor'
   },
   {
     id: 'differential-pressure-switch',
@@ -149,7 +149,7 @@ const products = [
     badge: 'Smart Cleaning',
     brief: 'High-precision differential pressure instruments that measure resistance across clean and dirty plenum tube sheets. Triggers pulse cleaning cycles only when required, saving up to 40% compressed air.',
     specs: ['Range: 0 - 250 mm WG / 0 - 500 mm WG (0 - 5 kPa)', 'Output: 4-20mA analog signal + adjustable SPDT relay contacts', 'Enclosure: IP65 weatherproof die-cast aluminum housing', 'Display: Dual scale local dial or bright digital LED indicator'],
-    link: '/products/control-panels'
+    link: '/products/differential-pressure-switch'
   },
   {
     id: 'pressure-switch',
@@ -159,7 +159,7 @@ const products = [
     badge: 'Safety Interlock',
     brief: 'Critical safety switch monitoring compressed air header reservoir pressure. Interlocks with the PLC/sequential timer to alert operators if plant air pressure drops below effective pulse cleaning thresholds.',
     specs: ['Pressure Range: 1 to 10 bar adjustable setting', 'Electrical Rating: Heavy-duty snap action micro-switch', 'Connection: 1/4" or 1/2" NPT / BSP brass or SS connector', 'Protection: Explosion-proof and weatherproof options'],
-    link: '/products/control-panels'
+    link: '/products/pressure-switch'
   },
   {
     id: 'level-sensor',
@@ -169,7 +169,7 @@ const products = [
     badge: 'Spill Prevention',
     brief: 'Rotary paddle, RF capacitance, and vibrating fork level switches installed on hopper cones. Detects high dust levels to prevent hopper backup that can submerge filter bags and cause bag failure.',
     specs: ['Sensing Mechanism: Rotary paddle, RF admittance, vibrating rod', 'Temperature: High temperature options up to 250°C', 'Output: DPDT potential free relay contacts for alarm & shutdown', 'Housing: Cast aluminum IP66 dust-tight enclosure'],
-    link: '/products/control-panels'
+    link: '/products/level-sensor'
   },
   {
     id: 'hopper-vibrator',
@@ -179,7 +179,7 @@ const products = [
     badge: 'Bridging Prevention',
     brief: 'Pneumatic piston and electric rotary vibrators installed on hopper sloped walls. Breaks material bridges, eliminates rat-holing, and ensures smooth free-flowing dust gravity discharge into rotary valves.',
     specs: ['Types: Electric unbalance motor or pneumatic ball/piston', 'Force: Adjustable centrifugal force from 50 kg to 2,000 kg', 'Mounting: Reinforced channel-mount mounting bracket', 'Control: Automatic pulse cycling via cleaning sequential timer'],
-    link: '/contact?product=Hopper-Vibrator'
+    link: '/products/hopper-vibrator'
   },
   {
     id: 'explosion-vents',
@@ -189,7 +189,7 @@ const products = [
     badge: 'Safety Relief',
     brief: 'Certified rupture membrane relief panels designed to vent combustible dust deflagrations safely away from plant personnel, protecting the bag filter structural casing from catastrophic overpressure.',
     specs: ['Certification: ATEX compliant combustible dust explosion relief', 'Burst Pressure: Precision calibrated (typically 0.1 bar / 1.5 psi)', 'Construction: Stainless steel composite with fluoropolymer seal', 'Accessories: Weather hoods, burst sensors, and rupture indicators'],
-    link: '/contact?product=Explosion-Vents'
+    link: '/products/explosion-vents'
   }
 ];
 
@@ -388,7 +388,7 @@ const ProductsPage = () => {
                 }}
               >
                 {/* Product Image */}
-                <div style={{ height: '220px', position: 'relative', overflow: 'hidden', background: '#020617' }}>
+                <Link to={product.link} style={{ display: 'block', height: '220px', position: 'relative', overflow: 'hidden', background: '#020617' }}>
                   <img
                     src={product.img}
                     alt={product.title}
@@ -423,7 +423,7 @@ const ProductsPage = () => {
                   }}>
                     {product.badge}
                   </div>
-                </div>
+                </Link>
 
                 {/* Product Body */}
                 <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
@@ -438,15 +438,17 @@ const ProductsPage = () => {
                     {product.category}
                   </div>
 
-                  <h3 style={{
-                    fontSize: '1.25rem',
-                    fontWeight: '700',
-                    color: '#ffffff',
-                    marginBottom: '12px',
-                    lineHeight: '1.3'
-                  }}>
-                    {product.title}
-                  </h3>
+                  <Link to={product.link} style={{ textDecoration: 'none' }}>
+                    <h3 style={{
+                      fontSize: '1.25rem',
+                      fontWeight: '700',
+                      color: '#ffffff',
+                      marginBottom: '12px',
+                      lineHeight: '1.3'
+                    }}>
+                      {product.title}
+                    </h3>
+                  </Link>
 
                   <p style={{
                     fontSize: '0.9rem',
@@ -503,7 +505,7 @@ const ProductsPage = () => {
                       e.currentTarget.style.color = '#38bdf8';
                     }}
                   >
-                    <span>Inquire / View Details</span>
+                    <span>View Specifications & RFQ</span>
                     <ArrowRight size={15} />
                   </Link>
                 </div>
