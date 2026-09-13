@@ -132,22 +132,22 @@ const IndustriesPage = () => {
   }, []);
 
   return (
-    <div className="industries-page" style={{ background: '#ffffff', minHeight: '100vh', paddingTop: '80px', color: '#0f172a' }}>
+    <div className="industries-page" style={{ background: '#0a1628', minHeight: '100vh', paddingTop: '80px', color: '#ffffff' }}>
       
       {/* Hero Header */}
       <section style={{
         position: 'relative',
-        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(248, 250, 252, 0.96) 100%), url(${cementImg})`,
+        background: `linear-gradient(180deg, rgba(10, 22, 40, 0.9) 0%, rgba(7, 14, 26, 0.98) 100%), url(${cementImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '5.5rem 0 4rem',
-        borderBottom: '1px solid #e2e8f0'
+        borderBottom: '1px solid rgba(56, 189, 248, 0.15)'
       }}>
         {/* Engineering CAD Grid Overlay */}
         <div style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
           pointerEvents: 'none'
         }} />
@@ -158,29 +158,30 @@ const IndustriesPage = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(2, 132, 199, 0.1)',
-            border: '1px solid rgba(2, 132, 199, 0.3)',
+            background: 'rgba(14, 165, 233, 0.12)',
+            border: '1px solid rgba(56, 189, 248, 0.35)',
             padding: '6px 18px',
             borderRadius: '999px',
-            color: '#0284c7',
+            color: '#38bdf8',
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            marginBottom: '1.25rem'
+            marginBottom: '1.25rem',
+            boxShadow: '0 2px 10px rgba(14, 165, 233, 0.15)'
           }}>
-            <Sparkles size={14} style={{ color: '#d97706' }} /> FIELD-PROVEN INDUSTRIAL APPLICATIONS
+            <Sparkles size={14} style={{ color: '#38bdf8' }} /> FIELD-PROVEN INDUSTRIAL APPLICATIONS
           </div>
 
           <h1 style={{
             fontSize: 'clamp(2.4rem, 4.5vw, 3.6rem)',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#ffffff',
             lineHeight: '1.18',
             marginBottom: '1.5rem'
           }}>
             Industries <span style={{
-              background: 'linear-gradient(135deg, #0284c7 0%, #d97706 60%, #ea580c 100%)',
+              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>We Serve</span>
@@ -189,7 +190,7 @@ const IndustriesPage = () => {
           <p style={{
             fontSize: '1.2rem',
             lineHeight: '1.7',
-            color: '#475569',
+            color: '#cbd5e1',
             maxWidth: '820px',
             margin: '0 auto 2.5rem'
           }}>
@@ -205,14 +206,14 @@ const IndustriesPage = () => {
       </section>
 
       {/* 11 Industries Grid */}
-      <section className="light-graphic-blueprint" style={{ padding: '5.5rem 0', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '5.5rem 0', backgroundColor: '#070e1a' }}>
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#d97706', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
               PROVEN PERFORMANCE ACROSS KEY SECTORS
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.6rem)', fontWeight: '800', color: '#0f172a' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.6rem)', fontWeight: '800', color: '#ffffff' }}>
               Engineered Solutions by Sector
             </h2>
           </div>
@@ -224,36 +225,36 @@ const IndustriesPage = () => {
           }}>
             {industriesList.map((ind, idx) => {
               const Icon = ind.icon;
-              const accentColors = ['#0284c7', '#d97706', '#059669', '#7c3aed', '#ea580c', '#0d9488'];
+              const accentColors = ['#38bdf8', '#60a5fa', '#38bdf8', '#818cf8', '#2dd4bf', '#38bdf8'];
               const accent = accentColors[idx % accentColors.length];
 
               return (
                 <div 
                   key={ind.id}
                   style={{
-                    background: '#ffffff',
-                    border: '1px solid #e2e8f0',
+                    background: '#0f2040',
+                    border: '1px solid rgba(56, 189, 248, 0.16)',
                     borderRadius: '18px',
                     overflow: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25)',
                     transition: 'transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease',
                     borderTop: `3px solid ${accent}`
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.08)';
+                    e.currentTarget.style.boxShadow = '0 14px 32px rgba(2, 132, 199, 0.25)';
                     e.currentTarget.style.borderColor = accent;
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.04)';
-                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.25)';
+                    e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.16)';
                     e.currentTarget.style.borderTop = `3px solid ${accent}`;
                   }}
                 >
-                  <div style={{ height: '170px', position: 'relative', overflow: 'hidden', background: '#f1f5f9' }}>
+                  <div style={{ height: '170px', position: 'relative', overflow: 'hidden', background: '#020617' }}>
                     <img 
                       src={ind.image} 
                       alt={ind.name} 
@@ -262,13 +263,13 @@ const IndustriesPage = () => {
                     <div style={{
                       position: 'absolute',
                       inset: 0,
-                      background: 'linear-gradient(to top, rgba(15, 23, 42, 0.45) 0%, transparent 60%)'
+                      background: 'linear-gradient(to top, rgba(10, 22, 40, 0.8) 0%, transparent 60%)'
                     }} />
                     <div style={{
                       position: 'absolute',
                       top: '12px',
                       left: '12px',
-                      background: 'rgba(255, 255, 255, 0.95)',
+                      background: 'rgba(10, 22, 40, 0.95)',
                       border: `1px solid ${accent}`,
                       color: accent,
                       padding: '4px 12px',
@@ -278,7 +279,8 @@ const IndustriesPage = () => {
                       gap: '6px',
                       fontSize: '0.75rem',
                       fontWeight: '700',
-                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                      backdropFilter: 'blur(8px)'
                     }}>
                       <Icon size={14} />
                       <span>{ind.name}</span>
@@ -286,7 +288,7 @@ const IndustriesPage = () => {
                   </div>
 
                   <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#0f172a', marginBottom: '8px' }}>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
                       {ind.name}
                     </h3>
                     
@@ -295,19 +297,19 @@ const IndustriesPage = () => {
                     </p>
 
                     <div style={{ marginBottom: '14px' }}>
-                      <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#ea580c', textTransform: 'uppercase', marginBottom: '4px', letterSpacing: '0.04em' }}>
+                      <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#f59e0b', textTransform: 'uppercase', marginBottom: '4px', letterSpacing: '0.04em' }}>
                         Process Challenge:
                       </div>
-                      <div style={{ fontSize: '0.86rem', color: '#475569', lineHeight: '1.5' }}>
+                      <div style={{ fontSize: '0.86rem', color: '#cbd5e1', lineHeight: '1.5' }}>
                         {ind.challenges}
                       </div>
                     </div>
 
                     <div style={{ marginBottom: '20px', flex: 1 }}>
-                      <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#059669', textTransform: 'uppercase', marginBottom: '4px', letterSpacing: '0.04em' }}>
+                      <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#38bdf8', textTransform: 'uppercase', marginBottom: '4px', letterSpacing: '0.04em' }}>
                         Engineered Solution:
                       </div>
-                      <div style={{ fontSize: '0.86rem', color: '#334155', lineHeight: '1.5' }}>
+                      <div style={{ fontSize: '0.86rem', color: '#e2e8f0', lineHeight: '1.5' }}>
                         {ind.solutions}
                       </div>
                     </div>
@@ -319,25 +321,25 @@ const IndustriesPage = () => {
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         padding: '10px 16px',
+                        background: '#0a1628',
+                        border: '1px solid rgba(56, 189, 248, 0.25)',
                         borderRadius: '10px',
-                        background: 'rgba(2, 132, 199, 0.08)',
-                        border: '1px solid rgba(2, 132, 199, 0.25)',
-                        color: '#0284c7',
-                        fontSize: '0.86rem',
-                        fontWeight: '700',
+                        color: '#38bdf8',
                         textDecoration: 'none',
+                        fontSize: '0.82rem',
+                        fontWeight: '700',
                         transition: 'all 0.2s ease'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = '#0284c7';
-                        e.currentTarget.style.color = '#ffffff';
+                        e.currentTarget.style.background = 'rgba(56, 189, 248, 0.15)';
+                        e.currentTarget.style.borderColor = '#38bdf8';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = 'rgba(2, 132, 199, 0.08)';
-                        e.currentTarget.style.color = '#0284c7';
+                        e.currentTarget.style.background = '#0a1628';
+                        e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.25)';
                       }}
                     >
-                      <span>Inquire for {ind.name.split(' ')[0]}</span>
+                      <span>Consult Sizing for {ind.name.split(' ')[0]}</span>
                       <ArrowRight size={14} />
                     </Link>
                   </div>

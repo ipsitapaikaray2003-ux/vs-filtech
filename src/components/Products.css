@@ -361,25 +361,25 @@
 
 .products-showcase-section {
   padding: 5.5rem 0;
-  background-color: #ffffff;
+  background-color: #0a1628;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+  border-top: 1px solid rgba(56, 189, 248, 0.12);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
   scroll-margin-top: 85px;
 }
 
 .products-main-title {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.2;
   margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
 .text-gradient-cyan {
-  background: linear-gradient(135deg, #d97706 0%, #ea580c 45%, #0284c7 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -387,7 +387,7 @@
 .products-main-lead {
   font-size: 1.1rem;
   line-height: 1.65;
-  color: #475569;
+  color: #94a3b8;
   max-width: 720px;
   margin: 0 auto;
 }
@@ -401,21 +401,21 @@
 }
 
 .umiya-product-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
 .umiya-product-card:hover {
   transform: translateY(-6px);
-  border-color: #cbd5e1;
-  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.1);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 20px 45px rgba(2, 132, 199, 0.25);
 }
 
 .umiya-card-media {
@@ -514,7 +514,7 @@
 .umiya-card-title {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 16px;
   line-height: 1.3;
 }
@@ -539,14 +539,14 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #0284c7;
+  background: #38bdf8;
   flex-shrink: 0;
   margin-top: 7px;
-  box-shadow: 0 0 6px rgba(2, 132, 199, 0.6);
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.7);
 }
 
 .umiya-bullet-text {
-  color: #334155;
+  color: #cbd5e1;
   font-size: 0.91rem;
   line-height: 1.5;
 }
@@ -554,7 +554,7 @@
 .umiya-buttons-row {
   display: flex;
   gap: 12px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 18px;
 }
 
@@ -563,9 +563,9 @@
   text-align: center;
   padding: 11px 14px;
   border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  color: #0f172a;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #e2e8f0;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -578,9 +578,9 @@
 }
 
 .umiya-btn-view:hover {
-  background: #eff6ff;
-  border-color: #0284c7;
-  color: #1d4ed8;
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
   transform: translateY(-1px);
 }
 
@@ -613,12 +613,12 @@
 
 /* ── 2. Thermax-Inspired Photographic Showcase ── */
 .thermax-industries-wrapper {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #0f1f3a;
+  border: 1px solid rgba(56, 189, 248, 0.18);
   border-radius: 28px;
   padding: 55px 36px;
   margin-bottom: 50px;
-  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.06);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 .thermax-section-header {
@@ -630,13 +630,13 @@
 .thermax-title {
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
 }
 
 .thermax-lead {
-  color: #475569;
+  color: #94a3b8;
   font-size: 1.05rem;
   line-height: 1.6;
 }
@@ -979,26 +979,26 @@
 
 /* ── 4. Explore Catalog Bar ── */
 .products-explore-bar {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
-  border: 1px solid #bae6fd;
+  background: linear-gradient(135deg, #0e2040 0%, #152e59 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 18px;
   padding: 24px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .explore-text-col h4 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 4px;
 }
 
 .explore-text-col p {
-  color: #475569;
+  color: #94a3b8;
   font-size: 0.92rem;
   margin: 0;
 }

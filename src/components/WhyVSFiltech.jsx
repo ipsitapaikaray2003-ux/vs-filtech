@@ -81,16 +81,16 @@ const WhyVSFiltech = () => {
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
-            color: '#b45309',
-            background: '#fffbeb',
-            border: '1px solid #fde68a',
+            color: '#0284c7',
+            background: '#f0f9ff',
+            border: '1px solid #bae6fd',
             padding: '6px 18px',
             borderRadius: '999px',
             textTransform: 'uppercase',
             marginBottom: '12px',
-            boxShadow: '0 2px 8px rgba(245, 158, 11, 0.1)'
+            boxShadow: '0 2px 8px rgba(2, 132, 199, 0.1)'
           }}>
-            <Sparkles size={14} style={{ color: '#d97706' }} /> CORE VALUE PROPOSITION
+            <Sparkles size={14} style={{ color: '#0284c7' }} /> CORE VALUE PROPOSITION
           </div>
 
           <h2 style={{
@@ -103,7 +103,7 @@ const WhyVSFiltech = () => {
           }}>
             Why{' '}
             <span style={{
-              background: 'linear-gradient(135deg, #d97706 0%, #ea580c 50%, #0284c7 100%)',
+              background: 'linear-gradient(135deg, #0284c7 0%, #1d4ed8 50%, #2563eb 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>

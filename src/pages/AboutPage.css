@@ -1,12 +1,12 @@
 /* ============================================================
-   VS FILTECH — EXECUTIVE WHITE & BLUE ABOUT STYLES
-   Crisp White Canvas | Technical Blue CAD Overlays | Royal Blue Accents
+   VS FILTECH — EXECUTIVE DEEP BLUE ABOUT STYLES
+   Corporate Deep Navy Canvas | Radiant Cyan & Royal Blue Accents | Crystal Clear Legibility
    ============================================================ */
 
 .about-premium-page {
   padding-top: var(--navbar-height, 70px);
-  background-color: #ffffff;
-  color: #0f172a;
+  background-color: #0a1628;
+  color: #ffffff;
   overflow-x: hidden;
   font-family: var(--font-body, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
 }
@@ -18,9 +18,9 @@
   display: flex;
   align-items: center;
   padding: 6.5rem 0 5rem;
-  background: radial-gradient(circle at 50% 15%, rgba(2, 132, 199, 0.08) 0%, transparent 60%),
-              #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  background: radial-gradient(circle at 50% 15%, rgba(14, 165, 233, 0.15) 0%, transparent 60%),
+              #0a1628;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@
   border-radius: 50%;
   filter: blur(100px);
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.25;
 }
 
 .ambient-orb-1 {
@@ -37,7 +37,7 @@
   height: 480px;
   top: -100px;
   right: -50px;
-  background: radial-gradient(circle, #bae6fd 0%, rgba(186, 230, 253, 0) 70%);
+  background: radial-gradient(circle, #0284c7 0%, rgba(2, 132, 199, 0) 70%);
 }
 
 .ambient-orb-2 {
@@ -45,17 +45,17 @@
   height: 520px;
   bottom: -150px;
   left: -80px;
-  background: radial-gradient(circle, #bfdbfe 0%, rgba(191, 219, 254, 0) 70%);
+  background: radial-gradient(circle, #1d4ed8 0%, rgba(29, 78, 216, 0) 70%);
 }
 
 .hud-grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(2, 132, 199, 0.06) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(2, 132, 199, 0.06) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .hero-content-wrapper {
@@ -71,23 +71,24 @@
   align-items: center;
   gap: 8px;
   padding: 6px 18px;
-  background: rgba(2, 132, 199, 0.1);
-  border: 1px solid rgba(2, 132, 199, 0.3);
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   border-radius: 999px;
-  color: #0284c7;
+  color: #38bdf8;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 22px;
+  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.15);
 }
 
 .pulse-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #0284c7;
-  box-shadow: 0 0 10px rgba(2, 132, 199, 0.5);
+  background: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
   animation: pulsePulse 2s infinite ease-in-out;
 }
 
@@ -100,13 +101,13 @@
   font-size: clamp(2.5rem, 5.2vw, 4rem);
   font-weight: 800;
   line-height: 1.15;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 22px;
   letter-spacing: -0.03em;
 }
 
 .luxury-gradient-text {
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -114,13 +115,13 @@
 .executive-lead {
   font-size: clamp(1.08rem, 1.8vw, 1.25rem);
   line-height: 1.75;
-  color: #475569;
+  color: #94a3b8;
   max-width: 820px;
   margin: 0 auto 34px;
 }
 
 .executive-lead strong {
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .executive-actions {
@@ -137,18 +138,18 @@
   padding: 14px 28px;
   border-radius: 12px;
   background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
-  border: 1px solid #1d4ed8;
+  border: 1px solid rgba(56, 189, 248, 0.5);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 6px 20px rgba(29, 78, 216, 0.25);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
 }
 
 .btn-luxury-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(29, 78, 216, 0.35);
+  box-shadow: 0 10px 28px rgba(2, 132, 199, 0.55);
 }
 
 .btn-luxury-secondary {
@@ -157,9 +158,9 @@
   gap: 8px;
   padding: 14px 26px;
   border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  color: #0f172a;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
@@ -167,17 +168,17 @@
 }
 
 .btn-luxury-secondary:hover {
-  background: #f8fafc;
-  border-color: #0284c7;
-  color: #1d4ed8;
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
   transform: translateY(-2px);
 }
 
 /* ── 2. Executive Stats Bar ── */
 .executive-stats-bar {
   padding: 3rem 0;
-  background: #f8fafc;
-  border-bottom: 1px solid #e2e8f0;
+  background: #070e1a;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
 }
 
 .stats-cards-grid {
@@ -187,21 +188,21 @@
 }
 
 .luxury-stat-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 16px;
   padding: 24px;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  border-top: 3px solid #1d4ed8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-top: 3px solid #38bdf8;
 }
 
 .luxury-stat-card:hover {
-  border-color: #0284c7;
+  border-color: rgba(56, 189, 248, 0.5);
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.1);
+  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.25);
 }
 
 .stat-top-row {
@@ -214,32 +215,32 @@
 .stat-number {
   font-size: clamp(2.2rem, 3.2vw, 2.8rem);
   font-weight: 800;
-  color: #1d4ed8;
+  color: #38bdf8;
   line-height: 1;
 }
 
 .stat-icon-spark {
-  color: #0284c7;
+  color: #60a5fa;
   opacity: 0.8;
 }
 
 .stat-title {
   font-size: 1.02rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
 .stat-subtext {
   font-size: 0.84rem;
   line-height: 1.45;
-  color: #64748b;
+  color: #94a3b8;
 }
 
 /* ── 3. Interactive Showcase (Tabs) ── */
 .about-interactive-showcase {
   padding: 6.5rem 0;
-  background: #ffffff;
+  background: #0a1628;
 }
 
 .showcase-nav-bar {
@@ -249,8 +250,8 @@
   flex-wrap: wrap;
   margin-bottom: 50px;
   padding: 8px;
-  background: #f0f7ff;
-  border: 1px solid #bae6fd;
+  background: #070e1a;
+  border: 1px solid rgba(56, 189, 248, 0.2);
   border-radius: 999px;
   max-width: 920px;
   margin-left: auto;
@@ -265,7 +266,7 @@
   border-radius: 999px;
   border: none;
   background: transparent;
-  color: #475569;
+  color: #94a3b8;
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
@@ -273,14 +274,14 @@
 }
 
 .showcase-nav-btn.active {
-  background: #1d4ed8;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
 }
 
 .showcase-nav-btn:hover:not(.active) {
-  color: #1d4ed8;
-  background: rgba(29, 78, 216, 0.08);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
 }
 
 .tab-grid-split {
@@ -296,7 +297,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #0284c7;
+  color: #38bdf8;
   margin-bottom: 12px;
 }
 
@@ -304,19 +305,19 @@
   font-size: clamp(2rem, 3.5vw, 2.9rem);
   font-weight: 800;
   line-height: 1.2;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 22px;
 }
 
 .tab-paragraph {
   font-size: 1.02rem;
   line-height: 1.75;
-  color: #475569;
+  color: #cbd5e1;
   margin-bottom: 18px;
 }
 
 .tab-paragraph strong {
-  color: #0f172a;
+  color: #ffffff;
 }
 
 .tab-feature-checks {
@@ -332,11 +333,11 @@
   gap: 10px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #334155;
+  color: #e2e8f0;
 }
 
 .text-cyan {
-  color: #0284c7;
+  color: #38bdf8;
   flex-shrink: 0;
 }
 
@@ -344,8 +345,8 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .visual-img {
@@ -364,12 +365,13 @@
   gap: 8px;
   padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #0284c7;
-  color: #1d4ed8;
+  background: rgba(10, 22, 40, 0.95);
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
   font-size: 0.78rem;
   font-weight: 700;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 
 .visual-stats-badge {
@@ -377,31 +379,32 @@
   bottom: 20px;
   left: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #bae6fd;
+  background: rgba(10, 22, 40, 0.95);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   border-radius: 14px;
   padding: 14px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 
 .badge-num {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #1d4ed8;
+  color: #38bdf8;
 }
 
 .badge-lbl {
   font-size: 0.85rem;
-  color: #475569;
+  color: #94a3b8;
   font-weight: 600;
 }
 
 .philosophy-highlight-box {
-  background: #f0f7ff;
-  border: 1px solid #bae6fd;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 16px;
   padding: 24px;
   margin-top: 24px;
@@ -413,7 +416,7 @@
   gap: 8px;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #1d4ed8;
+  color: #38bdf8;
   margin-bottom: 8px;
 }
 
@@ -421,7 +424,7 @@
   font-size: 0.98rem;
   font-style: italic;
   line-height: 1.6;
-  color: #334155;
+  color: #cbd5e1;
   margin: 0;
 }
 
@@ -435,20 +438,20 @@
 .consultancy-item-row {
   display: flex;
   gap: 14px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 14px;
   padding: 16px 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .con-icon-box {
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: #f0f7ff;
-  border: 1px solid #bae6fd;
-  color: #0284c7;
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,13 +461,13 @@
 .con-title {
   font-size: 1.02rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 4px;
 }
 
 .con-desc {
   font-size: 0.88rem;
-  color: #475569;
+  color: #94a3b8;
   line-height: 1.5;
 }
 
@@ -476,30 +479,30 @@
 }
 
 .luxury-mission-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 20px;
   padding: 32px 26px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
-  border-top: 3px solid #1d4ed8;
+  border-top: 3px solid #38bdf8;
 }
 
 .luxury-mission-card:hover {
   transform: translateY(-6px);
-  border-color: #0284c7;
-  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.12);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.25);
 }
 
 .mission-card-icon-wrap {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  border: 1px solid #bae6fd;
-  background: #f0f7ff;
-  color: #1d4ed8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,22 +512,22 @@
 .mission-card-title {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 .mission-card-desc {
   font-size: 0.92rem;
   line-height: 1.65;
-  color: #475569;
+  color: #cbd5e1;
 }
 
 /* ── 4. Technical Superiority ── */
 .about-tech-superiority {
   padding: 6.5rem 0;
-  background: #f8fafc;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+  background: #070e1a;
+  border-top: 1px solid rgba(56, 189, 248, 0.12);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
 }
 
 .section-head-center {
@@ -536,14 +539,14 @@
 .section-headline {
   font-size: clamp(2.1rem, 3.8vw, 3rem);
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
 .section-subtext {
   font-size: 1.08rem;
-  color: #475569;
+  color: #94a3b8;
   line-height: 1.65;
 }
 
@@ -555,21 +558,21 @@
 }
 
 .luxury-tech-mode-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 20px;
   padding: 36px 30px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  border-top: 4px solid #1d4ed8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-top: 4px solid #38bdf8;
   transition: all 0.3s ease;
 }
 
 .luxury-tech-mode-card:hover {
   transform: translateY(-5px);
-  border-color: #0284c7;
-  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.12);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.25);
 }
 
 .tech-mode-header {
@@ -582,9 +585,9 @@
 .tech-mode-pill {
   padding: 4px 14px;
   border-radius: 999px;
-  border: 1px solid #bae6fd;
-  background: #f0f7ff;
-  color: #1d4ed8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -593,14 +596,14 @@
 .tech-mode-title {
   font-size: 1.45rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 .tech-mode-desc {
   font-size: 0.94rem;
   line-height: 1.65;
-  color: #475569;
+  color: #cbd5e1;
   margin-bottom: 24px;
   flex: 1;
 }
@@ -609,7 +612,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 20px;
 }
 
@@ -618,13 +621,13 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 0.9rem;
-  color: #334155;
+  color: #cbd5e1;
   line-height: 1.45;
 }
 
 .gas-distribution-card {
-  background: #f0f7ff;
-  border: 1px solid #bae6fd;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 20px;
   padding: 36px 32px;
   display: flex;
@@ -636,9 +639,9 @@
   width: 68px;
   height: 68px;
   border-radius: 18px;
-  background: #ffffff;
-  border: 1px solid #bae6fd;
-  color: #0284c7;
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -648,14 +651,14 @@
 .gas-dist-content h3 {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .gas-dist-content p {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #475569;
+  color: #cbd5e1;
   margin: 0;
 }
 
@@ -664,21 +667,21 @@
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  border: 1px solid #bae6fd;
+  background: rgba(10, 22, 40, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   padding: 12px 20px;
   border-radius: 14px;
   white-space: nowrap;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #1d4ed8;
+  color: #38bdf8;
   flex-shrink: 0;
 }
 
 /* ── 5. Products Directory ── */
 .about-products-directory {
   padding: 6.5rem 0;
-  background: #ffffff;
+  background: #0a1628;
 }
 
 .products-brief-grid {
@@ -688,21 +691,21 @@
 }
 
 .luxury-product-brief-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 18px;
   padding: 24px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   transition: all 0.25s ease;
-  border-top: 3px solid #1d4ed8;
+  border-top: 3px solid #38bdf8;
 }
 
 .luxury-product-brief-card:hover {
   transform: translateY(-4px);
-  border-color: #0284c7;
-  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.1);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.25);
 }
 
 .prod-card-top {
@@ -715,8 +718,8 @@
 .prod-idx {
   font-size: 0.8rem;
   font-weight: 800;
-  color: #1d4ed8;
-  background: #f0f7ff;
+  color: #38bdf8;
+  background: rgba(14, 165, 233, 0.15);
   padding: 2px 8px;
   border-radius: 6px;
 }
@@ -724,7 +727,7 @@
 .prod-tag-pill {
   font-size: 0.72rem;
   font-weight: 700;
-  color: #64748b;
+  color: #94a3b8;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -732,14 +735,14 @@
 .prod-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .prod-desc {
   font-size: 0.88rem;
   line-height: 1.55;
-  color: #475569;
+  color: #cbd5e1;
   margin: 0;
   flex: 1;
 }
@@ -747,9 +750,9 @@
 /* ── 6. Photographic Core Industries Showcase ── */
 .about-industries-section {
   padding: 85px 0;
-  background: #f8fafc;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+  background: #070e1a;
+  border-top: 1px solid rgba(56, 189, 248, 0.12);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
 }
 
 .about-thermax-cards-grid {
@@ -763,15 +766,15 @@
   border-radius: 20px;
   overflow: hidden;
   height: 270px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-thermax-card:hover {
   transform: translateY(-6px);
-  border-color: #0284c7;
-  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.15);
+  border-color: #38bdf8;
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.35);
 }
 
 .about-thermax-img {
@@ -790,9 +793,9 @@
   inset: 0;
   background: linear-gradient(
     180deg, 
-    rgba(15, 23, 42, 0.25) 0%, 
-    rgba(15, 23, 42, 0.6) 50%, 
-    rgba(15, 23, 42, 0.95) 100%
+    rgba(10, 22, 40, 0.3) 0%, 
+    rgba(10, 22, 40, 0.65) 50%, 
+    rgba(10, 22, 40, 0.95) 100%
   );
   transition: background 0.3s ease;
 }
@@ -811,9 +814,9 @@
 
 .about-thermax-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #0284c7;
-  color: #1d4ed8;
+  background: rgba(10, 22, 40, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -821,7 +824,7 @@
   padding: 3px 12px;
   border-radius: 999px;
   margin-bottom: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .about-thermax-title {
@@ -842,7 +845,7 @@
 
 .about-thermax-desc {
   font-size: 0.78rem;
-  color: #f1f5f9;
+  color: #e2e8f0;
   line-height: 1.45;
   margin: 0 0 12px 0;
   max-width: 85%;
@@ -864,28 +867,29 @@
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
 }
 
 .about-thermax-card:hover .about-thermax-link {
-  background: linear-gradient(135deg, #1e40af 0%, #0369a1 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
   transform: translateY(-2px);
 }
 
 /* ── 7. Luxury CTA Banner ── */
 .about-luxury-cta {
   padding: 6.5rem 0;
-  background: #ffffff;
+  background: #0a1628;
 }
 
 .luxury-cta-box {
   position: relative;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0f2040 0%, #1e3a8a 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 28px;
   padding: 60px 40px;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 20px 50px -10px rgba(29, 78, 216, 0.35);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
 }
 
 .cta-ambient-circle {
@@ -895,7 +899,7 @@
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(56, 189, 248, 0.15);
   filter: blur(50px);
   pointer-events: none;
 }
@@ -913,8 +917,9 @@
   gap: 8px;
   padding: 6px 16px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -932,7 +937,7 @@
 .luxury-cta-box p {
   font-size: 1.15rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.92);
+  color: #cbd5e1;
   margin-bottom: 34px;
 }
 
@@ -949,19 +954,19 @@
   gap: 10px;
   padding: 14px 28px;
   border-radius: 12px;
-  background: #ffffff;
-  color: #1d4ed8;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  color: #ffffff;
   font-size: 0.95rem;
   font-weight: 800;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.35);
 }
 
 .btn-cta-white:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  background: #f8fafc;
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.5);
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
 }
 
 .btn-cta-translucent {
@@ -970,8 +975,8 @@
   gap: 8px;
   padding: 14px 26px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
@@ -980,8 +985,9 @@
 }
 
 .btn-cta-translucent:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: #ffffff;
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
   transform: translateY(-2px);
 }
 

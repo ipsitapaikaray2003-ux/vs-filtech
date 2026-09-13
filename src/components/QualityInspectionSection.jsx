@@ -65,10 +65,11 @@ const QualityInspectionSection = () => {
   return (
     <section 
       style={{
-        backgroundColor: '#f8fafc',
+        backgroundColor: '#0a1628',
         padding: '5.5rem 0',
         position: 'relative',
-        borderBottom: '1px solid #e2e8f0',
+        borderTop: '1px solid rgba(56, 189, 248, 0.12)',
+        borderBottom: '1px solid rgba(56, 189, 248, 0.12)',
         overflow: 'hidden'
       }}
     >
@@ -82,29 +83,29 @@ const QualityInspectionSection = () => {
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
-            color: '#065f46',
-            background: '#ecfdf5',
-            border: '1px solid #a7f3d0',
+            color: '#38bdf8',
+            background: 'rgba(14, 165, 233, 0.12)',
+            border: '1px solid rgba(56, 189, 248, 0.35)',
             padding: '6px 18px',
             borderRadius: '999px',
             textTransform: 'uppercase',
             marginBottom: '12px',
-            boxShadow: '0 2px 8px rgba(16, 185, 129, 0.1)'
+            boxShadow: '0 2px 10px rgba(14, 165, 233, 0.15)'
           }}>
-            <ShieldCheck size={14} style={{ color: '#059669' }} /> FABRICATION ASSURANCE &amp; QUALITY CONTROL
+            <ShieldCheck size={14} style={{ color: '#38bdf8' }} /> FABRICATION ASSURANCE &amp; QUALITY CONTROL
           </div>
 
           <h2 style={{
             fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#ffffff',
             lineHeight: '1.2',
             marginBottom: '1.25rem',
             letterSpacing: '-0.02em'
           }}>
             Quality &amp;{' '}
             <span style={{
-              background: 'linear-gradient(135deg, #059669 0%, #10b981 50%, #d97706 100%)',
+              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
@@ -115,13 +116,13 @@ const QualityInspectionSection = () => {
           <p style={{
             fontSize: '1.1rem',
             lineHeight: '1.7',
-            color: '#475569'
+            color: '#94a3b8'
           }}>
             Quality is incorporated throughout the engineering, fabrication and inspection process. Every baghouse casing, hopper, and tube sheet undergoes systematic staged inspection prior to dispatch.
           </p>
         </div>
 
-        {/* 8-Stage Inspection Sequence with Emerald & Amber Badges on White Cards */}
+        {/* 8-Stage Inspection Sequence with Cyan & Royal Blue Accents on Navy Cards */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -131,16 +132,16 @@ const QualityInspectionSection = () => {
           {qualityStages.map((stage, idx) => {
             const Icon = stage.icon;
             const isEven = idx % 2 === 0;
-            const accentColor = isEven ? '#059669' : '#d97706';
-            const accentBg = isEven ? '#ecfdf5' : '#fffbeb';
-            const accentBorder = isEven ? '#a7f3d0' : '#fde68a';
+            const accentColor = isEven ? '#38bdf8' : '#60a5fa';
+            const accentBg = isEven ? 'rgba(56, 189, 248, 0.12)' : 'rgba(96, 165, 250, 0.12)';
+            const accentBorder = isEven ? 'rgba(56, 189, 248, 0.35)' : 'rgba(96, 165, 250, 0.35)';
 
             return (
               <div 
                 key={idx}
                 style={{
-                  background: '#ffffff',
-                  border: '1px solid #e2e8f0',
+                  background: '#0f2040',
+                  border: '1px solid rgba(56, 189, 248, 0.16)',
                   borderRadius: '16px',
                   padding: '24px 20px',
                   display: 'flex',
@@ -148,17 +149,17 @@ const QualityInspectionSection = () => {
                   position: 'relative',
                   overflow: 'hidden',
                   transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 18px -2px rgba(0, 0, 0, 0.05)'
+                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.25)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)';
                   e.currentTarget.style.borderColor = accentColor;
-                  e.currentTarget.style.boxShadow = '0 12px 28px -4px rgba(0, 0, 0, 0.09)';
+                  e.currentTarget.style.boxShadow = '0 12px 30px rgba(2, 132, 199, 0.25)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.borderColor = '#e2e8f0';
-                  e.currentTarget.style.boxShadow = '0 4px 18px -2px rgba(0, 0, 0, 0.05)';
+                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.16)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.25)';
                 }}
               >
                 {/* Top Color Accent Line */}
@@ -202,7 +203,7 @@ const QualityInspectionSection = () => {
                 <h3 style={{
                   fontSize: '1.12rem',
                   fontWeight: '700',
-                  color: '#0f172a',
+                  color: '#ffffff',
                   marginBottom: '8px'
                 }}>
                   {stage.title}
@@ -211,7 +212,7 @@ const QualityInspectionSection = () => {
                 <p style={{
                   fontSize: '0.88rem',
                   lineHeight: '1.55',
-                  color: '#64748b',
+                  color: '#cbd5e1',
                   margin: 0,
                   flex: 1
                 }}>
@@ -222,11 +223,11 @@ const QualityInspectionSection = () => {
           })}
         </div>
 
-        {/* Quality Assurance Bottom Strip on White Card */}
+        {/* Quality Assurance Bottom Strip on Navy Card */}
         <div style={{
           textAlign: 'center',
-          background: '#ffffff',
-          border: '1px solid #e2e8f0',
+          background: '#0f2040',
+          border: '1px solid rgba(56, 189, 248, 0.2)',
           borderRadius: '16px',
           padding: '22px 30px',
           display: 'flex',
@@ -234,18 +235,18 @@ const QualityInspectionSection = () => {
           alignItems: 'center',
           justifyContent: 'center',
           gap: '28px',
-          boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.05)'
+          boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#334155', fontSize: '0.94rem', fontWeight: '600' }}>
-            <CheckCircle2 size={18} style={{ color: '#059669' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e2e8f0', fontSize: '0.94rem', fontWeight: '600' }}>
+            <CheckCircle2 size={18} style={{ color: '#38bdf8' }} />
             <span>100% Casing Airtightness Guarantee</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#334155', fontSize: '0.94rem', fontWeight: '600' }}>
-            <CheckCircle2 size={18} style={{ color: '#059669' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e2e8f0', fontSize: '0.94rem', fontWeight: '600' }}>
+            <CheckCircle2 size={18} style={{ color: '#38bdf8' }} />
             <span>Certified Material Test Reports (MTC)</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#334155', fontSize: '0.94rem', fontWeight: '600' }}>
-            <CheckCircle2 size={18} style={{ color: '#d97706' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e2e8f0', fontSize: '0.94rem', fontWeight: '600' }}>
+            <CheckCircle2 size={18} style={{ color: '#60a5fa' }} />
             <span>Statutory CPCB Emission Compliance (&lt;10 mg/Nm³)</span>
           </div>
         </div>

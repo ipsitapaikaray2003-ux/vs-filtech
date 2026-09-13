@@ -8,7 +8,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="contact-page-view" style={{ paddingTop: '60px', minHeight: '85vh', background: '#ffffff' }}>
+    <div className="contact-page-view" style={{ paddingTop: '60px', minHeight: '85vh', background: '#0a1628' }}>
       <ContactSection />
     </div>
   );

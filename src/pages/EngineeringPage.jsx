@@ -93,22 +93,22 @@ const EngineeringPage = () => {
   }, []);
 
   return (
-    <div className="engineering-page" style={{ background: '#ffffff', minHeight: '100vh', paddingTop: '80px', color: '#0f172a' }}>
+    <div className="engineering-page" style={{ background: '#0a1628', minHeight: '100vh', paddingTop: '80px', color: '#ffffff' }}>
       
       {/* Hero Header */}
       <section style={{
         position: 'relative',
-        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(248, 250, 252, 0.96) 100%), url(${engineeringBg})`,
+        background: `linear-gradient(180deg, rgba(10, 22, 40, 0.9) 0%, rgba(7, 14, 26, 0.98) 100%), url(${engineeringBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '5.5rem 0 4rem',
-        borderBottom: '1px solid #e2e8f0'
+        borderBottom: '1px solid rgba(56, 189, 248, 0.15)'
       }}>
         {/* Engineering CAD Grid Overlay */}
         <div style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'linear-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
           pointerEvents: 'none'
         }} />
@@ -119,30 +119,31 @@ const EngineeringPage = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(2, 132, 199, 0.1)',
-            border: '1px solid rgba(2, 132, 199, 0.3)',
+            background: 'rgba(14, 165, 233, 0.12)',
+            border: '1px solid rgba(56, 189, 248, 0.35)',
             padding: '6px 18px',
             borderRadius: '999px',
-            color: '#0284c7',
+            color: '#38bdf8',
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            marginBottom: '1.25rem'
+            marginBottom: '1.25rem',
+            boxShadow: '0 2px 10px rgba(14, 165, 233, 0.15)'
           }}>
-            <Sparkles size={14} style={{ color: '#d97706' }} /> PROCESS-DRIVEN FILTRATION DESIGN
+            <Sparkles size={14} style={{ color: '#38bdf8' }} /> PROCESS-DRIVEN FILTRATION DESIGN
           </div>
 
           <h1 style={{
             fontSize: 'clamp(2.4rem, 4.5vw, 3.6rem)',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#ffffff',
             lineHeight: '1.18',
             marginBottom: '1.5rem'
           }}>
             Engineering Based on <br />
             <span style={{
-              background: 'linear-gradient(135deg, #0284c7 0%, #d97706 60%, #ea580c 100%)',
+              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>Process Requirements</span>
@@ -151,7 +152,7 @@ const EngineeringPage = () => {
           <p style={{
             fontSize: '1.2rem',
             lineHeight: '1.7',
-            color: '#475569',
+            color: '#cbd5e1',
             maxWidth: '820px',
             margin: '0 auto 2.5rem'
           }}>
@@ -171,9 +172,9 @@ const EngineeringPage = () => {
               style={{
                 padding: '12px 22px',
                 fontSize: '0.95rem',
-                border: '1px solid #10b981',
-                color: '#059669',
-                background: '#ffffff',
+                border: '1px solid rgba(56, 189, 248, 0.4)',
+                color: '#38bdf8',
+                background: 'rgba(14, 165, 233, 0.1)',
                 borderRadius: '10px',
                 fontWeight: '600',
                 display: 'inline-flex',
@@ -189,14 +190,14 @@ const EngineeringPage = () => {
       </section>
 
       {/* 6-Step In-Depth Process Breakdown */}
-      <section className="light-graphic-blueprint" style={{ padding: '5.5rem 0', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '5.5rem 0', backgroundColor: '#070e1a' }}>
         <div className="container" style={{ maxWidth: '1040px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#d97706', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
               END-TO-END EXECUTION LIFECYCLE
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.6rem)', fontWeight: '800', color: '#0f172a' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.6rem)', fontWeight: '800', color: '#ffffff' }}>
               Our 6-Step Engineering Approach
             </h2>
           </div>
@@ -204,12 +205,12 @@ const EngineeringPage = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
             {engineeringSteps.map((step, idx) => {
               const colors = [
-                { border: '#0284c7', bg: 'rgba(2, 132, 199, 0.08)', text: '#0284c7' },
-                { border: '#7c3aed', bg: 'rgba(124, 58, 237, 0.08)', text: '#7c3aed' },
-                { border: '#d97706', bg: 'rgba(217, 119, 6, 0.08)', text: '#d97706' },
-                { border: '#ea580c', bg: 'rgba(234, 88, 12, 0.08)', text: '#ea580c' },
-                { border: '#059669', bg: 'rgba(5, 150, 105, 0.08)', text: '#059669' },
-                { border: '#0d9488', bg: 'rgba(13, 148, 136, 0.08)', text: '#0d9488' }
+                { border: '#38bdf8', bg: 'rgba(56, 189, 248, 0.15)', text: '#38bdf8' },
+                { border: '#818cf8', bg: 'rgba(129, 140, 248, 0.15)', text: '#818cf8' },
+                { border: '#38bdf8', bg: 'rgba(56, 189, 248, 0.15)', text: '#38bdf8' },
+                { border: '#60a5fa', bg: 'rgba(96, 165, 250, 0.15)', text: '#60a5fa' },
+                { border: '#2dd4bf', bg: 'rgba(45, 212, 191, 0.15)', text: '#2dd4bf' },
+                { border: '#38bdf8', bg: 'rgba(56, 189, 248, 0.15)', text: '#38bdf8' }
               ];
               const theme = colors[idx % colors.length];
 
@@ -217,15 +218,15 @@ const EngineeringPage = () => {
                 <div 
                   key={idx}
                   style={{
-                    background: '#ffffff',
-                    border: '1px solid #e2e8f0',
+                    background: '#0f2040',
+                    border: '1px solid rgba(56, 189, 248, 0.16)',
                     borderRadius: '18px',
                     padding: '32px 28px',
                     display: 'grid',
                     gridTemplateColumns: '80px 1fr',
                     gap: '24px',
                     alignItems: 'start',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25)',
                     borderLeft: `4px solid ${theme.border}`
                   }}
                 >
@@ -248,7 +249,7 @@ const EngineeringPage = () => {
 
                   {/* Content */}
                   <div>
-                    <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#0f172a', marginBottom: '8px' }}>
+                    <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
                       {step.title}
                     </h3>
                     <p style={{ fontSize: '1.05rem', color: theme.text, fontWeight: '600', marginBottom: '16px' }}>
@@ -257,8 +258,8 @@ const EngineeringPage = () => {
                     
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                       {step.details.map((d, dIdx) => (
-                        <li key={dIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.92rem', color: '#334155', lineHeight: '1.6' }}>
-                          <CheckCircle2 size={16} style={{ color: '#059669', flexShrink: 0, marginTop: '4px' }} />
+                        <li key={dIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.92rem', color: '#cbd5e1', lineHeight: '1.6' }}>
+                          <CheckCircle2 size={16} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '4px' }} />
                           <span>{d}</span>
                         </li>
                       ))}
@@ -273,38 +274,38 @@ const EngineeringPage = () => {
       </section>
 
       {/* Engineering Parameters Philosophy */}
-      <section className="light-graphic-dots" style={{ padding: '5rem 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+      <section style={{ padding: '5rem 0', background: '#0a1628', borderTop: '1px solid rgba(56, 189, 248, 0.12)' }}>
         <div className="container" style={{ maxWidth: '960px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
           <div style={{
-            background: '#ffffff',
-            border: '1px solid #cbd5e1',
+            background: '#0f2040',
+            border: '1px solid rgba(56, 189, 248, 0.22)',
             borderRadius: '20px',
             padding: '40px 36px',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)'
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.35)'
           }}>
-            <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+            <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
               Why Process Conditions Dictate System Sizing
             </h3>
 
-            <p style={{ fontSize: '1.02rem', lineHeight: '1.75', color: '#475569', marginBottom: '20px' }}>
+            <p style={{ fontSize: '1.02rem', lineHeight: '1.75', color: '#cbd5e1', marginBottom: '20px' }}>
               Two installations handling identical 50,000 m³/hr air volume will require completely different baghouses if one operates on dry cement dust at 70°C and the other operates on moisture-laden coal boiler flue gas at 180°C.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '18px', marginBottom: '28px' }}>
-              <div style={{ background: '#f8fafc', padding: '18px', borderRadius: '12px', border: '1px solid #e2e8f0', borderTop: '3px solid #0284c7' }}>
-                <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Air-to-Cloth Ratio</div>
-                <div style={{ color: '#475569', fontSize: '0.88rem', lineHeight: '1.55' }}>Conservative filtration velocity prevents fine dust from embedding permanently into fabric pores.</div>
+              <div style={{ background: '#0a1628', padding: '18px', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.16)', borderTop: '3px solid #38bdf8' }}>
+                <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Air-to-Cloth Ratio</div>
+                <div style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.55' }}>Conservative filtration velocity prevents fine dust from embedding permanently into fabric pores.</div>
               </div>
 
-              <div style={{ background: '#f8fafc', padding: '18px', borderRadius: '12px', border: '1px solid #e2e8f0', borderTop: '3px solid #d97706' }}>
-                <div style={{ color: '#d97706', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Can Velocity Distribution</div>
-                <div style={{ color: '#475569', fontSize: '0.88rem', lineHeight: '1.55' }}>Controlled upward gas speed inside the housing ensures pulsed dust drops straight into hoppers.</div>
+              <div style={{ background: '#0a1628', padding: '18px', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.16)', borderTop: '3px solid #60a5fa' }}>
+                <div style={{ color: '#60a5fa', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Can Velocity Distribution</div>
+                <div style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.55' }}>Controlled upward gas speed inside the housing ensures pulsed dust drops straight into hoppers.</div>
               </div>
 
-              <div style={{ background: '#f8fafc', padding: '18px', borderRadius: '12px', border: '1px solid #e2e8f0', borderTop: '3px solid #059669' }}>
-                <div style={{ color: '#059669', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Dew Point Margin</div>
-                <div style={{ color: '#475569', fontSize: '0.88rem', lineHeight: '1.55' }}>Thermal insulation and hopper heating prevent acid condensation and caked bag blindness.</div>
+              <div style={{ background: '#0a1628', padding: '18px', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.16)', borderTop: '3px solid #38bdf8' }}>
+                <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Dew Point Margin</div>
+                <div style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.55' }}>Thermal insulation and hopper heating prevent acid condensation and caked bag blindness.</div>
               </div>
             </div>
 

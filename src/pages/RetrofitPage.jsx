@@ -112,18 +112,18 @@ const RetrofitPage = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(245, 158, 11, 0.12)',
-            border: '1px solid rgba(245, 158, 11, 0.4)',
+            background: 'rgba(2, 132, 199, 0.1)',
+            border: '1px solid rgba(2, 132, 199, 0.3)',
             padding: '6px 18px',
             borderRadius: '999px',
-            color: '#d97706',
+            color: '#0284c7',
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             marginBottom: '1.25rem'
           }}>
-            <RefreshCw size={14} style={{ color: '#d97706' }} /> SYSTEM LIFE-EXTENSION &amp; UPGRADATION
+            <RefreshCw size={14} style={{ color: '#0284c7' }} /> SYSTEM LIFE-EXTENSION &amp; UPGRADATION
           </div>
 
           <h1 style={{
@@ -135,7 +135,7 @@ const RetrofitPage = () => {
           }}>
             Bag Filter Retrofit &amp; <br />
             <span style={{
-              background: 'linear-gradient(135deg, #d97706 0%, #ea580c 45%, #0284c7 100%)',
+              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 60%, #38bdf8 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>Replacement Solutions</span>
