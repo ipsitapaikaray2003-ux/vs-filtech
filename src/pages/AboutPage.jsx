@@ -43,10 +43,10 @@ import CountUpStat from '../components/CountUpStat';
 
 // Corporate Verified Metrics
 const executiveStats = [
-  { prefix: '< ', end: 10, suffix: ' mg/Nm³', decimals: 0, label: 'Guaranteed Clean Emissions', desc: 'Satisfies all statutory CPCB & State Pollution Board norms' },
-  { end: 100, suffix: '%', decimals: 0, label: 'Customized To Client Process', desc: 'Engineered for specific CFM, dust type & temperature' },
-  { end: 99.9, suffix: '%', decimals: 1, label: 'Particulate Capture Efficiency', desc: 'Meeting statutory CPCB norms (<10 mg/Nm³)' },
-  { end: 24, suffix: '/7', decimals: 0, label: 'On-Site & Technical Support', desc: 'Rapid response engineering and pan-India spares' }
+  { prefix: '< ', end: 10, suffix: ' mg/Nm³', decimals: 0, label: 'Guaranteed Clean Emissions', desc: 'Satisfies statutory CPCB & State Pollution Board norms', icon: ShieldCheck },
+  { end: 100, suffix: '%', decimals: 0, label: 'Customized To Client Process', desc: 'Engineered for specific CFM, dust type & temperature', icon: Settings },
+  { end: 99.9, suffix: '%', decimals: 1, label: 'Particulate Capture Efficiency', desc: 'Meeting statutory CPCB norms (<10 mg/Nm³)', icon: Target },
+  { end: 24, suffix: '/7', decimals: 0, label: 'On-Site & Technical Support', desc: 'Rapid response engineering and pan-India spares', icon: PhoneCall }
 ];
 
 // 4 Core Mission Tenets
@@ -301,18 +301,23 @@ const AboutPage = () => {
       <section className="executive-stats-bar-light">
         <div className="container">
           <div className="stats-cards-grid">
-            {executiveStats.map((stat, idx) => (
-              <div key={idx} className="luxury-stat-card-light">
-                <div className="stat-top-row">
-                  <span className="stat-number">
-                    <CountUpStat prefix={stat.prefix || ''} end={stat.end} decimals={stat.decimals} suffix={stat.suffix} />
-                  </span>
-                  <Activity size={20} className="stat-icon-spark" />
+            {executiveStats.map((stat, idx) => {
+              const Icon = stat.icon;
+              return (
+                <div key={idx} className="luxury-stat-card-light">
+                  <div className="stat-top-row">
+                    <span className="stat-number">
+                      <CountUpStat prefix={stat.prefix || ''} end={stat.end} decimals={stat.decimals} suffix={stat.suffix} />
+                    </span>
+                    <div className="stat-icon-spark-wrap">
+                      <Icon size={15} />
+                    </div>
+                  </div>
+                  <div className="stat-title">{stat.label}</div>
+                  <div className="stat-subtext">{stat.desc}</div>
                 </div>
-                <div className="stat-title">{stat.label}</div>
-                <div className="stat-subtext">{stat.desc}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

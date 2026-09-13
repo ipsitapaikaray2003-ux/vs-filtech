@@ -334,7 +334,7 @@
 
 /* ── 2. Executive Stats Bar (WHITE) ── */
 .executive-stats-bar-light {
-  padding: 3.5rem 0;
+  padding: 2rem 0;
   background: #ffffff;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
@@ -343,56 +343,94 @@
 .stats-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .luxury-stat-card-light {
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 26px 24px;
-  transition: all 0.3s ease;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 18px;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
-  border-top: 4px solid #0284c7;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+  overflow: hidden;
+}
+
+.luxury-stat-card-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);
+  opacity: 0.85;
+  transition: opacity 0.25s ease, height 0.25s ease;
 }
 
 .luxury-stat-card-light:hover {
-  border-color: #0284c7;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.12);
+  border-color: #bae6fd;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12), 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.luxury-stat-card-light:hover::before {
+  opacity: 1;
+  height: 3.5px;
 }
 
 .luxury-stat-card-light .stat-top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .luxury-stat-card-light .stat-number {
-  font-size: clamp(2.2rem, 3.2vw, 2.8rem);
+  font-size: clamp(1.4rem, 1.8vw, 1.75rem);
   font-weight: 800;
   color: #0284c7;
-  line-height: 1;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
-.luxury-stat-card-light .stat-icon-spark {
+.luxury-stat-card-light .stat-icon-spark-wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #f0f9ff;
+  border: 1px solid #e0f2fe;
   color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.luxury-stat-card-light:hover .stat-icon-spark-wrap {
+  background: #e0f2fe;
+  color: #0369a1;
+  transform: scale(1.05);
 }
 
 .luxury-stat-card-light .stat-title {
-  font-size: 1.05rem;
-  font-weight: 800;
+  font-size: 0.88rem;
+  font-weight: 700;
   color: #0f172a;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  line-height: 1.35;
 }
 
 .luxury-stat-card-light .stat-subtext {
-  font-size: 0.86rem;
-  line-height: 1.5;
+  font-size: 0.76rem;
+  line-height: 1.45;
   color: #64748b;
+  margin: 0;
 }
 
 /* ── 3. Who We Are & Infrastructure (BLUE) ── */
