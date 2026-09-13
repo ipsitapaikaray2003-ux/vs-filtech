@@ -64,7 +64,6 @@ const qualityStages = [
 const QualityInspectionSection = () => {
   return (
     <section 
-      className="light-graphic-dots"
       style={{
         backgroundColor: '#f8fafc',
         padding: '5.5rem 0',

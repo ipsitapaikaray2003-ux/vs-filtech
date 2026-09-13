@@ -70,10 +70,6 @@ const Hero = () => {
 
   return (
     <section className="hero" aria-label="Hero Slider">
-      {/* Technical Blueprint Graphic Mesh Overlay */}
-      <div className="hero-blueprint-mesh" aria-hidden="true" />
-      <div className="hero-ambient-orb hero-ambient-amber" aria-hidden="true" />
-      <div className="hero-ambient-orb hero-ambient-emerald" aria-hidden="true" />
 
       {slides.map((slide, idx) => (
         <div

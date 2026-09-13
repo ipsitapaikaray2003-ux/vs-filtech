@@ -44,7 +44,6 @@ const parameters = [
 const ProcessCapabilityBanner = () => {
   return (
     <section 
-      className="light-graphic-blueprint"
       style={{
         backgroundColor: '#ffffff',
         borderBottom: '1px solid #e2e8f0',

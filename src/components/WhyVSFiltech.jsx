@@ -63,7 +63,6 @@ const blocks = [
 const WhyVSFiltech = () => {
   return (
     <section 
-      className="light-graphic-isometric"
       style={{
         backgroundColor: '#ffffff',
         padding: '5.5rem 0',

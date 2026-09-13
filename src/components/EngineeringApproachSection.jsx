@@ -71,7 +71,6 @@ const steps = [
 const EngineeringApproachSection = () => {
   return (
     <section 
-      className="light-graphic-blueprint"
       style={{
         backgroundColor: '#ffffff',
         padding: '5.5rem 0',

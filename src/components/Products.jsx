@@ -203,7 +203,7 @@ const Products = () => {
   const [selectedIndustry, setSelectedIndustry] = useState(null);
 
   return (
-    <section id="products" className="products-showcase-section light-graphic-blueprint">
+    <section id="products" className="products-showcase-section">
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
         {/* Section Header */}

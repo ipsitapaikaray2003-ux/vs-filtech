@@ -69,7 +69,7 @@ _Sent via vsfiltech.com/contact_`;
   };
 
   return (
-    <section id="contact" className="contact-section light-graphic-blueprint">
+    <section id="contact" className="contact-section">
       <div className="container relative z-10">
         {/* Section Header */}
         <div className="contact-section-header">
