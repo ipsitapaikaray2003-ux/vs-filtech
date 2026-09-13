@@ -21,7 +21,10 @@ import {
   Hammer,
   Utensils,
   Cpu,
-  Droplets
+  Droplets,
+  FileText,
+  Phone,
+  MessageCircle
 } from 'lucide-react';
 import heroImg from '../assets/factory_bagfilter_plant_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
@@ -132,24 +135,24 @@ const coreIndustries = [
 
 const supportServices = [
   {
-    title: 'Preventive Maintenance Programs',
+    title: 'Preventive Maintenance',
     icon: Wrench,
-    desc: 'Scheduled plant inspection and health check programs ensuring your dust collection system consistently operates at peak efficiency with zero unplanned downtime.'
+    desc: 'Scheduled maintenance programs to ensure your dust collection systems operate at peak efficiency and minimize downtime.'
   },
   {
-    title: 'On-Site Installation & Commissioning',
-    icon: HardHat,
-    desc: 'Expert mechanical erection, ductwork installation, fan dynamic balancing, PLC timer calibration, and emission performance verification right from day one.'
+    title: 'Installation & Commissioning',
+    icon: Settings,
+    desc: 'Expert on-site installation, system commissioning, and performance testing to ensure your equipment is set up right from day one.'
   },
   {
-    title: 'Ready Spare Parts Supply',
+    title: 'Spare Parts Supply',
     icon: Package,
-    desc: 'Immediate pan-India dispatch of OEM-spec filter bags, cages, venturis, solenoid pulse valves, sequential timers, and rotary airlocks from ready inventory.'
+    desc: 'Genuine spare parts readily available—filter bags, cages, solenoid valves, timers, and all critical components.'
   },
   {
-    title: 'System Upgrades & Retrofitting',
-    icon: RefreshCw,
-    desc: 'Modernize older, failing, or undersized dust collectors with modern pulse-jet technology, pleated bags, and VFD controls for compliance and reduced operating costs.'
+    title: 'System Upgrades',
+    icon: FileText,
+    desc: 'Upgrade existing systems with latest technology for improved efficiency, compliance, and reduced operating costs.'
   }
 ];
 
@@ -620,102 +623,63 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 5. Comprehensive Lifecycle Support Services */}
-      <section className="light-graphic-dots" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+      {/* 5. OUR SERVICES - Comprehensive Support */}
+      <section className="comprehensive-support-section" id="services-support">
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
-              OUR SERVICES
+          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+            <div className="support-eyebrow">
+              <span className="support-eyebrow-dot"></span> OUR SERVICES
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
-              Comprehensive <span style={{ color: '#1d4ed8' }}>Support &amp; Maintenance</span>
+            <h2 className="support-main-title">
+              Comprehensive Support
             </h2>
-            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
-              Our commitment does not end with installation. We provide complete after-sales support to keep your baghouse running at peak efficiency with zero downtime.
+            <p className="support-main-subtitle">
+              Our commitment doesn't end with installation. We provide complete after-sales support to keep your systems running efficiently.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '40px' }}>
+          <div className="support-cards-grid">
             {supportServices.map((srv, idx) => {
               const Icon = srv.icon;
               return (
-                <div 
-                  key={idx}
-                  style={{
-                    background: '#ffffff',
-                    border: '1px solid #e2e8f0',
-                    borderRadius: '16px',
-                    padding: '28px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.04)'
-                  }}
-                >
-                  <div style={{
-                    width: '46px',
-                    height: '46px',
-                    borderRadius: '12px',
-                    background: '#f0f7ff',
-                    border: '1px solid #bae6fd',
-                    color: '#0284c7',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '18px'
-                  }}>
-                    <Icon size={22} />
+                <div key={idx} className="support-feature-card">
+                  <div className="support-icon-box">
+                    <Icon size={26} strokeWidth={1.8} />
                   </div>
-
-                  <h4 style={{ fontSize: '1.18rem', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>
-                    {srv.title}
-                  </h4>
-
-                  <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', margin: 0, flex: 1 }}>
-                    {srv.desc}
-                  </p>
+                  <div className="support-content-col">
+                    <h4 className="support-feature-title">{srv.title}</h4>
+                    <p className="support-feature-desc">{srv.desc}</p>
+                  </div>
                 </div>
               );
             })}
           </div>
 
           {/* Dedicated Support Callout Box */}
-          <div style={{
-            background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
-            borderRadius: '20px',
-            padding: '36px 32px',
-            textAlign: 'center',
-            maxWidth: '860px',
-            margin: '0 auto',
-            color: '#ffffff',
-            boxShadow: '0 10px 30px rgba(29, 78, 216, 0.25)'
-          }}>
-            <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#ffffff', marginBottom: '12px' }}>
-              Need Support for Your Existing Dust Collection System?
+          <div className="support-callout-card">
+            <h3 className="support-callout-title">
+              Need support for your existing system?
             </h3>
-            <p style={{ color: 'rgba(255, 255, 255, 0.92)', fontSize: '1.05rem', lineHeight: '1.6', maxWidth: '680px', margin: '0 auto 24px' }}>
-              Our dedicated engineering service desk is ready to assist with scheduled maintenance, emergency spare parts dispatch, and system upgrade audits across India.
+            <p className="support-callout-desc">
+              Our service team is ready to help with maintenance, spares, and upgrades.
             </p>
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/contact" className="btn btn-lg" style={{ background: '#ffffff', color: '#1d4ed8', fontWeight: '700', display: 'inline-flex', alignItems: 'center', gap: '8px', borderRadius: '10px' }}>
-                <span>Get a Service Quote</span>
-                <ArrowRight size={16} />
+            <div className="support-callout-buttons">
+              <Link to="/contact" className="btn-quote-orange">
+                <span>Get a Quote</span>
+                <ArrowRight size={17} />
               </Link>
-              <a 
-                href="tel:+911234567890" 
-                className="btn btn-lg" 
-                style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.4)', color: '#ffffff', display: 'inline-flex', alignItems: 'center', gap: '8px', borderRadius: '10px' }}
-              >
-                <PhoneCall size={16} />
-                <span>Call +91 1234567890</span>
+              <a href="tel:+911234567890" className="btn-call-outline">
+                <Phone size={17} />
+                <span>Call Now</span>
               </a>
               <a 
-                href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20need%20service%20support%20for%20my%20bag%20filter%20system."
+                href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20need%20support%20for%20my%20dust%20collection%20system." 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn btn-lg" 
-                style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.4)', color: '#ffffff', borderRadius: '10px' }}
+                className="btn-whatsapp-peach"
               >
-                <span>WhatsApp Desk</span>
+                <MessageCircle size={18} />
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
