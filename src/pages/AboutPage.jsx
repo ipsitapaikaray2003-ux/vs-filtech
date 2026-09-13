@@ -38,6 +38,7 @@ import baghouseImg from '../assets/hero_baghouse.jpg';
 import ductingImg from '../assets/indoor_ducting.jpg';
 import pleatedImg from '../assets/pleated_filter_bag.jpeg';
 import filterBagImg from '../assets/filter_bag_hd.jpg';
+import aboutHeroImg from '../assets/about_hero_plant.jpg';
 
 // 5 Genuine High-Resolution Industrial Photography Assets
 import industryCementImg from '../assets/industry_cement.jpg';
@@ -220,83 +221,101 @@ const AboutPage = () => {
   return (
     <div className="about-premium-page">
       
-      {/* ── 1. Executive Hero Header ── */}
+      {/* ── 1. Executive Hero Header (BLUE) ── */}
       <section className="about-premium-hero">
         <div className="ambient-glow-orb ambient-orb-1" />
         <div className="ambient-glow-orb ambient-orb-2" />
         <div className="hud-grid-overlay" />
 
         <div className="container relative z-10">
-          <div className="hero-content-wrapper">
+          <div className="about-hero-grid">
             
-            <div className="premium-hero-animate">
-              <span className="executive-badge">
-                <span className="pulse-dot" />
-                <Sparkles size={14} />
-                <span>ABOUT VS FILTECH</span>
-              </span>
+            {/* Left Content Column */}
+            <div className="about-hero-text-col">
+              <div className="premium-hero-animate">
+                <span className="executive-badge">
+                  <span className="pulse-dot" />
+                  <Sparkles size={14} />
+                  <span>ABOUT VS FILTECH</span>
+                </span>
+              </div>
+
+              <h1 className="premium-hero-animate executive-title">
+                Engineering-Oriented <br />
+                <span className="luxury-gradient-text">Dust Collection &amp; Filtration Solutions</span>
+              </h1>
+
+              <p className="premium-hero-animate executive-lead">
+                VS Filtech is an engineering-oriented company focused on industrial dust collection, filtration and control solutions. We provide customised solutions for industrial applications, with a focus on practical engineering, fabrication quality, inspection and dependable system performance.
+                <br /><br />
+                Our approach is based on understanding the process requirement first and then developing the appropriate filtration and dust collection solution.
+              </p>
+
+              {/* 4 Core Focus Pillars */}
+              <div className="premium-hero-animate hero-pillars-row">
+                {['Engineering', 'Quality', 'Reliability', 'Customer Support'].map((pillar, pIdx) => (
+                  <div key={pIdx} className="hero-pillar-pill">
+                    ✓ {pillar}
+                  </div>
+                ))}
+              </div>
+
+              <div className="premium-hero-animate executive-actions">
+                <Link to="/contact" className="btn-luxury-primary">
+                  <PhoneCall size={18} />
+                  <span>Request Engineering Consultation</span>
+                  <ArrowRight size={17} />
+                </Link>
+                <Link to="/products" className="btn-luxury-secondary">
+                  <span>Explore Technical Catalog</span>
+                </Link>
+              </div>
             </div>
 
-            <h1 className="premium-hero-animate executive-title">
-              Engineering-Oriented <br />
-              <span className="luxury-gradient-text">Dust Collection &amp; Filtration Solutions</span>
-            </h1>
+            {/* Right Hero Image Column */}
+            <div className="premium-hero-animate about-hero-visual-col">
+              <div className="about-hero-image-frame">
+                <img 
+                  src={aboutHeroImg} 
+                  alt="VS Filtech High-Capacity Pulse Jet Bag Filter Plant" 
+                  className="about-hero-plant-img" 
+                />
+                <div className="about-hero-img-overlay" />
 
-            <p className="premium-hero-animate executive-lead">
-              VS Filtech is an engineering-oriented company focused on industrial dust collection, filtration and control solutions. We provide customised solutions for industrial applications, with a focus on practical engineering, fabrication quality, inspection and dependable system performance.
-              <br /><br />
-              Our approach is based on understanding the process requirement first and then developing the appropriate filtration and dust collection solution.
-            </p>
-
-            {/* 4 Core Focus Pillars */}
-            <div className="premium-hero-animate" style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '12px',
-              marginBottom: '30px'
-            }}>
-              {['Engineering', 'Quality', 'Reliability', 'Customer Support'].map((pillar, pIdx) => (
-                <div key={pIdx} style={{
-                  background: 'rgba(56, 189, 248, 0.12)',
-                  border: '1px solid rgba(56, 189, 248, 0.35)',
-                  padding: '8px 18px',
-                  borderRadius: '999px',
-                  color: '#38bdf8',
-                  fontWeight: '700',
-                  fontSize: '0.9rem',
-                  letterSpacing: '0.04em'
-                }}>
-                  ✓ {pillar}
+                {/* Floating Badge Top */}
+                <div className="about-hero-floating-pill top-pill">
+                  <Factory size={15} />
+                  <span>Turnkey Pulse Jet Plants · Pan-India OEM</span>
                 </div>
-              ))}
-            </div>
 
-            <div className="premium-hero-animate executive-actions">
-              <Link to="/contact" className="btn-luxury-primary">
-                <PhoneCall size={18} />
-                <span>Request Engineering Consultation</span>
-                <ArrowRight size={17} />
-              </Link>
-              <Link to="/products" className="btn-luxury-secondary">
-                <span>Explore Technical Catalog</span>
-              </Link>
+                {/* Floating Badge Bottom */}
+                <div className="about-hero-stats-badge bottom-badge">
+                  <div className="stats-badge-icon">
+                    <ShieldCheck size={22} />
+                  </div>
+                  <div className="stats-badge-text">
+                    <span className="badge-num">&lt; 10 mg/Nm³</span>
+                    <span className="badge-lbl">Guaranteed Clean-Air Emission</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* ── 2. Executive Stat Cards Bar ── */}
-      <section className="executive-stats-bar">
+      {/* ── 2. Executive Stat Cards Bar (WHITE) ── */}
+      <section className="executive-stats-bar-light">
         <div className="container">
           <div className="stats-cards-grid">
             {executiveStats.map((stat, idx) => (
-              <div key={idx} className="luxury-stat-card">
+              <div key={idx} className="luxury-stat-card-light">
                 <div className="stat-top-row">
                   <span className="stat-number">
                     <CountUpStat prefix={stat.prefix || ''} end={stat.end} decimals={stat.decimals} suffix={stat.suffix} />
                   </span>
-                  <Activity size={18} className="stat-icon-spark" />
+                  <Activity size={20} className="stat-icon-spark" />
                 </div>
                 <div className="stat-title">{stat.label}</div>
                 <div className="stat-subtext">{stat.desc}</div>
@@ -505,14 +524,14 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ── 4. Technical Superiority: Online vs Offline & Gas Distribution ── */}
-      <section className="about-tech-superiority">
+      {/* ── 4. Technical Superiority: Online vs Offline & Gas Distribution (WHITE) ── */}
+      <section className="about-tech-superiority-light">
         <div className="container">
           
           <div className="section-head-center">
-            <span className="luxury-eyebrow">CLEANING INNOVATION & DUST DYNAMICS</span>
+            <span className="luxury-eyebrow">CLEANING INNOVATION &amp; DUST DYNAMICS</span>
             <h2 className="section-headline">
-              Pulse-Jet Cleaning: <span className="luxury-gradient-text">Online vs Offline Modes</span>
+              Pulse-Jet Cleaning: <span className="luxury-gradient-text-light">Online vs Offline Modes</span>
             </h2>
             <p className="section-subtext">
               Engineered according to process continuousness, dust adhesiveness, and compartment isolation demands:
@@ -521,9 +540,9 @@ const AboutPage = () => {
 
           <div className="tech-modes-grid">
             {cleaningTechnology.map((item, idx) => (
-              <div key={idx} className="luxury-tech-mode-card">
+              <div key={idx} className="luxury-tech-mode-card-light">
                 <div className="tech-mode-header">
-                  <span className="tech-mode-pill" style={{ color: item.accent, borderColor: `${item.accent}40`, background: `${item.accent}15` }}>
+                  <span className="tech-mode-pill-light" style={{ color: item.accent, borderColor: `${item.accent}55`, background: `${item.accent}18` }}>
                     {item.tag}
                   </span>
                   <Wind size={22} style={{ color: item.accent }} />
@@ -543,12 +562,12 @@ const AboutPage = () => {
           </div>
 
           {/* Gas & Dust Distribution Callout Card */}
-          <div className="gas-distribution-card">
+          <div className="gas-distribution-card-light">
             <div className="gas-dist-icon">
               <Wind size={32} />
             </div>
             <div className="gas-dist-content">
-              <h3>Aerodynamic Gas & Dust Distribution Technology</h3>
+              <h3>Aerodynamic Gas &amp; Dust Distribution Technology</h3>
               <p>
                 Our specialized inlet flow diffusers and baffle plates ensure uniform airflow across all filter rows, creating a true negative 
                 downward can velocity. This design prevents fine dust particles from being re-entrained back onto neighboring filter sleeves, 
@@ -556,7 +575,7 @@ const AboutPage = () => {
               </p>
             </div>
             <div className="gas-dist-badge">
-              <ShieldCheck size={20} className="text-cyan" />
+              <ShieldCheck size={20} style={{ color: '#0284c7' }} />
               <span>Zero Re-Entrainment</span>
             </div>
           </div>
@@ -564,7 +583,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ── 5. Complete 14 Products & Spares Directory ── */}
+      {/* ── 5. Complete 14 Products & Spares Directory (BLUE) ── */}
       <section className="about-products-directory">
         <div className="container">
           
@@ -601,14 +620,14 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ── 6. Photographic Core Industries Showcase (Thermax Inspired) ── */}
-      <section className="about-industries-section">
+      {/* ── 6. Photographic Core Industries Showcase (WHITE) ── */}
+      <section className="about-industries-section-light">
         <div className="container">
           
           <div className="section-head-center">
             <span className="luxury-eyebrow">TRUSTED NATIONWIDE</span>
             <h2 className="section-headline">
-              Industries <span className="luxury-gradient-text">We Serve</span>
+              Industries <span className="luxury-gradient-text-light">We Serve</span>
             </h2>
             <p className="section-subtext">
               Engineering customized air pollution control systems, reverse pulse-jet baghouses, and specialized filter media across India&apos;s primary industrial processing sectors:
@@ -618,7 +637,7 @@ const AboutPage = () => {
           <div className="about-thermax-cards-grid">
             {coreIndustries.map((ind, idx) => {
               return (
-                <div key={idx} className="about-thermax-card">
+                <div key={idx} className="about-thermax-card-light">
                   <img src={ind.image} alt={ind.name} className="about-thermax-img" loading="lazy" />
                   <div className="about-thermax-overlay" />
                   <div className="about-thermax-content">
