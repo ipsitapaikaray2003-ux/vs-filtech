@@ -37,28 +37,29 @@
   object-fit: cover;
   object-position: center right;
   display: block;
-  transform: scale(1.02);
+  transform: scale(1.01);
+  filter: brightness(1.06) contrast(1.05) saturate(1.1);
 }
 
 .about-hero-bg-overlay {
   position: absolute;
   inset: 0;
   background: 
-    /* Deep navy gradient on left to ensure 100% text legibility */
+    /* Soft directional gradient: gentle dark scrim only behind left text, clear & vibrant on the right */
     linear-gradient(
       90deg, 
-      rgba(7, 14, 26, 0.97) 0%, 
-      rgba(7, 14, 26, 0.93) 38%, 
-      rgba(10, 22, 40, 0.72) 70%, 
-      rgba(10, 22, 40, 0.55) 100%
+      rgba(7, 14, 26, 0.72) 0%, 
+      rgba(7, 14, 26, 0.52) 36%, 
+      rgba(10, 22, 40, 0.16) 62%, 
+      rgba(10, 22, 40, 0.04) 100%
     ),
-    /* Soft vertical vignette */
+    /* Soft minimal vertical feathering */
     linear-gradient(
       180deg, 
-      rgba(7, 14, 26, 0.65) 0%, 
-      transparent 30%, 
-      transparent 70%, 
-      rgba(7, 14, 26, 0.95) 100%
+      rgba(7, 14, 26, 0.4) 0%, 
+      transparent 15%, 
+      transparent 82%, 
+      rgba(7, 14, 26, 0.65) 100%
     );
   pointer-events: none;
 }
@@ -152,7 +153,7 @@
   color: #ffffff;
   margin-bottom: 20px;
   letter-spacing: -0.03em;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
 .luxury-gradient-text {
@@ -162,14 +163,15 @@
   -webkit-text-fill-color: transparent;
   color: #38bdf8;
   display: inline-block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
 }
 
 .executive-lead {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #cbd5e1;
+  color: #f8fafc;
   margin-bottom: 26px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
 .hero-pillars-row {

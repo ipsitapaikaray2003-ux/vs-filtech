@@ -231,11 +231,7 @@ const AboutPage = () => {
             className="about-hero-bg-img" 
           />
           <div className="about-hero-bg-overlay" />
-          <div className="hud-grid-overlay" />
         </div>
-
-        <div className="ambient-glow-orb ambient-orb-1" />
-        <div className="ambient-glow-orb ambient-orb-2" />
 
         <div className="container relative z-10">
           <div className="about-hero-grid">
