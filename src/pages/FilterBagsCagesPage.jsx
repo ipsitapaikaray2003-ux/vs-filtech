@@ -157,11 +157,7 @@ const FilterBagsCagesPage = () => {
                 lineHeight: '1.15',
                 marginBottom: '20px'
               }}>
-                Filter Bags <span style={{
-                  background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}>&amp; Cages</span>
+                Filter Bags <span style={{ color: '#0284c7' }}>&amp; Cages</span>
               </h1>
 
               <p style={{

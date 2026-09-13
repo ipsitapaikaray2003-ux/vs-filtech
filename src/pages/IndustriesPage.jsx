@@ -180,11 +180,7 @@ const IndustriesPage = () => {
             lineHeight: '1.18',
             marginBottom: '1.5rem'
           }}>
-            Industries <span style={{
-              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>We Serve</span>
+            Industries <span style={{ color: '#38bdf8' }}>We Serve</span>
           </h1>
 
           <p style={{

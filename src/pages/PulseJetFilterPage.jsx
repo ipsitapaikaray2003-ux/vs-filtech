@@ -206,11 +206,7 @@ const PulseJetFilterPage = () => {
                 lineHeight: '1.15',
                 marginBottom: '20px'
               }}>
-                Pulse Jet <span style={{
-                  background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}>Bag Filters</span>
+                Pulse Jet <span style={{ color: '#0284c7' }}>Bag Filters</span>
               </h1>
 
               <p style={{

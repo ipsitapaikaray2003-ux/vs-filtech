@@ -146,11 +146,7 @@ const ProjectsPage = () => {
             lineHeight: '1.18',
             marginBottom: '1.5rem'
           }}>
-            Our <span style={{
-              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>Projects</span>
+            Our <span style={{ color: '#0284c7' }}>Projects</span>
           </h1>
 
           <p style={{

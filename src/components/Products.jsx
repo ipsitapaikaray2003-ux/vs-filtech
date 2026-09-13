@@ -214,11 +214,7 @@ const Products = () => {
           </div>
 
           <h2 className="products-main-title">
-            Engineered Systems &amp; <span style={{
-              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>High-Efficiency Collectors</span>
+            Engineered Systems &amp; <span style={{ color: '#38bdf8' }}>High-Efficiency Collectors</span>
           </h2>
 
           <p className="products-main-lead">

@@ -104,11 +104,7 @@ const QualityInspectionSection = () => {
             letterSpacing: '-0.02em'
           }}>
             Quality &amp;{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
+            <span style={{ color: '#38bdf8' }}>
               Inspection Process
             </span>
           </h2>

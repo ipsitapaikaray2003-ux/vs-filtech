@@ -142,11 +142,7 @@ const EngineeringPage = () => {
             marginBottom: '1.5rem'
           }}>
             Engineering Based on <br />
-            <span style={{
-              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #93c5fd 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>Process Requirements</span>
+            <span style={{ color: '#38bdf8' }}>Process Requirements</span>
           </h1>
 
           <p style={{

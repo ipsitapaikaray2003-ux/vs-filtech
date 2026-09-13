@@ -302,11 +302,7 @@ const GalleryPage = () => {
             lineHeight: '1.15',
             marginBottom: '1.25rem'
           }}>
-            Manufacturing & Equipment <span style={{
-              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>Gallery</span>
+            Manufacturing & Equipment <span style={{ color: '#38bdf8' }}>Gallery</span>
           </h1>
 
           <p style={{

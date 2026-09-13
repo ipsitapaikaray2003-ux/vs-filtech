@@ -111,11 +111,7 @@ const EngineeringApproachSection = () => {
             letterSpacing: '-0.02em'
           }}>
             Engineering Based on{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #d97706 0%, #ea580c 45%, #0284c7 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
+            <span style={{ color: '#0284c7' }}>
               Process Requirements
             </span>
           </h2>

@@ -88,12 +88,7 @@ const ProcessCapabilityBanner = () => {
             letterSpacing: '-0.02em'
           }}>
             Engineered for Your Process.{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #d97706 0%, #ea580c 45%, #0284c7 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              display: 'inline'
-            }}>
+            <span style={{ color: '#0284c7' }}>
               Built for Reliable Filtration.
             </span>
           </h2>

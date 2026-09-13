@@ -134,11 +134,7 @@ const RetrofitPage = () => {
             marginBottom: '1.5rem'
           }}>
             Bag Filter Retrofit &amp; <br />
-            <span style={{
-              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 60%, #38bdf8 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>Replacement Solutions</span>
+            <span style={{ color: '#0284c7' }}>Replacement Solutions</span>
           </h1>
 
           <p style={{

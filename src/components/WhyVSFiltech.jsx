@@ -102,11 +102,7 @@ const WhyVSFiltech = () => {
             letterSpacing: '-0.02em'
           }}>
             Why{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #0284c7 0%, #1d4ed8 50%, #2563eb 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
+            <span style={{ color: '#0284c7' }}>
               VS Filtech?
             </span>
           </h2>

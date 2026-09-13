@@ -260,11 +260,7 @@ const ProductsPage = () => {
             marginBottom: '1.25rem',
             letterSpacing: '-0.02em'
           }}>
-            Industrial <span style={{
-              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>Products &amp; Spares</span>
+            Industrial <span style={{ color: '#0284c7' }}>Products &amp; Spares</span>
           </h1>
 
           <p style={{
