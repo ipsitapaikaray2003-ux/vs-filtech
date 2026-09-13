@@ -152,20 +152,34 @@ const IndustriesPage = () => {
       {/* Hero Header */}
       <section style={{
         position: 'relative',
-        background: `linear-gradient(180deg, rgba(10, 22, 40, 0.9) 0%, rgba(7, 14, 26, 0.98) 100%), url(${cementImg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '5.5rem 0 4rem',
-        borderBottom: '1px solid rgba(56, 189, 248, 0.15)'
+        minHeight: '460px',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '6rem 0 5rem',
+        borderBottom: '1px solid rgba(56, 189, 248, 0.2)',
+        overflow: 'hidden'
       }}>
-        {/* Engineering CAD Grid Overlay */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: 'linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-          pointerEvents: 'none'
-        }} />
+        {/* Full-bleed high-res background image */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, overflow: 'hidden' }}>
+          <img 
+            src={cementImg} 
+            alt="Industrial Cement Plant Background" 
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover', 
+              objectPosition: 'center',
+              filter: 'brightness(1.08) contrast(1.06) saturate(1.1)' 
+            }} 
+          />
+          {/* Subtle soft dark overlay so text pops while the photo is clearly visible */}
+          <div style={{ 
+            position: 'absolute', 
+            inset: 0, 
+            background: 'linear-gradient(180deg, rgba(7, 14, 26, 0.62) 0%, rgba(7, 14, 26, 0.42) 50%, rgba(7, 14, 26, 0.72) 100%)', 
+            pointerEvents: 'none' 
+          }} />
+        </div>
 
         <div className="container" style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 2 }}>
           
@@ -173,8 +187,8 @@ const IndustriesPage = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(14, 165, 233, 0.12)',
-            border: '1px solid rgba(56, 189, 248, 0.35)',
+            background: 'rgba(10, 22, 40, 0.8)',
+            border: '1px solid rgba(56, 189, 248, 0.45)',
             padding: '6px 18px',
             borderRadius: '999px',
             color: '#38bdf8',
@@ -183,7 +197,8 @@ const IndustriesPage = () => {
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             marginBottom: '1.25rem',
-            boxShadow: '0 2px 10px rgba(14, 165, 233, 0.15)'
+            boxShadow: '0 2px 12px rgba(14, 165, 233, 0.25)',
+            backdropFilter: 'blur(8px)'
           }}>
             <Sparkles size={14} style={{ color: '#38bdf8' }} /> FIELD-PROVEN INDUSTRIAL APPLICATIONS
           </div>
@@ -193,22 +208,24 @@ const IndustriesPage = () => {
             fontWeight: '800',
             color: '#ffffff',
             lineHeight: '1.18',
-            marginBottom: '1.5rem'
+            marginBottom: '1.5rem',
+            textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
           }}>
-            Industries <span style={{ color: '#38bdf8' }}>We Serve</span>
+            Industries <span style={{ color: '#38bdf8', textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 0 20px rgba(56, 189, 248, 0.4)' }}>We Serve</span>
           </h1>
 
           <p style={{
-            fontSize: '1.2rem',
+            fontSize: '1.18rem',
             lineHeight: '1.7',
-            color: '#cbd5e1',
+            color: '#f8fafc',
             maxWidth: '820px',
-            margin: '0 auto 2.5rem'
+            margin: '0 auto 2.5rem',
+            textShadow: '0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
           }}>
             VS Filtech designs, manufactures, and retrofits dust collection systems tailored to the exact operating conditions, moisture levels, temperatures, and statutory emission requirements of core manufacturing sectors.
           </p>
 
-          <Link to="/contact" className="btn-amber" style={{ padding: '12px 28px', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem' }}>
+          <Link to="/contact" className="btn-amber" style={{ padding: '12px 28px', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', boxShadow: '0 4px 15px rgba(245, 158, 11, 0.35)' }}>
             <span>Request Application Sizing</span>
             <ArrowRight size={16} />
           </Link>

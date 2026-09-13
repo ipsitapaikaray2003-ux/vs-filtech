@@ -98,20 +98,34 @@ const EngineeringPage = () => {
       {/* Hero Header */}
       <section style={{
         position: 'relative',
-        background: `linear-gradient(180deg, rgba(10, 22, 40, 0.9) 0%, rgba(7, 14, 26, 0.98) 100%), url(${engineeringBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '5.5rem 0 4rem',
-        borderBottom: '1px solid rgba(56, 189, 248, 0.15)'
+        minHeight: '480px',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '6rem 0 5rem',
+        borderBottom: '1px solid rgba(56, 189, 248, 0.2)',
+        overflow: 'hidden'
       }}>
-        {/* Engineering CAD Grid Overlay */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: 'linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-          pointerEvents: 'none'
-        }} />
+        {/* Full-bleed high-res background image */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, overflow: 'hidden' }}>
+          <img 
+            src={engineeringBg} 
+            alt="Engineering Process Plant Background" 
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover', 
+              objectPosition: 'center',
+              filter: 'brightness(1.08) contrast(1.06) saturate(1.1)' 
+            }} 
+          />
+          {/* Subtle soft dark overlay so text pops while the photo is clearly visible */}
+          <div style={{ 
+            position: 'absolute', 
+            inset: 0, 
+            background: 'linear-gradient(180deg, rgba(7, 14, 26, 0.62) 0%, rgba(7, 14, 26, 0.42) 50%, rgba(7, 14, 26, 0.72) 100%)', 
+            pointerEvents: 'none' 
+          }} />
+        </div>
 
         <div className="container" style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 2 }}>
           
@@ -119,8 +133,8 @@ const EngineeringPage = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(14, 165, 233, 0.12)',
-            border: '1px solid rgba(56, 189, 248, 0.35)',
+            background: 'rgba(10, 22, 40, 0.8)',
+            border: '1px solid rgba(56, 189, 248, 0.45)',
             padding: '6px 18px',
             borderRadius: '999px',
             color: '#38bdf8',
@@ -129,7 +143,8 @@ const EngineeringPage = () => {
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             marginBottom: '1.25rem',
-            boxShadow: '0 2px 10px rgba(14, 165, 233, 0.15)'
+            boxShadow: '0 2px 12px rgba(14, 165, 233, 0.25)',
+            backdropFilter: 'blur(8px)'
           }}>
             <Sparkles size={14} style={{ color: '#38bdf8' }} /> PROCESS-DRIVEN FILTRATION DESIGN
           </div>
@@ -139,24 +154,26 @@ const EngineeringPage = () => {
             fontWeight: '800',
             color: '#ffffff',
             lineHeight: '1.18',
-            marginBottom: '1.5rem'
+            marginBottom: '1.5rem',
+            textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
           }}>
             Engineering Based on <br />
-            <span style={{ color: '#38bdf8' }}>Process Requirements</span>
+            <span style={{ color: '#38bdf8', textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 0 20px rgba(56, 189, 248, 0.4)' }}>Process Requirements</span>
           </h1>
 
           <p style={{
-            fontSize: '1.2rem',
+            fontSize: '1.18rem',
             lineHeight: '1.7',
-            color: '#cbd5e1',
+            color: '#f8fafc',
             maxWidth: '820px',
-            margin: '0 auto 2.5rem'
+            margin: '0 auto 2.5rem',
+            textShadow: '0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
           }}>
             A dust collector cannot be selected only on air volume. Process conditions, dust characteristics, temperature, moisture, particle size, filtration velocity, pressure drop and cleaning requirements all influence the final design.
           </p>
 
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/contact" className="btn-amber" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <Link to="/contact" className="btn-amber" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 15px rgba(245, 158, 11, 0.35)' }}>
               <span>Submit Process Sizing Data</span>
               <ArrowRight size={16} />
             </Link>
@@ -170,12 +187,13 @@ const EngineeringPage = () => {
                 fontSize: '0.95rem',
                 border: '1px solid rgba(56, 189, 248, 0.4)',
                 color: '#38bdf8',
-                background: 'rgba(14, 165, 233, 0.1)',
+                background: 'rgba(10, 22, 40, 0.8)',
                 borderRadius: '10px',
                 fontWeight: '600',
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px'
+                gap: '8px',
+                backdropFilter: 'blur(8px)'
               }}
             >
               <span>WhatsApp Technical Desk</span>

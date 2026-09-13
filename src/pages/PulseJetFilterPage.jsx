@@ -173,14 +173,6 @@ const PulseJetFilterPage = () => {
         padding: '120px 0 70px',
         borderBottom: '1px solid #e2e8f0'
       }}>
-        {/* Engineering CAD Grid Overlay */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: 'linear-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(2, 132, 199, 0.08) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-          pointerEvents: 'none'
-        }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '50px', alignItems: 'center' }}>

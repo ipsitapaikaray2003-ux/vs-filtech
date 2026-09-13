@@ -91,20 +91,12 @@ const RetrofitPage = () => {
       {/* Hero Section */}
       <section style={{
         position: 'relative',
-        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(248, 250, 252, 0.96) 100%), url(${retrofitBg})`,
+        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 247, 255, 0.96) 100%), url(${retrofitBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '5.5rem 0 4.5rem',
         borderBottom: '1px solid #e2e8f0'
       }}>
-        {/* Isometric Pattern Overlay */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: 'linear-gradient(60deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px), linear-gradient(-60deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px)',
-          backgroundSize: '48px 84px',
-          pointerEvents: 'none'
-        }} />
 
         <div className="container" style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 2 }}>
           
