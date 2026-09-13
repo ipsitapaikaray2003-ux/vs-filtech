@@ -221,11 +221,21 @@ const AboutPage = () => {
   return (
     <div className="about-premium-page">
       
-      {/* ── 1. Executive Hero Header (BLUE) ── */}
+      {/* ── 1. Executive Hero Header (BLUE WITH HERO BACKGROUND IMAGE) ── */}
       <section className="about-premium-hero">
+        {/* Full-bleed high-res background image */}
+        <div className="about-hero-bg-wrapper">
+          <img 
+            src={aboutHeroImg} 
+            alt="VS Filtech Pulse Jet Bag Filter Plant Background" 
+            className="about-hero-bg-img" 
+          />
+          <div className="about-hero-bg-overlay" />
+          <div className="hud-grid-overlay" />
+        </div>
+
         <div className="ambient-glow-orb ambient-orb-1" />
         <div className="ambient-glow-orb ambient-orb-2" />
-        <div className="hud-grid-overlay" />
 
         <div className="container relative z-10">
           <div className="about-hero-grid">
@@ -272,31 +282,27 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Right Hero Image Column */}
-            <div className="premium-hero-animate about-hero-visual-col">
-              <div className="about-hero-image-frame">
-                <img 
-                  src={aboutHeroImg} 
-                  alt="VS Filtech High-Capacity Pulse Jet Bag Filter Plant" 
-                  className="about-hero-plant-img" 
-                />
-                <div className="about-hero-img-overlay" />
-
-                {/* Floating Badge Top */}
-                <div className="about-hero-floating-pill top-pill">
-                  <Factory size={15} />
-                  <span>Turnkey Pulse Jet Plants · Pan-India OEM</span>
+            {/* Right Side: Floating Glassmorphism Hero Badges over the background photo */}
+            <div className="premium-hero-animate about-hero-right-side">
+              <div className="hero-floating-glass-card top-card">
+                <div className="glass-card-icon-wrap">
+                  <Factory size={24} />
                 </div>
+                <div className="glass-card-info">
+                  <span className="glass-card-tag">PAN-INDIA OEM</span>
+                  <h4 className="glass-card-title">Turnkey Pulse Jet Plants</h4>
+                  <p className="glass-card-desc">Custom CFM sizing, CNC fabrication, site rigging &amp; commissioning</p>
+                </div>
+              </div>
 
-                {/* Floating Badge Bottom */}
-                <div className="about-hero-stats-badge bottom-badge">
-                  <div className="stats-badge-icon">
-                    <ShieldCheck size={22} />
-                  </div>
-                  <div className="stats-badge-text">
-                    <span className="badge-num">&lt; 10 mg/Nm³</span>
-                    <span className="badge-lbl">Guaranteed Clean-Air Emission</span>
-                  </div>
+              <div className="hero-floating-glass-card bottom-card">
+                <div className="glass-card-icon-wrap shield-wrap">
+                  <ShieldCheck size={28} />
+                </div>
+                <div className="glass-card-info">
+                  <span className="glass-stat-highlight">&lt; 10 mg/Nm³</span>
+                  <h4 className="glass-card-title">Guaranteed Clean-Air Emission</h4>
+                  <p className="glass-card-desc">Satisfies statutory CPCB &amp; State Pollution Control Board norms</p>
                 </div>
               </div>
             </div>

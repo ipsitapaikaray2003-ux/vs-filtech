@@ -11,17 +11,56 @@
   font-family: var(--font-body, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
 }
 
-/* ── 1. Executive Hero Header (BLUE) ── */
+/* ── 1. Executive Hero Header (BLUE WITH HERO BACKGROUND IMAGE) ── */
 .about-premium-hero {
   position: relative;
-  min-height: 540px;
+  min-height: 620px;
   display: flex;
   align-items: center;
-  padding: 5.5rem 0 5rem;
-  background: radial-gradient(circle at 65% 35%, rgba(14, 165, 233, 0.15) 0%, transparent 60%),
-              #0a1628;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 6.5rem 0 5.5rem;
+  background-color: #070e1a;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
   overflow: hidden;
+}
+
+/* Full-bleed background image container */
+.about-hero-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.about-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+  transform: scale(1.02);
+}
+
+.about-hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    /* Deep navy gradient on left to ensure 100% text legibility */
+    linear-gradient(
+      90deg, 
+      rgba(7, 14, 26, 0.97) 0%, 
+      rgba(7, 14, 26, 0.93) 38%, 
+      rgba(10, 22, 40, 0.72) 70%, 
+      rgba(10, 22, 40, 0.55) 100%
+    ),
+    /* Soft vertical vignette */
+    linear-gradient(
+      180deg, 
+      rgba(7, 14, 26, 0.65) 0%, 
+      transparent 30%, 
+      transparent 70%, 
+      rgba(7, 14, 26, 0.95) 100%
+    );
+  pointer-events: none;
 }
 
 .ambient-glow-orb {
@@ -30,6 +69,7 @@
   filter: blur(100px);
   pointer-events: none;
   opacity: 0.25;
+  z-index: 2;
 }
 
 .ambient-orb-1 {
@@ -55,19 +95,22 @@
                     linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.4;
+  z-index: 2;
 }
 
 /* 2-Column Hero Grid */
 .about-hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.18fr 0.82fr;
   gap: 48px;
   align-items: center;
 }
 
 .about-hero-text-col {
   text-align: left;
+  position: relative;
+  z-index: 3;
 }
 
 .executive-badge {
@@ -75,8 +118,8 @@
   align-items: center;
   gap: 8px;
   padding: 6px 18px;
-  background: rgba(14, 165, 233, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.45);
   border-radius: 999px;
   color: #38bdf8;
   font-size: 0.76rem;
@@ -84,7 +127,8 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.15);
+  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.2);
+  backdrop-filter: blur(8px);
 }
 
 .pulse-dot {
@@ -108,6 +152,7 @@
   color: #ffffff;
   margin-bottom: 20px;
   letter-spacing: -0.03em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .luxury-gradient-text {
@@ -122,8 +167,9 @@
 .executive-lead {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #94a3b8;
+  color: #cbd5e1;
   margin-bottom: 26px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-pillars-row {
@@ -134,14 +180,15 @@
 }
 
 .hero-pillar-pill {
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(10, 22, 40, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.45);
   padding: 7px 16px;
   border-radius: 999px;
   color: #38bdf8;
   font-weight: 700;
   font-size: 0.86rem;
   letter-spacing: 0.03em;
+  backdrop-filter: blur(8px);
 }
 
 .executive-actions {
@@ -163,12 +210,12 @@
   font-weight: 700;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
 }
 
 .btn-luxury-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(2, 132, 199, 0.55);
+  box-shadow: 0 10px 28px rgba(2, 132, 199, 0.6);
 }
 
 .btn-luxury-secondary {
@@ -177,106 +224,63 @@
   gap: 8px;
   padding: 13px 24px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(10, 22, 40, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
 }
 
 .btn-luxury-secondary:hover {
-  background: rgba(56, 189, 248, 0.15);
+  background: rgba(56, 189, 248, 0.2);
   border-color: #38bdf8;
   color: #38bdf8;
   transform: translateY(-2px);
 }
 
-/* Hero Visual Frame (Right Column) */
-.about-hero-visual-col {
+/* Right Side: Floating Glass Cards over background plant photo */
+.about-hero-right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  justify-content: center;
+  align-items: flex-end;
   position: relative;
+  z-index: 3;
 }
 
-.about-hero-image-frame {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1.5px solid rgba(56, 189, 248, 0.4);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65), 0 0 30px rgba(2, 132, 199, 0.25);
-  transition: all 0.4s ease;
-}
-
-.about-hero-image-frame:hover {
-  border-color: #38bdf8;
-  transform: translateY(-4px);
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.75), 0 0 40px rgba(2, 132, 199, 0.4);
-}
-
-.about-hero-plant-img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.about-hero-image-frame:hover .about-hero-plant-img {
-  transform: scale(1.04);
-}
-
-.about-hero-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg, 
-    rgba(10, 22, 40, 0.15) 0%, 
-    rgba(10, 22, 40, 0.2) 60%, 
-    rgba(10, 22, 40, 0.85) 100%
-  );
-  pointer-events: none;
-}
-
-.about-hero-floating-pill {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: rgba(10, 22, 40, 0.92);
-  border: 1.5px solid rgba(56, 189, 248, 0.6);
-  color: #38bdf8;
-  font-size: 0.8rem;
-  font-weight: 700;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-}
-
-.about-hero-stats-badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(10, 22, 40, 0.92);
-  border: 1.5px solid rgba(56, 189, 248, 0.45);
-  border-radius: 16px;
-  padding: 16px 20px;
+.hero-floating-glass-card {
   display: flex;
   align-items: center;
-  gap: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  gap: 18px;
+  background: rgba(10, 22, 40, 0.82);
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  border-radius: 20px;
+  padding: 22px 26px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 0 0 25px rgba(2, 132, 199, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.3s ease;
 }
 
-.stats-badge-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+.hero-floating-glass-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 35px rgba(2, 132, 199, 0.35);
+  background: rgba(10, 22, 40, 0.92);
+}
+
+.glass-card-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   background: rgba(14, 165, 233, 0.18);
-  border: 1px solid rgba(56, 189, 248, 0.5);
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
   color: #38bdf8;
   display: flex;
   align-items: center;
@@ -284,22 +288,45 @@
   flex-shrink: 0;
 }
 
-.stats-badge-text {
+.glass-card-icon-wrap.shield-wrap {
+  background: rgba(56, 189, 248, 0.22);
+  color: #38bdf8;
+}
+
+.glass-card-info {
   display: flex;
   flex-direction: column;
 }
 
-.badge-num {
-  font-size: 1.35rem;
+.glass-card-tag {
+  font-size: 0.72rem;
   font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #38bdf8;
-  line-height: 1.2;
+  margin-bottom: 3px;
 }
 
-.badge-lbl {
+.glass-stat-highlight {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #38bdf8;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+
+.glass-card-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.glass-card-desc {
   font-size: 0.82rem;
+  line-height: 1.45;
   color: #cbd5e1;
-  font-weight: 600;
+  margin: 0;
 }
 
 /* ── 2. Executive Stats Bar (WHITE) ── */
