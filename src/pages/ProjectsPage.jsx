@@ -108,10 +108,10 @@ const ProjectsPage = () => {
         display: 'flex',
         alignItems: 'center',
         padding: '6rem 0 4.5rem',
-        borderBottom: '1px solid #e2e8f0',
+        borderBottom: '1px solid rgba(56, 189, 248, 0.2)',
         overflow: 'hidden'
       }}>
-        {/* Full-bleed background image */}
+        {/* Full-bleed high-res background image */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, overflow: 'hidden' }}>
           <img 
             src={plantHd} 
@@ -121,14 +121,14 @@ const ProjectsPage = () => {
               height: '100%', 
               objectFit: 'cover', 
               objectPosition: 'center',
-              filter: 'brightness(1.06) contrast(1.05) saturate(1.15)' 
+              filter: 'brightness(1.08) contrast(1.06) saturate(1.1)' 
             }} 
           />
-          {/* Subtle soft white scrim so the photo is clearly visible while keeping dark text readable */}
+          {/* Subtle soft dark overlay so text pops while the photo is clearly visible */}
           <div style={{ 
             position: 'absolute', 
             inset: 0, 
-            background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0.62) 100%)', 
+            background: 'linear-gradient(180deg, rgba(7, 14, 26, 0.62) 0%, rgba(7, 14, 26, 0.42) 50%, rgba(7, 14, 26, 0.72) 100%)', 
             pointerEvents: 'none' 
           }} />
         </div>
@@ -139,41 +139,40 @@ const ProjectsPage = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(255, 255, 255, 0.9)',
-            border: '1px solid rgba(2, 132, 199, 0.35)',
+            background: 'rgba(10, 22, 40, 0.8)',
+            border: '1px solid rgba(56, 189, 248, 0.45)',
             padding: '6px 18px',
             borderRadius: '999px',
-            color: '#0284c7',
+            color: '#38bdf8',
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             marginBottom: '1.25rem',
-            boxShadow: '0 2px 10px rgba(2, 132, 199, 0.12)',
+            boxShadow: '0 2px 12px rgba(14, 165, 233, 0.25)',
             backdropFilter: 'blur(8px)'
           }}>
-            <Sparkles size={14} style={{ color: '#0284c7' }} /> FIELD INSTALLATIONS &amp; CASE STUDIES
+            <Sparkles size={14} style={{ color: '#38bdf8' }} /> FIELD INSTALLATIONS &amp; CASE STUDIES
           </div>
 
           <h1 style={{
             fontSize: 'clamp(2.4rem, 4.5vw, 3.6rem)',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#ffffff',
             lineHeight: '1.18',
             marginBottom: '1.5rem',
-            textShadow: '0 2px 16px rgba(255, 255, 255, 0.95), 0 1px 4px #ffffff'
+            textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
           }}>
-            Our <span style={{ color: '#0284c7' }}>Projects</span>
+            Our <span style={{ color: '#38bdf8', textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 0 20px rgba(56, 189, 248, 0.4)' }}>Projects</span>
           </h1>
 
           <p style={{
-            fontSize: '1.2rem',
+            fontSize: '1.18rem',
             lineHeight: '1.7',
-            color: '#1e293b',
+            color: '#f8fafc',
             maxWidth: '820px',
             margin: '0 auto 2.5rem',
-            fontWeight: '500',
-            textShadow: '0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px #ffffff'
+            textShadow: '0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
           }}>
             Representative industrial air filtration projects executed across core manufacturing plants. Every installation is engineered around process airflow, dust chemistry, and plant layout.
           </p>
@@ -188,13 +187,14 @@ const ProjectsPage = () => {
                 style={{
                   padding: '9px 18px',
                   borderRadius: '999px',
-                  border: selectedCat === cat ? '1px solid #1d4ed8' : '1px solid #cbd5e1',
-                  background: selectedCat === cat ? 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)' : '#ffffff',
-                  color: selectedCat === cat ? '#ffffff' : '#334155',
+                  border: selectedCat === cat ? '1px solid #38bdf8' : '1px solid rgba(56, 189, 248, 0.35)',
+                  background: selectedCat === cat ? 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)' : 'rgba(10, 22, 40, 0.8)',
+                  color: selectedCat === cat ? '#ffffff' : '#e2e8f0',
                   fontSize: '0.84rem',
                   fontWeight: '700',
                   cursor: 'pointer',
-                  boxShadow: selectedCat === cat ? '0 4px 14px rgba(29, 78, 216, 0.25)' : 'none',
+                  boxShadow: selectedCat === cat ? '0 4px 14px rgba(14, 165, 233, 0.35)' : 'none',
+                  backdropFilter: 'blur(8px)',
                   transition: 'all 0.2s ease'
                 }}
               >
