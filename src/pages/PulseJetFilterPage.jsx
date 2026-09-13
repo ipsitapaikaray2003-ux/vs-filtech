@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import heroImg from '../assets/factory_bagfilter_plant_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
+import './ProductDetails.css';
 
 const availableConfigurations = [
   {
@@ -119,14 +120,14 @@ const technicalHighlights = [
 ];
 
 const coreIndustries = [
-  { name: 'Foundry & Furnaces', icon: Flame, desc: 'Fume extraction, induction furnace melting, sand plant & pouring emissions.' },
-  { name: 'Pharmaceutical & Cleanrooms', icon: Pill, desc: 'Sterile high-containment dust collection with certified particulate capture.' },
-  { name: 'Cement, Lime & Kiln Exhaust', icon: Mountain, desc: 'High-temperature kiln flue gas, raw mill, ball mill & bulk packing transfer.' },
-  { name: 'Woodworking & Timber', icon: TreePine, desc: 'High-volume sawdust, fine wood sanding dust, and shavings collection.' },
-  { name: 'Metalworking & Grinding', icon: Hammer, desc: 'Laser cutting, CNC plasma cutting, shot blasting, and grinding fumes.' },
-  { name: 'Food Processing & Grain Milling', icon: Utensils, desc: 'Sanitary grade filtration for flour mills, rice mills, starch & spice powder.' },
-  { name: 'Mining, Minerals & Ferro Alloys', icon: Factory, desc: 'Heavy-duty extraction from primary crushers, vibrating screens & conveyors.' },
-  { name: 'Chemical & Fertilizer Plants', icon: Droplets, desc: 'Acid and moisture-resistant dust collection handling aggressive chemistry.' }
+  { name: 'Foundry', icon: Flame, desc: 'Induction melting furnaces, pouring emissions, shakeout & sand reclamation.' },
+  { name: 'Pharmaceutical', icon: Pill, desc: 'Fluid bed dryers (FBD), tablet coating, micronizing & sterile cleanrooms.' },
+  { name: 'Cement / Kiln', icon: Mountain, desc: 'Kiln exhaust, raw mill, clinker coolers, ball mills & bulk silo venting.' },
+  { name: 'Woodworking', icon: TreePine, desc: 'High-volume sawdust, fine wood sanding dust, and planar shavings collection.' },
+  { name: 'Metalworking', icon: Hammer, desc: 'Laser cutting, CNC plasma cutting, shot blasting, welding & grinding fumes.' },
+  { name: 'Food Processing', icon: Utensils, desc: 'Flour mills, rice husk boilers, grain elevators, starch & spice grinding.' },
+  { name: 'Manufacturing', icon: Factory, desc: 'Assembly plants, powder coating booths, packaging & secondary processing.' },
+  { name: 'Chemical & Fertilizer', icon: Droplets, desc: 'Pigment manufacturing, synthetic resins, acid & bulk fertilizer containment.' }
 ];
 
 const supportServices = [
@@ -577,73 +578,42 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 4. Core Industries Served Grid */}
+      {/* 4. Core Industries Served Grid (Matches Reference Layout) */}
       <section className="light-graphic-blueprint" style={{ padding: '80px 0', background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 45px' }}>
+            <div style={{ color: '#ea580c', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
               INDUSTRIES SERVED
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
-              Trusted Across India's <span style={{ color: '#1d4ed8' }}>Core Industries</span>
+            <h2 style={{ fontSize: 'clamp(2.1rem, 4vw, 3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px', letterSpacing: '-0.02em' }}>
+              Trusted across India’s core industries.
             </h2>
             <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
               Our pulse jet dust collectors are custom engineered to handle unique temperature profiles, corrosive gas streams, and particulate abrasiveness across primary sectors:
             </p>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '20px'
-          }}>
+          <div className="core-industries-grid">
             {coreIndustries.map((ind, idx) => {
               const Icon = ind.icon;
               return (
-                <div 
+                <Link 
+                  to="/industries"
                   key={idx}
-                  style={{
-                    background: '#ffffff',
-                    border: '1px solid #e2e8f0',
-                    borderRadius: '16px',
-                    padding: '24px',
-                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.04)',
-                    transition: 'all 0.25s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#0284c7';
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.boxShadow = '0 10px 24px rgba(2, 132, 199, 0.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e2e8f0';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.04)';
-                  }}
+                  className="core-industry-card"
                 >
-                  <div style={{
-                    width: '46px',
-                    height: '46px',
-                    borderRadius: '12px',
-                    background: '#f0f7ff',
-                    border: '1px solid #bae6fd',
-                    color: '#0284c7',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '16px'
-                  }}>
-                    <Icon size={22} />
+                  <div className="core-industry-icon-wrap">
+                    <Icon size={26} strokeWidth={2.2} />
                   </div>
 
-                  <h4 style={{ fontSize: '1.15rem', fontWeight: '700', color: '#0f172a', marginBottom: '8px' }}>
+                  <h3 className="core-industry-title">
                     {ind.name}
-                  </h4>
+                  </h3>
 
-                  <p style={{ color: '#475569', fontSize: '0.88rem', lineHeight: '1.55', margin: 0 }}>
+                  <p className="core-industry-desc">
                     {ind.desc}
                   </p>
-                </div>
+                </Link>
               );
             })}
           </div>

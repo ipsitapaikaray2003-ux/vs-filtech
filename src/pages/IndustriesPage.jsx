@@ -14,7 +14,10 @@ import {
   Wheat,
   Zap,
   FlaskConical,
-  Hammer
+  Hammer,
+  TreePine,
+  Utensils,
+  Droplets
 } from 'lucide-react';
 
 import cementImg from '../assets/industry_cement.jpg';
@@ -23,6 +26,18 @@ import metalsImg from '../assets/industry_metals.jpg';
 import powerImg from '../assets/industry_power.jpg';
 import carbonImg from '../assets/industry_carbon_black.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
+import './ProductDetails.css';
+
+const quickIndustries = [
+  { name: 'Foundry', icon: Flame, desc: 'Induction melting furnaces, pouring emissions, shakeout & sand reclamation.' },
+  { name: 'Pharmaceutical', icon: Pill, desc: 'Fluid bed dryers (FBD), tablet coating, micronizing & sterile cleanrooms.' },
+  { name: 'Cement / Kiln', icon: Mountain, desc: 'Kiln exhaust, raw mill, clinker coolers, ball mills & bulk silo venting.' },
+  { name: 'Woodworking', icon: TreePine, desc: 'High-volume sawdust, fine wood sanding dust, and planar shavings collection.' },
+  { name: 'Metalworking', icon: Hammer, desc: 'Laser cutting, CNC plasma cutting, shot blasting, welding & grinding fumes.' },
+  { name: 'Food Processing', icon: Utensils, desc: 'Flour mills, rice husk boilers, grain elevators, starch & spice grinding.' },
+  { name: 'Manufacturing', icon: Factory, desc: 'Assembly plants, powder coating booths, packaging & secondary processing.' },
+  { name: 'Chemical & Fertilizer', icon: Droplets, desc: 'Pigment manufacturing, synthetic resins, acid & bulk fertilizer containment.' }
+];
 
 const industriesList = [
   {
@@ -198,6 +213,47 @@ const IndustriesPage = () => {
             <ArrowRight size={16} />
           </Link>
 
+        </div>
+      </section>
+
+      {/* Quick Core Industries Overview (Exact Reference Style) */}
+      <section style={{ padding: '60px 0', backgroundColor: '#ffffff', borderBottom: '1px solid #e2e8f0', color: '#0f172a' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 40px' }}>
+            <div style={{ color: '#ea580c', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
+              INDUSTRIES SERVED
+            </div>
+            <h2 style={{ fontSize: 'clamp(2.1rem, 4vw, 3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px', letterSpacing: '-0.02em' }}>
+              Trusted across India’s core industries.
+            </h2>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
+              Engineered air pollution control and dust extraction systems tailored for continuous operation across India's primary industrial sectors:
+            </p>
+          </div>
+
+          <div className="core-industries-grid">
+            {quickIndustries.map((ind, idx) => {
+              const Icon = ind.icon;
+              return (
+                <div 
+                  key={idx}
+                  className="core-industry-card"
+                >
+                  <div className="core-industry-icon-wrap">
+                    <Icon size={26} strokeWidth={2.2} />
+                  </div>
+
+                  <h3 className="core-industry-title">
+                    {ind.name}
+                  </h3>
+
+                  <p className="core-industry-desc">
+                    {ind.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
