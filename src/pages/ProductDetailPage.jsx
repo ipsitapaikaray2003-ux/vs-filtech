@@ -103,34 +103,35 @@ _Sent from vsfiltech.com/products/${product.id}_`;
   };
 
   return (
-    <div className="product-page" style={{ paddingTop: '80px' }}>
+    <div className="product-page" style={{ paddingTop: '80px', background: '#ffffff' }}>
       
       {/* 1. BREADCRUMBS & TOP NAV */}
       <div style={{
-        background: '#040711',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+        background: '#f8fafc',
+        borderBottom: '1px solid #e2e8f0',
         padding: '14px 0',
         fontSize: '0.85rem'
       }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', color: '#94a3b8' }}>
-          <Link to="/" style={{ color: '#cbd5e1', textDecoration: 'none' }}>Home</Link>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', color: '#64748b' }}>
+          <Link to="/" style={{ color: '#475569', textDecoration: 'none', fontWeight: '500' }}>Home</Link>
           <ChevronRight size={14} />
-          <Link to="/products" style={{ color: '#cbd5e1', textDecoration: 'none' }}>Products & Spares</Link>
+          <Link to="/products" style={{ color: '#475569', textDecoration: 'none', fontWeight: '500' }}>Products &amp; Spares</Link>
           <ChevronRight size={14} />
-          <span style={{ color: '#38bdf8', fontWeight: '600' }}>{product.shortTitle || product.title}</span>
+          <span style={{ color: '#0284c7', fontWeight: '700' }}>{product.shortTitle || product.title}</span>
         </div>
       </div>
 
       {/* 2. HERO SECTION */}
-      <section style={{
-        position: 'relative',
-        background: `linear-gradient(180deg, rgba(7, 11, 20, 0.88) 0%, rgba(7, 11, 20, 0.98) 100%), url(${product.heroImage || product.image})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '4.5rem 0 3.5rem',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
-      }}>
-        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
+      <section 
+        className="light-graphic-blueprint"
+        style={{
+          position: 'relative',
+          background: 'linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%)',
+          padding: '4.5rem 0 3.5rem',
+          borderBottom: '1px solid #e2e8f0'
+        }}
+      >
+        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           <div style={{ maxWidth: '860px' }}>
             
             {/* Tag Badge */}
@@ -138,16 +139,17 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              background: 'rgba(56, 189, 248, 0.12)',
-              border: '1px solid rgba(56, 189, 248, 0.35)',
+              background: '#f0f9ff',
+              border: '1px solid #bae6fd',
               padding: '6px 14px',
               borderRadius: '999px',
-              color: '#38bdf8',
+              color: '#0284c7',
               fontSize: '0.8rem',
               fontWeight: '700',
               letterSpacing: '0.06em',
               textTransform: 'uppercase',
-              marginBottom: '1.25rem'
+              marginBottom: '1.25rem',
+              boxShadow: '0 2px 8px rgba(2, 132, 199, 0.1)'
             }}>
               <Sparkles size={14} />
               <span>{product.category} &bull; {product.tag}</span>
@@ -157,9 +159,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
             <h1 style={{
               fontSize: 'clamp(2.2rem, 4.5vw, 3.4rem)',
               fontWeight: '800',
-              color: '#ffffff',
+              color: '#0f172a',
               lineHeight: '1.18',
-              marginBottom: '1.25rem'
+              marginBottom: '1.25rem',
+              letterSpacing: '-0.02em'
             }}>
               {product.title}
             </h1>
@@ -168,7 +171,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
             <p style={{
               fontSize: '1.15rem',
               lineHeight: '1.65',
-              color: '#cbd5e1',
+              color: '#475569',
               marginBottom: '2rem',
               maxWidth: '780px'
             }}>
@@ -187,7 +190,12 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   padding: '12px 24px',
                   fontSize: '0.95rem',
                   fontWeight: '700',
-                  borderRadius: '10px'
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
+                  color: '#ffffff',
+                  border: '1px solid rgba(56, 189, 248, 0.5)',
+                  boxShadow: '0 4px 15px rgba(2, 132, 199, 0.3)',
+                  textDecoration: 'none'
                 }}
               >
                 <FileText size={18} />
@@ -209,7 +217,8 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   fontSize: '0.95rem',
                   fontWeight: '700',
                   borderRadius: '10px',
-                  textDecoration: 'none'
+                  textDecoration: 'none',
+                  boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)'
                 }}
               >
                 <MessageCircle size={18} />
@@ -226,10 +235,14 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   padding: '12px 20px',
                   fontSize: '0.95rem',
                   fontWeight: '600',
-                  borderRadius: '10px'
+                  borderRadius: '10px',
+                  background: '#ffffff',
+                  border: '1.5px solid #cbd5e1',
+                  color: '#0f172a',
+                  textDecoration: 'none'
                 }}
               >
-                <PhoneCall size={17} />
+                <PhoneCall size={17} style={{ color: '#0284c7' }} />
                 <span>+91 1234567890</span>
               </a>
             </div>
@@ -239,41 +252,41 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
               gap: '16px',
-              padding: '16px 20px',
-              background: 'rgba(15, 23, 42, 0.75)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
-              borderRadius: '14px',
-              backdropFilter: 'blur(10px)'
+              padding: '18px 22px',
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderRadius: '16px',
+              boxShadow: '0 4px 18px rgba(0, 0, 0, 0.04)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <ShieldCheck size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
+                <ShieldCheck size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase' }}>Quality Standard</div>
-                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '700' }}>100% OEM Precision</div>
+                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Quality Standard</div>
+                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>100% OEM Precision</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Factory size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
+                <Factory size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase' }}>Manufacturing Hub</div>
-                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '700' }}>Ghaziabad, UP, India</div>
+                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Manufacturing Hub</div>
+                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>Ghaziabad, UP, India</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Clock size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
+                <Clock size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase' }}>Dispatch & Supply</div>
-                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '700' }}>Pan-India Delivery</div>
+                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Dispatch &amp; Supply</div>
+                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>Pan-India Delivery</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Award size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
+                <Award size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase' }}>Pollution Compliance</div>
-                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '700' }}>CPCB & State Norms</div>
+                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Pollution Compliance</div>
+                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>CPCB &amp; State Norms</div>
                 </div>
               </div>
             </div>
@@ -283,8 +296,11 @@ _Sent from vsfiltech.com/products/${product.id}_`;
       </section>
 
       {/* 3. PRODUCT OVERVIEW & PHOTOGRAPHY SPLIT */}
-      <section style={{ padding: '5rem 0 4rem', background: '#070b14' }}>
-        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
+      <section 
+        className="light-graphic-blueprint"
+        style={{ padding: '5rem 0 4rem', background: '#ffffff', borderBottom: '1px solid #e2e8f0' }}
+      >
+        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'minmax(320px, 460px) 1fr',
@@ -299,9 +315,9 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   position: 'relative',
                   borderRadius: '20px',
                   overflow: 'hidden',
-                  background: '#020617',
-                  border: '1px solid rgba(56, 189, 248, 0.3)',
-                  boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.6)',
+                  background: '#f8fafc',
+                  border: '1px solid #bae6fd',
+                  boxShadow: '0 12px 30px rgba(2, 132, 199, 0.08)',
                   cursor: 'pointer'
                 }}
                 onClick={() => setLightboxOpen(true)}
@@ -328,7 +344,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     top: '14px',
                     right: '14px',
                     background: 'rgba(15, 23, 42, 0.85)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    border: '1px solid rgba(255, 255, 255, 0.3)',
                     color: '#ffffff',
                     display: 'flex',
                     alignItems: 'center',
@@ -351,7 +367,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   position: 'absolute',
                   bottom: 0,
                   insetInline: 0,
-                  background: 'linear-gradient(to top, rgba(2, 6, 23, 0.95) 0%, transparent 100%)',
+                  background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, transparent 100%)',
                   padding: '24px 20px 16px',
                   color: '#ffffff'
                 }}>
@@ -359,7 +375,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     Authentic Industrial Component
                   </div>
                   <div style={{ fontSize: '0.95rem', fontWeight: '600' }}>
-                    Fabricated & Tested to Standard Tolerances
+                    Fabricated &amp; Tested to Standard Tolerances
                   </div>
                 </div>
               </div>
@@ -367,26 +383,26 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               {/* Quick Specs Snapshot */}
               <div style={{
                 marginTop: '1.5rem',
-                background: 'rgba(15, 23, 42, 0.6)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
                 borderRadius: '14px',
                 padding: '18px 20px'
               }}>
-                <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#38bdf8', textTransform: 'uppercase', marginBottom: '10px' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#0284c7', textTransform: 'uppercase', marginBottom: '10px' }}>
                   Engineering Assurance
                 </div>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.88rem', color: '#cbd5e1' }}>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.88rem', color: '#334155' }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <CheckCircle2 size={16} style={{ color: '#34d399', flexShrink: 0 }} />
+                    <CheckCircle2 size={16} style={{ color: '#059669', flexShrink: 0 }} />
                     <span>Zero bypass / 100% dust containment</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <CheckCircle2 size={16} style={{ color: '#34d399', flexShrink: 0 }} />
-                    <span>Custom drawings & retrofit compatibility</span>
+                    <CheckCircle2 size={16} style={{ color: '#059669', flexShrink: 0 }} />
+                    <span>Custom drawings &amp; retrofit compatibility</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <CheckCircle2 size={16} style={{ color: '#34d399', flexShrink: 0 }} />
-                    <span>Tested for thermal & abrasive durability</span>
+                    <CheckCircle2 size={16} style={{ color: '#059669', flexShrink: 0 }} />
+                    <span>Tested for thermal &amp; abrasive durability</span>
                   </li>
                 </ul>
               </div>
@@ -399,17 +415,17 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 fontSize: '0.8rem',
                 fontWeight: '700',
                 letterSpacing: '0.08em',
-                color: '#38bdf8',
+                color: '#0284c7',
                 textTransform: 'uppercase',
                 marginBottom: '8px'
               }}>
-                TECHNICAL SPECIFICATIONS & ARCHITECTURE
+                TECHNICAL SPECIFICATIONS &amp; ARCHITECTURE
               </div>
 
               <h2 style={{
                 fontSize: 'clamp(1.8rem, 3vw, 2.3rem)',
                 fontWeight: '800',
-                color: '#ffffff',
+                color: '#0f172a',
                 lineHeight: '1.25',
                 marginBottom: '1.5rem'
               }}>
@@ -419,7 +435,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               <p style={{
                 fontSize: '1.05rem',
                 lineHeight: '1.75',
-                color: '#cbd5e1',
+                color: '#334155',
                 marginBottom: '1.5rem'
               }}>
                 {product.overview}
@@ -428,8 +444,8 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               {/* Working Principle Box */}
               {product.principle && (
                 <div style={{
-                  background: 'rgba(56, 189, 248, 0.05)',
-                  border: '1px solid rgba(56, 189, 248, 0.25)',
+                  background: '#f0f9ff',
+                  border: '1px solid #bae6fd',
                   borderRadius: '14px',
                   padding: '22px 24px',
                   marginBottom: '2rem'
@@ -440,13 +456,13 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     gap: '10px',
                     fontSize: '1rem',
                     fontWeight: '700',
-                    color: '#38bdf8',
+                    color: '#0369a1',
                     marginBottom: '10px'
                   }}>
                     <Settings size={18} />
-                    <span>Operating Principle & Functional Mechanism</span>
+                    <span>Operating Principle &amp; Functional Mechanism</span>
                   </div>
-                  <p style={{ fontSize: '0.92rem', lineHeight: '1.65', color: '#94a3b8', margin: 0 }}>
+                  <p style={{ fontSize: '0.92rem', lineHeight: '1.65', color: '#334155', margin: 0 }}>
                     {product.principle}
                   </p>
                 </div>
@@ -454,7 +470,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
 
               {/* Key Features List */}
               <div style={{ marginTop: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#ffffff', marginBottom: '1rem' }}>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', marginBottom: '1rem' }}>
                   Distinguishing Engineering Advantages:
                 </h3>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '14px' }}>
@@ -462,20 +478,21 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     <div 
                       key={idx} 
                       style={{
-                        background: 'rgba(15, 23, 42, 0.6)',
-                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                        background: '#ffffff',
+                        border: '1px solid #e2e8f0',
                         borderRadius: '12px',
                         padding: '16px',
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '6px'
+                        gap: '6px',
+                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.03)'
                       }}
                     >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#38bdf8', fontWeight: '700', fontSize: '0.92rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#0284c7', fontWeight: '700', fontSize: '0.92rem' }}>
                         <CheckCircle2 size={16} style={{ flexShrink: 0 }} />
                         <span>{feat.title}</span>
                       </div>
-                      <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5', margin: 0 }}>
+                      <p style={{ fontSize: '0.85rem', color: '#475569', lineHeight: '1.5', margin: 0 }}>
                         {feat.desc}
                       </p>
                     </div>
@@ -490,7 +507,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
       </section>
 
       {/* 4. COMPREHENSIVE SPECIFICATIONS TABLE */}
-      <section style={{ padding: '4.5rem 0', background: '#040711', borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}>
+      <section style={{ padding: '4.5rem 0', background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
           
           <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 3rem' }}>
@@ -499,31 +516,31 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               fontSize: '0.8rem',
               fontWeight: '700',
               letterSpacing: '0.08em',
-              color: '#38bdf8',
+              color: '#0284c7',
               textTransform: 'uppercase',
               marginBottom: '8px'
             }}>
               ENGINEERING MATRIX
             </div>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: '800', color: '#ffffff', marginBottom: '12px' }}>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
               Standard Technical Parameters
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6' }}>
+            <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6' }}>
               Every unit is engineered to close tolerances. Custom configurations, special alloys, and custom dimensions are available on demand.
             </p>
           </div>
 
           <div style={{
-            background: 'rgba(15, 23, 42, 0.7)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
+            background: '#ffffff',
+            border: '1px solid #e2e8f0',
             borderRadius: '16px',
             overflow: 'hidden',
-            boxShadow: '0 15px 35px -10px rgba(0, 0, 0, 0.5)'
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)'
           }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
               <thead>
-                <tr style={{ background: 'rgba(2, 6, 23, 0.8)', borderBottom: '1px solid rgba(56, 189, 248, 0.3)' }}>
-                  <th style={{ padding: '16px 24px', color: '#38bdf8', fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', width: '35%' }}>
+                <tr style={{ background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)', borderBottom: '1px solid #0284c7' }}>
+                  <th style={{ padding: '16px 24px', color: '#ffffff', fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', width: '35%' }}>
                     Technical Parameter
                   </th>
                   <th style={{ padding: '16px 24px', color: '#ffffff', fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', width: '65%' }}>
@@ -536,14 +553,14 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   <tr 
                     key={idx}
                     style={{
-                      borderBottom: idx === product.specs.length - 1 ? 'none' : '1px solid rgba(255, 255, 255, 0.05)',
-                      background: idx % 2 === 0 ? 'transparent' : 'rgba(255, 255, 255, 0.015)'
+                      borderBottom: idx === product.specs.length - 1 ? 'none' : '1px solid #e2e8f0',
+                      background: idx % 2 === 0 ? '#ffffff' : '#f8fafc'
                     }}
                   >
-                    <td style={{ padding: '16px 24px', color: '#ffffff', fontWeight: '600', fontSize: '0.92rem' }}>
+                    <td style={{ padding: '16px 24px', color: '#0f172a', fontWeight: '700', fontSize: '0.92rem' }}>
                       {item.parameter}
                     </td>
-                    <td style={{ padding: '16px 24px', color: '#cbd5e1', fontSize: '0.9rem', lineHeight: '1.55' }}>
+                    <td style={{ padding: '16px 24px', color: '#334155', fontSize: '0.9rem', lineHeight: '1.55' }}>
                       {item.value}
                     </td>
                   </tr>
@@ -556,7 +573,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
       </section>
 
       {/* 5. PROCESS & INDUSTRIAL APPLICATIONS */}
-      <section style={{ padding: '4.5rem 0', background: '#070b14' }}>
+      <section style={{ padding: '4.5rem 0', background: '#ffffff', borderBottom: '1px solid #e2e8f0' }}>
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
           
           <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 2.5rem' }}>
@@ -565,16 +582,16 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               fontSize: '0.8rem',
               fontWeight: '700',
               letterSpacing: '0.08em',
-              color: '#38bdf8',
+              color: '#0284c7',
               textTransform: 'uppercase',
               marginBottom: '8px'
             }}>
               FIELD-PROVEN DEPLOYMENTS
             </div>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.3rem)', fontWeight: '800', color: '#ffffff', marginBottom: '12px' }}>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
               Common Industrial Applications
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6' }}>
+            <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6' }}>
               Operating successfully across high-load continuous processing sectors in India:
             </p>
           </div>
@@ -588,21 +605,23 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               <div 
                 key={idx}
                 style={{
-                  background: 'rgba(15, 23, 42, 0.65)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  background: '#f8fafc',
+                  border: '1px solid #e2e8f0',
                   borderRadius: '12px',
                   padding: '16px 20px',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '12px',
-                  transition: 'border-color 0.2s ease, transform 0.2s ease'
+                  transition: 'border-color 0.2s ease, transform 0.2s ease, background 0.2s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.4)';
+                  e.currentTarget.style.borderColor = '#0284c7';
+                  e.currentTarget.style.background = '#ffffff';
                   e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                  e.currentTarget.style.background = '#f8fafc';
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
@@ -610,10 +629,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   width: '8px',
                   height: '8px',
                   borderRadius: '50%',
-                  background: '#38bdf8',
-                  boxShadow: '0 0 8px #38bdf8'
+                  background: '#0284c7',
+                  boxShadow: '0 0 8px rgba(2, 132, 199, 0.5)'
                 }} />
-                <span style={{ fontSize: '0.95rem', fontWeight: '600', color: '#f1f5f9' }}>{app}</span>
+                <span style={{ fontSize: '0.95rem', fontWeight: '600', color: '#0f172a' }}>{app}</span>
               </div>
             ))}
           </div>
@@ -622,15 +641,15 @@ _Sent from vsfiltech.com/products/${product.id}_`;
       </section>
 
       {/* 6. TECHNICAL RFQ & DRAWINGS INQUIRY FORM */}
-      <section id="rfq-form" style={{ padding: '5rem 0', background: '#040711', borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}>
+      <section id="rfq-form" style={{ padding: '5rem 0', background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
         <div className="container" style={{ maxWidth: '840px', margin: '0 auto' }}>
           
           <div style={{
-            background: 'radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, rgba(15, 23, 42, 0.95) 75%)',
-            border: '1px solid rgba(56, 189, 248, 0.3)',
+            background: '#ffffff',
+            border: '1px solid #bae6fd',
             borderRadius: '24px',
             padding: '3rem 2.5rem',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7)'
+            boxShadow: '0 15px 45px rgba(2, 132, 199, 0.08)'
           }}>
             
             <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
@@ -638,11 +657,11 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'rgba(56, 189, 248, 0.15)',
-                border: '1px solid rgba(56, 189, 248, 0.3)',
+                background: '#f0f9ff',
+                border: '1px solid #bae6fd',
                 padding: '6px 16px',
                 borderRadius: '999px',
-                color: '#38bdf8',
+                color: '#0284c7',
                 fontSize: '0.78rem',
                 fontWeight: '700',
                 letterSpacing: '0.08em',
@@ -652,20 +671,20 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 <MessageCircle size={14} /> INSTANT TECHNICAL RFQ DESK
               </div>
 
-              <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.3rem)', fontWeight: '800', color: '#ffffff', marginBottom: '10px' }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '10px' }}>
                 Request Quotation for {product.shortTitle || product.title}
               </h2>
               
-              <p style={{ color: '#94a3b8', fontSize: '0.98rem', lineHeight: '1.6' }}>
+              <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: '1.6' }}>
                 Fill out the technical requirements below. Submitting opens a direct WhatsApp chat with our engineers at <strong>+91 1234567890</strong> for immediate quotation and drawings.
               </p>
             </div>
 
             {submitted && (
               <div style={{
-                background: 'rgba(34, 197, 94, 0.15)',
-                border: '1px solid rgba(34, 197, 94, 0.4)',
-                color: '#4ade80',
+                background: '#f0fdf4',
+                border: '1px solid #86efac',
+                color: '#15803d',
                 padding: '16px 20px',
                 borderRadius: '12px',
                 marginBottom: '24px',
@@ -683,7 +702,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
             <form onSubmit={handleWhatsAppSubmit}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '18px', marginBottom: '18px' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#1e293b', marginBottom: '6px' }}>
                     Contact Person *
                   </label>
                   <input 
@@ -695,10 +714,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      background: 'rgba(2, 6, 23, 0.7)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#ffffff',
+                      border: '1.5px solid #cbd5e1',
                       borderRadius: '10px',
-                      color: '#ffffff',
+                      color: '#0f172a',
                       fontSize: '0.95rem',
                       outline: 'none'
                     }}
@@ -706,7 +725,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#1e293b', marginBottom: '6px' }}>
                     Company / Plant Name
                   </label>
                   <input 
@@ -717,10 +736,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      background: 'rgba(2, 6, 23, 0.7)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#ffffff',
+                      border: '1.5px solid #cbd5e1',
                       borderRadius: '10px',
-                      color: '#ffffff',
+                      color: '#0f172a',
                       fontSize: '0.95rem',
                       outline: 'none'
                     }}
@@ -730,7 +749,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '18px', marginBottom: '18px' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#1e293b', marginBottom: '6px' }}>
                     WhatsApp Mobile Number *
                   </label>
                   <input 
@@ -742,10 +761,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      background: 'rgba(2, 6, 23, 0.7)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#ffffff',
+                      border: '1.5px solid #cbd5e1',
                       borderRadius: '10px',
-                      color: '#ffffff',
+                      color: '#0f172a',
                       fontSize: '0.95rem',
                       outline: 'none'
                     }}
@@ -753,7 +772,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#1e293b', marginBottom: '6px' }}>
                     Email Address (Optional)
                   </label>
                   <input 
@@ -764,10 +783,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      background: 'rgba(2, 6, 23, 0.7)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#ffffff',
+                      border: '1.5px solid #cbd5e1',
                       borderRadius: '10px',
-                      color: '#ffffff',
+                      color: '#0f172a',
                       fontSize: '0.95rem',
                       outline: 'none'
                     }}
@@ -777,7 +796,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '18px', marginBottom: '18px' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#1e293b', marginBottom: '6px' }}>
                     Dimensions / Drawing Model / Quantity
                   </label>
                   <input 
@@ -788,10 +807,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      background: 'rgba(2, 6, 23, 0.7)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#ffffff',
+                      border: '1.5px solid #cbd5e1',
                       borderRadius: '10px',
-                      color: '#ffffff',
+                      color: '#0f172a',
                       fontSize: '0.95rem',
                       outline: 'none'
                     }}
@@ -799,8 +818,8 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '6px' }}>
-                    Operating Temperature & Flue Gas Type
+                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#1e293b', marginBottom: '6px' }}>
+                    Operating Temperature &amp; Flue Gas Type
                   </label>
                   <input 
                     type="text" 
@@ -810,10 +829,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      background: 'rgba(2, 6, 23, 0.7)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      background: '#ffffff',
+                      border: '1.5px solid #cbd5e1',
                       borderRadius: '10px',
-                      color: '#ffffff',
+                      color: '#0f172a',
                       fontSize: '0.95rem',
                       outline: 'none'
                     }}
@@ -822,7 +841,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               </div>
 
               <div style={{ marginBottom: '24px' }}>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#cbd5e1', marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#1e293b', marginBottom: '6px' }}>
                   Specific Technical Notes / Replacement Requirements
                 </label>
                 <textarea 
@@ -833,10 +852,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   style={{
                     width: '100%',
                     padding: '12px 16px',
-                    background: 'rgba(2, 6, 23, 0.7)',
-                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    background: '#ffffff',
+                    border: '1.5px solid #cbd5e1',
                     borderRadius: '10px',
-                    color: '#ffffff',
+                    color: '#0f172a',
                     fontSize: '0.95rem',
                     outline: 'none',
                     resize: 'vertical'
@@ -852,7 +871,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '10px',
-                  background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+                  background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
                   border: 'none',
                   color: '#ffffff',
                   padding: '16px 24px',
@@ -860,8 +879,8 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   fontSize: '1.05rem',
                   fontWeight: '700',
                   cursor: 'pointer',
-                  boxShadow: '0 10px 25px -5px rgba(2, 132, 199, 0.4)',
-                  transition: 'transform 0.2s ease'
+                  boxShadow: '0 6px 20px rgba(2, 132, 199, 0.35)',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease'
                 }}
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
@@ -878,7 +897,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
 
       {/* 7. RELATED INDUSTRIAL SPARES & EQUIPMENT */}
       {relatedProducts.length > 0 && (
-        <section style={{ padding: '4.5rem 0 5.5rem', background: '#070b14' }}>
+        <section style={{ padding: '4.5rem 0 5.5rem', background: '#ffffff' }}>
           <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
             
             <div style={{
@@ -890,11 +909,11 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               gap: '12px'
             }}>
               <div>
-                <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#0284c7', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                   BAGHOUSE SPARES ECOSYSTEM
                 </div>
-                <h3 style={{ fontSize: '1.8rem', fontWeight: '800', color: '#ffffff', marginTop: '4px' }}>
-                  Related Components & Spares
+                <h3 style={{ fontSize: '1.8rem', fontWeight: '800', color: '#0f172a', marginTop: '4px' }}>
+                  Related Components &amp; Spares
                 </h3>
               </div>
               
@@ -904,13 +923,13 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '6px',
-                  color: '#38bdf8',
+                  color: '#0284c7',
                   textDecoration: 'none',
                   fontSize: '0.9rem',
-                  fontWeight: '600'
+                  fontWeight: '700'
                 }}
               >
-                <span>View All 17 Spares & Systems</span>
+                <span>View All 17 Spares &amp; Systems</span>
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -924,21 +943,24 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 <div 
                   key={rel.id}
                   style={{
-                    background: 'rgba(15, 23, 42, 0.75)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    background: '#ffffff',
+                    border: '1px solid #e2e8f0',
                     borderRadius: '16px',
                     overflow: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
-                    transition: 'transform 0.25s ease, border-color 0.25s ease'
+                    boxShadow: '0 4px 18px rgba(0, 0, 0, 0.04)',
+                    transition: 'transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.4)';
+                    e.currentTarget.style.borderColor = '#0284c7';
+                    e.currentTarget.style.boxShadow = '0 12px 30px rgba(2, 132, 199, 0.12)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.boxShadow = '0 4px 18px rgba(0, 0, 0, 0.04)';
                   }}
                 >
                   <div style={{ height: '170px', overflow: 'hidden', background: '#020617', position: 'relative' }}>
@@ -951,8 +973,8 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                       position: 'absolute',
                       top: '10px',
                       left: '10px',
-                      background: 'rgba(15, 23, 42, 0.85)',
-                      border: '1px solid rgba(56, 189, 248, 0.3)',
+                      background: 'rgba(15, 23, 42, 0.88)',
+                      border: '1px solid rgba(56, 189, 248, 0.4)',
                       color: '#38bdf8',
                       padding: '3px 10px',
                       borderRadius: '999px',
@@ -964,10 +986,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   </div>
 
                   <div style={{ padding: '18px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <h4 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
+                    <h4 style={{ fontSize: '1.05rem', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
                       {rel.shortTitle || rel.title}
                     </h4>
-                    <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5', marginBottom: '16px', flex: 1 }}>
+                    <p style={{ fontSize: '0.85rem', color: '#475569', lineHeight: '1.5', marginBottom: '16px', flex: 1 }}>
                       {rel.shortDesc}
                     </p>
                     <Link 
@@ -976,14 +998,23 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        padding: '8px 14px',
+                        padding: '9px 14px',
                         borderRadius: '8px',
-                        background: 'rgba(56, 189, 248, 0.1)',
-                        border: '1px solid rgba(56, 189, 248, 0.25)',
-                        color: '#38bdf8',
+                        background: '#f0f9ff',
+                        border: '1px solid #bae6fd',
+                        color: '#0284c7',
                         fontSize: '0.85rem',
                         fontWeight: '700',
-                        textDecoration: 'none'
+                        textDecoration: 'none',
+                        transition: 'all 0.2s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#0284c7';
+                        e.currentTarget.style.color = '#ffffff';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#f0f9ff';
+                        e.currentTarget.style.color = '#0284c7';
                       }}
                     >
                       <span>View Specifications</span>
@@ -997,6 +1028,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
           </div>
         </section>
       )}
+
 
       {/* 8. ULTRA-HD LIGHTBOX MODAL */}
       {lightboxOpen && (

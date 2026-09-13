@@ -355,29 +355,40 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
   padding: 6px 18px;
   border-radius: 999px;
-  color: #38bdf8;
+  color: #0284c7;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.1);
+}
+
+.products-showcase-section {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  scroll-margin-top: 85px;
 }
 
 .products-main-title {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   line-height: 1.2;
   margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
 .text-gradient-cyan {
-  background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, #d97706 0%, #ea580c 45%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -385,7 +396,7 @@
 .products-main-lead {
   font-size: 1.1rem;
   line-height: 1.65;
-  color: #94a3b8;
+  color: #475569;
   max-width: 720px;
   margin: 0 auto;
 }
@@ -399,23 +410,21 @@
 }
 
 .umiya-product-card {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
 .umiya-product-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(56, 189, 248, 0.45);
-  box-shadow: 0 20px 45px -10px rgba(14, 165, 233, 0.25);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.1);
 }
 
 .umiya-card-media {
@@ -447,7 +456,7 @@
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(11, 17, 32, 0.9);
+  background: rgba(11, 17, 32, 0.92);
   border: 1px solid rgba(56, 189, 248, 0.4);
   color: #38bdf8;
   padding: 5px 14px;
@@ -462,6 +471,48 @@
   z-index: 2;
 }
 
+.umiya-card-tag.badge-cyan {
+  border-color: rgba(6, 182, 212, 0.6);
+  color: #38bdf8;
+  background: rgba(8, 20, 38, 0.94);
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.25);
+}
+
+.umiya-card-tag.badge-blue {
+  border-color: rgba(96, 165, 250, 0.6);
+  color: #93c5fd;
+  background: rgba(15, 23, 42, 0.94);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+}
+
+.umiya-card-tag.badge-amber {
+  border-color: rgba(245, 158, 11, 0.6);
+  color: #fbbf24;
+  background: rgba(30, 22, 10, 0.94);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+
+.umiya-card-tag.badge-emerald {
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #34d399;
+  background: rgba(10, 28, 18, 0.94);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.umiya-card-tag.badge-purple {
+  border-color: rgba(168, 85, 247, 0.6);
+  color: #c084fc;
+  background: rgba(26, 14, 40, 0.94);
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3);
+}
+
+.umiya-card-tag.badge-orange {
+  border-color: rgba(249, 115, 22, 0.6);
+  color: #fb923c;
+  background: rgba(34, 18, 10, 0.94);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+}
+
 .umiya-card-body {
   padding: 24px 24px 22px;
   flex: 1;
@@ -472,7 +523,7 @@
 .umiya-card-title {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 16px;
   line-height: 1.3;
 }
@@ -497,14 +548,14 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #ea580c;
+  background: #0284c7;
   flex-shrink: 0;
   margin-top: 7px;
-  box-shadow: 0 0 6px rgba(234, 88, 12, 0.6);
+  box-shadow: 0 0 6px rgba(2, 132, 199, 0.6);
 }
 
 .umiya-bullet-text {
-  color: #cbd5e1;
+  color: #334155;
   font-size: 0.91rem;
   line-height: 1.5;
 }
@@ -512,7 +563,7 @@
 .umiya-buttons-row {
   display: flex;
   gap: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #e2e8f0;
   padding-top: 18px;
 }
 
@@ -521,9 +572,9 @@
   text-align: center;
   padding: 11px 14px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -536,8 +587,9 @@
 }
 
 .umiya-btn-view:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: #ffffff;
+  background: #eff6ff;
+  border-color: #0284c7;
+  color: #1d4ed8;
   transform: translateY(-1px);
 }
 
@@ -549,8 +601,8 @@
   gap: 6px;
   padding: 11px 14px;
   border-radius: 8px;
-  background: #0c2340;
-  border: 1px solid #1e3a8a;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  border: 1px solid rgba(56, 189, 248, 0.5);
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
@@ -558,26 +610,24 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
 }
 
 .umiya-btn-quote:hover {
-  background: #0284c7;
-  border-color: #38bdf8;
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  border-color: #bae6fd;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55);
 }
 
 /* ── 2. Thermax-Inspired Photographic Showcase ── */
 .thermax-industries-wrapper {
-  background: rgba(11, 17, 32, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 28px;
   padding: 55px 36px;
   margin-bottom: 50px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.06);
 }
 
 .thermax-section-header {
@@ -589,13 +639,13 @@
 .thermax-title {
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
 }
 
 .thermax-lead {
-  color: #94a3b8;
+  color: #475569;
   font-size: 1.05rem;
   line-height: 1.6;
 }
@@ -742,26 +792,26 @@
 }
 
 .industry-modal-content {
-  background: #0b1329;
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  background: #ffffff;
+  border: 1px solid #bae6fd;
   border-radius: 24px;
   max-width: 820px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 60px rgba(2, 132, 199, 0.2);
   padding: 36px;
-  color: #ffffff;
+  color: #0f172a;
 }
 
 .industry-modal-close {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #475569;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -773,7 +823,7 @@
 }
 
 .industry-modal-close:hover {
-  background: rgba(239, 68, 68, 0.2);
+  background: #fee2e2;
   border-color: #ef4444;
   color: #ef4444;
 }
@@ -784,9 +834,9 @@
 
 .industry-modal-pill {
   display: inline-block;
-  background: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: #f0f9ff;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
   padding: 4px 12px;
   border-radius: 999px;
   font-size: 0.72rem;
@@ -799,12 +849,12 @@
 .industry-modal-header h3 {
   font-size: 1.85rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 6px;
 }
 
 .industry-modal-header p {
-  color: #94a3b8;
+  color: #475569;
   font-size: 1.05rem;
 }
 
@@ -819,7 +869,7 @@
   overflow: hidden;
   height: 100%;
   min-height: 260px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #e2e8f0;
 }
 
 .modal-img-wrap img {
@@ -831,7 +881,7 @@
 .modal-details-col h4 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #38bdf8;
+  color: #1d4ed8;
   margin-bottom: 14px;
 }
 
@@ -848,13 +898,13 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: #cbd5e1;
+  color: #334155;
   font-size: 0.9rem;
   line-height: 1.45;
 }
 
 .modal-check-icon {
-  color: #38bdf8;
+  color: #0284c7;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -864,10 +914,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-bottom: 24px;
-  background: rgba(15, 23, 42, 0.6);
+  background: #f8fafc;
   padding: 14px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #e2e8f0;
 }
 
 .modal-spec-box {
@@ -880,12 +930,12 @@
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #94a3b8;
+  color: #64748b;
 }
 
 .spec-val {
   font-size: 0.88rem;
-  color: #ffffff;
+  color: #0f172a;
   font-weight: 700;
 }
 
@@ -922,9 +972,9 @@
   gap: 8px;
   padding: 12px 18px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
@@ -932,32 +982,32 @@
 }
 
 .btn-modal-call:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: #ffffff;
+  background: #e2e8f0;
+  border-color: #94a3b8;
 }
 
 /* ── 4. Explore Catalog Bar ── */
 .products-explore-bar {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+  border: 1px solid #bae6fd;
   border-radius: 18px;
   padding: 24px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
 }
 
 .explore-text-col h4 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 4px;
 }
 
 .explore-text-col p {
-  color: #94a3b8;
+  color: #475569;
   font-size: 0.92rem;
   margin: 0;
 }

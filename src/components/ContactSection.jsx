@@ -69,17 +69,14 @@ _Sent via vsfiltech.com/contact_`;
   };
 
   return (
-    <section id="contact" className="contact-section">
-      <div className="contact-ambient-glow glow-left"></div>
-      <div className="contact-ambient-glow glow-right"></div>
-
+    <section id="contact" className="contact-section light-graphic-blueprint">
       <div className="container relative z-10">
         {/* Section Header */}
         <div className="contact-section-header">
           <div className="contact-eyebrow">
             <span className="contact-live-dot"></span>
             <Sparkles size={14} className="contact-sparkle" />
-            <span>ENGINEERING ASSESSMENT & QUOTATION DESK</span>
+            <span>ENGINEERING ASSESSMENT &amp; QUOTATION DESK</span>
           </div>
 
           <h2 className="contact-main-title">

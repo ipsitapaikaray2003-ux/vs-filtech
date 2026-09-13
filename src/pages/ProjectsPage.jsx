@@ -99,46 +99,55 @@ const ProjectsPage = () => {
   );
 
   return (
-    <div className="projects-page" style={{ background: '#040711', minHeight: '100vh', paddingTop: '80px' }}>
+    <div className="projects-page" style={{ background: '#ffffff', minHeight: '100vh', paddingTop: '80px', color: '#0f172a' }}>
       
       {/* Hero Header */}
       <section style={{
         position: 'relative',
-        background: `linear-gradient(180deg, rgba(4, 7, 17, 0.85) 0%, rgba(4, 7, 17, 0.98) 100%), url(${plantHd})`,
+        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 247, 255, 0.96) 100%), url(${plantHd})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '5.5rem 0 4rem',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+        borderBottom: '1px solid #e2e8f0'
       }}>
-        <div className="container" style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center' }}>
+        {/* Engineering CAD Grid Overlay */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'linear-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(2, 132, 199, 0.08) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          pointerEvents: 'none'
+        }} />
+
+        <div className="container" style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 2 }}>
           
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(56, 189, 248, 0.12)',
-            border: '1px solid rgba(56, 189, 248, 0.3)',
-            padding: '6px 16px',
+            background: 'rgba(2, 132, 199, 0.1)',
+            border: '1px solid rgba(2, 132, 199, 0.3)',
+            padding: '6px 18px',
             borderRadius: '999px',
-            color: '#38bdf8',
+            color: '#0284c7',
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             marginBottom: '1.25rem'
           }}>
-            <Sparkles size={14} /> FIELD INSTALLATIONS & CASE STUDIES
+            <Sparkles size={14} style={{ color: '#0284c7' }} /> FIELD INSTALLATIONS &amp; CASE STUDIES
           </div>
 
           <h1 style={{
             fontSize: 'clamp(2.4rem, 4.5vw, 3.6rem)',
             fontWeight: '800',
-            color: '#ffffff',
+            color: '#0f172a',
             lineHeight: '1.18',
             marginBottom: '1.5rem'
           }}>
             Our <span style={{
-              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%)',
+              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>Projects</span>
@@ -147,7 +156,7 @@ const ProjectsPage = () => {
           <p style={{
             fontSize: '1.2rem',
             lineHeight: '1.7',
-            color: '#cbd5e1',
+            color: '#475569',
             maxWidth: '820px',
             margin: '0 auto 2.5rem'
           }}>
@@ -162,14 +171,15 @@ const ProjectsPage = () => {
                 type="button"
                 onClick={() => setSelectedCat(cat)}
                 style={{
-                  padding: '8px 16px',
+                  padding: '9px 18px',
                   borderRadius: '999px',
-                  border: selectedCat === cat ? '1px solid #38bdf8' : '1px solid rgba(255, 255, 255, 0.1)',
-                  background: selectedCat === cat ? 'rgba(56, 189, 248, 0.2)' : 'rgba(15, 23, 42, 0.6)',
-                  color: selectedCat === cat ? '#38bdf8' : '#cbd5e1',
-                  fontSize: '0.82rem',
-                  fontWeight: '600',
+                  border: selectedCat === cat ? '1px solid #1d4ed8' : '1px solid #cbd5e1',
+                  background: selectedCat === cat ? 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)' : '#ffffff',
+                  color: selectedCat === cat ? '#ffffff' : '#334155',
+                  fontSize: '0.84rem',
+                  fontWeight: '700',
                   cursor: 'pointer',
+                  boxShadow: selectedCat === cat ? '0 4px 14px rgba(29, 78, 216, 0.25)' : 'none',
                   transition: 'all 0.2s ease'
                 }}
               >
@@ -182,8 +192,8 @@ const ProjectsPage = () => {
       </section>
 
       {/* Projects Showcase Grid */}
-      <section style={{ padding: '5.5rem 0', background: '#070b14' }}>
-        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
+      <section className="light-graphic-blueprint" style={{ padding: '5.5rem 0', backgroundColor: '#ffffff' }}>
+        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
           <div style={{
             display: 'grid',
@@ -194,29 +204,31 @@ const ProjectsPage = () => {
               <div 
                 key={project.id}
                 style={{
-                  background: 'rgba(15, 23, 42, 0.75)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  background: '#ffffff',
+                  border: '1px solid #e2e8f0',
                   borderRadius: '20px',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
-                  boxShadow: '0 15px 30px -10px rgba(0, 0, 0, 0.5)'
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+                  borderTop: '3px solid #1d4ed8'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.4)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(14, 165, 233, 0.2)';
+                  e.currentTarget.style.borderColor = '#0284c7';
+                  e.currentTarget.style.boxShadow = '0 16px 36px rgba(2, 132, 199, 0.12)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-                  e.currentTarget.style.boxShadow = '0 15px 30px -10px rgba(0, 0, 0, 0.5)';
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                  e.currentTarget.style.borderTop = '3px solid #1d4ed8';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.04)';
                 }}
               >
                 {/* Image */}
                 <div 
-                  style={{ height: '220px', position: 'relative', overflow: 'hidden', background: '#020617', cursor: 'pointer' }}
+                  style={{ height: '220px', position: 'relative', overflow: 'hidden', background: '#f1f5f9', cursor: 'pointer' }}
                   onClick={() => setActiveModalProject(project)}
                 >
                   <img 
@@ -229,20 +241,21 @@ const ProjectsPage = () => {
                   <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 60%)'
+                    background: 'linear-gradient(to top, rgba(15, 23, 42, 0.4) 0%, transparent 60%)'
                   }} />
                   <div style={{
                     position: 'absolute',
                     top: '12px',
                     left: '12px',
-                    background: 'rgba(15, 23, 42, 0.85)',
-                    border: '1px solid rgba(56, 189, 248, 0.3)',
-                    color: '#38bdf8',
-                    padding: '4px 10px',
+                    background: 'rgba(255, 255, 255, 0.95)',
+                    border: '1px solid #0284c7',
+                    color: '#1d4ed8',
+                    padding: '4px 12px',
                     borderRadius: '8px',
-                    fontSize: '0.72rem',
+                    fontSize: '0.74rem',
                     fontWeight: '700',
-                    textTransform: 'uppercase'
+                    textTransform: 'uppercase',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
                   }}>
                     {project.industry}
                   </div>
@@ -250,24 +263,24 @@ const ProjectsPage = () => {
 
                 {/* Body */}
                 <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#ffffff', marginBottom: '12px', lineHeight: '1.3' }}>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', marginBottom: '12px', lineHeight: '1.3' }}>
                     {project.title}
                   </h3>
 
-                  <div style={{ marginBottom: '12px', background: 'rgba(2, 6, 23, 0.5)', padding: '10px 12px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                    <span style={{ fontSize: '0.75rem', color: '#38bdf8', fontWeight: '700', textTransform: 'uppercase', display: 'block', marginBottom: '3px' }}>
+                  <div style={{ marginBottom: '12px', background: '#f0f7ff', padding: '12px 14px', borderRadius: '10px', border: '1px solid #bae6fd' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#0284c7', fontWeight: '700', textTransform: 'uppercase', display: 'block', marginBottom: '3px' }}>
                       Application:
                     </span>
-                    <span style={{ fontSize: '0.86rem', color: '#cbd5e1', lineHeight: '1.4' }}>
+                    <span style={{ fontSize: '0.86rem', color: '#334155', lineHeight: '1.4' }}>
                       {project.application}
                     </span>
                   </div>
 
                   <div style={{ marginBottom: '16px', flex: 1 }}>
-                    <span style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: '700', textTransform: 'uppercase', display: 'block', marginBottom: '3px' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '700', textTransform: 'uppercase', display: 'block', marginBottom: '3px' }}>
                       Equipment Supplied:
                     </span>
-                    <span style={{ fontSize: '0.86rem', color: '#94a3b8', lineHeight: '1.5' }}>
+                    <span style={{ fontSize: '0.86rem', color: '#475569', lineHeight: '1.5' }}>
                       {project.equipmentSupplied}
                     </span>
                   </div>
@@ -277,14 +290,15 @@ const ProjectsPage = () => {
                     alignItems: 'center',
                     gap: '8px',
                     fontSize: '0.82rem',
-                    color: '#34d399',
-                    background: 'rgba(34, 197, 94, 0.1)',
+                    color: '#059669',
+                    background: 'rgba(16, 185, 129, 0.08)',
+                    border: '1px solid rgba(16, 185, 129, 0.2)',
                     padding: '8px 12px',
                     borderRadius: '8px',
                     marginBottom: '18px'
                   }}>
-                    <CheckCircle2 size={15} style={{ flexShrink: 0 }} />
-                    <span>{project.outcome}</span>
+                    <CheckCircle2 size={15} style={{ flexShrink: 0, color: '#059669' }} />
+                    <span style={{ fontWeight: '600' }}>{project.outcome}</span>
                   </div>
 
                   <Link 
@@ -295,12 +309,21 @@ const ProjectsPage = () => {
                       justifyContent: 'space-between',
                       padding: '10px 16px',
                       borderRadius: '10px',
-                      background: 'rgba(56, 189, 248, 0.1)',
-                      border: '1px solid rgba(56, 189, 248, 0.25)',
-                      color: '#38bdf8',
+                      background: 'rgba(2, 132, 199, 0.08)',
+                      border: '1px solid rgba(2, 132, 199, 0.25)',
+                      color: '#0284c7',
                       fontSize: '0.86rem',
                       fontWeight: '700',
-                      textDecoration: 'none'
+                      textDecoration: 'none',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = '#1d4ed8';
+                      e.currentTarget.style.color = '#ffffff';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(2, 132, 199, 0.08)';
+                      e.currentTarget.style.color = '#0284c7';
                     }}
                   >
                     <span>Request Similar Case Study</span>

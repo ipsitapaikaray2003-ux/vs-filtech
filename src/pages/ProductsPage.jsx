@@ -221,51 +221,56 @@ const ProductsPage = () => {
   });
 
   return (
-    <div className="products-page" style={{ background: 'var(--bg-primary, #070b14)', minHeight: '100vh', paddingTop: '80px' }}>
+    <div className="products-page" style={{ background: '#ffffff', minHeight: '100vh', paddingTop: '80px' }}>
       
       {/* Page Header */}
-      <section style={{ 
-        background: 'radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.12) 0%, transparent 60%), #0b1120',
-        padding: '5rem 0 3.5rem',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
-      }}>
-        <div className="container" style={{ textAlign: 'center', maxWidth: '880px', margin: '0 auto' }}>
+      <section 
+        className="light-graphic-blueprint"
+        style={{ 
+          background: 'linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%)',
+          padding: '5rem 0 3.5rem',
+          borderBottom: '1px solid #e2e8f0'
+        }}
+      >
+        <div className="container" style={{ textAlign: 'center', maxWidth: '880px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(56, 189, 248, 0.1)',
-            border: '1px solid rgba(56, 189, 248, 0.3)',
-            padding: '6px 16px',
+            background: '#f0f9ff',
+            border: '1px solid #bae6fd',
+            padding: '6px 18px',
             borderRadius: '999px',
-            color: '#38bdf8',
+            color: '#0284c7',
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            marginBottom: '1.25rem'
+            marginBottom: '1.25rem',
+            boxShadow: '0 2px 8px rgba(2, 132, 199, 0.1)'
           }}>
-            <Sparkles size={14} /> COMPLETE FILTRATION & SPARES CATALOG
+            <Sparkles size={14} /> COMPLETE FILTRATION &amp; SPARES CATALOG
           </div>
 
           <h1 style={{
             fontSize: 'clamp(2.4rem, 4.5vw, 3.5rem)',
             fontWeight: '800',
-            color: '#ffffff',
+            color: '#0f172a',
             lineHeight: '1.15',
-            marginBottom: '1.25rem'
+            marginBottom: '1.25rem',
+            letterSpacing: '-0.02em'
           }}>
             Industrial <span style={{
-              background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%)',
+              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
-            }}>Products & Spares</span>
+            }}>Products &amp; Spares</span>
           </h1>
 
           <p style={{
             fontSize: '1.1rem',
             lineHeight: '1.65',
-            color: '#94a3b8',
+            color: '#475569',
             marginBottom: '2.5rem'
           }}>
             From heavy-duty Pulse Jet Bag Filters to the smallest instrumentation spare. We design, manufacture, and supply complete air filtration equipment, accessories, and replacement parts under one roof.
@@ -284,7 +289,7 @@ const ProductsPage = () => {
               width: '100%',
               maxWidth: '520px'
             }}>
-              <Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: '#64748b' }} />
+              <Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: '#0284c7' }} />
               <input
                 type="text"
                 value={searchQuery}
@@ -293,13 +298,22 @@ const ProductsPage = () => {
                 style={{
                   width: '100%',
                   padding: '12px 16px 12px 46px',
-                  background: 'rgba(15, 23, 42, 0.8)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: '#ffffff',
+                  border: '1.5px solid #cbd5e1',
                   borderRadius: '12px',
-                  color: '#ffffff',
+                  color: '#0f172a',
                   fontSize: '0.95rem',
                   outline: 'none',
-                  transition: 'border-color 0.2s ease'
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+                  transition: 'border-color 0.2s ease, box-shadow 0.2s ease'
+                }}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = '#0284c7';
+                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(2, 132, 199, 0.15)';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = '#cbd5e1';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
                 }}
               />
             </div>
@@ -319,12 +333,13 @@ const ProductsPage = () => {
                   style={{
                     padding: '8px 16px',
                     borderRadius: '999px',
-                    border: selectedCategory === cat ? '1px solid #38bdf8' : '1px solid rgba(255, 255, 255, 0.1)',
-                    background: selectedCategory === cat ? 'rgba(56, 189, 248, 0.2)' : 'rgba(15, 23, 42, 0.6)',
-                    color: selectedCategory === cat ? '#38bdf8' : '#cbd5e1',
+                    border: selectedCategory === cat ? '1px solid #0284c7' : '1px solid #e2e8f0',
+                    background: selectedCategory === cat ? 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)' : '#ffffff',
+                    color: selectedCategory === cat ? '#ffffff' : '#475569',
                     fontSize: '0.82rem',
-                    fontWeight: '600',
+                    fontWeight: '700',
                     cursor: 'pointer',
+                    boxShadow: selectedCategory === cat ? '0 4px 12px rgba(2, 132, 199, 0.25)' : '0 1px 4px rgba(0, 0, 0, 0.03)',
                     transition: 'all 0.2s ease'
                   }}
                 >
@@ -337,21 +352,24 @@ const ProductsPage = () => {
       </section>
 
       {/* Products Grid Section */}
-      <section style={{ padding: '4.5rem 0 6rem' }}>
-        <div className="container">
+      <section 
+        className="light-graphic-dots"
+        style={{ padding: '4.5rem 0 6rem', backgroundColor: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}
+      >
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             marginBottom: '2rem',
-            color: '#94a3b8',
+            color: '#64748b',
             fontSize: '0.9rem'
           }}>
-            <span>Showing {filteredProducts.length} Equipment & Spares Items</span>
+            <span>Showing <strong style={{ color: '#0f172a' }}>{filteredProducts.length}</strong> Equipment &amp; Spares Items</span>
             {selectedCategory !== 'All Equipment' && (
               <button 
                 onClick={() => setSelectedCategory('All Equipment')}
-                style={{ background: 'none', border: 'none', color: '#38bdf8', cursor: 'pointer', textDecoration: 'underline' }}
+                style={{ background: 'none', border: 'none', color: '#0284c7', cursor: 'pointer', textDecoration: 'underline', fontWeight: '600' }}
               >
                 Clear Category Filter
               </button>
@@ -367,24 +385,24 @@ const ProductsPage = () => {
               <div
                 key={product.id}
                 style={{
-                  background: 'rgba(15, 23, 42, 0.75)',
+                  background: '#ffffff',
                   borderRadius: '18px',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  border: '1px solid #e2e8f0',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
-                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.3)'
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.4)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(14, 165, 233, 0.2)';
+                  e.currentTarget.style.borderColor = '#0284c7';
+                  e.currentTarget.style.boxShadow = '0 16px 36px rgba(2, 132, 199, 0.12)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-                  e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.3)';
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.04)';
                 }}
               >
                 {/* Product Image */}
@@ -404,14 +422,14 @@ const ProductsPage = () => {
                   <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, transparent 60%)'
+                    background: 'linear-gradient(to top, rgba(15, 23, 42, 0.7) 0%, transparent 60%)'
                   }} />
                   <div style={{
                     position: 'absolute',
                     top: '14px',
                     left: '14px',
-                    background: 'rgba(15, 23, 42, 0.85)',
-                    border: '1px solid rgba(56, 189, 248, 0.3)',
+                    background: 'rgba(15, 23, 42, 0.88)',
+                    border: '1px solid rgba(56, 189, 248, 0.4)',
                     color: '#38bdf8',
                     padding: '4px 12px',
                     borderRadius: '999px',
@@ -432,7 +450,7 @@ const ProductsPage = () => {
                     fontWeight: '700',
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
-                    color: '#38bdf8',
+                    color: '#0284c7',
                     marginBottom: '6px'
                   }}>
                     {product.category}
@@ -441,8 +459,8 @@ const ProductsPage = () => {
                   <Link to={product.link} style={{ textDecoration: 'none' }}>
                     <h3 style={{
                       fontSize: '1.25rem',
-                      fontWeight: '700',
-                      color: '#ffffff',
+                      fontWeight: '800',
+                      color: '#0f172a',
                       marginBottom: '12px',
                       lineHeight: '1.3'
                     }}>
@@ -453,7 +471,7 @@ const ProductsPage = () => {
                   <p style={{
                     fontSize: '0.9rem',
                     lineHeight: '1.6',
-                    color: '#94a3b8',
+                    color: '#475569',
                     marginBottom: '18px',
                     flex: 1
                   }}>
@@ -466,14 +484,14 @@ const ProductsPage = () => {
                     flexDirection: 'column',
                     gap: '6px',
                     marginBottom: '20px',
-                    background: 'rgba(2, 6, 23, 0.5)',
+                    background: '#f8fafc',
                     padding: '12px 14px',
                     borderRadius: '10px',
-                    border: '1px solid rgba(255, 255, 255, 0.05)'
+                    border: '1px solid #e2e8f0'
                   }}>
                     {product.specs.map((spec, sIdx) => (
-                      <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#cbd5e1' }}>
-                        <CheckCircle2 size={13} style={{ color: '#38bdf8', flexShrink: 0 }} />
+                      <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#334155' }}>
+                        <CheckCircle2 size={13} style={{ color: '#0284c7', flexShrink: 0 }} />
                         <span>{spec}</span>
                       </div>
                     ))}
@@ -486,26 +504,29 @@ const ProductsPage = () => {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
-                      padding: '10px 16px',
+                      padding: '11px 16px',
                       borderRadius: '10px',
-                      background: 'rgba(56, 189, 248, 0.12)',
-                      border: '1px solid rgba(56, 189, 248, 0.25)',
-                      color: '#38bdf8',
+                      background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
+                      border: '1px solid rgba(56, 189, 248, 0.4)',
+                      color: '#ffffff',
                       fontSize: '0.88rem',
                       fontWeight: '700',
                       textDecoration: 'none',
+                      boxShadow: '0 4px 14px rgba(2, 132, 199, 0.25)',
                       transition: 'all 0.2s ease'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#0284c7';
-                      e.currentTarget.style.color = '#ffffff';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%)';
+                      e.currentTarget.style.transform = 'translateY(-1px)';
+                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(2, 132, 199, 0.4)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'rgba(56, 189, 248, 0.12)';
-                      e.currentTarget.style.color = '#38bdf8';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0 4px 14px rgba(2, 132, 199, 0.25)';
                     }}
                   >
-                    <span>View Specifications & RFQ</span>
+                    <span>View Specifications &amp; RFQ</span>
                     <ArrowRight size={15} />
                   </Link>
                 </div>
@@ -517,7 +538,7 @@ const ProductsPage = () => {
 
       {/* Bottom Technical Inquiry Banner */}
       <section style={{
-        background: 'linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%)',
+        background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
         padding: '4.5rem 0',
         color: '#ffffff',
         textAlign: 'center'

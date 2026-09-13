@@ -158,44 +158,56 @@ const PulseJetFilterPage = () => {
   }, []);
 
   return (
-    <div className="product-detail-page" style={{ background: 'var(--bg-primary, #070b14)', paddingBottom: '80px', color: '#fff' }}>
+    <div className="product-detail-page" style={{ background: '#ffffff', paddingBottom: '80px', color: '#0f172a' }}>
       
       {/* Hero Section */}
       <section style={{ 
-        background: 'radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.12) 0%, transparent 60%), #0b1120',
+        position: 'relative',
+        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 247, 255, 0.96) 100%), url(${heroImg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         padding: '120px 0 70px',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+        borderBottom: '1px solid #e2e8f0'
       }}>
-        <div className="container">
+        {/* Engineering CAD Grid Overlay */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'linear-gradient(rgba(2, 132, 199, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(2, 132, 199, 0.08) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          pointerEvents: 'none'
+        }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '50px', alignItems: 'center' }}>
             <div style={{ flex: '1 1 540px' }}>
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'rgba(56, 189, 248, 0.1)',
-                border: '1px solid rgba(56, 189, 248, 0.3)',
+                background: 'rgba(2, 132, 199, 0.1)',
+                border: '1px solid rgba(2, 132, 199, 0.3)',
                 padding: '6px 16px',
                 borderRadius: '999px',
-                color: '#38bdf8',
+                color: '#0284c7',
                 fontSize: '0.8rem',
                 fontWeight: '700',
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 marginBottom: '18px'
               }}>
-                <Sparkles size={14} /> HIGH-EFFICIENCY CONTINUOUS DUST COLLECTION
+                <Sparkles size={14} style={{ color: '#0284c7' }} /> HIGH-EFFICIENCY CONTINUOUS DUST COLLECTION
               </div>
 
               <h1 style={{
                 fontSize: 'clamp(2.5rem, 5vw, 3.8rem)',
                 fontWeight: '800',
-                color: '#ffffff',
+                color: '#0f172a',
                 lineHeight: '1.15',
                 marginBottom: '20px'
               }}>
                 Pulse Jet <span style={{
-                  background: 'linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%)',
+                  background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent'
                 }}>Bag Filters</span>
@@ -204,7 +216,7 @@ const PulseJetFilterPage = () => {
               <p style={{
                 fontSize: '1.15rem',
                 lineHeight: '1.7',
-                color: '#94a3b8',
+                color: '#475569',
                 marginBottom: '32px'
               }}>
                 VS Filtech designs, manufactures, erects, and commissions heavy-duty industrial Pulse Jet Bag Filters engineered for continuous 24/7 dust extraction. Built with aerodynamic gas distribution, top-access clean-air plenum, and guaranteed emission levels below &lt;10 mg/Nm³.
@@ -219,8 +231,8 @@ const PulseJetFilterPage = () => {
                   href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20Pulse%20Jet%20Bag%20Filters."
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="btn btn-outline btn-lg"
-                  style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}
+                  className="btn btn-lg"
+                  style={{ border: '1px solid #10b981', color: '#059669', background: '#ffffff', borderRadius: '10px' }}
                 >
                   <span>WhatsApp Desk</span>
                 </a>
@@ -232,8 +244,8 @@ const PulseJetFilterPage = () => {
                 position: 'relative',
                 borderRadius: '20px',
                 overflow: 'hidden',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6)'
+                border: '1px solid #e2e8f0',
+                boxShadow: '0 15px 35px rgba(2, 132, 199, 0.12)'
               }}>
                 <img 
                   src={heroImg} 
@@ -245,22 +257,23 @@ const PulseJetFilterPage = () => {
                   bottom: '16px',
                   left: '16px',
                   right: '16px',
-                  background: 'rgba(15, 23, 42, 0.9)',
-                  border: '1px solid rgba(56, 189, 248, 0.3)',
+                  background: 'rgba(255, 255, 255, 0.95)',
+                  border: '1px solid #bae6fd',
                   padding: '12px 18px',
                   borderRadius: '12px',
                   backdropFilter: 'blur(10px)',
                   display: 'flex',
                   justifyContent: 'space-between',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
                 }}>
                   <div>
-                    <div style={{ color: '#38bdf8', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase' }}>CPCB Compliant</div>
-                    <div style={{ color: '#ffffff', fontSize: '1rem', fontWeight: '700' }}>Emissions: &lt; 10 mg/Nm³</div>
+                    <div style={{ color: '#0284c7', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase' }}>CPCB Compliant</div>
+                    <div style={{ color: '#0f172a', fontSize: '1rem', fontWeight: '700' }}>Emissions: &lt; 10 mg/Nm³</div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
-                    <div style={{ color: '#94a3b8', fontSize: '0.78rem' }}>Efficiency</div>
-                    <div style={{ color: '#38bdf8', fontSize: '1.1rem', fontWeight: '800' }}>99.9%</div>
+                    <div style={{ color: '#64748b', fontSize: '0.78rem' }}>Efficiency</div>
+                    <div style={{ color: '#1d4ed8', fontSize: '1.1rem', fontWeight: '800' }}>99.9%</div>
                   </div>
                 </div>
               </div>
@@ -270,16 +283,16 @@ const PulseJetFilterPage = () => {
       </section>
 
       {/* 1. Pulse-Jet Cleaning Operating Modes: Online vs Offline */}
-      <section style={{ padding: '80px 0', background: '#070b14' }}>
-        <div className="container">
+      <section className="light-graphic-dots" style={{ padding: '80px 0', background: '#f8fafc' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               CLEANING TECHNOLOGY
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
-              Pulse-Jet Cleaning: <span style={{ color: '#38bdf8' }}>Online vs Offline Modes</span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+              Pulse-Jet Cleaning: <span style={{ color: '#1d4ed8' }}>Online vs Offline Modes</span>
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
               Depending on your plant's dust loading, particle adhesion, and operational schedule, VS Filtech designs bag filters in both Online and Offline pulse configurations:
             </p>
           </div>
@@ -289,29 +302,33 @@ const PulseJetFilterPage = () => {
               <div 
                 key={idx}
                 style={{
-                  background: 'rgba(15, 23, 42, 0.75)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  background: '#ffffff',
+                  border: '1px solid #e2e8f0',
                   borderRadius: '20px',
                   padding: '36px 30px',
                   display: 'flex',
                   flexDirection: 'column',
-                  transition: 'border-color 0.3s ease, transform 0.3s ease',
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)'
+                  transition: 'border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease',
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+                  borderTop: '4px solid #1d4ed8'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.4)';
+                  e.currentTarget.style.borderColor = '#0284c7';
                   e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 14px 30px rgba(2, 132, 199, 0.12)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                  e.currentTarget.style.borderTop = '4px solid #1d4ed8';
                   e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.04)';
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                   <span style={{
-                    background: 'rgba(56, 189, 248, 0.12)',
-                    border: '1px solid rgba(56, 189, 248, 0.3)',
-                    color: '#38bdf8',
+                    background: 'rgba(2, 132, 199, 0.1)',
+                    border: '1px solid rgba(2, 132, 199, 0.3)',
+                    color: '#0284c7',
                     padding: '4px 12px',
                     borderRadius: '999px',
                     fontSize: '0.75rem',
@@ -320,26 +337,26 @@ const PulseJetFilterPage = () => {
                   }}>
                     {item.badge}
                   </span>
-                  <Wind size={20} style={{ color: '#38bdf8' }} />
+                  <Wind size={20} style={{ color: '#0284c7' }} />
                 </div>
 
-                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#ffffff', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
                   {item.mode}
                 </h3>
 
-                <div style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: '600', marginBottom: '16px' }}>
+                <div style={{ color: '#1d4ed8', fontSize: '0.9rem', fontWeight: '600', marginBottom: '16px' }}>
                   {item.highlight}
                 </div>
 
-                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.65', marginBottom: '24px', flex: 1 }}>
+                <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.65', marginBottom: '24px', flex: 1 }}>
                   {item.desc}
                 </p>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '20px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderTop: '1px solid #e2e8f0', paddingTop: '20px' }}>
                   {item.features.map((feat, fIdx) => (
                     <div key={fIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <CheckCircle2 size={16} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '3px' }} />
-                      <span style={{ color: '#cbd5e1', fontSize: '0.88rem', lineHeight: '1.5' }}>{feat}</span>
+                      <CheckCircle2 size={16} style={{ color: '#0284c7', flexShrink: 0, marginTop: '3px' }} />
+                      <span style={{ color: '#334155', fontSize: '0.88rem', lineHeight: '1.5' }}>{feat}</span>
                     </div>
                   ))}
                 </div>
@@ -350,16 +367,16 @@ const PulseJetFilterPage = () => {
       </section>
 
       {/* 2. Available Configurations */}
-      <section style={{ padding: '80px 0', background: '#0b1120', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
-        <div className="container">
+      <section className="light-graphic-blueprint" style={{ padding: '80px 0', background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               CUSTOM BUILT FOR PROCESS NEEDS
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
-              Available <span style={{ color: '#38bdf8' }}>Configurations</span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+              Available <span style={{ color: '#1d4ed8' }}>Configurations</span>
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
               Every plant has specific physical layout constraints, dust loadings, and operational requirements. We engineer our Pulse Jet Bag Filters in tailored configurations:
             </p>
           </div>
@@ -369,21 +386,24 @@ const PulseJetFilterPage = () => {
               <div 
                 key={idx}
                 style={{
-                  background: 'rgba(15, 23, 42, 0.7)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  background: '#ffffff',
+                  border: '1px solid #e2e8f0',
                   borderRadius: '16px',
                   padding: '28px',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '12px',
-                  transition: 'transform 0.25s ease, border-color 0.25s ease'
+                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.04)',
+                  transition: 'transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.4)';
+                  e.currentTarget.style.borderColor = '#0284c7';
+                  e.currentTarget.style.boxShadow = '0 10px 24px rgba(2, 132, 199, 0.1)';
                   e.currentTarget.style.transform = 'translateY(-3px)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.04)';
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
@@ -392,9 +412,9 @@ const PulseJetFilterPage = () => {
                     width: '32px',
                     height: '32px',
                     borderRadius: '8px',
-                    background: 'rgba(56, 189, 248, 0.15)',
-                    border: '1px solid rgba(56, 189, 248, 0.3)',
-                    color: '#38bdf8',
+                    background: '#f0f7ff',
+                    border: '1px solid #bae6fd',
+                    color: '#1d4ed8',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -403,11 +423,11 @@ const PulseJetFilterPage = () => {
                   }}>
                     {idx + 1}
                   </div>
-                  <h3 style={{ fontSize: '1.15rem', fontWeight: '700', color: '#ffffff', margin: 0 }}>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: '700', color: '#0f172a', margin: 0 }}>
                     {cfg.title}
                   </h3>
                 </div>
-                <p style={{ color: '#94a3b8', fontSize: '0.92rem', lineHeight: '1.6', margin: 0 }}>
+                <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: '1.6', margin: 0 }}>
                   {cfg.desc}
                 </p>
               </div>
@@ -417,16 +437,16 @@ const PulseJetFilterPage = () => {
       </section>
 
       {/* 3. Gas & Dust Distribution + Clean Air Top Access Architecture */}
-      <section style={{ padding: '80px 0', background: '#070b14', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
-        <div className="container">
+      <section className="light-graphic-dots" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               PROPRIETARY ENGINEERING
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
-              Gas Distribution & <span style={{ color: '#38bdf8' }}>Top-Access Media</span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+              Gas Distribution &amp; <span style={{ color: '#1d4ed8' }}>Top-Access Media</span>
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
               Engineered flow dynamics and ergonomic maintenance access ensure zero re-entrainment and seamless bag servicing.
             </p>
           </div>
@@ -438,21 +458,22 @@ const PulseJetFilterPage = () => {
                 <div 
                   key={idx}
                   style={{
-                    background: 'rgba(15, 23, 42, 0.65)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    background: '#ffffff',
+                    border: '1px solid #e2e8f0',
                     borderRadius: '18px',
                     padding: '32px 26px',
                     display: 'flex',
-                    flexDirection: 'column'
+                    flexDirection: 'column',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)'
                   }}
                 >
                   <div style={{
                     width: '50px',
                     height: '50px',
                     borderRadius: '12px',
-                    background: 'rgba(14, 165, 233, 0.12)',
-                    border: '1px solid rgba(14, 165, 233, 0.25)',
-                    color: '#38bdf8',
+                    background: '#f0f7ff',
+                    border: '1px solid #bae6fd',
+                    color: '#0284c7',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -461,15 +482,15 @@ const PulseJetFilterPage = () => {
                     <Icon size={24} />
                   </div>
 
-                  <span style={{ color: '#38bdf8', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '6px' }}>
+                  <span style={{ color: '#0284c7', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '6px' }}>
                     {tech.subtitle}
                   </span>
 
-                  <h3 style={{ fontSize: '1.28rem', fontWeight: '700', color: '#ffffff', marginBottom: '12px' }}>
+                  <h3 style={{ fontSize: '1.28rem', fontWeight: '700', color: '#0f172a', marginBottom: '12px' }}>
                     {tech.title}
                   </h3>
 
-                  <p style={{ color: '#94a3b8', fontSize: '0.92rem', lineHeight: '1.65', margin: 0 }}>
+                  <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: '1.65', margin: 0 }}>
                     {tech.desc}
                   </p>
                 </div>
@@ -479,17 +500,17 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 3. Core Industries Served Grid */}
-      <section style={{ padding: '80px 0', background: '#070b14' }}>
-        <div className="container">
+      {/* 4. Core Industries Served Grid */}
+      <section className="light-graphic-blueprint" style={{ padding: '80px 0', background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               INDUSTRIES SERVED
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
-              Trusted Across India's <span style={{ color: '#38bdf8' }}>Core Industries</span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+              Trusted Across India's <span style={{ color: '#1d4ed8' }}>Core Industries</span>
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
               Our pulse jet dust collectors are custom engineered to handle unique temperature profiles, corrosive gas streams, and particulate abrasiveness across primary sectors:
             </p>
           </div>
@@ -505,28 +526,31 @@ const PulseJetFilterPage = () => {
                 <div 
                   key={idx}
                   style={{
-                    background: 'rgba(15, 23, 42, 0.7)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    background: '#ffffff',
+                    border: '1px solid #e2e8f0',
                     borderRadius: '16px',
                     padding: '24px',
+                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.04)',
                     transition: 'all 0.25s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.35)';
+                    e.currentTarget.style.borderColor = '#0284c7';
                     e.currentTarget.style.transform = 'translateY(-4px)';
+                    e.currentTarget.style.boxShadow = '0 10px 24px rgba(2, 132, 199, 0.1)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                    e.currentTarget.style.borderColor = '#e2e8f0';
                     e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.04)';
                   }}
                 >
                   <div style={{
                     width: '46px',
                     height: '46px',
                     borderRadius: '12px',
-                    background: 'rgba(56, 189, 248, 0.1)',
-                    border: '1px solid rgba(56, 189, 248, 0.25)',
-                    color: '#38bdf8',
+                    background: '#f0f7ff',
+                    border: '1px solid #bae6fd',
+                    color: '#0284c7',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -535,11 +559,11 @@ const PulseJetFilterPage = () => {
                     <Icon size={22} />
                   </div>
 
-                  <h4 style={{ fontSize: '1.15rem', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
+                  <h4 style={{ fontSize: '1.15rem', fontWeight: '700', color: '#0f172a', marginBottom: '8px' }}>
                     {ind.name}
                   </h4>
 
-                  <p style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.55', margin: 0 }}>
+                  <p style={{ color: '#475569', fontSize: '0.88rem', lineHeight: '1.55', margin: 0 }}>
                     {ind.desc}
                   </p>
                 </div>
@@ -549,17 +573,17 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 4. Comprehensive Lifecycle Support Services */}
-      <section style={{ padding: '80px 0', background: '#0b1120', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
-        <div className="container">
+      {/* 5. Comprehensive Lifecycle Support Services */}
+      <section className="light-graphic-dots" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               OUR SERVICES
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
-              Comprehensive <span style={{ color: '#38bdf8' }}>Support & Maintenance</span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
+              Comprehensive <span style={{ color: '#1d4ed8' }}>Support &amp; Maintenance</span>
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
+            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
               Our commitment does not end with installation. We provide complete after-sales support to keep your baghouse running at peak efficiency with zero downtime.
             </p>
           </div>
@@ -571,21 +595,22 @@ const PulseJetFilterPage = () => {
                 <div 
                   key={idx}
                   style={{
-                    background: 'rgba(15, 23, 42, 0.65)',
-                    border: '1px solid rgba(255, 255, 255, 0.07)',
+                    background: '#ffffff',
+                    border: '1px solid #e2e8f0',
                     borderRadius: '16px',
                     padding: '28px',
                     display: 'flex',
-                    flexDirection: 'column'
+                    flexDirection: 'column',
+                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.04)'
                   }}
                 >
                   <div style={{
                     width: '46px',
                     height: '46px',
                     borderRadius: '12px',
-                    background: 'rgba(14, 165, 233, 0.1)',
-                    border: '1px solid rgba(14, 165, 233, 0.25)',
-                    color: '#38bdf8',
+                    background: '#f0f7ff',
+                    border: '1px solid #bae6fd',
+                    color: '#0284c7',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -594,11 +619,11 @@ const PulseJetFilterPage = () => {
                     <Icon size={22} />
                   </div>
 
-                  <h4 style={{ fontSize: '1.18rem', fontWeight: '700', color: '#ffffff', marginBottom: '10px' }}>
+                  <h4 style={{ fontSize: '1.18rem', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>
                     {srv.title}
                   </h4>
 
-                  <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6', margin: 0, flex: 1 }}>
+                  <p style={{ color: '#475569', fontSize: '0.9rem', lineHeight: '1.6', margin: 0, flex: 1 }}>
                     {srv.desc}
                   </p>
                 </div>
@@ -608,29 +633,30 @@ const PulseJetFilterPage = () => {
 
           {/* Dedicated Support Callout Box */}
           <div style={{
-            background: 'linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(37, 99, 235, 0.08) 100%)',
-            border: '1px solid rgba(56, 189, 248, 0.35)',
+            background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
             borderRadius: '20px',
             padding: '36px 32px',
             textAlign: 'center',
             maxWidth: '860px',
-            margin: '0 auto'
+            margin: '0 auto',
+            color: '#ffffff',
+            boxShadow: '0 10px 30px rgba(29, 78, 216, 0.25)'
           }}>
             <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#ffffff', marginBottom: '12px' }}>
               Need Support for Your Existing Dust Collection System?
             </h3>
-            <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: '1.6', maxWidth: '680px', margin: '0 auto 24px' }}>
+            <p style={{ color: 'rgba(255, 255, 255, 0.92)', fontSize: '1.05rem', lineHeight: '1.6', maxWidth: '680px', margin: '0 auto 24px' }}>
               Our dedicated engineering service desk is ready to assist with scheduled maintenance, emergency spare parts dispatch, and system upgrade audits across India.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/contact" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <Link to="/contact" className="btn btn-lg" style={{ background: '#ffffff', color: '#1d4ed8', fontWeight: '700', display: 'inline-flex', alignItems: 'center', gap: '8px', borderRadius: '10px' }}>
                 <span>Get a Service Quote</span>
                 <ArrowRight size={16} />
               </Link>
               <a 
                 href="tel:+911234567890" 
-                className="btn btn-outline" 
-                style={{ borderColor: '#38bdf8', color: '#38bdf8', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                className="btn btn-lg" 
+                style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.4)', color: '#ffffff', display: 'inline-flex', alignItems: 'center', gap: '8px', borderRadius: '10px' }}
               >
                 <PhoneCall size={16} />
                 <span>Call +91 1234567890</span>
@@ -639,8 +665,8 @@ const PulseJetFilterPage = () => {
                 href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20need%20service%20support%20for%20my%20bag%20filter%20system."
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn btn-outline" 
-                style={{ borderColor: '#22c55e', color: '#4ade80' }}
+                className="btn btn-lg" 
+                style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.4)', color: '#ffffff', borderRadius: '10px' }}
               >
                 <span>WhatsApp Desk</span>
               </a>
@@ -649,17 +675,17 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 5. Design Parameters Matrix */}
-      <section style={{ padding: '80px 0', background: '#070b14', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
-        <div className="container">
+      {/* 6. Design Parameters Matrix */}
+      <section className="light-graphic-blueprint" style={{ padding: '80px 0', background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 40px' }}>
-            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               TECHNICAL MATRIX
             </div>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: '800', color: '#ffffff', marginBottom: '12px' }}>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
               Design Parameters Matrix
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
+            <p style={{ color: '#475569', fontSize: '1rem' }}>
               Standard design baseline parameters engineered for custom industrial applications:
             </p>
           </div>
@@ -667,10 +693,11 @@ const PulseJetFilterPage = () => {
           <div style={{
             maxWidth: '880px',
             margin: '0 auto',
-            background: 'rgba(15, 23, 42, 0.75)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
+            background: '#ffffff',
+            border: '1px solid #cbd5e1',
             borderRadius: '16px',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)'
           }}>
             {designParameters.map((item, idx) => (
               <div 
@@ -679,14 +706,14 @@ const PulseJetFilterPage = () => {
                   display: 'flex',
                   flexWrap: 'wrap',
                   padding: '16px 24px',
-                  borderBottom: idx !== designParameters.length - 1 ? '1px solid rgba(255, 255, 255, 0.06)' : 'none',
-                  background: idx % 2 === 0 ? 'rgba(2, 6, 23, 0.4)' : 'transparent'
+                  borderBottom: idx !== designParameters.length - 1 ? '1px solid #e2e8f0' : 'none',
+                  background: idx % 2 === 0 ? '#f8fafc' : '#ffffff'
                 }}
               >
-                <div style={{ flex: '1 1 260px', fontWeight: '700', color: '#38bdf8', fontSize: '0.92rem' }}>
+                <div style={{ flex: '1 1 260px', fontWeight: '700', color: '#1d4ed8', fontSize: '0.92rem' }}>
                   {item.label}
                 </div>
-                <div style={{ flex: '2 1 360px', color: '#cbd5e1', fontSize: '0.92rem', lineHeight: '1.5' }}>
+                <div style={{ flex: '2 1 360px', color: '#334155', fontSize: '0.92rem', lineHeight: '1.5' }}>
                   {item.value}
                 </div>
               </div>

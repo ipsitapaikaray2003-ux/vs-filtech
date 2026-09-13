@@ -70,6 +70,11 @@ const Hero = () => {
 
   return (
     <section className="hero" aria-label="Hero Slider">
+      {/* Technical Blueprint Graphic Mesh Overlay */}
+      <div className="hero-blueprint-mesh" aria-hidden="true" />
+      <div className="hero-ambient-orb hero-ambient-amber" aria-hidden="true" />
+      <div className="hero-ambient-orb hero-ambient-emerald" aria-hidden="true" />
+
       {slides.map((slide, idx) => (
         <div
           key={idx}
@@ -83,7 +88,7 @@ const Hero = () => {
             <div className="container hero-container">
               <div key={current} className="hero-inner">
                 <div className="hero-badge">
-                  <Sparkles size={13} />
+                  <Sparkles size={13} className="hero-badge-sparkle" />
                   <span>{slide.badge}</span>
                 </div>
 
@@ -118,19 +123,21 @@ const Hero = () => {
         <ChevronRight size={22} />
       </button>
 
-
-      {/* Stats Bar */}
+      {/* Stats Bar with Vibrant Accent Colors */}
       <div className="hero-stats-bar">
         <div className="container">
           <div className="hero-stats-inner">
-            {stats.map((s, idx) => (
-              <div key={idx} className="hero-stat-col">
-                <span className="hero-stat-val">
-                  <CountUpStat prefix={s.prefix || ''} end={s.end} decimals={s.decimals} suffix={s.suffix} />
-                </span>
-                <span className="hero-stat-lbl">{s.label}</span>
-              </div>
-            ))}
+            {stats.map((s, idx) => {
+              const statColors = ['#10b981', '#f59e0b', '#38bdf8', '#a78bfa'];
+              return (
+                <div key={idx} className="hero-stat-col">
+                  <span className="hero-stat-val" style={{ color: statColors[idx] }}>
+                    <CountUpStat prefix={s.prefix || ''} end={s.end} decimals={s.decimals} suffix={s.suffix} />
+                  </span>
+                  <span className="hero-stat-lbl">{s.label}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

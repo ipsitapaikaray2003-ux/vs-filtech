@@ -203,18 +203,22 @@ const Products = () => {
   const [selectedIndustry, setSelectedIndustry] = useState(null);
 
   return (
-    <section id="products" className="products-showcase-section">
-      <div className="container">
+    <section id="products" className="products-showcase-section light-graphic-blueprint">
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
         {/* Section Header */}
         <div className="products-section-header">
           <div className="products-luxury-tag">
-            <Sparkles size={14} /> 
-            <span>INDUSTRIAL FILTRATION & DUST EXTRACTION</span>
+            <Sparkles size={14} style={{ color: '#0284c7' }} /> 
+            <span>INDUSTRIAL FILTRATION &amp; DUST EXTRACTION</span>
           </div>
 
           <h2 className="products-main-title">
-            Engineered Systems & <span className="text-gradient-cyan">High-Efficiency Collectors</span>
+            Engineered Systems &amp; <span style={{
+              background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>High-Efficiency Collectors</span>
           </h2>
 
           <p className="products-main-lead">
@@ -236,7 +240,7 @@ const Products = () => {
                   loading="lazy"
                 />
                 <div className="umiya-media-gradient" />
-                <span className="umiya-card-tag">{prod.tag}</span>
+                <span className={`umiya-card-tag ${prod.tagClass || ''}`}>{prod.tag}</span>
               </div>
 
               {/* Body */}
@@ -244,7 +248,7 @@ const Products = () => {
                 <h3 className="umiya-card-title">{prod.title}</h3>
 
                 {prod.lead && (
-                  <p style={{ fontSize: '0.88rem', color: '#94a3b8', lineHeight: '1.5', marginBottom: '14px' }}>
+                  <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.5', marginBottom: '14px' }}>
                     {prod.lead}
                   </p>
                 )}
