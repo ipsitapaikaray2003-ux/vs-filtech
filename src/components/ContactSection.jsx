@@ -80,7 +80,7 @@ _Sent via vsfiltech.com/contact_`;
           </div>
 
           <h2 className="contact-main-title">
-            Tell Us About <span className="text-gradient">Your Requirement</span>
+            Tell Us About <span style={{ color: '#38bdf8' }}>Your Requirement</span>
           </h2>
 
           <p className="contact-main-subtitle">

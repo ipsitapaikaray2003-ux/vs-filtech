@@ -58,24 +58,24 @@ const ProcessCapabilityBanner = () => {
           margin: '0 auto',
           textAlign: 'center'
         }}>
-          {/* Eyebrow in Warm Amber on Light Background */}
+          {/* Eyebrow in Royal Blue on Light Background */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: '#fffbeb',
-            border: '1px solid #fde68a',
+            background: '#f0f9ff',
+            border: '1px solid #bae6fd',
             padding: '6px 18px',
             borderRadius: '999px',
-            color: '#b45309',
+            color: '#0284c7',
             fontSize: '0.8rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
             marginBottom: '1.25rem',
-            boxShadow: '0 2px 8px rgba(245, 158, 11, 0.1)'
+            boxShadow: '0 2px 8px rgba(2, 132, 199, 0.1)'
           }}>
-            <Sliders size={14} style={{ color: '#d97706' }} /> PROCESS-DRIVEN FILTRATION ENGINEERING
+            <Sliders size={14} style={{ color: '#0284c7' }} /> PROCESS-DRIVEN FILTRATION ENGINEERING
           </div>
 
           {/* Main Statement */}
