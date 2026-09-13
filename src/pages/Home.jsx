@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
-import About from '../components/About';
+import ProcessCapabilityBanner from '../components/ProcessCapabilityBanner';
 import Products from '../components/Products';
+import EngineeringApproachSection from '../components/EngineeringApproachSection';
+import QualityInspectionSection from '../components/QualityInspectionSection';
+import WhyVSFiltech from '../components/WhyVSFiltech';
 import ContactSection from '../components/ContactSection';
 import { scrollToSection } from '../utils/scrollUtils';
 
@@ -14,8 +16,6 @@ const Home = () => {
     let targetId = null;
     if (location.hash) {
       targetId = location.hash.replace('#', '');
-    } else if (location.pathname === '/services') {
-      targetId = 'services';
     }
 
     if (targetId) {
@@ -31,9 +31,11 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <About />
-      <Services />
+      <ProcessCapabilityBanner />
       <Products />
+      <EngineeringApproachSection />
+      <QualityInspectionSection />
+      <WhyVSFiltech />
       <ContactSection />
     </>
   );

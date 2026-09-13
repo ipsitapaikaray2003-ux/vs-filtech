@@ -26,16 +26,48 @@ import {
 import heroImg from '../assets/factory_bagfilter_plant_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
 
-const specs = [
-  { label: 'Material of Construction (MOC)', value: 'Heavy Gauge IS 2062 Mild Steel (MS), SS 304, SS 316, Corten Steel' },
-  { label: 'Filter Media Options', value: 'Polyester Needlefelt, Nomex/Aramid (240°C), PPS/Ryton (190°C), PTFE Membrane, Polypropylene, Fiberglass' },
-  { label: 'Airflow Capacity', value: 'Custom Engineered from 1,000 CFM to 1,50,000+ CFM' },
-  { label: 'Pulse Jet Cleaning Modes', value: 'Online Continuous Mode or Offline Compartmentalized Mode' },
-  { label: 'Air Distribution', value: 'Engineered Inlet Baffles with Controlled Downward Can Velocity' },
-  { label: 'Access Mechanism', value: 'Top-Access Snap-In/Snap-Out from Clean Air Plenum via Roof Gasketed Hatches' },
-  { label: 'Cleaning System', value: 'High-speed pilot diaphragm solenoid valves, pulse header, and sequential timer' },
-  { label: 'Operating Temperature', value: 'Ambient up to 260°C continuous' },
-  { label: 'Guaranteed Emission Norm', value: '< 10 mg/Nm³ (CPCB & State Pollution Control Board certified)' }
+const availableConfigurations = [
+  {
+    title: 'Online Pulse Jet Bag Filter',
+    desc: 'Continuous row-by-row compressed air pulse cleaning while dust-laden process gas continuously passes through the filter.'
+  },
+  {
+    title: 'Offline Pulse Jet Bag Filter',
+    desc: 'Compartmentalized design where individual chambers are isolated in zero-velocity air during cleaning to eliminate dust re-entrainment.'
+  },
+  {
+    title: 'Single / Multiple Module Arrangements',
+    desc: 'Scalable modular structures customized for localized individual machines up to large multi-module centralized plants.'
+  },
+  {
+    title: 'Top-Entry Bag Removal Arrangements',
+    desc: 'Clean-air plenum snap-ring bag removal via weather-tight roof doors without exposing technicians to process dust.'
+  },
+  {
+    title: 'Side / Bottom Inlet Arrangements',
+    desc: 'Engineered baffle plate diffusers for downward can velocity, tailored according to site space and duct routing.'
+  },
+  {
+    title: 'Custom Outlet Configurations',
+    desc: 'Duct plenum geometries optimized for minimal static pressure drop and direct mating to ID fans or exhaust stacks.'
+  },
+  {
+    title: 'Custom Hopper Arrangements',
+    desc: 'Pyramidal, trough, or multi-outlet hoppers equipped with rotary airlocks, screw conveyors, vibrators, or manual slide gates.'
+  }
+];
+
+const designParameters = [
+  { label: 'Gas Flow Rate', value: 'As per application & process CFM calculations' },
+  { label: 'Operating Temperature', value: 'As per process conditions (ambient up to high-temperature gas streams)' },
+  { label: 'Filter Media', value: 'Application-specific: Polyester, Polypropylene, Acrylic, PPS, Aramid, PTFE, Fiberglass' },
+  { label: 'Bag Diameter & Length', value: 'As per engineering design (standard Ø 120mm - 160mm, lengths up to 6m+)' },
+  { label: 'Number of Bags', value: 'Calculated according to required filtration area and air-to-cloth ratio' },
+  { label: 'Number of Modules', value: 'Configured according to total air volume and online/offline arrangement' },
+  { label: 'Cleaning System', value: 'Compressed-air pulse jet with solenoid valves & sequential micro-controller' },
+  { label: 'Dust Discharge Arrangement', value: 'Rotary airlock / screw conveyor / double flap valve / slide gate as applicable' },
+  { label: 'Material of Construction (MOC)', value: 'Heavy Gauge IS 2062 Mild Steel (MS) / SS 304 / SS 316 / Corten Steel' },
+  { label: 'Access Mechanism', value: 'Top-access clean-air plenum with weather-tight gasketed roof doors' }
 ];
 
 const cleaningModes = [
@@ -317,8 +349,75 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 2. Gas & Dust Distribution + Clean Air Top Access Architecture */}
+      {/* 2. Available Configurations */}
       <section style={{ padding: '80px 0', background: '#0b1120', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 50px' }}>
+            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+              CUSTOM BUILT FOR PROCESS NEEDS
+            </div>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
+              Available <span style={{ color: '#38bdf8' }}>Configurations</span>
+            </h2>
+            <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
+              Every plant has specific physical layout constraints, dust loadings, and operational requirements. We engineer our Pulse Jet Bag Filters in tailored configurations:
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+            {availableConfigurations.map((cfg, idx) => (
+              <div 
+                key={idx}
+                style={{
+                  background: 'rgba(15, 23, 42, 0.7)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '16px',
+                  padding: '28px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  transition: 'transform 0.25s ease, border-color 0.25s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.4)';
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '8px',
+                    background: 'rgba(56, 189, 248, 0.15)',
+                    border: '1px solid rgba(56, 189, 248, 0.3)',
+                    color: '#38bdf8',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: '800',
+                    fontSize: '0.85rem'
+                  }}>
+                    {idx + 1}
+                  </div>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: '700', color: '#ffffff', margin: 0 }}>
+                    {cfg.title}
+                  </h3>
+                </div>
+                <p style={{ color: '#94a3b8', fontSize: '0.92rem', lineHeight: '1.6', margin: 0 }}>
+                  {cfg.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Gas & Dust Distribution + Clean Air Top Access Architecture */}
+      <section style={{ padding: '80px 0', background: '#070b14', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px' }}>
             <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
@@ -550,15 +649,18 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 5. Technical Specifications Table */}
-      <section style={{ padding: '80px 0', background: '#070b14' }}>
+      {/* 5. Design Parameters Matrix */}
+      <section style={{ padding: '80px 0', background: '#070b14', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 40px' }}>
+            <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+              TECHNICAL MATRIX
+            </div>
             <h2 style={{ fontSize: '2.2rem', fontWeight: '800', color: '#ffffff', marginBottom: '12px' }}>
-              Engineering Specifications
+              Design Parameters Matrix
             </h2>
             <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
-              Standard technical parameters for VS Filtech Pulse Jet Baghouse installations:
+              Standard design baseline parameters engineered for custom industrial applications:
             </p>
           </div>
 
@@ -570,14 +672,14 @@ const PulseJetFilterPage = () => {
             borderRadius: '16px',
             overflow: 'hidden'
           }}>
-            {specs.map((item, idx) => (
+            {designParameters.map((item, idx) => (
               <div 
                 key={idx} 
                 style={{
                   display: 'flex',
                   flexWrap: 'wrap',
                   padding: '16px 24px',
-                  borderBottom: idx !== specs.length - 1 ? '1px solid rgba(255, 255, 255, 0.06)' : 'none',
+                  borderBottom: idx !== designParameters.length - 1 ? '1px solid rgba(255, 255, 255, 0.06)' : 'none',
                   background: idx % 2 === 0 ? 'rgba(2, 6, 23, 0.4)' : 'transparent'
                 }}
               >

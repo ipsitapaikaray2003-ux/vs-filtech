@@ -11,6 +11,10 @@ import ProductsPage from './pages/ProductsPage';
 import PulseJetFilterPage from './pages/PulseJetFilterPage';
 import FilterBagsCagesPage from './pages/FilterBagsCagesPage';
 import ControlPanelsPage from './pages/ControlPanelsPage';
+import EngineeringPage from './pages/EngineeringPage';
+import RetrofitPage from './pages/RetrofitPage';
+import IndustriesPage from './pages/IndustriesPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 // Old routes for backwards compatibility
 import ProductPoly from './pages/ProductPoly';
@@ -26,10 +30,17 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/engineering" element={<EngineeringPage />} />
+            <Route path="/retrofit" element={<RetrofitPage />} />
+            <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<Contact />} />
+            
+            {/* Services & Gallery backwards compatibility */}
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/gallery" element={<ProjectsPage />} />
+
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/pulse-jet-filter" element={<PulseJetFilterPage />} />
             <Route path="/products/filter-bags-cages" element={<FilterBagsCagesPage />} />

@@ -100,33 +100,41 @@ const About = () => {
           <div className="about-content-premium">
             <div className="about-eyebrow-graphic">
               <span className="pulse-dot-cyan" />
-              <span>ABOUT VS FILTECH · AIR FILTRATION & DUST CONTROL</span>
+              <span>ABOUT VS FILTECH</span>
             </div>
 
             <h2 className="about-title-premium">
-              Design & Manufacturer of <br />
-              <span className="about-title-gradient">Bag Filters & Dust Collectors</span> <br />
-              in India
+              Engineering-Oriented <br />
+              <span className="about-title-gradient">Dust Collection &amp; Filtration Solutions</span>
             </h2>
 
             <p className="about-lead-premium">
-              <strong>VS Filtech</strong> is one of India&apos;s premier Design and Manufacturers of high-capacity Bag Filters and Dust Collectors. 
-              We are an end-to-end manufacturer and supplier of Air Filtration Equipments, Accessories & Spares — delivering precision engineering, 
-              statutory pollution compliance (&lt;10 mg/Nm³), and turnkey systems nationwide.
+              VS Filtech is an engineering-oriented company focused on industrial dust collection, filtration and control solutions. We provide customised solutions for industrial applications, with a focus on practical engineering, fabrication quality, inspection and dependable system performance.
+              <br /><br />
+              Our approach is based on understanding the process requirement first and then developing the appropriate filtration and dust collection solution.
             </p>
 
-            {/* Why Choose Us & Comprehensive Consultancy Services Box */}
-            <div className="about-consultancy-box">
-              <div className="about-consultancy-title">
-                <Target size={18} className="text-accent" />
-                <span>Why Choose Us? · Comprehensive Consultancy & Total Solutions</span>
-              </div>
-              <p className="about-consultancy-text">
-                Our precision fabrics and filter articles help clients achieve maximum value for money with highest filtration quality in minimum time. 
-                At VS Filtech, we not only provide top-notch equipment but also offer comprehensive consultancy services. 
-                Our experienced engineering team assists with product selection, system design, CFM sizing, and on-site troubleshooting. 
-                Our maximum products are 100% customized according to customer needs.
-              </p>
+            {/* Our Focus: 4 Pillars */}
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '12px',
+              marginBottom: '28px'
+            }}>
+              {['Engineering', 'Quality', 'Reliability', 'Customer Support'].map((pillar, pIdx) => (
+                <div key={pIdx} style={{
+                  background: 'rgba(56, 189, 248, 0.12)',
+                  border: '1px solid rgba(56, 189, 248, 0.35)',
+                  padding: '8px 18px',
+                  borderRadius: '999px',
+                  color: '#38bdf8',
+                  fontWeight: '700',
+                  fontSize: '0.9rem',
+                  letterSpacing: '0.04em'
+                }}>
+                  ✓ {pillar}
+                </div>
+              ))}
             </div>
 
             {/* Our Mission 4 Key Tenets */}

@@ -28,87 +28,95 @@ import industrySteelImg from '../assets/industry_steel.jpg';
 import industryMetalsImg from '../assets/industry_metals.jpg';
 import industryCarbonBlackImg from '../assets/industry_carbon_black.jpg';
 
+import controlPanelMcc from '../assets/control_panel_mcc_product.jpg';
+
 import './Products.css';
 
-// Featured Dust Collection Systems
+// 6 Core Product Categories
 const systemProducts = [
   {
-    title: 'Pulse Jet Bag Filter',
-    tag: 'PLEATED MEDIA',
-    tagClass: 'badge-emerald',
-    image: pleatedImg,
-    bullets: [
-      'High dust load capacity (2.5x media area)',
-      'Continuous 24/7 online reverse-pulse cleaning',
-      '99.9%+ collection efficiency (<10 mg/Nm³)'
-    ],
-    detailsLink: '/products/filter-bags-cages',
-    quoteLink: '/contact?product=Pleated-Pulse-Jet-Bag-Filter'
-  },
-  {
-    title: 'Dust Collector (Baghouse / Cyclone)',
-    tag: 'BAGHOUSE & CYCLONE',
-    tagClass: 'badge-blue',
-    image: baghouseCycloneImg,
-    bullets: [
-      'Cyclone pre-separation (80%+ coarse dust)',
-      'Heavy-duty multi-hopper fabric baghouse',
-      'Low-maintenance top clean-air plenum access'
-    ],
-    detailsLink: '/products/pulse-jet-filter',
-    quoteLink: '/contact?product=Baghouse-Cyclone-Collector'
-  },
-  {
-    title: 'Pulse Jet Dust Collector',
-    tag: 'CONTINUOUS PULSE',
+    title: 'Pulse Jet Bag Filters',
+    tag: 'CORE EQUIPMENT',
     tagClass: 'badge-cyan',
     image: pulseJetImg,
+    lead: 'Custom-engineered online and offline pulse jet bag filters for industrial dust collection applications.',
     bullets: [
-      'Engineered downward can velocity baffles',
-      'Microprocessor sequential timer & DP feedback',
-      'Supersonic venturi pulse cleaning shockwaves'
+      'Continuous online or offline compartmentalized cleaning',
+      'Configured for high air volumes and process dust loads',
+      'Laser-cut tube sheets with clean-air plenum roof access'
     ],
     detailsLink: '/products/pulse-jet-filter',
-    quoteLink: '/contact?product=Pulse-Jet-Dust-Collector'
+    quoteLink: '/contact?product=Pulse-Jet-Bag-Filters'
   },
   {
-    title: 'Fume Extraction System',
-    tag: 'FUME & EMISSION CONTROL',
-    tagClass: 'badge-purple',
-    image: fumeImg,
+    title: 'Dust Collection Systems',
+    tag: 'COMPLETE INSTALLATIONS',
+    tagClass: 'badge-blue',
+    image: baghouseCycloneImg,
+    lead: 'Complete systems including hoods, ducting, dampers, bag filters, fans and dust discharge arrangements.',
     bullets: [
-      'Source-capture articulated suction hoods',
-      'Multi-stage inline spark arrestor dampers',
-      'High-static dynamically balanced ID fans'
+      'Articulated capture hoods & aerodynamic duct design',
+      'Integrated cyclone pre-separators & fabric baghouses',
+      'Heavy-duty ID fans & rotary airlock discharge systems'
     ],
-    detailsLink: '/products',
-    quoteLink: '/contact?product=Fume-Extraction-System'
+    detailsLink: '/products/dust-collector-system',
+    quoteLink: '/contact?product=Dust-Collection-Systems'
   },
   {
-    title: 'Filter Bags & Support Cages',
-    tag: 'OEM FILTER MEDIA & CAGES',
+    title: 'Filter Bags & Cages',
+    tag: 'FILTRATION MEDIA & CAGES',
     tagClass: 'badge-amber',
     image: filterBagImg,
+    lead: 'Replacement filter bags and cages selected according to application, temperature, dust characteristics and filtration requirements.',
     bullets: [
-      'Stainless spring snap-band airtight collar',
-      'Rigid 10/12/16-wire anti-collapse cages',
-      'Polyester, Nomex (240°C), PPS & PTFE media'
+      'Polyester, Aramid, PPS, PTFE, and Fiberglass media',
+      'Rigid 8 to 24-wire precision-welded anti-collapse cages',
+      'Airtight snap-band collar sealing with supersonic venturis'
     ],
     detailsLink: '/products/filter-bags-cages',
     quoteLink: '/contact?product=Filter-Bags-Cages'
   },
   {
-    title: 'Pulse Solenoid Valves & Controls',
-    tag: 'PULSE CONTROLS & MCC',
-    tagClass: 'badge-rose',
-    image: solenoidImg,
+    title: 'Cartridge Filters',
+    tag: 'COMPACT HIGH SURFACE AREA',
+    tagClass: 'badge-emerald',
+    image: pleatedImg,
+    lead: 'Compact filtration solutions for applications where high filtration area is required in limited space.',
     bullets: [
-      'Fast-acting 1M+ cycle pilot diaphragm valves',
-      'Digital sequential timer & real-time DP monitor',
-      'Direct OEM drop-in replacements for all makes'
+      '2.5x to 3x higher filtration surface area in compact footprint',
+      'Pleated spunbond polyester media with ePTFE membranes',
+      'Direct retrofit options into existing baghouse tube sheets'
+    ],
+    detailsLink: '/products/pleated-filter-bag',
+    quoteLink: '/contact?product=Cartridge-Filters'
+  },
+  {
+    title: 'Dampers & Accessories',
+    tag: 'AIRFLOW & SYSTEM ACCESSORIES',
+    tagClass: 'badge-purple',
+    image: fumeImg,
+    lead: 'Industrial dampers, valves and accessories for airflow control and dust collection systems.',
+    bullets: [
+      'Isolation poppet dampers, butterfly valves & multi-louvers',
+      'Rotary airlocks, screw conveyors & double flap valves',
+      'Engineered for reliable gas balancing and dust isolation'
+    ],
+    detailsLink: '/products/cyclone-dust-collector',
+    quoteLink: '/contact?product=Dampers-Accessories'
+  },
+  {
+    title: 'Control Panel & Automation Systems',
+    tag: 'ELECTRICAL & AUTOMATION',
+    tagClass: 'badge-rose',
+    image: controlPanelMcc,
+    lead: 'Electrical control panels and automation solutions for bag-filter cleaning, monitoring and system operation.',
+    bullets: [
+      'Microprocessor sequential pulse cleaning timers',
+      'Real-time differential pressure (DP) monitoring & on-demand pulse',
+      'VFD ID fan speed modulation, motor starters & safety interlocks'
     ],
     detailsLink: '/products/control-panels',
-    quoteLink: '/contact?product=Solenoid-Valves-Panels'
+    quoteLink: '/contact?product=Control-Panels'
   }
 ];
 
@@ -234,6 +242,12 @@ const Products = () => {
               {/* Body */}
               <div className="umiya-card-body">
                 <h3 className="umiya-card-title">{prod.title}</h3>
+
+                {prod.lead && (
+                  <p style={{ fontSize: '0.88rem', color: '#94a3b8', lineHeight: '1.5', marginBottom: '14px' }}>
+                    {prod.lead}
+                  </p>
+                )}
 
                 {/* Bullet Points with Orange Markers */}
                 <ul className="umiya-bullet-list">

@@ -233,20 +233,43 @@ const AboutPage = () => {
               <span className="executive-badge">
                 <span className="pulse-dot" />
                 <Sparkles size={14} />
-                <span>ABOUT VS FILTECH & CONTROL PANELS SYSTEMS</span>
+                <span>ABOUT VS FILTECH</span>
               </span>
             </div>
 
             <h1 className="premium-hero-animate executive-title">
-              Engineering Industrial <br />
-              <span className="luxury-gradient-text">Filtration Solutions.</span>
+              Engineering-Oriented <br />
+              <span className="luxury-gradient-text">Dust Collection &amp; Filtration Solutions</span>
             </h1>
 
             <p className="premium-hero-animate executive-lead">
-              <strong>VS Filtech & Control Panels Systems</strong> is one of India&apos;s premier design and manufacturers of industrial 
-              Bag Filters, Dust Collectors, ID Fans, and precision filtration accessories. We deliver turnkey air pollution control systems 
-              guaranteed to satisfy statutory emission limits (&lt;10 mg/Nm³) with maximum reliability.
+              VS Filtech is an engineering-oriented company focused on industrial dust collection, filtration and control solutions. We provide customised solutions for industrial applications, with a focus on practical engineering, fabrication quality, inspection and dependable system performance.
+              <br /><br />
+              Our approach is based on understanding the process requirement first and then developing the appropriate filtration and dust collection solution.
             </p>
+
+            {/* 4 Core Focus Pillars */}
+            <div className="premium-hero-animate" style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '12px',
+              marginBottom: '30px'
+            }}>
+              {['Engineering', 'Quality', 'Reliability', 'Customer Support'].map((pillar, pIdx) => (
+                <div key={pIdx} style={{
+                  background: 'rgba(56, 189, 248, 0.12)',
+                  border: '1px solid rgba(56, 189, 248, 0.35)',
+                  padding: '8px 18px',
+                  borderRadius: '999px',
+                  color: '#38bdf8',
+                  fontWeight: '700',
+                  fontSize: '0.9rem',
+                  letterSpacing: '0.04em'
+                }}>
+                  ✓ {pillar}
+                </div>
+              ))}
+            </div>
 
             <div className="premium-hero-animate executive-actions">
               <Link to="/contact" className="btn-luxury-primary">

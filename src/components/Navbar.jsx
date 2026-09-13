@@ -64,23 +64,7 @@ const Navbar = () => {
             className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} 
             onClick={closeMobileMenu}
           >
-            About Us
-          </Link>
-
-          <Link 
-            to="/services" 
-            className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} 
-            onClick={closeMobileMenu}
-          >
-            Services
-          </Link>
-
-          <Link 
-            to="/gallery" 
-            className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`} 
-            onClick={closeMobileMenu}
-          >
-            Gallery
+            About
           </Link>
 
           <div 
@@ -101,32 +85,61 @@ const Navbar = () => {
             <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
               <Link to="/products/pulse-jet-filter" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-flame">
-                  <Flame size={20} />
+                  <Flame size={18} />
                 </div>
                 <div className="dropdown-item-info">
                   <span className="dropdown-item-title">Pulse Jet Bag Filters</span>
-                  <span className="dropdown-item-subtitle">High-Efficiency Dust Collection</span>
+                  <span className="dropdown-item-subtitle">Online & offline baghouses</span>
                 </div>
-                <span className="dropdown-tag">Featured</span>
+              </Link>
+
+              <Link to="/products/dust-collector-system" className="dropdown-item" onClick={closeMobileMenu}>
+                <div className="dropdown-item-icon icon-layers">
+                  <Layers size={18} />
+                </div>
+                <div className="dropdown-item-info">
+                  <span className="dropdown-item-title">Dust Collection Systems</span>
+                  <span className="dropdown-item-subtitle">Complete turnkey installations</span>
+                </div>
               </Link>
 
               <Link to="/products/filter-bags-cages" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-layers">
-                  <Layers size={20} />
+                  <Layers size={18} />
                 </div>
                 <div className="dropdown-item-info">
                   <span className="dropdown-item-title">Filter Bags & Cages</span>
-                  <span className="dropdown-item-subtitle">Quality Filtration Media</span>
+                  <span className="dropdown-item-subtitle">Replacement media & support cages</span>
+                </div>
+              </Link>
+
+              <Link to="/products/pleated-filter-bag" className="dropdown-item" onClick={closeMobileMenu}>
+                <div className="dropdown-item-icon icon-layers">
+                  <Layers size={18} />
+                </div>
+                <div className="dropdown-item-info">
+                  <span className="dropdown-item-title">Cartridge Filters</span>
+                  <span className="dropdown-item-subtitle">Compact high surface area solutions</span>
+                </div>
+              </Link>
+
+              <Link to="/products/cyclone-dust-collector" className="dropdown-item" onClick={closeMobileMenu}>
+                <div className="dropdown-item-icon icon-droplets">
+                  <Droplets size={18} />
+                </div>
+                <div className="dropdown-item-info">
+                  <span className="dropdown-item-title">Dampers & Accessories</span>
+                  <span className="dropdown-item-subtitle">Valves, airlocks & duct accessories</span>
                 </div>
               </Link>
 
               <Link to="/products/control-panels" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-cpu">
-                  <Cpu size={20} />
+                  <Cpu size={18} />
                 </div>
                 <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Control Panels</span>
-                  <span className="dropdown-item-subtitle">Automation for Dust Collection</span>
+                  <span className="dropdown-item-title">Control Panels & Automation</span>
+                  <span className="dropdown-item-subtitle">Sequential timers & DP monitoring</span>
                 </div>
               </Link>
 
@@ -134,15 +147,47 @@ const Navbar = () => {
 
               <Link to="/products" className="dropdown-item dropdown-item-sub" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-layers">
-                  <Layers size={18} />
+                  <Layers size={16} />
                 </div>
                 <div className="dropdown-item-info">
                   <span className="dropdown-item-title">All Products & Systems</span>
-                  <span className="dropdown-item-subtitle">View complete catalog</span>
+                  <span className="dropdown-item-subtitle">View complete equipment catalog</span>
                 </div>
               </Link>
             </div>
           </div>
+
+          <Link 
+            to="/engineering" 
+            className={`nav-link ${location.pathname === '/engineering' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
+            Engineering
+          </Link>
+
+          <Link 
+            to="/retrofit" 
+            className={`nav-link ${location.pathname === '/retrofit' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
+            Retrofit
+          </Link>
+
+          <Link 
+            to="/industries" 
+            className={`nav-link ${location.pathname === '/industries' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
+            Industries
+          </Link>
+
+          <Link 
+            to="/projects" 
+            className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
+            Projects
+          </Link>
 
           <Link 
             to="/contact" 
