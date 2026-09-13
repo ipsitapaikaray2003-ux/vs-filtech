@@ -23,10 +23,11 @@ import {
 import { getProductByIdOrSlug, allProductsData } from '../data/productsData';
 import './ProductDetails.css';
 
-const ProductDetailPage = () => {
+const ProductDetailPage = ({ defaultSlug }) => {
   const { slug } = useParams();
+  const activeSlug = slug || defaultSlug;
   const navigate = useNavigate();
-  const product = getProductByIdOrSlug(slug);
+  const product = getProductByIdOrSlug(activeSlug);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -43,7 +44,7 @@ const ProductDetailPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     setSubmitted(false);
-  }, [slug]);
+  }, [activeSlug]);
 
   if (!product) {
     return (

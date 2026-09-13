@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight, Cpu } from 'lucide-react';
 import logoColor from '../assets/logo_transparent.png';
 import logoWhite from '../assets/logo_white.png';
 import './Navbar.css';
@@ -121,8 +121,8 @@ const Navbar = () => {
               </Link>
 
               <Link to="/products/control-panels" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-droplets">
-                  <Droplets size={20} />
+                <div className="dropdown-item-icon icon-cpu">
+                  <Cpu size={20} />
                 </div>
                 <div className="dropdown-item-info">
                   <span className="dropdown-item-title">Control Panels</span>

@@ -38,8 +38,8 @@ import dpTransmitter from '../assets/dp_transmitter_product.jpg';
 import pressureSwitch from '../assets/pressure_switch_product.jpg';
 
 import controlPanelMcc from '../assets/control_panel_mcc_product.jpg';
-import panelImg3 from '../assets/slide_new_3.png';
-import panelImg2 from '../assets/slide_new_2.jpg';
+import htLtPanel from '../assets/ht_lt_panel_product.jpg';
+import vfdPlcPanel from '../assets/vfd_plc_panel_product.jpg';
 
 const galleryItems = [
   // 1. Pulse Jet Bag Filter
@@ -208,7 +208,7 @@ const galleryItems = [
     category: 'Control panels',
     title: 'HT & LT Power Distribution Panels',
     desc: 'Heavy-duty industrial LT and HT switchgear panels custom-engineered for dust collector plants.',
-    src: panelImg2,
+    src: htLtPanel,
     tag: 'Control Panels (MCC, HT, LT, VFD)'
   },
   {
@@ -216,7 +216,7 @@ const galleryItems = [
     category: 'Control panels',
     title: 'VFD Speed Modulation & PLC Panel',
     desc: 'Variable Frequency Drive panel regulating fan speed according to real-time duct static pressure.',
-    src: panelImg3,
+    src: vfdPlcPanel,
     tag: 'Control Panels (MCC, HT, LT, VFD)'
   }
 ];
