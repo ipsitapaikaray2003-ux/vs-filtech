@@ -176,16 +176,16 @@ const About = () => {
                 <span>State-of-the-Art Bag Filter Plant</span>
               </div>
 
-              {/* Floating Badge 1: 15+ Years Experience */}
+              {/* Floating Badge 1: CPCB Compliant Emissions */}
               <div className="about-floating-experience">
                 <div className="experience-badge-top">
-                  <Award size={14} className="text-accent" />
-                  <span>PROVEN TRACK RECORD</span>
+                  <ShieldCheck size={14} className="text-accent" />
+                  <span>CPCB CERTIFIED</span>
                 </div>
                 <div className="experience-number">
-                  <CountUpStat end={15} suffix="+" />
+                  <CountUpStat prefix="< " end={10} suffix=" mg" />
                 </div>
-                <div className="experience-label">Years Engineering Expertise</div>
+                <div className="experience-label">Outlet Emission Norms</div>
               </div>
 
               {/* Floating Badge 2: 99.9% Efficiency */}

@@ -61,10 +61,10 @@ const slides = [
 ];
 
 const stats = [
-  { label: 'Years Expertise', end: 15, suffix: '+', decimals: 0 },
-  { label: 'Industries Served', end: 20, suffix: '+', decimals: 0 },
+  { label: 'CPCB Emission Norms', prefix: '< ', end: 10, suffix: ' mg/Nm³', decimals: 0 },
   { label: 'Custom Solutions', end: 100, suffix: '%', decimals: 0 },
-  { label: 'Filtration Efficiency', end: 99.9, suffix: '%', decimals: 1 }
+  { label: 'Filtration Efficiency', end: 99.9, suffix: '%', decimals: 1 },
+  { label: 'Technical Support', end: 24, suffix: '/7', decimals: 0 }
 ];
 
 const Hero = () => {
@@ -138,7 +138,7 @@ const Hero = () => {
             {stats.map((s, idx) => (
               <div key={idx} className="hero-stat-col">
                 <span className="hero-stat-val">
-                  <CountUpStat end={s.end} decimals={s.decimals} suffix={s.suffix} />
+                  <CountUpStat prefix={s.prefix || ''} end={s.end} decimals={s.decimals} suffix={s.suffix} />
                 </span>
                 <span className="hero-stat-lbl">{s.label}</span>
               </div>

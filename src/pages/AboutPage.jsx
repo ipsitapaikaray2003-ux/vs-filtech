@@ -50,7 +50,7 @@ import CountUpStat from '../components/CountUpStat';
 
 // Corporate Verified Metrics
 const executiveStats = [
-  { end: 15, suffix: '+', decimals: 0, label: 'Years Engineering Excellence', desc: 'Continuous manufacturing track record across India' },
+  { prefix: '< ', end: 10, suffix: ' mg/Nm³', decimals: 0, label: 'Guaranteed Clean Emissions', desc: 'Satisfies all statutory CPCB & State Pollution Board norms' },
   { end: 100, suffix: '%', decimals: 0, label: 'Customized To Client Process', desc: 'Engineered for specific CFM, dust type & temperature' },
   { end: 99.9, suffix: '%', decimals: 1, label: 'Particulate Capture Efficiency', desc: 'Meeting statutory CPCB norms (<10 mg/Nm³)' },
   { end: 24, suffix: '/7', decimals: 0, label: 'On-Site & Technical Support', desc: 'Rapid response engineering and pan-India spares' }
@@ -271,7 +271,7 @@ const AboutPage = () => {
               <div key={idx} className="luxury-stat-card">
                 <div className="stat-top-row">
                   <span className="stat-number">
-                    <CountUpStat end={stat.end} decimals={stat.decimals} suffix={stat.suffix} />
+                    <CountUpStat prefix={stat.prefix || ''} end={stat.end} decimals={stat.decimals} suffix={stat.suffix} />
                   </span>
                   <Activity size={18} className="stat-icon-spark" />
                 </div>
