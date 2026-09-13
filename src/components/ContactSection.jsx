@@ -10,7 +10,6 @@ import {
   Sparkles,
   ExternalLink,
   ShieldCheck,
-  FileUp,
   FileText
 } from 'lucide-react';
 import './ContactSection.css';
@@ -30,14 +29,7 @@ const ContactSection = () => {
     requirementDetails: ''
   });
 
-  const [fileName, setFileName] = useState('');
   const [submitted, setSubmitted] = useState(false);
-
-  const handleFileChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      setFileName(e.target.files[0].name);
-    }
-  };
 
   const handleWhatsAppSubmit = (e) => {
     e.preventDefault();
@@ -56,7 +48,6 @@ const ContactSection = () => {
 🌡️ *Operating Temperature:* ${formData.operatingTemp ? `${formData.operatingTemp} °C` : 'Ambient'}
 🌪️ *Dust / Material:* ${formData.dustMaterial || 'General industrial particulate'}
 🔄 *Existing Bag Filter?:* ${formData.existingBagFilter}
-📎 *Drawing Attached/To Share:* ${fileName ? `Yes (${fileName})` : 'Will share via WhatsApp'}
 📝 *Requirement Details:* ${formData.requirementDetails || 'Please provide technical proposal, sizing, and quotation.'}
 ----------------------------------------
 _Sent via vsfiltech.com/contact_`;
@@ -333,33 +324,7 @@ _Sent via vsfiltech.com/contact_`;
                   </div>
                 </div>
 
-                {/* 6. Upload Drawing / Datasheet */}
-                <div className="form-field">
-                  <label className="field-label">Upload Drawing / Datasheet (Optional)</label>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    background: 'rgba(2, 6, 23, 0.7)',
-                    border: '1px dashed rgba(255, 255, 255, 0.2)',
-                    padding: '12px 16px',
-                    borderRadius: '10px'
-                  }}>
-                    <FileUp size={20} style={{ color: '#38bdf8', flexShrink: 0 }} />
-                    <input 
-                      type="file" 
-                      onChange={handleFileChange}
-                      style={{ fontSize: '0.85rem', color: '#cbd5e1' }}
-                    />
-                  </div>
-                  {fileName && (
-                    <span style={{ fontSize: '0.8rem', color: '#34d399', marginTop: '4px', display: 'block' }}>
-                      Selected: {fileName} (will be confirmed via WhatsApp chat)
-                    </span>
-                  )}
-                </div>
-
-                {/* 7. Requirement Details */}
+                {/* 6. Requirement Details */}
                 <div className="form-field">
                   <label className="field-label">Requirement Details</label>
                   <textarea 
