@@ -418,75 +418,21 @@ section {
 }
 
 /* ══════════════════════════════════════════════
-   LIGHT THEME GRAPHIC BACKGROUND IMAGES & TEXTURES
+   LIGHT THEME BACKGROUNDS (CLEAN & DISTRACTION-FREE)
    ══════════════════════════════════════════════ */
 
-/* 1. Light Technical CAD Blueprint Grid */
-.light-graphic-blueprint {
-  position: relative;
-  background-color: #ffffff;
-}
-.light-graphic-blueprint::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(14, 165, 233, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(14, 165, 233, 0.07) 1px, transparent 1px);
-  background-size: 44px 44px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* 2. Light Technical Dot Matrix Graphic */
-.light-graphic-dots {
-  position: relative;
-  background-color: #f8fafc;
-}
-.light-graphic-dots::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1.2px, transparent 1.2px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* 3. Light Isometric Wireframe Graphic */
-.light-graphic-isometric {
-  position: relative;
-  background-color: #ffffff;
-}
-.light-graphic-isometric::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(60deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
-    linear-gradient(-60deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
-  background-size: 52px 90px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* 4. Light Engineering Schematic Texture */
+.light-graphic-blueprint,
+.light-graphic-dots,
+.light-graphic-isometric,
 .light-graphic-schematic {
   position: relative;
-  background-color: #f8fafc;
 }
+
+.light-graphic-blueprint::before,
+.light-graphic-dots::before,
+.light-graphic-isometric::before,
 .light-graphic-schematic::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    radial-gradient(rgba(245, 158, 11, 0.07) 1.5px, transparent 1.5px);
-  background-size: 44px 44px, 44px 44px, 22px 22px;
-  pointer-events: none;
-  z-index: 1;
+  display: none !important;
 }
 
 /* Multi-Color Buttons */

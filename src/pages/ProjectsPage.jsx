@@ -104,12 +104,34 @@ const ProjectsPage = () => {
       {/* Hero Header */}
       <section style={{
         position: 'relative',
-        background: `linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 247, 255, 0.96) 100%), url(${plantHd})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '5.5rem 0 4rem',
-        borderBottom: '1px solid #e2e8f0'
+        minHeight: '480px',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '6rem 0 4.5rem',
+        borderBottom: '1px solid #e2e8f0',
+        overflow: 'hidden'
       }}>
+        {/* Full-bleed background image */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, overflow: 'hidden' }}>
+          <img 
+            src={plantHd} 
+            alt="Industrial Projects Plant Background" 
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover', 
+              objectPosition: 'center',
+              filter: 'brightness(1.06) contrast(1.05) saturate(1.15)' 
+            }} 
+          />
+          {/* Subtle soft white scrim so the photo is clearly visible while keeping dark text readable */}
+          <div style={{ 
+            position: 'absolute', 
+            inset: 0, 
+            background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.32) 50%, rgba(255, 255, 255, 0.62) 100%)', 
+            pointerEvents: 'none' 
+          }} />
+        </div>
 
         <div className="container" style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 2 }}>
           
@@ -117,8 +139,8 @@ const ProjectsPage = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(2, 132, 199, 0.1)',
-            border: '1px solid rgba(2, 132, 199, 0.3)',
+            background: 'rgba(255, 255, 255, 0.9)',
+            border: '1px solid rgba(2, 132, 199, 0.35)',
             padding: '6px 18px',
             borderRadius: '999px',
             color: '#0284c7',
@@ -126,7 +148,9 @@ const ProjectsPage = () => {
             fontWeight: '700',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            marginBottom: '1.25rem'
+            marginBottom: '1.25rem',
+            boxShadow: '0 2px 10px rgba(2, 132, 199, 0.12)',
+            backdropFilter: 'blur(8px)'
           }}>
             <Sparkles size={14} style={{ color: '#0284c7' }} /> FIELD INSTALLATIONS &amp; CASE STUDIES
           </div>
@@ -136,7 +160,8 @@ const ProjectsPage = () => {
             fontWeight: '800',
             color: '#0f172a',
             lineHeight: '1.18',
-            marginBottom: '1.5rem'
+            marginBottom: '1.5rem',
+            textShadow: '0 2px 16px rgba(255, 255, 255, 0.95), 0 1px 4px #ffffff'
           }}>
             Our <span style={{ color: '#0284c7' }}>Projects</span>
           </h1>
@@ -144,9 +169,11 @@ const ProjectsPage = () => {
           <p style={{
             fontSize: '1.2rem',
             lineHeight: '1.7',
-            color: '#475569',
+            color: '#1e293b',
             maxWidth: '820px',
-            margin: '0 auto 2.5rem'
+            margin: '0 auto 2.5rem',
+            fontWeight: '500',
+            textShadow: '0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px #ffffff'
           }}>
             Representative industrial air filtration projects executed across core manufacturing plants. Every installation is engineered around process airflow, dust chemistry, and plant layout.
           </p>
@@ -180,7 +207,7 @@ const ProjectsPage = () => {
       </section>
 
       {/* Projects Showcase Grid */}
-      <section className="light-graphic-blueprint" style={{ padding: '5.5rem 0', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '5.5rem 0', backgroundColor: '#ffffff' }}>
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
           <div style={{
