@@ -178,12 +178,19 @@
 /* ── Dropdown Container ── */
 .nav-dropdown-container {
   position: relative;
+  padding-bottom: 12px;
+  margin-bottom: -12px;
 }
 
 .dropdown-trigger {
   display: flex;
   align-items: center;
   gap: 0.35rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .chevron-icon {
@@ -201,9 +208,9 @@
 /* ── Dropdown Menu (Desktop) ── */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 14px);
+  top: calc(100% + 6px);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(4px);
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
@@ -214,13 +221,26 @@
   gap: 4px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
   box-shadow: 0 16px 45px rgba(15, 23, 42, 0.14), 0 4px 12px rgba(15, 23, 42, 0.05);
   z-index: 2000;
   pointer-events: none;
 }
 
+/* Invisible Bridge: Fills the gap so cursor can smoothly move from Products button to dropdown without losing hover */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  right: -20px;
+  height: 28px;
+  background: transparent;
+  pointer-events: all;
+}
+
 .nav-dropdown-container:hover .dropdown-menu,
+.dropdown-active .dropdown-menu,
 .dropdown-menu.show {
   opacity: 1;
   visibility: visible;

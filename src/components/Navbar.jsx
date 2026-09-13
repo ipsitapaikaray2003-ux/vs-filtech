@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight, Cpu } from 'lucide-react';
 import logoColor from '../assets/logo_transparent.png';
@@ -10,6 +10,8 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
+  const dropdownTimeoutRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,59 @@ const Navbar = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setDropdownOpen(false);
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
   }, [location]);
+
+  // Handle click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    // 300ms grace period so cursor can transition smoothly across any gap without disappearing
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setDropdownOpen(false);
+    }, 300);
+  };
+
+  const handleDropdownToggle = (e) => {
+    e.preventDefault();
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setDropdownOpen(prev => !prev);
+  };
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     setDropdownOpen(false);
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
   };
 
   const isHomePage = location.pathname === '/';
@@ -68,21 +118,26 @@ const Navbar = () => {
           </Link>
 
           <div 
+            ref={dropdownRef}
             className={`nav-dropdown-container ${dropdownOpen ? 'dropdown-active' : ''}`}
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <button 
               type="button"
               className={`nav-link dropdown-trigger ${location.pathname.startsWith('/products') ? 'active' : ''}`}
-              onClick={() => setDropdownOpen(!dropdownOpen)}
+              onClick={handleDropdownToggle}
               aria-expanded={dropdownOpen}
             >
               <span>Products</span>
               <ChevronDown size={15} className={`chevron-icon ${dropdownOpen ? 'rotate' : ''}`} />
             </button>
             
-            <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+            <div 
+              className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <Link to="/products/pulse-jet-filter" className="dropdown-item" onClick={closeMobileMenu}>
                 <div className="dropdown-item-icon icon-flame">
                   <Flame size={18} />
