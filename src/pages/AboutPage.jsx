@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { 
@@ -7,29 +7,21 @@ import {
   Settings, 
   Award, 
   ArrowRight, 
-  Layers, 
   Sparkles, 
   HardHat, 
   Target, 
   CheckCircle2, 
   Users, 
-  Cpu, 
-  HelpCircle, 
   Wrench, 
   Compass, 
   PhoneCall, 
-  FileCheck2,
   Wind,
   Flame,
-  Pill,
   Mountain,
-  TreePine,
   Hammer,
-  Utensils,
   Droplets,
   Zap,
-  Activity,
-  ChevronRight
+  Activity
 } from 'lucide-react';
 import './AboutPage.css';
 
@@ -200,8 +192,6 @@ const coreIndustries = [
 ];
 
 const AboutPage = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -327,213 +317,183 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ── 3. Interactive Corporate Showcase (Tabbed Navigation) ── */}
-      <section className="about-interactive-showcase">
+      {/* ── 3. Who We Are & Infrastructure (BLUE) ── */}
+      <section className="about-who-we-are-section" id="who-we-are">
         <div className="container">
-          
-          <div className="showcase-nav-bar">
-            <button 
-              className={`showcase-nav-btn ${activeTab === 'overview' ? 'active' : ''}`}
-              onClick={() => setActiveTab('overview')}
-            >
-              <Factory size={16} />
-              <span>Who We Are & Infrastructure</span>
-            </button>
-            <button 
-              className={`showcase-nav-btn ${activeTab === 'philosophy' ? 'active' : ''}`}
-              onClick={() => setActiveTab('philosophy')}
-            >
-              <Settings size={16} />
-              <span>Engineering Philosophy</span>
-            </button>
-            <button 
-              className={`showcase-nav-btn ${activeTab === 'consultancy' ? 'active' : ''}`}
-              onClick={() => setActiveTab('consultancy')}
-            >
-              <Compass size={16} />
-              <span>Consultancy & Sizing</span>
-            </button>
-            <button 
-              className={`showcase-nav-btn ${activeTab === 'mission' ? 'active' : ''}`}
-              onClick={() => setActiveTab('mission')}
-            >
-              <ShieldCheck size={16} />
-              <span>Our Mission (4 Tenets)</span>
-            </button>
+          <div className="tab-grid-split">
+            <div className="tab-text-side">
+              <div className="luxury-eyebrow">PREMIER OEM IN INDIA</div>
+              <h2 className="tab-heading">
+                Design &amp; Manufacturer of <br />
+                <span className="luxury-gradient-text">Bag Filters &amp; Dust Collectors</span>
+              </h2>
+              <p className="tab-paragraph">
+                <strong>VS Filtech</strong> is one of the premier Design and Manufacturers of Bag Filters and Dust Collectors in India. We introduce ourselves as a full-scale Manufacturer and Supplier of Air Filtration Equipments, Accessories &amp; Spares — including Pulse Jet Bag Filters, Dust Collectors, Manual Dust Collectors, Centrifugal ID Fans, Pulse Jet Filter Bags, Pleated Filter Bags, Support Cages with Aerodynamic Venturis, Solenoid Pulse Valves, Sequential Timers, Rotary Air Locks (RAL), Vibrosieves, Screw Conveyors, Differential Pressure Transmitters, Pressure Switches, Hopper Level Sensors, and associated dust handling systems.
+              </p>
+              <p className="tab-paragraph">
+                Our precision fabrics and filter articles help our clients to get true value for money with maximum filtration quality in minimum time. Total satisfaction of our customers is the key to the growth of VS FILTECH in the field of industrial fabrics and filtration accessories.
+              </p>
+
+              <div className="tab-feature-checks">
+                <div className="feature-check-item">
+                  <CheckCircle2 size={18} className="text-cyan" />
+                  <span>Single-source manufacturer: casing, media, cages &amp; instrumentation</span>
+                </div>
+                <div className="feature-check-item">
+                  <CheckCircle2 size={18} className="text-cyan" />
+                  <span>Guaranteed statutory compliance with CPCB norms (&lt;10 mg/Nm³)</span>
+                </div>
+                <div className="feature-check-item">
+                  <CheckCircle2 size={18} className="text-cyan" />
+                  <span>Complete CAD design, site rigging, duct layout &amp; turnkey commissioning</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="tab-visual-side">
+              <div className="visual-image-frame">
+                <img src={plantImg} alt="VS Filtech Industrial Manufacturing Plant" className="visual-img" />
+                <div className="visual-floating-pill">
+                  <Factory size={15} />
+                  <span>Full Turnkey Bag Filter Plant</span>
+                </div>
+                <div className="visual-stats-badge">
+                  <span className="badge-num">&lt; 10 mg/Nm³</span>
+                  <span className="badge-lbl">Guaranteed Clean-Air Emission</span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div className="showcase-tab-content">
-            
-            {/* Tab 1: Overview */}
-            {activeTab === 'overview' && (
-              <div className="tab-grid-split">
-                <div className="tab-text-side">
-                  <div className="luxury-eyebrow">PREMIER OEM IN INDIA</div>
-                  <h2 className="tab-heading">
-                    Design & Manufacturer of <br />
-                    <span className="luxury-gradient-text">Bag Filters & Dust Collectors</span>
-                  </h2>
-                  <p className="tab-paragraph">
-                    <strong>VS Filtech</strong> is one of the premier Design and Manufacturers of Bag Filters and Dust Collectors in India. We introduce ourselves as a full-scale Manufacturer and Supplier of Air Filtration Equipments, Accessories & Spares — including Pulse Jet Bag Filters, Dust Collectors, Manual Dust Collectors, Centrifugal ID Fans, Pulse Jet Filter Bags, Pleated Filter Bags, Support Cages with Aerodynamic Venturis, Solenoid Pulse Valves, Sequential Timers, Rotary Air Locks (RAL), Vibrosieves, Screw Conveyors, Differential Pressure Transmitters, Pressure Switches, Hopper Level Sensors, and associated dust handling systems.
-                  </p>
-                  <p className="tab-paragraph">
-                    Our precision fabrics and filter articles help our clients to get true value for money with maximum filtration quality in minimum time. Total satisfaction of our customers is the key to the growth of VS FILTECH in the field of industrial fabrics and filtration accessories.
-                  </p>
-
-                  <div className="tab-feature-checks">
-                    <div className="feature-check-item">
-                      <CheckCircle2 size={18} className="text-cyan" />
-                      <span>Single-source manufacturer: casing, media, cages & instrumentation</span>
-                    </div>
-                    <div className="feature-check-item">
-                      <CheckCircle2 size={18} className="text-cyan" />
-                      <span>Guaranteed statutory compliance with CPCB norms (&lt;10 mg/Nm³)</span>
-                    </div>
-                    <div className="feature-check-item">
-                      <CheckCircle2 size={18} className="text-cyan" />
-                      <span>Complete CAD design, site rigging, duct layout & turnkey commissioning</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="tab-visual-side">
-                  <div className="visual-image-frame">
-                    <img src={plantImg} alt="VS Filtech Industrial Manufacturing Plant" className="visual-img" />
-                    <div className="visual-floating-pill">
-                      <Factory size={15} />
-                      <span>Full Turnkey Bag Filter Plant</span>
-                    </div>
-                    <div className="visual-stats-badge">
-                      <span className="badge-num">&lt; 10 mg/Nm³</span>
-                      <span className="badge-lbl">Guaranteed Clean-Air Emission</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Tab 2: Philosophy */}
-            {activeTab === 'philosophy' && (
-              <div className="tab-grid-split">
-                <div className="tab-text-side">
-                  <div className="luxury-eyebrow">APPLICATION-FIRST ENGINEERING</div>
-                  <h2 className="tab-heading">
-                    Engineered Around <br />
-                    <span className="luxury-gradient-text">Your Exact Industrial Process</span>
-                  </h2>
-                  <p className="tab-paragraph">
-                    We understand that every industrial process is different. Dust type, particle size distribution, temperature spikes, moisture content, airflow dynamics, dust concentration, and plant operating cycles can significantly affect the performance of a filtration system.
-                  </p>
-                  <p className="tab-paragraph">
-                    Therefore, our approach is to understand the application first and then develop a suitable solution. We focus on practical design, reliable operation, maintainability, and long-term performance. We can design bags and baghouses as per your exact process needs — our maximum products are 100% customized according to customer needs.
-                  </p>
-
-                  <div className="philosophy-highlight-box">
-                    <div className="phi-title">
-                      <Zap size={18} className="text-cyan" />
-                      <span>The VS Filtech Design Creed</span>
-                    </div>
-                    <p>
-                      &ldquo;We never impose off-the-shelf catalog units on complex industrial processes. Every CFM, can velocity, and filter fabric is mathematically selected for your plant's dust chemistry.&rdquo;
-                    </p>
-                  </div>
-                </div>
-
-                <div className="tab-visual-side">
-                  <div className="visual-image-frame">
-                    <img src={baghouseImg} alt="Baghouse Engineering Analysis" className="visual-img" />
-                    <div className="visual-floating-pill">
-                      <Settings size={15} />
-                      <span>Application-Specific Design</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Tab 3: Consultancy */}
-            {activeTab === 'consultancy' && (
-              <div className="tab-grid-split">
-                <div className="tab-text-side">
-                  <div className="luxury-eyebrow">TOTAL-SOLUTION PARTNERSHIP</div>
-                  <h2 className="tab-heading">
-                    Comprehensive <br />
-                    <span className="luxury-gradient-text">Consultancy Services</span>
-                  </h2>
-                  <p className="tab-paragraph">
-                    At VS Filtech, we not only provide top-notch products but also offer comprehensive consultancy services. Our team of experienced professionals is dedicated to understanding your specific filtration requirements and providing tailored solutions that meet your needs.
-                  </p>
-                  <p className="tab-paragraph">
-                    Whether you are seeking assistance with product selection, airflow & CFM calculations, system design, duct velocity optimization, differential pressure troubleshooting, or reverse engineering of existing equipment, our engineering desk is here to help.
-                  </p>
-
-                  <div className="consultancy-services-list">
-                    {whyChooseUsCards.map((card, idx) => {
-                      const Icon = card.icon;
-                      return (
-                        <div key={idx} className="consultancy-item-row">
-                          <div className="con-icon-box">
-                            <Icon size={18} />
-                          </div>
-                          <div>
-                            <div className="con-title">{card.title}</div>
-                            <div className="con-desc">{card.desc}</div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                <div className="tab-visual-side">
-                  <div className="visual-image-frame">
-                    <img src={ductingImg} alt="Industrial Consultancy and Ducting" className="visual-img" />
-                    <div className="visual-floating-pill">
-                      <Compass size={15} />
-                      <span>Engineering Audit & Sizing</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Tab 4: Mission */}
-            {activeTab === 'mission' && (
-              <div className="mission-tenets-full">
-                <div className="luxury-eyebrow text-center">FOUNDATIONAL TENETS</div>
-                <h2 className="tab-heading text-center" style={{ marginBottom: '40px' }}>
-                  Our Mission: <span className="luxury-gradient-text">4 Core Principles</span>
-                </h2>
-                <div className="mission-cards-grid">
-                  {missionTenets.map((tenet, idx) => {
-                    const Icon = tenet.icon;
-                    return (
-                      <div key={idx} className="luxury-mission-card">
-                        <div className="mission-card-icon-wrap" style={{ color: tenet.accent, borderColor: `${tenet.accent}33`, background: `${tenet.accent}14` }}>
-                          <Icon size={26} />
-                        </div>
-                        <h3 className="mission-card-title">{tenet.title}</h3>
-                        <p className="mission-card-desc">{tenet.desc}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-          </div>
-
         </div>
       </section>
 
-      {/* ── 4. Technical Superiority: Online vs Offline & Gas Distribution (WHITE) ── */}
-      <section className="about-tech-superiority-light">
+      {/* ── 4. Engineering Philosophy & Vision (WHITE) ── */}
+      <section className="about-philosophy-section-light" id="engineering-philosophy">
+        <div className="container">
+          <div className="tab-grid-split">
+            <div className="tab-visual-side">
+              <div className="visual-image-frame-light">
+                <img src={baghouseImg} alt="Baghouse Engineering Analysis" className="visual-img" />
+                <div className="visual-floating-pill-light">
+                  <Settings size={15} />
+                  <span>Application-Specific Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="tab-text-side">
+              <div className="luxury-eyebrow-light">APPLICATION-FIRST ENGINEERING &amp; VISION</div>
+              <h2 className="tab-heading-light">
+                Engineered Around <br />
+                <span className="luxury-gradient-text-light">Your Exact Industrial Process</span>
+              </h2>
+              <p className="tab-paragraph-light">
+                We understand that every industrial process is different. Dust type, particle size distribution, temperature spikes, moisture content, airflow dynamics, dust concentration, and plant operating cycles can significantly affect the performance of a filtration system.
+              </p>
+              <p className="tab-paragraph-light">
+                Therefore, our approach is to understand the application first and then develop a suitable solution. We focus on practical design, reliable operation, maintainability, and long-term performance. We can design bags and baghouses as per your exact process needs — our maximum products are 100% customized according to customer needs.
+              </p>
+
+              <div className="philosophy-highlight-box-light">
+                <div className="phi-title-light">
+                  <Zap size={18} />
+                  <span>The VS Filtech Design Creed</span>
+                </div>
+                <p>
+                  &ldquo;We never impose off-the-shelf catalog units on complex industrial processes. Every CFM, can velocity, and filter fabric is mathematically selected for your plant's dust chemistry.&rdquo;
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. Consultancy & Sizing Services (BLUE) ── */}
+      <section className="about-consultancy-section" id="consultancy-sizing">
+        <div className="container">
+          <div className="tab-grid-split">
+            <div className="tab-text-side">
+              <div className="luxury-eyebrow">TOTAL-SOLUTION PARTNERSHIP</div>
+              <h2 className="tab-heading">
+                Comprehensive <br />
+                <span className="luxury-gradient-text">Consultancy &amp; Sizing Services</span>
+              </h2>
+              <p className="tab-paragraph">
+                At VS Filtech, we not only provide top-notch products but also offer comprehensive consultancy services. Our team of experienced professionals is dedicated to understanding your specific filtration requirements and providing tailored solutions that meet your needs.
+              </p>
+              <p className="tab-paragraph">
+                Whether you are seeking assistance with product selection, airflow &amp; CFM calculations, system design, duct velocity optimization, differential pressure troubleshooting, or reverse engineering of existing equipment, our engineering desk is here to help.
+              </p>
+
+              <div className="consultancy-services-list">
+                {whyChooseUsCards.map((card, idx) => {
+                  const Icon = card.icon;
+                  return (
+                    <div key={idx} className="consultancy-item-row">
+                      <div className="con-icon-box">
+                        <Icon size={18} />
+                      </div>
+                      <div>
+                        <div className="con-title">{card.title}</div>
+                        <div className="con-desc">{card.desc}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="tab-visual-side">
+              <div className="visual-image-frame">
+                <img src={ductingImg} alt="Industrial Consultancy and Ducting" className="visual-img" />
+                <div className="visual-floating-pill">
+                  <Compass size={15} />
+                  <span>Engineering Audit &amp; Sizing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. Our Mission & Foundational Tenets (WHITE) ── */}
+      <section className="about-mission-section-light" id="our-mission">
+        <div className="container">
+          <div className="section-head-center">
+            <span className="luxury-eyebrow-light">FOUNDATIONAL TENETS</span>
+            <h2 className="section-headline-light">
+              Our Mission: <span className="luxury-gradient-text-light">4 Core Principles</span>
+            </h2>
+            <p className="section-subtext-light">
+              The foundational principles guiding every dust collection plant we engineer, manufacture, and commission:
+            </p>
+          </div>
+
+          <div className="mission-cards-grid">
+            {missionTenets.map((tenet, idx) => {
+              const Icon = tenet.icon;
+              return (
+                <div key={idx} className="luxury-mission-card-light">
+                  <div className="mission-card-icon-wrap" style={{ color: tenet.accent, borderColor: `${tenet.accent}33`, background: `${tenet.accent}14` }}>
+                    <Icon size={26} />
+                  </div>
+                  <h3 className="mission-card-title-light">{tenet.title}</h3>
+                  <p className="mission-card-desc-light">{tenet.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 7. Technical Superiority: Online vs Offline & Gas Distribution (BLUE) ── */}
+      <section className="about-tech-superiority">
         <div className="container">
           
           <div className="section-head-center">
             <span className="luxury-eyebrow">CLEANING INNOVATION &amp; DUST DYNAMICS</span>
             <h2 className="section-headline">
-              Pulse-Jet Cleaning: <span className="luxury-gradient-text-light">Online vs Offline Modes</span>
+              Pulse-Jet Cleaning: <span className="luxury-gradient-text">Online vs Offline Modes</span>
             </h2>
             <p className="section-subtext">
               Engineered according to process continuousness, dust adhesiveness, and compartment isolation demands:
@@ -542,9 +502,9 @@ const AboutPage = () => {
 
           <div className="tech-modes-grid">
             {cleaningTechnology.map((item, idx) => (
-              <div key={idx} className="luxury-tech-mode-card-light">
+              <div key={idx} className="luxury-tech-mode-card">
                 <div className="tech-mode-header">
-                  <span className="tech-mode-pill-light" style={{ color: item.accent, borderColor: `${item.accent}55`, background: `${item.accent}18` }}>
+                  <span className="tech-mode-pill" style={{ color: item.accent, borderColor: `${item.accent}55`, background: `${item.accent}18` }}>
                     {item.tag}
                   </span>
                   <Wind size={22} style={{ color: item.accent }} />
@@ -564,7 +524,7 @@ const AboutPage = () => {
           </div>
 
           {/* Gas & Dust Distribution Callout Card */}
-          <div className="gas-distribution-card-light">
+          <div className="gas-distribution-card">
             <div className="gas-dist-icon">
               <Wind size={32} />
             </div>
@@ -577,7 +537,7 @@ const AboutPage = () => {
               </p>
             </div>
             <div className="gas-dist-badge">
-              <ShieldCheck size={20} style={{ color: '#0284c7' }} />
+              <ShieldCheck size={20} style={{ color: '#38bdf8' }} />
               <span>Zero Re-Entrainment</span>
             </div>
           </div>
@@ -585,23 +545,23 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ── 5. Complete 14 Products & Spares Directory (BLUE) ── */}
-      <section className="about-products-directory">
+      {/* ── 8. Complete 14 Products & Spares Directory (WHITE) ── */}
+      <section className="about-products-directory-light">
         <div className="container">
           
           <div className="section-head-center">
-            <span className="luxury-eyebrow">COMPLETE CATALOGUE UNDER ONE ROOF</span>
-            <h2 className="section-headline">
-              Air Filtration Equipments, <span className="luxury-gradient-text">Accessories & Spares</span>
+            <span className="luxury-eyebrow-light">COMPLETE CATALOGUE UNDER ONE ROOF</span>
+            <h2 className="section-headline-light">
+              Air Filtration Equipments, <span className="luxury-gradient-text-light">Accessories &amp; Spares</span>
             </h2>
-            <p className="section-subtext">
+            <p className="section-subtext-light">
               Comprehensive manufacturing and supply of dust collectors, media, and auxiliary spare parts across India:
             </p>
           </div>
 
           <div className="products-brief-grid">
             {completeProductsBrief.map((prod, idx) => (
-              <div key={idx} className="luxury-product-brief-card">
+              <div key={idx} className="luxury-product-brief-card-light">
                 <div className="prod-card-top">
                   <span className="prod-idx">{(idx + 1).toString().padStart(2, '0')}</span>
                   <span className="prod-tag-pill">{prod.tag}</span>
@@ -622,14 +582,14 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ── 6. Photographic Core Industries Showcase (WHITE) ── */}
-      <section className="about-industries-section-light">
+      {/* ── 9. Photographic Core Industries Showcase (BLUE) ── */}
+      <section className="about-industries-section">
         <div className="container">
           
           <div className="section-head-center">
             <span className="luxury-eyebrow">TRUSTED NATIONWIDE</span>
             <h2 className="section-headline">
-              Industries <span className="luxury-gradient-text-light">We Serve</span>
+              Industries <span className="luxury-gradient-text">We Serve</span>
             </h2>
             <p className="section-subtext">
               Engineering customized air pollution control systems, reverse pulse-jet baghouses, and specialized filter media across India&apos;s primary industrial processing sectors:
@@ -639,7 +599,7 @@ const AboutPage = () => {
           <div className="about-thermax-cards-grid">
             {coreIndustries.map((ind, idx) => {
               return (
-                <div key={idx} className="about-thermax-card-light">
+                <div key={idx} className="about-thermax-card">
                   <img src={ind.image} alt={ind.name} className="about-thermax-img" loading="lazy" />
                   <div className="about-thermax-overlay" />
                   <div className="about-thermax-content">

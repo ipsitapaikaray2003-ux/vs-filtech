@@ -394,51 +394,161 @@
   color: #64748b;
 }
 
-/* ── 3. Interactive Showcase (Tabs) ── */
-.about-interactive-showcase {
+/* ── 3. Who We Are & Infrastructure (BLUE) ── */
+.about-who-we-are-section {
   padding: 6.5rem 0;
   background: #0a1628;
 }
 
-.showcase-nav-bar {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-  padding: 8px;
-  background: #070e1a;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 999px;
-  max-width: 920px;
-  margin-left: auto;
-  margin-right: auto;
+/* ── 4. Engineering Philosophy & Vision (WHITE) ── */
+.about-philosophy-section-light {
+  padding: 6.5rem 0;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.showcase-nav-btn {
+.luxury-eyebrow-light {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0284c7;
+  margin-bottom: 12px;
+}
+
+.tab-heading-light {
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 22px;
+}
+
+.tab-paragraph-light {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 18px;
+}
+
+.tab-paragraph-light strong {
+  color: #0f172a;
+}
+
+.visual-image-frame-light {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.visual-floating-pill-light {
+  position: absolute;
+  top: 18px;
+  left: 18px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 22px;
+  padding: 6px 14px;
   border-radius: 999px;
-  border: none;
-  background: transparent;
-  color: #94a3b8;
-  font-size: 0.9rem;
+  background: #ffffff;
+  border: 1.5px solid #bae6fd;
+  color: #0284c7;
+  font-size: 0.78rem;
   font-weight: 700;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);
 }
 
-.showcase-nav-btn.active {
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+.philosophy-highlight-box-light {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-left: 4px solid #0284c7;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
 }
 
-.showcase-nav-btn:hover:not(.active) {
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.1);
+.phi-title-light {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 8px;
+}
+
+.philosophy-highlight-box-light p {
+  font-size: 0.98rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+}
+
+/* ── 5. Consultancy & Sizing Services (BLUE) ── */
+.about-consultancy-section {
+  padding: 6.5rem 0;
+  background: #0a1628;
+}
+
+/* ── 6. Our Mission & Foundational Tenets (WHITE) ── */
+.about-mission-section-light {
+  padding: 6.5rem 0;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section-headline-light {
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-subtext-light {
+  font-size: 1.08rem;
+  color: #64748b;
+  line-height: 1.65;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.luxury-mission-card-light {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
+  border-top: 4px solid #0284c7;
+}
+
+.luxury-mission-card-light:hover {
+  transform: translateY(-6px);
+  border-color: #0284c7;
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.12);
+}
+
+.mission-card-title-light {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.mission-card-desc-light {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #475569;
 }
 
 .tab-grid-split {
@@ -679,173 +789,177 @@
   color: #cbd5e1;
 }
 
-/* ── 4. Technical Superiority (WHITE) ── */
-.about-tech-superiority-light {
+/* ── 7. Technical Superiority: Online vs Offline (BLUE) ── */
+.about-tech-superiority {
   padding: 6.5rem 0;
-  background: #ffffff;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+  background: #0a1628;
 }
 
-.about-tech-superiority-light .section-head-center {
+.about-tech-superiority .section-head-center {
   max-width: 840px;
   margin: 0 auto 55px;
   text-align: center;
 }
 
-.about-tech-superiority-light .luxury-eyebrow {
-  color: #0284c7;
+.about-tech-superiority .luxury-eyebrow {
+  color: #38bdf8;
 }
 
-.about-tech-superiority-light .section-headline {
+.about-tech-superiority .section-headline {
   font-size: clamp(2.1rem, 3.8vw, 3rem);
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
-.about-tech-superiority-light .section-subtext {
+.about-tech-superiority .section-subtext {
   font-size: 1.08rem;
-  color: #64748b;
+  color: #94a3b8;
   line-height: 1.65;
 }
 
-.luxury-gradient-text-light {
-  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 50%, #2563eb 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #0284c7;
-  display: inline-block;
+.tech-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+  margin-bottom: 35px;
 }
 
-.luxury-tech-mode-card-light {
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
+.luxury-tech-mode-card {
+  background: #0f2040;
+  border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 20px;
   padding: 36px 30px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
-  border-top: 4px solid #0284c7;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-top: 3.5px solid #38bdf8;
   transition: all 0.3s ease;
 }
 
-.luxury-tech-mode-card-light:hover {
+.luxury-tech-mode-card:hover {
   transform: translateY(-5px);
-  border-color: #0284c7;
-  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.12);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.25);
 }
 
-.luxury-tech-mode-card-light .tech-mode-header {
+.luxury-tech-mode-card .tech-mode-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
 }
 
-.tech-mode-pill-light {
+.tech-mode-pill {
   padding: 4px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(2, 132, 199, 0.3);
-  background: #f0f9ff;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(14, 165, 233, 0.15);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.luxury-tech-mode-card-light .tech-mode-title {
+.luxury-tech-mode-card .tech-mode-title {
   font-size: 1.45rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
-.luxury-tech-mode-card-light .tech-mode-desc {
+.luxury-tech-mode-card .tech-mode-desc {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #475569;
+  color: #cbd5e1;
   margin-bottom: 24px;
   flex: 1;
 }
 
-.luxury-tech-mode-card-light .tech-mode-points {
+.luxury-tech-mode-card .tech-mode-points {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid rgba(56, 189, 248, 0.15);
   padding-top: 20px;
 }
 
-.luxury-tech-mode-card-light .tech-mode-pt {
+.luxury-tech-mode-card .tech-mode-pt {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 0.92rem;
-  color: #334155;
+  color: #e2e8f0;
   line-height: 1.45;
 }
 
-.gas-distribution-card-light {
-  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
-  border: 1.5px solid #bae6fd;
+.gas-distribution-card {
+  background: linear-gradient(135deg, #0f2040 0%, #172554 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 20px;
   padding: 36px 32px;
   display: flex;
   align-items: center;
   gap: 28px;
-  box-shadow: 0 6px 24px rgba(2, 132, 199, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.gas-distribution-card-light .gas-dist-icon {
+.gas-distribution-card .gas-dist-icon {
   width: 68px;
   height: 68px;
   border-radius: 18px;
-  background: #e0f2fe;
-  border: 1px solid #bae6fd;
-  color: #0284c7;
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.gas-distribution-card-light .gas-dist-content h3 {
+.gas-distribution-card .gas-dist-content h3 {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
-.gas-distribution-card-light .gas-dist-content p {
+.gas-distribution-card .gas-dist-content p {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #475569;
+  color: #cbd5e1;
   margin: 0;
 }
 
-.gas-distribution-card-light .gas-dist-badge {
+.gas-distribution-card .gas-dist-badge {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  border: 1.5px solid #bae6fd;
+  background: #0a1628;
+  border: 1px solid rgba(56, 189, 248, 0.35);
   padding: 12px 20px;
   border-radius: 14px;
   white-space: nowrap;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #0284c7;
+  color: #38bdf8;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* ── 5. Products Directory ── */
-.about-products-directory {
+/* ── 8. Products Directory (WHITE) ── */
+.about-products-directory-light {
   padding: 6.5rem 0;
-  background: #0a1628;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.about-products-directory-light .section-head-center {
+  max-width: 840px;
+  margin: 0 auto 55px;
+  text-align: center;
 }
 
 .products-brief-grid {
@@ -854,92 +968,90 @@
   gap: 22px;
 }
 
-.luxury-product-brief-card {
-  background: #0f2040;
-  border: 1px solid rgba(56, 189, 248, 0.16);
+.luxury-product-brief-card-light {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   border-radius: 18px;
   padding: 24px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   transition: all 0.25s ease;
-  border-top: 3px solid #38bdf8;
+  border-top: 3.5px solid #0284c7;
 }
 
-.luxury-product-brief-card:hover {
+.luxury-product-brief-card-light:hover {
   transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.25);
+  border-color: #0284c7;
+  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.12);
 }
 
-.prod-card-top {
+.luxury-product-brief-card-light .prod-card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
 }
 
-.prod-idx {
+.luxury-product-brief-card-light .prod-idx {
   font-size: 0.8rem;
   font-weight: 800;
-  color: #38bdf8;
-  background: rgba(14, 165, 233, 0.15);
+  color: #0284c7;
+  background: #e0f2fe;
   padding: 2px 8px;
   border-radius: 6px;
 }
 
-.prod-tag-pill {
+.luxury-product-brief-card-light .prod-tag-pill {
   font-size: 0.72rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: #64748b;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.prod-title {
+.luxury-product-brief-card-light .prod-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #0f172a;
   margin-bottom: 8px;
 }
 
-.prod-desc {
+.luxury-product-brief-card-light .prod-desc {
   font-size: 0.88rem;
   line-height: 1.55;
-  color: #cbd5e1;
+  color: #475569;
   margin: 0;
   flex: 1;
 }
 
-/* ── 6. Photographic Core Industries Showcase (WHITE) ── */
-.about-industries-section-light {
+/* ── 9. Photographic Core Industries Showcase (BLUE) ── */
+.about-industries-section {
   padding: 85px 0;
-  background: #ffffff;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+  background: #0a1628;
 }
 
-.about-industries-section-light .section-head-center {
+.about-industries-section .section-head-center {
   max-width: 840px;
   margin: 0 auto 55px;
   text-align: center;
 }
 
-.about-industries-section-light .luxury-eyebrow {
-  color: #0284c7;
+.about-industries-section .luxury-eyebrow {
+  color: #38bdf8;
 }
 
-.about-industries-section-light .section-headline {
+.about-industries-section .section-headline {
   font-size: clamp(2.1rem, 3.8vw, 3rem);
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.2;
   margin-bottom: 16px;
 }
 
-.about-industries-section-light .section-subtext {
+.about-industries-section .section-subtext {
   font-size: 1.08rem;
-  color: #64748b;
+  color: #94a3b8;
   line-height: 1.65;
 }
 
@@ -949,43 +1061,127 @@
   gap: 26px;
 }
 
-.about-thermax-card-light {
+.about-thermax-card {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
   height: 275px;
-  border: 1.5px solid #e2e8f0;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-thermax-card-light:hover {
+.about-thermax-card:hover {
   transform: translateY(-6px);
-  border-color: #0284c7;
-  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.2);
+  border-color: #38bdf8;
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.35);
 }
 
-.about-thermax-card-light .about-thermax-img {
+.about-thermax-card .about-thermax-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-thermax-card-light:hover .about-thermax-img {
+.about-thermax-card:hover .about-thermax-img {
   transform: scale(1.06);
 }
 
-.about-thermax-card-light .about-thermax-overlay {
+.about-thermax-card .about-thermax-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg, 
-    rgba(10, 22, 40, 0.25) 0%, 
-    rgba(10, 22, 40, 0.65) 50%, 
-    rgba(10, 22, 40, 0.95) 100%
+    rgba(10, 22, 40, 0.3) 0%, 
+    rgba(10, 22, 40, 0.75) 50%, 
+    rgba(10, 22, 40, 0.96) 100%
   );
   transition: background 0.3s ease;
+}
+
+.about-thermax-card:hover .about-thermax-overlay {
+  background: linear-gradient(
+    180deg, 
+    rgba(2, 132, 199, 0.25) 0%, 
+    rgba(10, 22, 40, 0.8) 50%, 
+    rgba(10, 22, 40, 0.98) 100%
+  );
+}
+
+.about-thermax-card .about-thermax-content {
+  position: absolute;
+  inset: 0;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.about-thermax-card .about-thermax-badge {
+  display: inline-block;
+  background: rgba(10, 22, 40, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.about-thermax-card .about-thermax-title {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  margin: 0 0 4px 0;
+}
+
+.about-thermax-card .about-thermax-headline {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin: 0 0 6px 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about-thermax-card .about-thermax-desc {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0 0 12px 0;
+  max-width: 85%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.about-thermax-card .about-thermax-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  padding: 8px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
+}
+
+.about-thermax-card:hover .about-thermax-link {
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  transform: translateY(-2px);
 }
 
 .about-thermax-card-light:hover .about-thermax-overlay {
