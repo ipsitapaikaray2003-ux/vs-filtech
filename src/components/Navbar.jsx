@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight, Cpu } from 'lucide-react';
 import logoColor from '../assets/logo_transparent.png';
-import logoWhite from '../assets/logo_white.png';
+import logoDark from '../assets/logo_dark_theme.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -83,20 +83,16 @@ const Navbar = () => {
 
   const isHomePage = location.pathname === '/';
   const isTransparent = isHomePage && !scrolled;
+  const currentLogo = isTransparent ? logoDark : logoColor;
 
   return (
     <header className={`navbar ${isTransparent ? 'navbar-transparent' : (scrolled ? 'navbar-scrolled' : 'navbar-solid')}`}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu} aria-label="VS Filtech Home">
           <img 
-            src={logoWhite} 
-            alt="VS Filtech - Cleaner Air Brighter Tomorrow" 
-            className="navbar-logo-img navbar-logo-white" 
-          />
-          <img 
-            src={logoColor} 
-            alt="VS Filtech - Cleaner Air Brighter Tomorrow" 
-            className="navbar-logo-img navbar-logo-color" 
+            src={currentLogo} 
+            alt="VS Filtech - Engineering A Cleaner Tomorrow" 
+            className="navbar-logo-img" 
           />
         </Link>
 

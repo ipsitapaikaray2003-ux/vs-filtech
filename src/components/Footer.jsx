@@ -58,7 +58,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" style={{ display: 'inline-block', marginBottom: '20px' }}>
-              <img src={logoImg} alt="VS Filtech" style={{ height: '44px', width: 'auto', objectFit: 'contain' }} />
+              <img src={logoImg} alt="VS Filtech - Engineering A Cleaner Tomorrow" style={{ height: '54px', width: 'auto', objectFit: 'contain' }} />
             </Link>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>
               Design and manufacturer of industrial bag filters, dust collectors, and complete air filtration systems. Trusted across cement, steel, food, and chemical industries.
