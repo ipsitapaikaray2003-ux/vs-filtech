@@ -374,7 +374,7 @@ const RetrofitPage = () => {
               style={{ background: 'rgba(255, 255, 255, 0.15)', color: '#ffffff', border: '1px solid rgba(255,255,255,0.4)', padding: '14px 24px', borderRadius: '10px' }}
             >
               <MessageCircle size={18} />
-              <span>WhatsApp Drawing to +91 1234567890</span>
+              <span>Share Drawing on WhatsApp</span>
             </a>
           </div>
         </div>

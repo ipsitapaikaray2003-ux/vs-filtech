@@ -651,7 +651,7 @@ const AboutPage = () => {
                   rel="noopener noreferrer"
                   className="btn-cta-translucent"
                 >
-                  <span>WhatsApp: +91 1234567890</span>
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
             </div>

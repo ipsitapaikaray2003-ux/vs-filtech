@@ -27,8 +27,7 @@ import industryPowerImg from '../assets/industry_power.jpg';
 import industrySteelImg from '../assets/industry_steel.jpg';
 import industryMetalsImg from '../assets/industry_metals.jpg';
 import industryCarbonBlackImg from '../assets/industry_carbon_black.jpg';
-
-import controlPanelMcc from '../assets/control_panel_mcc_product.jpg';
+import peHtPanel from '../assets/pe_htpanel.jpg';
 
 import './Products.css';
 
@@ -105,15 +104,15 @@ const systemProducts = [
     quoteLink: '/contact?product=Dampers-Accessories'
   },
   {
-    title: 'Control Panel & Automation Systems',
+    title: 'Control Panels & Switchgear (HT, LT, MCC, VFD, APFC)',
     tag: 'ELECTRICAL & AUTOMATION',
     tagClass: 'badge-rose',
-    image: controlPanelMcc,
-    lead: 'Electrical control panels and automation solutions for bag-filter cleaning, monitoring and system operation.',
+    image: peHtPanel,
+    lead: 'Turnkey industrial electrical switchboards, motor control centers and automation panels for bag filters and heavy process plants.',
     bullets: [
-      'Microprocessor sequential pulse cleaning timers',
-      'Real-time differential pressure (DP) monitoring & on-demand pulse',
-      'VFD ID fan speed modulation, motor starters & safety interlocks'
+      'HT (up to 33kV) & LT 415V power distribution and PCC switchboards up to 6300A',
+      'VFD Drive Panels for ID fans with closed-loop DP speed modulation & 35% power savings',
+      'MCC motor starter centers & APFC automatic power factor correction panels (0.99 PF)'
     ],
     detailsLink: '/products/control-panels',
     quoteLink: '/contact?product=Control-Panels'
@@ -385,7 +384,7 @@ const Products = () => {
                         className="btn-modal-call"
                       >
                         <PhoneCall size={16} />
-                        <span>Call +91 1234567890</span>
+                        <span>Call Engineering Desk</span>
                       </a>
                     </div>
                   </div>

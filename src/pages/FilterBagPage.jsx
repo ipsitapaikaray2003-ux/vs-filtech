@@ -657,7 +657,7 @@ _Sent via vsfiltech.com_`;
               </div>
               <h2 className="rfq-title">Request Quotation & Engineering Drawings</h2>
               <p className="rfq-subtitle">
-                Fill details below — submitting opens your inquiry directly in WhatsApp with our technical engineers at <strong>+91 1234567890</strong>.
+                Fill details below — submitting opens your inquiry directly in WhatsApp with our technical engineers.
               </p>
             </div>
 
@@ -701,7 +701,7 @@ _Sent via vsfiltech.com_`;
                     type="tel" 
                     required 
                     className="field-input" 
-                    placeholder="+91 1234567890"
+                    placeholder="Enter WhatsApp mobile number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />

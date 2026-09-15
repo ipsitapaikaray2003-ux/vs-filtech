@@ -559,7 +559,7 @@ _Sent from VS Filtech Official Portal_`;
                   Direct Factory Desk:
                 </div>
                 <div style={{ fontSize: '1.25rem', fontWeight: '800', color: '#00e5ff' }}>
-                  +91 1234567890
+                  Available on WhatsApp
                 </div>
               </div>
             </div>
@@ -582,7 +582,7 @@ _Sent from VS Filtech Official Portal_`;
                   <input 
                     type="tel" 
                     required 
-                    placeholder="+91 1234567890"
+                    placeholder="Enter WhatsApp number"
                     className="pp-form-input"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}

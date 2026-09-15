@@ -2,11 +2,11 @@ import pulseJetImg from '../assets/factory_bagfilter_plant_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
 import pleatedImg from '../assets/pleated_filter_bag.jpeg';
 import cycloneImg from '../assets/cyclone_dust_collector.webp';
-import idFanImg from '../assets/id_fan.jpg';
+import idFanImg from '../assets/id_fan_hd.jpg';
 import filterBagImg from '../assets/filter_bag_hd.jpg';
-import cageImg from '../assets/filter_cage.webp';
+import cageImg from '../assets/filter_cage_hd.jpg';
 import venturiImg from '../assets/metal_venturi.jpg';
-import solenoidImg from '../assets/solenoid_valve.webp';
+import solenoidImg from '../assets/solenoid_valve_hd.jpg';
 import ralImg from '../assets/rotary_air_lock.webp';
 import siloImg from '../assets/silo_filter_product.jpg';
 import conveyorImg from '../assets/screw_conveyor_product.jpg';
@@ -15,7 +15,20 @@ import pressureSwitchImg from '../assets/pressure_switch_product.jpg';
 import levelSensorImg from '../assets/level_sensor_product.jpg';
 import hopperVibratorImg from '../assets/hopper_vibrator_product.jpg';
 import explosionVentImg from '../assets/explosion_vent_product.jpg';
+import vfdPlcImg from '../assets/vfd_plc_panel_product.jpg';
 import controlPanelImg from '../assets/control_panel_mcc_product.jpg';
+
+import peHtPanel from '../assets/pe_htpanel.jpg';
+import peLtPanel from '../assets/pe_ltpanel.jpg';
+import pePccPanel from '../assets/pe_pccpanel.webp';
+import peMccPanel from '../assets/pe_mccpanel.jpg';
+import peApfcPanel from '../assets/pe_apfcpanel.png';
+import peBusDuct from '../assets/pe_busduct.jpg';
+import peHero1 from '../assets/pe_hero1.jpg';
+import peHero2 from '../assets/pe_hero2.jpg';
+import peHero3 from '../assets/pe_hero3.jpg';
+import peHero4 from '../assets/pe_hero4.jpg';
+
 import ductingImg from '../assets/indoor_ducting.jpg';
 
 export const allProductsData = [
@@ -558,36 +571,275 @@ export const allProductsData = [
   },
   {
     id: 'control-panels',
-    slugs: ['control-panels', 'sequential-timers', 'mcc-panel', 'plc-panel'],
-    title: 'MCC & PLC Automation Control Panels (Sequential Pulse Timers)',
-    shortTitle: 'Control Panels',
-    category: 'Automation & Electrical Panels',
-    tag: 'Pulse Automation',
-    image: controlPanelImg,
-    heroImage: solenoidImg,
-    shortDesc: 'Dust collector automation control panels incorporating microprocessor sequential timers, differential pressure displays, and VFDs.',
-    overview: 'VS Filtech designs and builds complete electrical and automation control panels for dust collection systems. Incorporating programmable microprocessor sequential pulse timers, digital differential pressure transmitters, VFD motor drives for ID fans, and plant DCS / SCADA communication interfaces, our control panels ensure automated, energy-efficient baghouse operation.',
+    slugs: ['control-panels', 'bag-filter-control-panels', 'plc-automation-panels'],
+    title: 'Industrial Electrical & Automation Control Panels (HT, LT, MCC, VFD, APFC)',
+    shortTitle: 'Control Panels & Automation',
+    category: 'Electrical & Automation Panels',
+    tag: 'Turnkey Electrical & Automation',
+    image: peMccPanel,
+    heroImage: peHtPanel,
+    shortDesc: 'Comprehensive industrial electrical control panels including HT Switchgear, LT Distribution, MCC Panels, VFD Fan Drives, PCC, APFC, and Baghouse PLC Automation.',
+    overview: 'VS Filtech designs, manufactures, and integrates turnkey electrical switchgear and automation control panels for dust collection systems, heavy process plants, and industrial substations. From primary 33 kV HT switchboards and high-amperage 6300A Power Control Centers (PCC) to energy-saving Variable Frequency Drive (VFD) ID fan panels and microprocessor-based sequential pulse jet timers, our panels are engineered to international IEC 61439 and IS standards with branded components (Siemens, Schneider, ABB, L&T, Danfoss).',
     features: [
-      { title: 'Microprocessor Sequential Pulse Timer', desc: 'Precision digital timer regulates pulse duration (50-200ms) and pulse intervals across all solenoid rows.' },
-      { title: 'DP On-Demand Cleaning Logic', desc: 'Automatically switches from continuous cycling to on-demand cleaning based on differential pressure.' },
-      { title: 'VFD Speed Modulation for ID Fans', desc: 'Variable Frequency Drives adjust fan speed according to actual process draft demands, saving power.' },
-      { title: 'Complete Safety Interlocks', desc: 'Comprehensive monitoring of header pressure, motor overload, high temperature, and hopper level.' }
+      { title: 'Complete Voltage Range Coverage', desc: 'Custom engineered solutions from 33 kV High Tension (HT) switchgear down to 415V LT distribution, MCC motor starters, and 24V DC PLC automation.' },
+      { title: 'Bag Filter Process Automation', desc: 'Integrated closed-loop differential pressure (DP) monitoring, sequential pulse jet timer firing, and dust discharge interlocks.' },
+      { title: '25% - 40% VFD Energy Conservation', desc: 'Dynamic fan speed modulation based on duct static pressure, eliminating damper throttling losses.' },
+      { title: 'Power Quality & Unity Power Factor', desc: 'Automatic Power Factor Control (APFC) panels maintaining 0.99 PF with detuned harmonic filter reactors.' }
     ],
     specs: [
-      { parameter: 'Enclosure Rating', value: 'IP55 / IP65 powder-coated CRCA sheet steel with double door' },
-      { parameter: 'Operating Supply', value: '415V AC ± 10%, 3-Phase, 50 Hz / 230V AC Single Phase' },
-      { parameter: 'Pulse Channels Supported', value: '4, 8, 16, 24, 32, 64, 128 solenoid valve output channels' },
-      { parameter: 'Pulse Timing Range', value: 'Pulse Duration: 50ms to 500ms; Pulse Interval: 1 sec to 99 sec' },
-      { parameter: 'PLC / Controller Brands', value: 'Siemens, Schneider Electric, Delta, Rockwell / Allen Bradley' },
-      { parameter: 'HMI Screen Options', value: '4.3", 7.0", or 10.0" full color industrial touchscreen HMI' },
-      { parameter: 'Communication Protocols', value: 'Modbus RTU / RS485, Profinet, Ethernet/IP for plant DCS integration' }
+      { parameter: 'Panel Types Manufactured', value: 'HT Panels (up to 33kV), LT Panels, MCC Panels, VFD Drive Panels, PCC Panels, APFC Panels, Bus Ducts' },
+      { parameter: 'Rated Voltage Coverage', value: '415 V AC to 33,000 V (33 kV) AC, 50 Hz / 60 Hz, 3-Phase' },
+      { parameter: 'Current Handling Capacity', value: 'Up to 6300 A continuous busbar rating with 65 kA / 1 sec short circuit withstand' },
+      { parameter: 'Enclosure Rating', value: 'IP42 / IP54 / IP55 / IP65 powder-coated CRCA sheet steel (1.6mm - 3.0mm)' },
+      { parameter: 'Switchgear & Drive Brands', value: 'Siemens, Schneider Electric, ABB, L&T, Danfoss, Delta, Rockwell Automation' },
+      { parameter: 'Automation & PLC Protocols', value: 'Modbus RTU / RS485, Profinet, Ethernet/IP, SCADA / DCS integration' },
+      { parameter: 'Design Compliance', value: 'IEC 61439-1 & 2, IEC 62271-200, IS 8623, IS 3427, CPRI Type Tested designs' }
     ],
-    principle: 'The control panel is the central nervous system of the filtration plant. It continuously reads differential pressure across the baghouse and compressed air pressure in the header. When cleaning is required, it fires output triacs/relays in sequence to energize solenoid valves row by row, while monitoring system safety and motor currents.',
+    principle: 'The electrical and automation panels form the vital nervous and circulatory system of any modern industrial plant and filtration facility. Incoming high or low-voltage power is safely isolated, stepped down, conditioned, and distributed through PCC/LT panels, while MCC and VFD panels intelligently regulate motor speeds, and PLC sequential timers maintain pulse jet cleaning cycles in precise synchronization with process demand.',
     applications: [
-      'Turnkey Pulse Jet Baghouses', 'Centralized Dust Collection Plants', 'Fume Extraction Systems', 
-      'Multi-Compartment Offline Baghouses', 'Silo Top Automation'
+      'Turnkey Pulse Jet Baghouses', 'Centralized Dust Collection & Fume Plants', 'Cement & Clinker Plants', 
+      'Steel Rolling Mills & Induction Furnaces', 'Power Plants & Boiler Flue Gas Cleaning', 'Chemical & Pharmaceutical Complexes'
     ],
-    relatedIds: ['solenoid-valve', 'differential-pressure-switch', 'pressure-switch', 'dust-collector-system']
+    relatedIds: ['ht-panel', 'lt-panel', 'mcc-panel', 'vfd-panel', 'pcc-panel', 'apfc-panel']
+  },
+  {
+    id: 'ht-panel',
+    slugs: ['ht-panel', 'ht-panels', 'high-tension-panel', 'vcb-panel', '11kv-panel', '33kv-panel'],
+    title: 'HT Panels (High Tension 11kV / 22kV / 33kV Switchgear Panels)',
+    shortTitle: 'HT Panels',
+    category: 'Electrical & Automation Panels',
+    tag: 'High Tension Switchgear',
+    image: peHtPanel,
+    heroImage: peHero1,
+    shortDesc: 'High Tension (HT) switchgear panels up to 33 kV with Vacuum Circuit Breakers (VCB), numerical protection relays, and arc-resistant compartmentalization for heavy industries.',
+    overview: 'VS Filtech supplies industrial HT (High Tension) electrical panels engineered for primary power intake and distribution in industrial manufacturing plants, substations, and large-scale process facilities operating at 11 kV, 22 kV, or 33 kV. Built with branded Vacuum Circuit Breakers (VCB) or SF6 gas circuit breakers, microprocessor numerical protection relays, instrument transformers (CT/PT), and multi-compartment arc-resistant enclosures, our HT switchboards ensure uninterrupted power distribution and maximum operator safety under the most demanding industrial conditions.',
+    features: [
+      { title: 'Vacuum Circuit Breaker (VCB) Technology', desc: 'Premium branded motorized draw-out VCBs offering rapid arc quenching, 26.3 kA to 31.5 kA breaking capacity, and long mechanical endurance.' },
+      { title: 'Numerical Multi-Function Protection', desc: 'Integrated microprocessor relays provide comprehensive overcurrent, short-circuit, earth fault, under/over voltage, and motor differential protection.' },
+      { title: 'Safety Interlocks & Arc Containment', desc: 'Foolproof mechanical and electrical interlocks prevent accidental rack-in or rack-out under load, with internal arc-classified safety relief flaps.' },
+      { title: 'Heavy-Duty CRCA Steel Housing', desc: 'Fabricated from 2.0mm to 3.0mm CRCA sheet steel treated with automated 9-tank pre-treatment and electrostatic powder coating.' }
+    ],
+    specs: [
+      { parameter: 'Rated Operating Voltage', value: 'Up to 33 kV (11 kV, 22 kV, and 33 kV configurations available)' },
+      { parameter: 'Rated Frequency', value: '50 Hz ± 5% / 60 Hz' },
+      { parameter: 'Rated Normal Current', value: '630 A, 1250 A, 1600 A, 2000 A, 2500 A' },
+      { parameter: 'Short-Circuit Breaking Capacity', value: 'Up to 26.3 kA / 31.5 kA for 3 seconds' },
+      { parameter: 'Enclosure Protection Rating', value: 'IP42 / IP54 / IP55 (Indoor / Outdoor kiosk designs)' },
+      { parameter: 'Circuit Breaker Types', value: 'Draw-out Vacuum Circuit Breaker (VCB) / SF6 Gas Insulated' },
+      { parameter: 'Busbar Material', value: 'High-conductivity Electrolytic Copper / Aluminium with heat-shrinkable insulation' },
+      { parameter: 'Standard Compliance', value: 'IEC 62271-200, IS 3427, IS 13118' }
+    ],
+    principle: 'HT panels receive medium-to-high voltage electrical power (11kV to 33kV) from the electricity board grid or captive power generators. When short-circuit or phase faults occur, numerical protection relays detect transient anomalies within milliseconds and trigger the spring-charged vacuum breaker mechanism, extinguishing high-energy electrical arcs inside sealed vacuum bottles before downstream equipment can be damaged.',
+    applications: [
+      'Industrial Primary Substations', 'Cement, Steel & Sponge Iron Plants', 'Captive Power Generation Facilities',
+      'Large High-Volume Baghouse Substations', 'Heavy Chemical & Fertilizer Complexes', 'Commercial Infrastructure & Utility Networks'
+    ],
+    relatedIds: ['lt-panel', 'pcc-panel', 'mcc-panel', 'vfd-panel', 'control-panels']
+  },
+  {
+    id: 'lt-panel',
+    slugs: ['lt-panel', 'lt-panels', 'low-tension-panel', 'lt-distribution-panel', 'main-lt-panel'],
+    title: 'LT Panels (Low Tension 415V Power Distribution Panels)',
+    shortTitle: 'LT Distribution Panels',
+    category: 'Electrical & Automation Panels',
+    tag: 'Low Tension Distribution',
+    image: peLtPanel,
+    heroImage: peHero2,
+    shortDesc: 'Low Tension (LT) power distribution switchboards engineered for dependable 415V, 3-Phase power management across factories and bag filter installations.',
+    overview: 'VS Filtech manufactures and supplies robust Low Tension (LT) electrical panels engineered for safe, efficient 415V, 3-phase, 4-wire power distribution. Connecting downstream from step-down distribution transformers, our LT panels house branded Air Circuit Breakers (ACB), Molded Case Circuit Breakers (MCCB), energy metering, and compartmentalized busbar chambers to distribute electrical energy reliably across plant machinery, bag filter systems, ventilation fans, and plant utilities.',
+    features: [
+      { title: 'High-Conductivity Busbar System', desc: 'Electrolytic grade copper and aluminum busbars engineered for low temperature rise, minimal I²R transmission losses, and high short-circuit withstand.' },
+      { title: 'Modular Compartmentalized Design', desc: 'Individual feeder compartments allow technicians to inspect or service specific breakers safely without disconnecting neighboring operational loads.' },
+      { title: 'Multi-Tier Fault Protection', desc: 'Complete coordinated protection against thermal overload, instantaneous short-circuits, ground faults, and phase failures.' },
+      { title: 'Digital Power Quality Monitoring', desc: 'Equipped with digital multi-function meters (MFM) displaying Voltage, Current, Frequency, PF, kW, and kVA with RS485 SCADA connectivity.' }
+    ],
+    specs: [
+      { parameter: 'Operating Voltage', value: '415 V AC ± 10%, 3-Phase, 4-Wire, 50 Hz' },
+      { parameter: 'Rated Insulation Voltage', value: '1000 V AC' },
+      { parameter: 'Rated Current Capacity', value: 'Up to 4000 A continuous rating' },
+      { parameter: 'Short Circuit Withstand', value: '35 kA / 50 kA for 1 second' },
+      { parameter: 'Enclosure Rating', value: 'IP42 / IP54 / IP65 powder-coated CRCA sheet steel (1.6mm / 2.0mm)' },
+      { parameter: 'Form of Separation', value: 'Form 2b / Form 3b / Form 4b as per IEC 61439-1 & 2' },
+      { parameter: 'Finishing & Painting', value: '7-tank chemical pre-treatment with RAL 7035 / RAL 7032 powder coat' },
+      { parameter: 'Standard Compliance', value: 'IEC 61439-1 & 2, IS 8623' }
+    ],
+    principle: 'The LT panel serves as the main low-voltage power distribution hub of an industrial building. It takes 415V power from the distribution transformer secondary winding and partitions it into individual branch feeders feeding Motor Control Centers (MCC), bag filter control panels, lighting, and auxiliary utility equipment.',
+    applications: [
+      'Factory Substation Distribution', 'Dust Collection Plant Power Feeds', 'Manufacturing & Assembly Lines',
+      'Textile, Paper & Packaging Mills', 'Food & Beverage Processing Facilities', 'Foundry & Forging Plants'
+    ],
+    relatedIds: ['pcc-panel', 'mcc-panel', 'ht-panel', 'apfc-panel', 'control-panels']
+  },
+  {
+    id: 'mcc-panel',
+    slugs: ['mcc-panel', 'mcc-panels', 'motor-control-center', 'motor-control-centre', 'bag-filter-mcc'],
+    title: 'MCC Panels (Motor Control Centre Panels for Bag Filters & Process Plants)',
+    shortTitle: 'MCC Panels',
+    category: 'Electrical & Automation Panels',
+    tag: 'Motor Control Center',
+    image: peMccPanel,
+    heroImage: peHero4,
+    shortDesc: 'Centralized Motor Control Center (MCC) panels delivering coordinated motor starting, overload protection, and process interlocks for bag filter fans and auxiliary drives.',
+    overview: 'VS Filtech manufactures custom Motor Control Centre (MCC) panels specifically engineered to control, sequence, and protect electrical motors in dust collection systems and industrial process lines. Regulating everything from high-horsepower Induced Draft (ID) fans and secondary booster blowers to rotary airlock valves, hopper screw conveyors, slide gates, and vibratory feeders, our MCC panels feature compartmentalized Form 3b/4b construction, DOL / Star-Delta / Soft starter combinations, and fail-safe process interlocking.',
+    features: [
+      { title: 'Individual Starter Compartments', desc: 'Each motor feeder possesses its own isolated door-interlocked isolator handle, contactor, MPCB / overload relay, and run/trip/stop indication lamps.' },
+      { title: 'Versatile Starter Configurations', desc: 'Configurable with Direct-On-Line (DOL), Automatic Star-Delta, Electronic Soft Starters, and Variable Frequency Drive (VFD) modules.' },
+      { title: 'Baghouse Process Sequencing Interlocks', desc: 'Built-in interlocking ensures dust discharge devices (rotary airlock and screw conveyor) start before the main ID fan, preventing hopper blockages.' },
+      { title: 'Draw-Out & Fixed Modular Flexibility', desc: 'Available in both fully draw-out and fixed modular arrangements for rapid replacement and zero-downtime maintenance.' }
+    ],
+    specs: [
+      { parameter: 'Operating Voltage', value: '415 V AC ± 10%, 3-Phase, 50 Hz' },
+      { parameter: 'Main Busbar Rating', value: 'Up to 3200 A Electrolytic Copper / Aluminium' },
+      { parameter: 'Starter Ratings Handled', value: 'Fractional 0.5 HP up to 350+ HP heavy industrial motors' },
+      { parameter: 'Starter Options', value: 'DOL, Star-Delta, Soft Starter, VFD (Variable Frequency Drive)' },
+      { parameter: 'Short Circuit Withstand', value: '50 kA RMS for 1 second' },
+      { parameter: 'Ingress Protection Class', value: 'IP54 / IP55 powder-coated CRCA steel' },
+      { parameter: 'Internal Separation', value: 'Form 3b / Form 4b as per IEC 61439' },
+      { parameter: 'Control Voltage', value: '110V AC / 230V AC / 24V DC control circuits' }
+    ],
+    principle: 'Centralizes the control, protection, and operational monitoring of all plant motors into a single organized switchboard. It prevents catastrophic motor burnouts from single phasing, overloads, or locked rotor currents, and automates bag filter startup/shutdown procedures.',
+    applications: [
+      'Baghouse ID Fans & Booster Blowers', 'Rotary Airlock & Screw Conveyor Feeds', 'Hopper Piston & Rotary Vibrators',
+      'Pneumatic Conveying Compressors', 'Cement & Steel Bulk Material Handling', 'Crushing & Screening Plants'
+    ],
+    relatedIds: ['vfd-panel', 'control-panels', 'lt-panel', 'rotary-air-lock', 'screw-conveyor']
+  },
+  {
+    id: 'vfd-panel',
+    slugs: ['vfd-panel', 'vfd-panels', 'vfd-drive-panel', 'vfd-drive-panels', 'vfd-drive', 'id-fan-vfd-panel'],
+    title: 'VFD Drive Panels (Variable Frequency Drive Panels for Bag Filter ID Fans)',
+    shortTitle: 'VFD Drive Panels',
+    category: 'Electrical & Automation Panels',
+    tag: 'Airflow & Energy Saving',
+    image: vfdPlcImg,
+    heroImage: peHero3,
+    shortDesc: 'High-efficiency Variable Frequency Drive (VFD) panels designed for bag filter ID fans, delivering dynamic closed-loop draft modulation and 25% to 40% electrical power savings.',
+    overview: 'VS Filtech specializes in engineering dedicated VFD (Variable Frequency Drive) Control Panels designed specifically for dust collector ID (Induced Draft) fans and industrial ventilation blowers. By dynamically modulating motor speed in real time based on 4-20mA differential pressure (DP) and duct static pressure transmitter feedback, our VFD panels eliminate wasteful damper throttling and slash electrical energy consumption by 25% to 40%. Featuring integrated line chokes, dV/dt filters, thermostatically controlled forced cooling, and intuitive touchscreen PLC interfaces, they protect motors and extend baghouse filter life.',
+    features: [
+      { title: 'Closed-Loop PID Airflow Modulation', desc: 'Automatically regulates ID fan RPM to maintain constant suction pressure at collection hoods, compensating for filter cake accumulation.' },
+      { title: '25% - 40% Power Savings (Affinity Laws)', desc: 'Fan power consumption varies with the cube of speed (P ∝ N³) — a minor 20% reduction in fan RPM cuts electrical power demand by almost 50%.' },
+      { title: 'Smooth Soft Starting & Zero Inrush', desc: 'Eliminates peak electrical startup currents and prevents mechanical torque shock on fan impellers, V-belts, and pillow block bearings.' },
+      { title: 'Built-in Harmonic & dV/dt Filtration', desc: 'Integrated AC line reactors and dV/dt output filters protect motor windings against voltage spikes and satisfy IEEE 519 harmonic standards.' },
+      { title: 'Manual / Auto Bypass Operation', desc: 'Equipped with an automatic or manual Star-Delta bypass circuit so the bag filter can continue operating during drive servicing.' }
+    ],
+    specs: [
+      { parameter: 'Motor Power Ratings Handled', value: '5.5 kW to 350+ kW (7.5 HP to 500 HP)' },
+      { parameter: 'Operating Supply', value: '380V - 480V AC ± 10%, 3-Phase, 50/60 Hz' },
+      { parameter: 'Drive Manufacturers', value: 'Danfoss, Siemens, Schneider Electric, ABB, Delta, Yaskawa' },
+      { parameter: 'Control Algorithm', value: 'Closed-loop PID based on 4-20mA static duct pressure or baghouse DP' },
+      { parameter: 'Bypass Architecture', value: 'Integrated DOL / Star-Delta bypass switch with electrical interlocking' },
+      { parameter: 'Harmonic Suppression', value: 'Built-in DC Choke + AC Line Reactor (IEEE 519 compliant)' },
+      { parameter: 'Enclosure Cooling', value: 'IP54 / IP55 with forced filtered ventilation or top-mount air conditioning' },
+      { parameter: 'Communications', value: 'Modbus RTU / RS485, Profinet, Ethernet/IP, analog 4-20mA retransmission' }
+    ],
+    principle: 'Conventional baghouse systems run ID fans at full speed and throttle airflow with manual dampers, wasting massive electricity against closed louvers. The VFD drive panel reads the real-time duct suction pressure and baghouse differential pressure, automatically adjusting the fan motor frequency (Hz) to deliver exact required CFM with minimum power.',
+    applications: [
+      'Bag Filter Induced Draft (ID) Fans', 'Boiler Exhaust Flue Gas Blowers', 'Fume Extraction Systems',
+      'Pneumatic Dilute Phase Conveying Blowers', 'Foundry Furnace Hood Suction Fans', 'Cement Kiln & Mill Venting Fans'
+    ],
+    relatedIds: ['mcc-panel', 'differential-pressure-switch', 'id-fans', 'control-panels', 'dust-collector-system']
+  },
+  {
+    id: 'pcc-panel',
+    slugs: ['pcc-panel', 'pcc-panels', 'power-control-centre', 'power-control-center', 'main-pcc-panel'],
+    title: 'PCC Panels (Power Control Centre Panels up to 6300A)',
+    shortTitle: 'PCC Panels',
+    category: 'Electrical & Automation Panels',
+    tag: 'Main Power Distribution',
+    image: pePccPanel,
+    heroImage: peHero3,
+    shortDesc: 'Heavy-duty Power Control Centre (PCC) panels designed for main factory electrical power distribution up to 6300A with 65kA fault withstand capacity.',
+    overview: 'VS Filtech manufactures high-capacity Power Control Centre (PCC) panels engineered as the main electrical backbone of heavy industrial facilities. Installed immediately downstream of step-down transformers or captive generator sets, our PCC panels handle continuous currents up to 6300A with high short-circuit withstand capacity (up to 65 kA for 1 second). Designed with Form 4 compartmentalization, motorized draw-out Air Circuit Breakers (ACB), precision metering, and transient surge suppression, they provide uncompromised power reliability for entire industrial complexes.',
+    features: [
+      { title: 'Heavy-Duty Air Circuit Breakers (ACB)', desc: 'High breaking capacity microprocessor-based ACBs with adjustable Long, Short, Instantaneous, and Ground Fault (LSIG) trip settings.' },
+      { title: 'High-Purity Busbar Architecture', desc: 'Electrolytic copper and aluminum busbars engineered for low impedance, superior heat dissipation, and short-circuit electrodynamic bracing.' },
+      { title: 'Automatic Source Transfer (AMF/ATS)', desc: 'Seamless motorized bus coupler interlocking allows automatic transfer between utility transformer supply and emergency diesel generators (DG).' },
+      { title: 'Form 4b Compartmental Isolation', desc: 'Physical steel barriers between busbars, functional breaker units, and external cable terminations prevent arc flash propagation.' }
+    ],
+    specs: [
+      { parameter: 'Rated Operating Voltage', value: '415 V AC ± 10%, 3-Phase, 4-Wire, 50 Hz' },
+      { parameter: 'Rated Current Carrying Capacity', value: '800 A to 6300 A continuous rating' },
+      { parameter: 'Short-Circuit Breaking Capacity', value: '50 kA / 65 kA / 85 kA for 1 second' },
+      { parameter: 'Rated Insulation Voltage', value: '1000 V AC' },
+      { parameter: 'Enclosure Protection Rating', value: 'IP42 / IP54 / IP55 powder-coated CRCA steel (2.0mm / 2.5mm)' },
+      { parameter: 'Form of Internal Separation', value: 'Form 3b / Form 4b as per IEC 61439-2' },
+      { parameter: 'Breaker Units Supported', value: 'Draw-out 3-pole / 4-pole ACBs (Schneider, ABB, Siemens, L&T)' },
+      { parameter: 'Standard Compliance', value: 'IEC 61439-1 & 2, IS 8623, CPRI Type Tested' }
+    ],
+    principle: 'PCC panels receive primary low-voltage electrical power from substation transformers or captive DG sets, safeguard the entire factory network with high-breaking-capacity ACBs, and distribute power cleanly across sub-distribution LT panels, MCCs, and APFC banks.',
+    applications: [
+      'Central Factory Power Substations', 'Integrated Steel Plants & Rolling Mills', 'Cement & Clinker Complexes',
+      'Large Multi-Baghouse Environmental Plants', 'Chemical & Petrochemical Refineries', 'Automobile & Heavy Engineering Facilities'
+    ],
+    relatedIds: ['ht-panel', 'lt-panel', 'apfc-panel', 'bus-duct', 'mcc-panel']
+  },
+  {
+    id: 'apfc-panel',
+    slugs: ['apfc-panel', 'apfc-panels', 'automatic-power-factor-control', 'capacitor-panel'],
+    title: 'APFC Panels (Automatic Power Factor Control Panels)',
+    shortTitle: 'APFC Panels',
+    category: 'Electrical & Automation Panels',
+    tag: 'Power Factor Optimization',
+    image: peApfcPanel,
+    heroImage: peHero1,
+    shortDesc: 'Intelligent Automatic Power Factor Control (APFC) panels maintaining near-unity power factor (0.99) to eliminate utility penalty surcharges and reduce electrical losses.',
+    overview: 'VS Filtech designs and builds Automatic Power Factor Control (APFC) panels equipped with microprocessor-controlled multi-stage capacitor banks and detuned harmonic filter reactors. Industrial induction motors powering bag filter ID fans, blowers, and air compressors operate at low lagging power factor (0.75 - 0.85), drawing excess reactive current that incurs heavy electricity board penalties and overheats transformers. Our APFC panels continuously calculate reactive KVAR demand and automatically switch heavy-duty capacitor stages to maintain a constant power factor of 0.98 to 0.99 lag.',
+    features: [
+      { title: 'Intelligent Microprocessor Controller', desc: 'Advanced APFC relay dynamically calculates required reactive power and rotates capacitor switching steps to equalize capacitor run hours.' },
+      { title: 'Detuned Harmonic Filter Reactors (7% / 14%)', desc: 'Prevents dangerous harmonic resonance amplified by nonlinear VFD drives, protecting capacitor banks from overcurrent and premature failure.' },
+      { title: 'Heavy-Duty Self-Healing MPP Capacitors', desc: 'Equipped with metallized polypropylene (MPP) capacitors featuring internal overpressure tear-off disconnectors for fire safety.' },
+      { title: 'Specialized Capacitor Duty Contactors', desc: 'Equipped with early-make damping resistor blocks to suppress dangerous inrush currents during step switching.' }
+    ],
+    specs: [
+      { parameter: 'Operating Voltage', value: '415 V AC ± 10%, 3-Phase, 50 Hz' },
+      { parameter: 'Capacity Rating', value: '50 kVAR to 1200+ kVAR (custom modular sizing)' },
+      { parameter: 'Target Power Factor', value: '0.98 to 0.999 lag automatically maintained' },
+      { parameter: 'Controller Steps', value: '6, 8, 12, 14, or 16-step microprocessor APFC relay' },
+      { parameter: 'Detuned Reactors', value: '7% (189 Hz) or 14% (134 Hz) copper/aluminium detuned reactors' },
+      { parameter: 'Capacitor Types', value: 'Heavy-duty MPP cylindrical / box capacitors with internal discharge resistors' },
+      { parameter: 'Protection Class', value: 'IP42 / IP54 CRCA sheet steel with thermostatic cooling fans' },
+      { parameter: 'Standard Compliance', value: 'IS 13340 / IS 13341, IEC 60831-1 & 2' }
+    ],
+    principle: 'Inductive motor loads draw reactive power (KVAR), lowering plant power factor. The APFC panel measures CT/PT phase angle in real time, calculating the exact capacitive KVAR needed and pulsing capacitor contactors into the bus to cancel inductive reactance automatically.',
+    applications: [
+      'Industrial Plants with Heavy Induction Motors', 'Dust Collector & Fan Substations', 'Rolling Mills & Foundries',
+      'Textile & Paper Processing Facilities', 'Chemical & Plastic Manufacturing Plants', 'Commercial Complexes & Data Centers'
+    ],
+    relatedIds: ['pcc-panel', 'lt-panel', 'mcc-panel', 'vfd-panel', 'control-panels']
+  },
+  {
+    id: 'bus-duct',
+    slugs: ['bus-duct', 'bus-duct-systems', 'bus-trunking', 'sandwich-bus-duct', 'copper-bus-duct'],
+    title: 'Bus Duct Systems (Modular Sandwich & Air Insulated Power Distribution)',
+    shortTitle: 'Bus Duct Systems',
+    category: 'Electrical & Automation Panels',
+    tag: 'High Current Power Transmission',
+    image: peBusDuct,
+    heroImage: peHero2,
+    shortDesc: 'Compact sandwich-type copper and aluminum bus duct trunking systems rated up to 6300A for efficient, low-loss power distribution between transformers, PCC, and MCC panels.',
+    overview: 'VS Filtech supplies industrial Sandwich Bus Duct and Air-Insulated Busbar Trunking Systems designed for safe, compact, high-amperage electrical power transmission. Replacing bulky parallel multiple cable runs, our modular bus ducts connect transformers to main Power Control Centers (PCC) and route power directly to Motor Control Centers (MCC) and baghouse installations with lower voltage drop, exceptional short-circuit withstand, and superior fire safety.',
+    features: [
+      { title: 'Compact Sandwich Construction', desc: 'Eliminates air space between conductors, achieving minimum impedance, high electrodynamic strength, and lowest voltage drop.' },
+      { title: 'Electrolytic Copper & Aluminium Conductors', desc: 'Fabricated with 99.9% pure ETP copper or high-conductivity aluminium with silver/tin plating at all joint connections.' },
+      { title: 'Class F / Class H Certified Insulation', desc: 'Multi-layer Mylar / epoxy insulation guarantees high dielectric strength and flame retardancy under severe fault conditions.' },
+      { title: 'Plug-In Tap-Off Boxes with Isolators', desc: 'Enables safe, flexible power tapping along the run without interrupting main electrical distribution to the rest of the factory.' }
+    ],
+    specs: [
+      { parameter: 'Rated Operational Voltage', value: 'Up to 690 V / 1000 V AC, 50/60 Hz' },
+      { parameter: 'Current Carrying Rating', value: '100 A to 6300 A continuous rating' },
+      { parameter: 'Conductor Material', value: '99.9% Electrolytic Grade Copper / High-Conductivity Aluminium Alloy' },
+      { parameter: 'Insulation Class', value: 'Class F (155°C) / Class H (180°C) halogen-free epoxy film' },
+      { parameter: 'Short-Circuit Withstand', value: 'Up to 100 kA RMS for 1 second' },
+      { parameter: 'Ingress Protection', value: 'IP54 / IP55 (Indoor) / IP65 / IP67 (Outdoor weatherproof with canopy)' },
+      { parameter: 'Enclosure Housing', value: 'Extruded Aluminium housing providing low resistance integral ground path' },
+      { parameter: 'Standard Compliance', value: 'IEC 61439-6, IS 8623-2' }
+    ],
+    principle: 'Instead of laying dozens of heavy, expensive, and heat-generating power cables in crowded cable trays, a prefabricated rigid bus duct enclosure carries thousands of amperes compactly with superior heat radiation and minimal electromagnetic interference.',
+    applications: [
+      'Transformer to Main PCC Incomer Links', 'Substation Interconnections', 'Heavy Baghouse Blower Substation Feeders',
+      'Multi-Story Industrial Buildings', 'Steel, Cement & Petrochemical Plants', 'Continuous Process Manufacturing Facilities'
+    ],
+    relatedIds: ['pcc-panel', 'ht-panel', 'lt-panel', 'mcc-panel', 'control-panels']
   }
 ];
 

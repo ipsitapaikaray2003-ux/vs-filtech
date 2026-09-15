@@ -189,8 +189,8 @@ const Navbar = () => {
                   <Cpu size={18} />
                 </div>
                 <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Control Panels & Automation</span>
-                  <span className="dropdown-item-subtitle">Sequential timers & DP monitoring</span>
+                  <span className="dropdown-item-title">Control Panels & Electrical</span>
+                  <span className="dropdown-item-subtitle">HT, LT, MCC, VFD &amp; APFC Panels</span>
                 </div>
               </Link>
 

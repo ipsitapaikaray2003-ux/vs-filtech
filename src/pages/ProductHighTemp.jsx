@@ -490,7 +490,7 @@ _Sent via vsfiltech.com_`;
               </div>
               <h2 className="ht-rfq-title">Request High-Temperature Engineering Quotation</h2>
               <p className="ht-rfq-subtitle">
-                Fill details below — submitting opens your inquiry directly in WhatsApp with our filtration specialists at <strong>+91 1234567890</strong>.
+                Fill details below — submitting opens your inquiry directly in WhatsApp with our filtration specialists.
               </p>
             </div>
 
@@ -534,7 +534,7 @@ _Sent via vsfiltech.com_`;
                     type="tel" 
                     required 
                     className="field-input" 
-                    placeholder="+91 1234567890"
+                    placeholder="Enter WhatsApp mobile number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />

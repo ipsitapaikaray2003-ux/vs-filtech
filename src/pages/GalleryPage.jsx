@@ -37,8 +37,12 @@ import pipingControl from '../assets/client_service_piping_control.jpg';
 import dpTransmitter from '../assets/dp_transmitter_product.jpg';
 import pressureSwitch from '../assets/pressure_switch_product.jpg';
 
-import controlPanelMcc from '../assets/control_panel_mcc_product.jpg';
-import htLtPanel from '../assets/ht_lt_panel_product.jpg';
+import peHtPanel from '../assets/pe_htpanel.jpg';
+import peLtPanel from '../assets/pe_ltpanel.jpg';
+import pePccPanel from '../assets/pe_pccpanel.webp';
+import peMccPanel from '../assets/pe_mccpanel.jpg';
+import peApfcPanel from '../assets/pe_apfcpanel.png';
+import peBusDuct from '../assets/pe_busduct.jpg';
 import vfdPlcPanel from '../assets/vfd_plc_panel_product.jpg';
 
 const galleryItems = [
@@ -194,30 +198,62 @@ const galleryItems = [
     tag: 'Solenoid Valves'
   },
 
-  // 5. Control Panels (MCC, HT, LT, VFD, etc.)
+  // 5. Control Panels (MCC, HT, LT, VFD, PCC, APFC, Bus Duct)
   {
     id: 19,
     category: 'Control panels',
-    title: 'MCC Dust Collector Automation System',
-    desc: 'Motor Control Center (MCC) panel with integrated VFD drives and PLC touchscreen interface.',
-    src: controlPanelMcc,
-    tag: 'Control Panels (MCC, HT, LT, VFD)'
+    title: 'HT Panels (High Tension 11kV - 33kV Switchgear)',
+    desc: 'Vacuum Circuit Breakers (VCB) with numerical protection relays for primary substations.',
+    src: peHtPanel,
+    tag: 'HT Panels'
   },
   {
     id: 20,
     category: 'Control panels',
-    title: 'HT & LT Power Distribution Panels',
-    desc: 'Heavy-duty industrial LT and HT switchgear panels custom-engineered for dust collector plants.',
-    src: htLtPanel,
-    tag: 'Control Panels (MCC, HT, LT, VFD)'
+    title: 'LT Panels (415V Power Distribution)',
+    desc: 'Heavy-duty industrial LT distribution switchboards with Air Circuit Breakers (ACB) and MCCBs.',
+    src: peLtPanel,
+    tag: 'LT Panels'
   },
   {
     id: 21,
     category: 'Control panels',
-    title: 'VFD Speed Modulation & PLC Panel',
-    desc: 'Variable Frequency Drive panel regulating fan speed according to real-time duct static pressure.',
+    title: 'PCC Panels (Power Control Centre up to 6300A)',
+    desc: 'High-amperage switchboards with motorized drawout ACBs and automatic generator transfer.',
+    src: pePccPanel,
+    tag: 'PCC Panels'
+  },
+  {
+    id: 22,
+    category: 'Control panels',
+    title: 'MCC Panels (Motor Control Centre for Baghouse Drives)',
+    desc: 'Centralized motor control panels housing DOL, Star-Delta, and Soft Starters with interlocks.',
+    src: peMccPanel,
+    tag: 'MCC Panels'
+  },
+  {
+    id: 23,
+    category: 'Control panels',
+    title: 'APFC Panels (Automatic Power Factor Control)',
+    desc: 'Capacitor banks with detuned harmonic filter reactors maintaining 0.99 power factor.',
+    src: peApfcPanel,
+    tag: 'APFC Panels'
+  },
+  {
+    id: 24,
+    category: 'Control panels',
+    title: 'Bus Duct Systems (Modular Power Trunking)',
+    desc: 'Sandwich copper & aluminium busbar trunking systems rated up to 6300A.',
+    src: peBusDuct,
+    tag: 'Bus Duct'
+  },
+  {
+    id: 25,
+    category: 'Control panels',
+    title: 'VFD Speed Modulation & PLC Drive Panel',
+    desc: 'Variable Frequency Drive panel regulating ID fan speed according to real-time static pressure.',
     src: vfdPlcPanel,
-    tag: 'Control Panels (MCC, HT, LT, VFD)'
+    tag: 'VFD Panels'
   }
 ];
 
@@ -662,7 +698,7 @@ const GalleryPage = () => {
               className="btn btn-outline btn-lg"
               style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}
             >
-              <span>WhatsApp +91 1234567890</span>
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>

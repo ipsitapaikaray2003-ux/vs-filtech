@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   FileText
 } from 'lucide-react';
+import contactGraphicBg from '../assets/contact_graphic_bg.jpg';
 import './ContactSection.css';
 
 const ContactSection = () => {
@@ -60,7 +61,11 @@ _Sent via vsfiltech.com/contact_`;
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section 
+      id="contact" 
+      className="contact-section"
+      style={{ backgroundImage: `url(${contactGraphicBg})` }}
+    >
       <div className="container relative z-10">
         {/* Section Header */}
         <div className="contact-section-header">
@@ -92,7 +97,7 @@ _Sent via vsfiltech.com/contact_`;
                 <div className="detail-text-box">
                   <span className="detail-label">WhatsApp Technical Desk</span>
                   <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" className="detail-link wa-link">
-                    +91 1234567890
+                    Chat on WhatsApp
                   </a>
                   <span className="detail-hint">Direct engineering assistance & drawing review</span>
                 </div>
@@ -219,7 +224,7 @@ _Sent via vsfiltech.com/contact_`;
                       type="tel" 
                       required 
                       className="field-input" 
-                      placeholder="+91 1234567890"
+                      placeholder="Enter mobile / WhatsApp number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
@@ -353,7 +358,7 @@ _Sent via vsfiltech.com/contact_`;
                   rel="noopener noreferrer"
                   className="direct-wa-link"
                 >
-                  <MessageCircle size={15} /> WhatsApp +91 1234567890
+                  <MessageCircle size={15} /> Chat on WhatsApp
                 </a>
               </div>
             </div>

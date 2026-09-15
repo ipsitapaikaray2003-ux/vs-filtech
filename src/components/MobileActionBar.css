@@ -1,4 +1,4 @@
-/* MobileActionBar.css - Bottom Sticky Bar for Mobile Viewports */
+/* MobileActionBar.css - Bottom Sticky Bar for Mobile Viewports & Floating Desktop Dock */
 
 .mobile-action-bar-wrap {
   display: none;
@@ -88,5 +88,67 @@
   /* Add padding to the footer so the sticky bar doesn't obscure footer content */
   body {
     padding-bottom: 60px;
+  }
+}
+
+/* Desktop Floating Action Dock - Circular Logos Only (Screens > 768px) */
+.desktop-action-dock {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+.desktop-dock-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, filter 0.2s ease;
+  user-select: none;
+  position: relative;
+}
+
+.desktop-dock-btn:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.38);
+}
+
+.desktop-dock-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+}
+
+.desktop-dock-whatsapp:hover {
+  background: #1ebc59;
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.65);
+}
+
+.desktop-dock-call {
+  background: #0284c7;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.45);
+}
+
+.desktop-dock-call:hover {
+  background: #0369a1;
+  box-shadow: 0 12px 32px rgba(2, 132, 199, 0.65);
+}
+
+@media (max-width: 768px) {
+  .desktop-action-dock {
+    display: none !important;
   }
 }

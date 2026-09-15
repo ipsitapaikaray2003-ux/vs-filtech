@@ -29,6 +29,7 @@ import {
 import heroImg from '../assets/factory_bagfilter_plant_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
 import './ProductDetails.css';
+import './PulseJetFilterPage.css';
 
 const availableConfigurations = [
   {
@@ -301,17 +302,17 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 1. Pulse-Jet Cleaning Operating Modes: Online vs Offline */}
-      <section className="light-graphic-dots" style={{ padding: '80px 0', background: '#f8fafc' }}>
+      {/* 1. Pulse-Jet Cleaning Operating Modes: Online vs Offline (BLUE SECTION) */}
+      <section className="pj-section-blue">
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 50px' }}>
-            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
-              CLEANING TECHNOLOGY
+            <div className="pj-blue-eyebrow">
+              <Sparkles size={13} /> CLEANING TECHNOLOGY
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>
-              Pulse-Jet Cleaning: <span style={{ color: '#1d4ed8' }}>Online vs Offline Modes</span>
+            <h2 className="pj-blue-title">
+              Pulse-Jet Cleaning: <span style={{ color: '#38bdf8' }}>Online vs Offline Modes</span>
             </h2>
-            <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.65' }}>
+            <p className="pj-blue-subtitle">
               Depending on your plant's dust loading, particle adhesion, and operational schedule, VS Filtech designs bag filters in both Online and Offline pulse configurations:
             </p>
           </div>
@@ -320,34 +321,14 @@ const PulseJetFilterPage = () => {
             {cleaningModes.map((item, idx) => (
               <div 
                 key={idx}
-                style={{
-                  background: '#ffffff',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '20px',
-                  padding: '36px 30px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
-                  borderTop: '4px solid #1d4ed8'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = '#0284c7';
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 14px 30px rgba(2, 132, 199, 0.12)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#e2e8f0';
-                  e.currentTarget.style.borderTop = '4px solid #1d4ed8';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.04)';
-                }}
+                className="pj-dark-card"
+                style={{ borderTop: '4px solid #38bdf8' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                   <span style={{
-                    background: 'rgba(2, 132, 199, 0.1)',
-                    border: '1px solid rgba(2, 132, 199, 0.3)',
-                    color: '#0284c7',
+                    background: 'rgba(56, 189, 248, 0.15)',
+                    border: '1px solid rgba(56, 189, 248, 0.35)',
+                    color: '#38bdf8',
                     padding: '4px 12px',
                     borderRadius: '999px',
                     fontSize: '0.75rem',
@@ -356,26 +337,26 @@ const PulseJetFilterPage = () => {
                   }}>
                     {item.badge}
                   </span>
-                  <Wind size={20} style={{ color: '#0284c7' }} />
+                  <Wind size={20} style={{ color: '#38bdf8' }} />
                 </div>
 
-                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#ffffff', marginBottom: '8px' }}>
                   {item.mode}
                 </h3>
 
-                <div style={{ color: '#1d4ed8', fontSize: '0.9rem', fontWeight: '600', marginBottom: '16px' }}>
+                <div style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: '600', marginBottom: '16px' }}>
                   {item.highlight}
                 </div>
 
-                <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.65', marginBottom: '24px', flex: 1 }}>
+                <p style={{ color: '#cbd5e1', fontSize: '0.95rem', lineHeight: '1.65', marginBottom: '24px', flex: 1 }}>
                   {item.desc}
                 </p>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderTop: '1px solid #e2e8f0', paddingTop: '20px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderTop: '1px solid rgba(56, 189, 248, 0.15)', paddingTop: '20px' }}>
                   {item.features.map((feat, fIdx) => (
                     <div key={fIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <CheckCircle2 size={16} style={{ color: '#0284c7', flexShrink: 0, marginTop: '3px' }} />
-                      <span style={{ color: '#334155', fontSize: '0.88rem', lineHeight: '1.5' }}>{feat}</span>
+                      <CheckCircle2 size={16} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '3px' }} />
+                      <span style={{ color: '#e2e8f0', fontSize: '0.88rem', lineHeight: '1.5' }}>{feat}</span>
                     </div>
                   ))}
                 </div>
@@ -455,34 +436,27 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 3. Gas & Dust Distribution + Filter Bags & Cages Architecture */}
-      <section className="light-graphic-dots" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+      {/* 3. Gas & Dust Distribution + Filter Bags & Cages Architecture (BLUE SECTION) */}
+      <section className="pj-section-blue">
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '860px', margin: '0 auto 40px' }}>
-            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
-              PROPRIETARY ENGINEERING
+            <div className="pj-blue-eyebrow">
+              <Sparkles size={13} /> PROPRIETARY ENGINEERING
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#0f172a', marginBottom: '18px' }}>
-              GAS &amp; DUST <span style={{ color: '#1d4ed8' }}>DISTRIBUTION</span>
+            <h2 className="pj-blue-title">
+              GAS &amp; DUST <span style={{ color: '#38bdf8' }}>DISTRIBUTION</span>
             </h2>
             
             {/* Hallmark Feature Callout Box */}
-            <div style={{
-              background: '#ffffff',
-              border: '1.5px solid #bae6fd',
-              borderRadius: '16px',
-              padding: '24px 30px',
-              boxShadow: '0 4px 20px rgba(2, 132, 199, 0.08)',
-              textAlign: 'left'
-            }}>
+            <div className="pj-dark-callout">
               <p style={{
-                color: '#1e293b',
+                color: '#f1f5f9',
                 fontSize: '1.1rem',
                 lineHeight: '1.75',
                 margin: 0,
                 fontWeight: '500'
               }}>
-                A hallmark of VS Filtech engineering, our <strong style={{ color: '#0284c7' }}>distribution system</strong> ensures a uniform flow across the filter bags, creating a true negative can velocity. This prevents dust re-entrainment, reduces wear, and maximizes filter efficiency.
+                A hallmark of VS Filtech engineering, our <strong style={{ color: '#38bdf8' }}>distribution system</strong> ensures a uniform flow across the filter bags, creating a true negative can velocity. This prevents dust re-entrainment, reduces wear, and maximizes filter efficiency.
               </p>
             </div>
           </div>
@@ -490,24 +464,15 @@ const PulseJetFilterPage = () => {
           {/* Cards for Filter Bags & Cages + Top-Access Replacement */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '28px' }}>
             {/* Card 1: Filter Bags & Cages */}
-            <div style={{
-              background: '#ffffff',
-              border: '1px solid #e2e8f0',
-              borderRadius: '18px',
-              padding: '32px 28px',
-              display: 'flex',
-              flexDirection: 'column',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
-              borderTop: '4px solid #0284c7'
-            }}>
+            <div className="pj-dark-card" style={{ borderTop: '4px solid #0284c7' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '18px' }}>
                 <div style={{
                   width: '46px',
                   height: '46px',
                   borderRadius: '12px',
-                  background: '#f0f7ff',
-                  border: '1px solid #bae6fd',
-                  color: '#0284c7',
+                  background: 'rgba(2, 132, 199, 0.2)',
+                  border: '1px solid rgba(56, 189, 248, 0.4)',
+                  color: '#38bdf8',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -515,10 +480,10 @@ const PulseJetFilterPage = () => {
                   <Layers size={22} />
                 </div>
                 <div>
-                  <span style={{ color: '#0284c7', fontSize: '0.76rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                  <span style={{ color: '#38bdf8', fontSize: '0.76rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     MEDIA &amp; SUPPORT CAGES
                   </span>
-                  <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#0f172a', margin: 0 }}>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#ffffff', margin: 0 }}>
                     Filter Bags &amp; Cages
                   </h3>
                 </div>
@@ -526,40 +491,31 @@ const PulseJetFilterPage = () => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0284c7', marginTop: '7px', flexShrink: 0 }} />
-                  <p style={{ margin: 0, color: '#334155', fontSize: '0.94rem', lineHeight: '1.6' }}>
-                    <strong style={{ color: '#0f172a' }}>Bags:</strong> High-quality fabrics with stainless steel snap rings for a dust-tight seal and easy installation.
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#38bdf8', marginTop: '7px', flexShrink: 0 }} />
+                  <p style={{ margin: 0, color: '#cbd5e1', fontSize: '0.94rem', lineHeight: '1.6' }}>
+                    <strong style={{ color: '#ffffff' }}>Bags:</strong> High-quality fabrics with stainless steel snap rings for a dust-tight seal and easy installation.
                   </p>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0284c7', marginTop: '7px', flexShrink: 0 }} />
-                  <p style={{ margin: 0, color: '#334155', fontSize: '0.94rem', lineHeight: '1.6' }}>
-                    <strong style={{ color: '#0f172a' }}>Cages:</strong> Precision-welded mild steel or stainless steel frames that prevent abrasion, allow proper flexing, and ensure smooth dust release during cleaning.
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#38bdf8', marginTop: '7px', flexShrink: 0 }} />
+                  <p style={{ margin: 0, color: '#cbd5e1', fontSize: '0.94rem', lineHeight: '1.6' }}>
+                    <strong style={{ color: '#ffffff' }}>Cages:</strong> Precision-welded mild steel or stainless steel frames that prevent abrasion, allow proper flexing, and ensure smooth dust release during cleaning.
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Card 2: Top-Access Snap-In/Snap-Out Replacement */}
-            <div style={{
-              background: '#ffffff',
-              border: '1px solid #e2e8f0',
-              borderRadius: '18px',
-              padding: '32px 28px',
-              display: 'flex',
-              flexDirection: 'column',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
-              borderTop: '4px solid #10b981'
-            }}>
+            <div className="pj-dark-card" style={{ borderTop: '4px solid #10b981' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '18px' }}>
                 <div style={{
                   width: '46px',
                   height: '46px',
                   borderRadius: '12px',
-                  background: '#ecfdf5',
-                  border: '1px solid #a7f3d0',
-                  color: '#059669',
+                  background: 'rgba(16, 185, 129, 0.2)',
+                  border: '1px solid rgba(16, 185, 129, 0.4)',
+                  color: '#34d399',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -567,22 +523,22 @@ const PulseJetFilterPage = () => {
                   <ShieldCheck size={22} />
                 </div>
                 <div>
-                  <span style={{ color: '#059669', fontSize: '0.76rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                  <span style={{ color: '#34d399', fontSize: '0.76rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     CLEAN-AIR PLENUM SERVICING
                   </span>
-                  <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#0f172a', margin: 0 }}>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#ffffff', margin: 0 }}>
                     Top-Access Maintenance
                   </h3>
                 </div>
               </div>
 
-              <p style={{ color: '#334155', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '16px' }}>
+              <p style={{ color: '#cbd5e1', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '16px' }}>
                 Top-access, snap-in/snap-out bag replacement from the clean air side through roof-mounted, gasketed doors. Designed for safe, quick maintenance without production losses.
               </p>
 
               <div style={{
-                background: '#f8fafc',
-                border: '1px solid #e2e8f0',
+                background: 'rgba(10, 22, 40, 0.8)',
+                border: '1px solid rgba(16, 185, 129, 0.3)',
                 borderRadius: '12px',
                 padding: '12px 16px',
                 marginTop: 'auto',
@@ -590,8 +546,8 @@ const PulseJetFilterPage = () => {
                 alignItems: 'center',
                 gap: '10px'
               }}>
-                <CheckCircle2 size={16} style={{ color: '#10b981', flexShrink: 0 }} />
-                <span style={{ fontSize: '0.86rem', color: '#475569', fontWeight: '500' }}>
+                <CheckCircle2 size={16} style={{ color: '#34d399', flexShrink: 0 }} />
+                <span style={{ fontSize: '0.86rem', color: '#a7f3d0', fontWeight: '500' }}>
                   Zero technician exposure to hazardous interior hopper dust.
                 </span>
               </div>
@@ -642,8 +598,8 @@ const PulseJetFilterPage = () => {
         </div>
       </section>
 
-      {/* 5. OUR SERVICES - Comprehensive Support */}
-      <section className="comprehensive-support-section" id="services-support">
+      {/* 5. OUR SERVICES - Comprehensive Support (BLUE SECTION) */}
+      <section className="comprehensive-support-section pj-support-blue" id="services-support">
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
             <div className="support-eyebrow">

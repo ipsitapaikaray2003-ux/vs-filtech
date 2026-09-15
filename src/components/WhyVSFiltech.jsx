@@ -8,55 +8,57 @@ import {
   Headphones, 
   Sparkles
 } from 'lucide-react';
+import whyVsFiltechBg from '../assets/why_vs_filtech_bg.jpg';
+import './WhyVSFiltech.css';
 
 const blocks = [
   {
     icon: Settings,
     title: 'Application-Based Design',
-    desc: 'Solutions developed around actual process conditions, gas chemistry, and dust properties.',
-    color: '#d97706',
-    bg: '#fffbeb',
-    border: '#fde68a'
-  },
-  {
-    icon: Layers,
-    title: 'Customised Engineering',
-    desc: 'Equipment configured to suit individual project requirements, plant space, and maintenance access.',
-    color: '#4f46e5',
-    bg: '#eef2ff',
-    border: '#c7d2fe'
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Quality Inspection',
-    desc: 'Inspection at relevant stages of fabrication, welding, dimensional checks, and assembly.',
-    color: '#059669',
-    bg: '#ecfdf5',
-    border: '#a7f3d0'
-  },
-  {
-    icon: CheckCircle2,
-    title: 'Complete Solutions',
-    desc: 'From filtration equipment, ducting, and fans to replacement spares, instrumentation, and controls.',
+    desc: 'Solutions developed around actual process conditions, gas chemistry, moisture profile, and dust properties.',
     color: '#0284c7',
     bg: '#f0f9ff',
     border: '#bae6fd'
   },
   {
+    icon: Layers,
+    title: 'Customised Engineering',
+    desc: 'Equipment configured to suit individual project requirements, plant headroom, and maintenance access.',
+    color: '#0369a1',
+    bg: '#eff6ff',
+    border: '#bfdbfe'
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Quality Inspection',
+    desc: 'Rigorous inspection at all stages: raw material MTC, weld seams, dimensional accuracy, and trial assembly.',
+    color: '#0284c7',
+    bg: '#f0f9ff',
+    border: '#bae6fd'
+  },
+  {
+    icon: CheckCircle2,
+    title: 'Complete Solutions',
+    desc: 'From primary pulse jet filtration, ducting, and ID fans to replacement filter bags, cages, and control panels.',
+    color: '#2563eb',
+    bg: '#eff6ff',
+    border: '#bfdbfe'
+  },
+  {
     icon: RefreshCw,
     title: 'Retrofit Capability',
-    desc: 'Modification, capacity enhancement, and replacement solutions for existing installations.',
-    color: '#ea580c',
-    bg: '#fff7ed',
-    border: '#fed7aa'
+    desc: 'Modification, capacity enhancement, baghouse upgrades, and turnkey replacement for existing installations.',
+    color: '#0284c7',
+    bg: '#f0f9ff',
+    border: '#bae6fd'
   },
   {
     icon: Headphones,
     title: 'Technical Support',
-    desc: 'Engineering assistance and technical guidance from initial enquiry through site execution.',
-    color: '#e11d48',
-    bg: '#fff1f2',
-    border: '#fecdd3'
+    desc: 'Dedicated engineering assistance and technical guidance from initial CFM sizing through on-site execution.',
+    color: '#0369a1',
+    bg: '#eff6ff',
+    border: '#bfdbfe'
   }
 ];
 
@@ -64,130 +66,149 @@ const WhyVSFiltech = () => {
   return (
     <section 
       style={{
-        backgroundColor: '#ffffff',
-        padding: '5.5rem 0',
         position: 'relative',
-        borderBottom: '1px solid #e2e8f0',
+        padding: '4.5rem 0',
+        backgroundImage: `url(${whyVsFiltechBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        borderBottom: '1px solid rgba(2, 132, 199, 0.15)',
         overflow: 'hidden'
       }}
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
-        <div style={{ maxWidth: '820px', margin: '0 auto 3.5rem', textAlign: 'center' }}>
+        {/* Section Header - Compact Sleek Box */}
+        <div style={{ 
+          maxWidth: '680px', 
+          margin: '0 auto 2.25rem', 
+          textAlign: 'center',
+          background: 'rgba(255, 255, 255, 0.92)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
+          borderRadius: '18px',
+          padding: '1.4rem 1.75rem 1.25rem',
+          border: '1.5px solid rgba(255, 255, 255, 0.95)',
+          boxShadow: '0 12px 30px rgba(15, 23, 42, 0.10)'
+        }}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '8px',
-            fontSize: '0.8rem',
+            gap: '6px',
+            fontSize: '0.74rem',
             fontWeight: '700',
             letterSpacing: '0.08em',
             color: '#0284c7',
-            background: '#f0f9ff',
-            border: '1px solid #bae6fd',
-            padding: '6px 18px',
+            background: 'rgba(2, 132, 199, 0.10)',
+            border: '1px solid rgba(2, 132, 199, 0.30)',
+            padding: '4px 14px',
             borderRadius: '999px',
             textTransform: 'uppercase',
-            marginBottom: '12px',
-            boxShadow: '0 2px 8px rgba(2, 132, 199, 0.1)'
+            marginBottom: '8px'
           }}>
-            <Sparkles size={14} style={{ color: '#0284c7' }} /> CORE VALUE PROPOSITION
+            <Sparkles size={12} style={{ color: '#0284c7' }} /> CORE VALUE PROPOSITION
           </div>
 
           <h2 style={{
-            fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
+            fontSize: 'clamp(1.5rem, 2.5vw, 2.1rem)',
             fontWeight: '800',
             color: '#0f172a',
             lineHeight: '1.2',
-            marginBottom: '1.25rem',
+            marginBottom: '0.5rem',
             letterSpacing: '-0.02em'
           }}>
             Why{' '}
-            <span style={{ color: '#0284c7' }}>
+            <span style={{ 
+              background: 'linear-gradient(135deg, #0284c7 0%, #2563eb 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
               VS Filtech?
             </span>
           </h2>
 
           <p style={{
-            fontSize: '1.1rem',
-            lineHeight: '1.7',
-            color: '#475569'
+            fontSize: '0.94rem',
+            lineHeight: '1.55',
+            color: '#475569',
+            maxWidth: '620px',
+            margin: '0 auto'
           }}>
-            We combine practical dust collection engineering with disciplined fabrication and hands-on site support to deliver dependable filtration systems.
+            We combine practical dust collection engineering with disciplined fabrication and hands-on site support to deliver dependable, high-efficiency filtration systems.
           </p>
         </div>
 
-        {/* 6 Multi-Colored Blocks on White Cards */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '24px'
-        }}>
+        {/* 6 Small Compact Value Cards: Exactly 3-3 boxes per line */}
+        <div className="why-filtech-grid">
           {blocks.map((block, idx) => {
             const Icon = block.icon;
             return (
               <div 
                 key={idx}
                 style={{
-                  background: '#ffffff',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '18px',
-                  padding: '28px 24px',
+                  background: 'rgba(255, 255, 255, 0.94)',
+                  backdropFilter: 'blur(14px)',
+                  WebkitBackdropFilter: 'blur(14px)',
+                  border: '1.5px solid rgba(255, 255, 255, 0.95)',
+                  borderRadius: '16px',
+                  padding: '18px 18px 16px',
                   display: 'flex',
-                  gap: '18px',
+                  gap: '14px',
                   position: 'relative',
                   overflow: 'hidden',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.05)'
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.08)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)';
-                  e.currentTarget.style.borderColor = block.color;
-                  e.currentTarget.style.boxShadow = '0 12px 28px -4px rgba(0, 0, 0, 0.1)';
+                  e.currentTarget.style.borderColor = 'rgba(2, 132, 199, 0.5)';
+                  e.currentTarget.style.boxShadow = '0 14px 30px rgba(2, 132, 199, 0.16)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.borderColor = '#e2e8f0';
-                  e.currentTarget.style.boxShadow = '0 4px 20px -2px rgba(0, 0, 0, 0.05)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.95)';
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(15, 23, 42, 0.08)';
                 }}
               >
-                {/* Colored Left Edge Indicator */}
+                {/* Left Blue Accent Bar */}
                 <div style={{
                   position: 'absolute',
                   top: 0,
                   left: 0,
                   bottom: 0,
-                  width: '4px',
-                  background: block.color
+                  width: '3.5px',
+                  background: 'linear-gradient(180deg, #0284c7 0%, #2563eb 100%)'
                 }} />
 
                 <div style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '12px',
-                  background: block.bg,
-                  border: `1px solid ${block.border}`,
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '10px',
+                  background: 'linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: block.color,
-                  flexShrink: 0
+                  color: '#ffffff',
+                  flexShrink: 0,
+                  boxShadow: '0 6px 14px rgba(2, 132, 199, 0.3)'
                 }}>
-                  <Icon size={22} />
+                  <Icon size={20} />
                 </div>
 
                 <div>
                   <h3 style={{
-                    fontSize: '1.18rem',
-                    fontWeight: '700',
+                    fontSize: '1.05rem',
+                    fontWeight: '800',
                     color: '#0f172a',
-                    marginBottom: '8px'
+                    marginBottom: '4px',
+                    lineHeight: '1.3'
                   }}>
                     {block.title}
                   </h3>
                   <p style={{
-                    fontSize: '0.92rem',
-                    lineHeight: '1.6',
-                    color: '#64748b',
+                    fontSize: '0.84rem',
+                    lineHeight: '1.5',
+                    color: '#475569',
                     margin: 0
                   }}>
                     {block.desc}

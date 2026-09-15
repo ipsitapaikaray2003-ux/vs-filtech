@@ -29,6 +29,13 @@ import pressureSwitchImg from '../assets/pressure_switch_product.jpg';
 import levelSensorImg from '../assets/level_sensor_product.jpg';
 import hopperVibratorImg from '../assets/hopper_vibrator_product.jpg';
 import explosionVentImg from '../assets/explosion_vent_product.jpg';
+import peHtPanel from '../assets/pe_htpanel.jpg';
+import peLtPanel from '../assets/pe_ltpanel.jpg';
+import pePccPanel from '../assets/pe_pccpanel.webp';
+import peMccPanel from '../assets/pe_mccpanel.jpg';
+import peApfcPanel from '../assets/pe_apfcpanel.png';
+import peBusDuct from '../assets/pe_busduct.jpg';
+import vfdPlcImg from '../assets/vfd_plc_panel_product.jpg';
 
 const products = [
   {
@@ -190,11 +197,92 @@ const products = [
     brief: 'Certified rupture membrane relief panels designed to vent combustible dust deflagrations safely away from plant personnel, protecting the bag filter structural casing from catastrophic overpressure.',
     specs: ['Certification: ATEX compliant combustible dust explosion relief', 'Burst Pressure: Precision calibrated (typically 0.1 bar / 1.5 psi)', 'Construction: Stainless steel composite with fluoropolymer seal', 'Accessories: Weather hoods, burst sensors, and rupture indicators'],
     link: '/products/explosion-vents'
+  },
+  {
+    id: 'vfd-panel',
+    title: 'VFD Drive Panels (Variable Frequency Drive for ID Fans)',
+    category: 'Electrical & Automation Panels',
+    img: vfdPlcImg,
+    badge: 'Airflow & Energy Saving',
+    brief: 'High-efficiency Variable Frequency Drive (VFD) panels designed for bag filter ID fans. Dynamically modulates fan RPM based on duct static pressure, delivering 25% to 40% electrical power savings.',
+    specs: ['Ratings: 5.5 kW to 350+ kW (7.5 - 500 HP)', 'Brands: Danfoss, Siemens, Schneider, ABB, Delta', 'Control: Closed-loop PID on 4-20mA DP feedback', 'Protection: Built-in line chokes & dV/dt filters'],
+    link: '/products/vfd-panel'
+  },
+  {
+    id: 'mcc-panel',
+    title: 'MCC Panels (Motor Control Centre for Bag Filters)',
+    category: 'Electrical & Automation Panels',
+    img: peMccPanel,
+    badge: 'Motor Control Center',
+    brief: 'Centralized Motor Control Center (MCC) panels housing DOL, Star-Delta, and Soft Starters with fail-safe interlocks ensuring dust discharge valves start before the bag filter ID fan.',
+    specs: ['Operating Voltage: 415 V AC, 3-Phase, 50 Hz', 'Busbar Capacity: Up to 3200 A Copper/Aluminium', 'Starters: DOL, Automatic Star-Delta, Soft Starters', 'Separation: Form 3b / Form 4b (IEC 61439)'],
+    link: '/products/mcc-panel'
+  },
+  {
+    id: 'ht-panel',
+    title: 'HT Panels (High Tension 11kV / 22kV / 33kV Switchgear)',
+    category: 'Electrical & Automation Panels',
+    img: peHtPanel,
+    badge: 'Up to 33 kV Switchgear',
+    brief: 'High Tension (HT) switchgear panels with Vacuum Circuit Breakers (VCB) or SF6 breakers and numerical protection relays, engineered for primary plant substations and large dust collection plants.',
+    specs: ['Voltage Rating: 11 kV, 22 kV, 33 kV (50 Hz)', 'Current Rating: 630 A to 2500 A', 'Breaking Capacity: Up to 31.5 kA for 3 seconds', 'Standard: IEC 62271-200 / IS 3427'],
+    link: '/products/ht-panel'
+  },
+  {
+    id: 'lt-panel',
+    title: 'LT Panels (Low Tension 415V Power Distribution)',
+    category: 'Electrical & Automation Panels',
+    img: peLtPanel,
+    badge: '415V Power Distribution',
+    brief: 'Industrial Low Tension (LT) distribution switchboards with Air Circuit Breakers (ACB), MCCBs, and digital multifunction power meters for safe, uninterrupted power management.',
+    specs: ['Operating Voltage: 415 V AC, 3-Phase, 50 Hz', 'Continuous Current: Up to 4000 A rating', 'Fault Level: 35 kA / 50 kA for 1 second', 'Enclosure: IP42 / IP54 / IP65 powder-coated CRCA'],
+    link: '/products/lt-panel'
+  },
+  {
+    id: 'pcc-panel',
+    title: 'PCC Panels (Power Control Centre up to 6300A)',
+    category: 'Electrical & Automation Panels',
+    img: pePccPanel,
+    badge: 'Main Power Backbone',
+    brief: 'High-capacity Power Control Centre (PCC) switchboards with motorized draw-out ACBs and automatic generator source transfer (AMF/ATS) handling continuous currents up to 6300A.',
+    specs: ['Current Rating: 800 A to 6300 A continuous', 'Short Circuit Withstand: 50 kA / 65 kA for 1 sec', 'Busbars: High-purity Electrolytic Copper / Aluminium', 'Form of Separation: Form 4b compartmentalization'],
+    link: '/products/pcc-panel'
+  },
+  {
+    id: 'apfc-panel',
+    title: 'APFC Panels (Automatic Power Factor Control)',
+    category: 'Electrical & Automation Panels',
+    img: peApfcPanel,
+    badge: 'Target 0.99 PF',
+    brief: 'Microprocessor-controlled capacitor banks with 7%/14% detuned harmonic filter reactors. Automatically maintains power factor at 0.99 lag to eliminate electricity board penalty surcharges.',
+    specs: ['Capacity Range: 50 kVAR to 1200+ kVAR modular', 'Target PF: 0.98 to 0.999 lag automatically maintained', 'Reactors: 7% (189 Hz) / 14% (134 Hz) detuned', 'Capacitors: Self-healing MPP with internal disconnectors'],
+    link: '/products/apfc-panel'
+  },
+  {
+    id: 'control-panels-seq',
+    title: 'Baghouse PLC & Sequential Pulse Timer Panels',
+    category: 'Electrical & Automation Panels',
+    img: peMccPanel,
+    badge: 'Pulse Automation',
+    brief: 'Microprocessor sequential pulse timers with digital differential pressure transmitters and solid-state triac outputs for automated, on-demand reverse pulse-jet bag cleaning.',
+    specs: ['Channels: 4, 8, 16, 24, 32, 64, 128 channels', 'Outputs: 24V DC / 110V AC / 230V AC triacs', 'Interface: Digital LED / 7.0" color touchscreen HMI', 'Enclosure: IP65 double-door weatherproof CRCA'],
+    link: '/products/control-panels'
+  },
+  {
+    id: 'bus-duct',
+    title: 'Bus Duct Systems (Modular Sandwich Power Transmission)',
+    category: 'Electrical & Automation Panels',
+    img: peBusDuct,
+    badge: 'High Amperage Feeder',
+    brief: 'Prefabricated compact sandwich-type copper and aluminum busbar trunking systems rated up to 6300A, connecting transformers to PCC and heavy baghouse ID fan MCCs with low voltage drop.',
+    specs: ['Voltage Rating: Up to 690 V / 1000 V AC', 'Current Capacity: 100 A to 6300 A continuous', 'Conductors: 99.9% Electrolytic Copper / Aluminium', 'Protection: IP54 / IP55 / IP65 / IP67 rating'],
+    link: '/products/bus-duct'
   }
 ];
 
 const categories = [
   'All Equipment',
+  'Electrical & Automation Panels',
   'Filtration Systems',
   'Filtration Media',
   'Structural Support',
@@ -544,7 +632,7 @@ const ProductsPage = () => {
             Need Custom Filtration Equipment or Spares?
           </h2>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.65', color: 'rgba(255, 255, 255, 0.9)', marginBottom: '2rem' }}>
-            We manufacture bags, cages, valves, and baghouses customized to your exact drawing and process requirements. Contact our engineers directly at <strong>+91 1234567890</strong>.
+            We manufacture bags, cages, valves, and baghouses customized to your exact drawing and process requirements. Contact our engineers directly via WhatsApp or technical desk.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/contact" className="btn btn-primary btn-lg" style={{ background: '#ffffff', color: '#0369a1' }}>
@@ -558,7 +646,7 @@ const ProductsPage = () => {
               className="btn btn-outline btn-lg"
               style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#ffffff' }}
             >
-              <span>WhatsApp +91 1234567890</span>
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>

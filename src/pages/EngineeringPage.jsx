@@ -17,6 +17,8 @@ import {
 import engineeringBg from '../assets/factory_bagfilter_plant_hd.jpg';
 import casingImg from '../assets/client_service_casing_fabrication.jpg';
 import pipingImg from '../assets/client_service_piping_control.jpg';
+import AnimatedEngineeringBg from '../components/AnimatedEngineeringBg';
+import './EngineeringPage.css';
 
 const engineeringSteps = [
   {
@@ -203,20 +205,37 @@ const EngineeringPage = () => {
         </div>
       </section>
 
-      {/* 6-Step In-Depth Process Breakdown */}
-      <section style={{ padding: '5.5rem 0', backgroundColor: '#070e1a' }}>
+      {/* 6-Step In-Depth Process Breakdown with Animated Graphic Background */}
+      <section className="engineering-process-section">
+        <AnimatedEngineeringBg />
+
         <div className="container" style={{ maxWidth: '1040px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
-              END-TO-END EXECUTION LIFECYCLE
+          <div className="engineering-section-header">
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              fontSize: '0.76rem',
+              fontWeight: '800',
+              color: '#38bdf8',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              background: 'rgba(56, 189, 248, 0.12)',
+              border: '1px solid rgba(56, 189, 248, 0.3)',
+              padding: '5px 16px',
+              borderRadius: '999px',
+              marginBottom: '12px',
+              boxShadow: '0 0 15px rgba(56, 189, 248, 0.2)'
+            }}>
+              <Sparkles size={13} /> END-TO-END EXECUTION LIFECYCLE
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.6rem)', fontWeight: '800', color: '#ffffff' }}>
-              Our 6-Step Engineering Approach
+            <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.7rem)', fontWeight: '800', color: '#ffffff', letterSpacing: '-0.02em' }}>
+              Our 6-Step <span style={{ color: '#38bdf8' }}>Engineering Approach</span>
             </h2>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+          <div className="engineering-steps-container">
             {engineeringSteps.map((step, idx) => {
               const colors = [
                 { border: '#38bdf8', bg: 'rgba(56, 189, 248, 0.15)', text: '#38bdf8' },
@@ -231,49 +250,34 @@ const EngineeringPage = () => {
               return (
                 <div 
                   key={idx}
-                  style={{
-                    background: '#0f2040',
-                    border: '1px solid rgba(56, 189, 248, 0.16)',
-                    borderRadius: '18px',
-                    padding: '32px 28px',
-                    display: 'grid',
-                    gridTemplateColumns: '80px 1fr',
-                    gap: '24px',
-                    alignItems: 'start',
-                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25)',
-                    borderLeft: `4px solid ${theme.border}`
-                  }}
+                  className="engineering-step-card"
+                  style={{ '--card-border-color': theme.border }}
                 >
                   {/* Number Badge */}
-                  <div style={{
-                    width: '64px',
-                    height: '64px',
-                    borderRadius: '16px',
-                    background: theme.bg,
-                    border: `1px solid ${theme.border}`,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: theme.text,
-                    fontSize: '1.4rem',
-                    fontWeight: '800'
-                  }}>
+                  <div 
+                    className="step-number-box"
+                    style={{
+                      background: theme.bg,
+                      border: `1.5px solid ${theme.border}`,
+                      color: theme.text
+                    }}
+                  >
                     {step.step}
                   </div>
 
                   {/* Content */}
                   <div>
-                    <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#ffffff', marginBottom: '8px' }}>
+                    <h3 className="step-card-title">
                       {step.title}
                     </h3>
-                    <p style={{ fontSize: '1.05rem', color: theme.text, fontWeight: '600', marginBottom: '16px' }}>
+                    <p className="step-card-lead" style={{ color: theme.text }}>
                       {step.lead}
                     </p>
                     
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    <ul className="step-details-list">
                       {step.details.map((d, dIdx) => (
-                        <li key={dIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.92rem', color: '#cbd5e1', lineHeight: '1.6' }}>
-                          <CheckCircle2 size={16} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '4px' }} />
+                        <li key={dIdx} className="step-detail-item">
+                          <CheckCircle2 size={16} className="step-check-icon" style={{ color: theme.border }} />
                           <span>{d}</span>
                         </li>
                       ))}

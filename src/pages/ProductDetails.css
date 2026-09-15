@@ -702,3 +702,195 @@
   }
 }
 
+/* ==========================================================
+   PRODUCT DETAIL PAGE - ALTERNATING WHITE & BLUE SECTIONS
+   Hero (Dust Collector Plant BG) -> White -> Blue -> White -> Blue -> White
+   ========================================================== */
+
+.pd-hero-container {
+  position: relative;
+  overflow: hidden;
+  padding: 5.5rem 0 4.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pd-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 38%;
+  filter: contrast(1.05) saturate(1.1);
+  z-index: 1;
+}
+
+.pd-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.58) 48%, rgba(255, 255, 255, 0.28) 82%, rgba(255, 255, 255, 0.12) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 860px) {
+  .pd-hero-scrim {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.82) 100%);
+  }
+}
+
+/* Blue Section Base */
+.pd-section-blue {
+  position: relative;
+  background-color: #08162b;
+  color: #ffffff;
+  border-top: 1px solid rgba(56, 189, 248, 0.16);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.16);
+  overflow: hidden;
+}
+
+.pd-section-blue::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 18% 25%, rgba(56, 189, 248, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 82% 75%, rgba(37, 99, 235, 0.14) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* White Section Base - Clean Crisp Luxury White */
+.pd-section-white {
+  position: relative;
+  background-color: #ffffff;
+  color: #0f172a;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* 2-Column Responsive Grid (2-2 Line Mai) */
+.pd-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .pd-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* Dark Cards for Blue Sections */
+.pd-dark-card {
+  background: rgba(15, 32, 64, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.pd-dark-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.22);
+}
+
+/* Dark Input Styling for Blue RFQ Form */
+.pd-dark-input {
+  width: 100%;
+  padding: 13px 16px;
+  background: rgba(8, 22, 43, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.28);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.pd-dark-input::placeholder {
+  color: #94a3b8;
+}
+
+.pd-dark-input:focus {
+  border-color: #38bdf8;
+  background: rgba(12, 28, 56, 0.95);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.32);
+}
+
+/* Rich Application Cards */
+.pd-app-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.pd-app-card:hover {
+  transform: translateY(-4px);
+  border-color: #0284c7;
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.12);
+}
+
+.pd-app-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.pd-app-card:hover .pd-app-icon-box {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+/* Metric Pills */
+.pd-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 5px 14px;
+  border-radius: 999px;
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+/* Specs Table Row Hover */
+.pd-table-row {
+  transition: background-color 0.2s ease;
+}
+
+.pd-table-row:hover {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+}
+
+
+
+

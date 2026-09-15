@@ -158,11 +158,11 @@ const Footer = () => {
               </li>
               <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                 <Phone size={15} style={{ color: '#60a5fa', flexShrink: 0 }} />
-                <a href="tel:+911234567890" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', textDecoration: 'none' }}
+                <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', textDecoration: 'none' }}
                   onMouseEnter={e => e.currentTarget.style.color = '#60a5fa'}
                   onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
                 >
-                  +91 1234567890
+                  Call / WhatsApp Support
                 </a>
               </li>
               <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
