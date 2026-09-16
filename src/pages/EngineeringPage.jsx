@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   FileSearch, 
@@ -12,14 +12,196 @@ import {
   CheckCircle2,
   Sliders,
   Sparkles,
-  PhoneCall
+  PhoneCall,
+  Calculator,
+  Cpu,
+  Wind,
+  Gauge,
+  Workflow,
+  Maximize2,
+  FileText,
+  FileCheck2,
+  AlertCircle
 } from 'lucide-react';
 import engineeringBg from '../assets/factory_bagfilter_plant_hd.jpg';
 import casingImg from '../assets/client_service_casing_fabrication.jpg';
 import pipingImg from '../assets/client_service_piping_control.jpg';
 import AnimatedEngineeringBg from '../components/AnimatedEngineeringBg';
+import QualityInspectionSection from '../components/QualityInspectionSection';
 import './EngineeringPage.css';
 
+// 17 Engineering & Design Services Capabilities
+const engineeringServices = [
+  {
+    id: 'sizing',
+    title: 'Bag Filter Sizing & Selection',
+    lead: 'Online vs. offline compartment sizing matching process continuity.',
+    desc: 'Determination of gross and net filtration capacity, compartment count, offline isolation dampers, and modular casing configuration.',
+    icon: Compass,
+    color: '#38bdf8'
+  },
+  {
+    id: 'air-volume',
+    title: 'Air Volume Calculation',
+    lead: 'Actual m³/hr vs. Normal Nm³/hr thermal compensation.',
+    desc: 'Calculations adjusting for operating gas temperature, altitude, barometric pressure, moisture percentage, and combustion excess air.',
+    icon: Wind,
+    color: '#60a5fa'
+  },
+  {
+    id: 'air-cloth',
+    title: 'Air-to-Cloth Ratio Calculation',
+    lead: 'Conservative filtration velocity tailored to dust loading.',
+    desc: 'Selecting true filtration velocity (typically 0.8 to 1.8 m/min) to prevent interstitial fabric pore clogging and excessive cake pressure.',
+    icon: Sliders,
+    color: '#818cf8'
+  },
+  {
+    id: 'filtration-area',
+    title: 'Filtration Area Calculation',
+    lead: 'Net active area ensuring statutory continuous emission limits.',
+    desc: 'Determining exact bag counts, diameter (120mm-160mm), and length (2m-8m) while factoring in offline cleaning cycle margins.',
+    icon: Layers,
+    color: '#a78bfa'
+  },
+  {
+    id: 'pressure-drop',
+    title: 'Pressure Drop Estimation',
+    lead: 'Accurate static head estimation across clean and caked bags.',
+    desc: 'Calculating housing loss, tube sheet ΔP, clean cloth resistance, residual dust cake coefficient (K2), and duct static resistances.',
+    icon: Gauge,
+    color: '#2dd4bf'
+  },
+  {
+    id: 'bag-selection',
+    title: 'Filter Bag Selection',
+    lead: 'Chemical compatibility and thermal endurance matching.',
+    desc: 'Specification of optimal media: Polyester, PPS (Ryton), Aramid (Nomex), Fiberglass, PTFE, and ePTFE membrane based on flue gas acids.',
+    icon: FileCheck2,
+    color: '#34d399'
+  },
+  {
+    id: 'dust-loading',
+    title: 'Dust Loading Assessment',
+    lead: 'Grain loading evaluation (g/Nm³ or grains/cu.ft).',
+    desc: 'Analyzing bulk density, particle size distribution (PSD), abrasiveness, and stickiness to design inlet deceleration baffles.',
+    icon: FileSearch,
+    color: '#fbbf24'
+  },
+  {
+    id: 'temperature-eval',
+    title: 'Temperature Evaluation',
+    lead: 'Flue gas thermal dissipation & acid dew point calculation.',
+    desc: 'Assessment of operating gas temperature peaks, acid dew point margins (SOx/HCl), and emergency cold-air dilution damper sizing.',
+    icon: AlertCircle,
+    color: '#f87171'
+  },
+  {
+    id: 'duct-sizing',
+    title: 'Duct Sizing & Velocity',
+    lead: 'Transport velocity balancing preventing dust dropout.',
+    desc: 'Engineering duct diameters at optimal transport speeds (18 - 22 m/s) to prevent particulate settling while minimizing abrasion and pressure drop.',
+    icon: Workflow,
+    color: '#38bdf8'
+  },
+  {
+    id: 'hood-design',
+    title: 'Capture Hood Design',
+    lead: 'ACGIH industrial ventilation capture velocity standards.',
+    desc: 'Aerodynamic design of canopy hoods, swing hoods, push-pull hoods, and enclosure drafts capturing 100% of fugitive industrial emissions.',
+    icon: Compass,
+    color: '#60a5fa'
+  },
+  {
+    id: 'id-fan',
+    title: 'ID Fan Selection',
+    lead: 'Centrifugal fan curve matching and motor power sizing.',
+    desc: 'Selecting backward-curved or radial-tipped industrial blowers matched precisely to total system static drop, temperature, and altitude.',
+    icon: Cpu,
+    color: '#818cf8'
+  },
+  {
+    id: 'pulse-cleaning',
+    title: 'Pulse Cleaning System Design',
+    lead: 'Supersonic compressed air shockwave dynamics.',
+    desc: 'Sizing compressed air header reservoirs, blowpipe nozzle diameters, pilot solenoid valves, and supersonic venturi profiles.',
+    icon: Sparkles,
+    color: '#a78bfa'
+  },
+  {
+    id: 'hopper-design',
+    title: 'Hopper Design',
+    lead: 'Minimum 60° valley angle free-flowing geometry.',
+    desc: 'Engineering pyramidal and trough hoppers with anti-bridging angles, strike plates, fluidization pads, and cleanout inspection doors.',
+    icon: Layers,
+    color: '#2dd4bf'
+  },
+  {
+    id: 'outlet-manifold',
+    title: 'Outlet Manifold Design',
+    lead: 'Aerodynamic clean gas distribution without dead zones.',
+    desc: 'Design of clean air plenum headers, bypass dampers, and stack connections ensuring uniform draft across all filter compartments.',
+    icon: Workflow,
+    color: '#34d399'
+  },
+  {
+    id: 'emission-opt',
+    title: 'Emission Optimisation',
+    lead: 'Guaranteed statutory compliance (<10 mg/Nm³ CPCB).',
+    desc: 'Optimizing surface filtration, zero particle bypass snap-band collars, and tubesheet hole CNC tolerances to beat statutory norms.',
+    icon: ShieldCheck,
+    color: '#fbbf24'
+  },
+  {
+    id: 'retrofit-mod',
+    title: 'Retrofit & Modification',
+    lead: 'Capacity expansion of existing OEM baghouses.',
+    desc: 'Conversion of old shaker or reverse-air baghouses into modern pulse jet systems, or tubular-to-pleated cartridge capacity doubling.',
+    icon: Hammer,
+    color: '#f87171'
+  },
+  {
+    id: 'ga-drawings',
+    title: 'GA Drawings & Fabrication BOM',
+    lead: 'Complete General Arrangement, manufacturing details & BOM.',
+    desc: 'Preparation of 3D CAD models, General Arrangement (GA) drawings, foundation load calculations, nozzle schedules, and Bill of Materials.',
+    icon: FileText,
+    color: '#38bdf8'
+  }
+];
+
+// Typical Design Inputs Checklist
+const typicalDesignInputs = [
+  {
+    category: 'Process Gas Parameters',
+    inputs: [
+      { name: 'Volumetric Airflow Rate', unit: 'm³/hr or CFM', desc: 'Actual operating gas volume at process temperature' },
+      { name: 'Operating Gas Temperature', unit: '°C (Normal / Peak Surge)', desc: 'Continuous temperature and maximum thermal excursions' },
+      { name: 'Gas Moisture Percentage', unit: '% Volume / Dew Point °C', desc: 'Water vapor percentage determining hydrolysis risk' },
+      { name: 'Gas Chemical Composition', unit: 'SOx, NOx, HCl, HF, O2', desc: 'Presence of corrosive acid gases impacting media selection' }
+    ]
+  },
+  {
+    category: 'Particulate Characteristics',
+    inputs: [
+      { name: 'Dust Bulk Density', unit: 'kg/m³ or lb/ft³', desc: 'Weight of aerated dust impacting hopper discharge and can velocity' },
+      { name: 'Inlet Dust Loading', unit: 'g/Nm³ or grains/cu.ft', desc: 'Concentration of dust entering baghouse from process' },
+      { name: 'Particle Size Distribution (PSD)', unit: '% < 5µm, % < 10µm', desc: 'Sub-micron fraction determining needlefelt vs membrane media' },
+      { name: 'Particulate Behavior', unit: 'Abrasive, Hygroscopic, Sticky', desc: 'Tendency to cake, agglomerate, or abrade casing and bags' }
+    ]
+  },
+  {
+    category: 'Site Constraints & Utilities',
+    inputs: [
+      { name: 'Compressed Air Availability', unit: 'bar (g) & CFM', desc: 'Supply pressure (typically 5.0 - 6.5 bar) and dryer dew point' },
+      { name: 'Site Physical Footprint', unit: 'L x W x Height clearance', desc: 'Available floor space, crane hook height, and access clearances' },
+      { name: 'Target Emission Limit', unit: 'mg/Nm³', desc: 'Statutory compliance norm (e.g. <10 mg/Nm³ or <5 mg/Nm³)' },
+      { name: 'Electrical Power Supply', unit: '415V AC, 3-Phase, 50 Hz', desc: 'Substation capacity for ID fan motor, airlocks, and control panel' }
+    ]
+  }
+];
+
+// 6-Step In-Depth Approach
 const engineeringSteps = [
   {
     step: '01',
@@ -90,6 +272,8 @@ const engineeringSteps = [
 ];
 
 const EngineeringPage = () => {
+  const [activeTab, setActiveTab] = useState('all');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -97,142 +281,173 @@ const EngineeringPage = () => {
   return (
     <div className="engineering-page" style={{ background: '#0a1628', minHeight: '100vh', paddingTop: '80px', color: '#ffffff' }}>
       
-      {/* Hero Header */}
-      <section style={{
-        position: 'relative',
-        minHeight: '480px',
-        display: 'flex',
-        alignItems: 'center',
-        padding: '6rem 0 5rem',
-        borderBottom: '1px solid rgba(56, 189, 248, 0.2)',
-        overflow: 'hidden'
-      }}>
-        {/* Full-bleed high-res background image */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, overflow: 'hidden' }}>
+      {/* 1. HERO HEADER */}
+      <section className="eng-hero-section">
+        <div className="eng-hero-bg-media">
           <img 
             src={engineeringBg} 
             alt="Engineering Process Plant Background" 
-            style={{ 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover', 
-              objectPosition: 'center',
-              filter: 'brightness(1.08) contrast(1.06) saturate(1.1)' 
-            }} 
+            className="eng-hero-bg-img"
           />
-          {/* Subtle soft dark overlay so text pops while the photo is clearly visible */}
-          <div style={{ 
-            position: 'absolute', 
-            inset: 0, 
-            background: 'linear-gradient(180deg, rgba(7, 14, 26, 0.62) 0%, rgba(7, 14, 26, 0.42) 50%, rgba(7, 14, 26, 0.72) 100%)', 
-            pointerEvents: 'none' 
-          }} />
+          <div className="eng-hero-overlay" />
         </div>
 
-        <div className="container" style={{ maxWidth: '960px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 2 }}>
-          
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            background: 'rgba(10, 22, 40, 0.8)',
-            border: '1px solid rgba(56, 189, 248, 0.45)',
-            padding: '6px 18px',
-            borderRadius: '999px',
-            color: '#38bdf8',
-            fontSize: '0.8rem',
-            fontWeight: '700',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            marginBottom: '1.25rem',
-            boxShadow: '0 2px 12px rgba(14, 165, 233, 0.25)',
-            backdropFilter: 'blur(8px)'
-          }}>
-            <Sparkles size={14} style={{ color: '#38bdf8' }} /> PROCESS-DRIVEN FILTRATION DESIGN
+        <div className="container eng-hero-container">
+          <div className="eng-hero-pill">
+            <Sparkles size={14} style={{ color: '#38bdf8' }} /> 
+            <span>APPLICATION-BASED DUST COLLECTION ENGINEERING</span>
           </div>
 
-          <h1 style={{
-            fontSize: 'clamp(2.4rem, 4.5vw, 3.6rem)',
-            fontWeight: '800',
-            color: '#ffffff',
-            lineHeight: '1.18',
-            marginBottom: '1.5rem',
-            textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
-          }}>
-            Engineering Based on <br />
-            <span style={{ color: '#38bdf8', textShadow: '0 3px 18px rgba(0, 0, 0, 0.95), 0 0 20px rgba(56, 189, 248, 0.4)' }}>Process Requirements</span>
+          <h1 className="eng-hero-title">
+            Engineering &amp; Design Services | <br />
+            <span style={{ color: '#38bdf8' }}>Bag Filter Design &amp; Manufacturing</span>
           </h1>
 
-          <p style={{
-            fontSize: '1.18rem',
-            lineHeight: '1.7',
-            color: '#f8fafc',
-            maxWidth: '820px',
-            margin: '0 auto 2.5rem',
-            textShadow: '0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.95)'
-          }}>
-            A dust collector cannot be selected only on air volume. Process conditions, dust characteristics, temperature, moisture, particle size, filtration velocity, pressure drop and cleaning requirements all influence the final design.
+          <p className="eng-hero-lead">
+            VS Filtech performs application-based dust collection engineering. Backed by deep expertise in bag filter sizing, 
+            aerodynamic fluid modeling, and in-house fabrication, we understand complete dust-collection engineering — not just trading.
           </p>
 
-          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/contact" className="btn-amber" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 15px rgba(245, 158, 11, 0.35)' }}>
-              <span>Submit Process Sizing Data</span>
+          <div className="eng-hero-cta-row">
+            <a href="#engineering-services" className="btn-hero-primary">
+              <span>Explore All 17 Engineering Capabilities</span>
               <ArrowRight size={16} />
-            </Link>
-            <a 
-              href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20would%20like%20to%20discuss%20engineering%20sizing%20for%20a%20dust%20collection%20system."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-              style={{
-                padding: '12px 22px',
-                fontSize: '0.95rem',
-                border: '1px solid rgba(56, 189, 248, 0.4)',
-                color: '#38bdf8',
-                background: 'rgba(10, 22, 40, 0.8)',
-                borderRadius: '10px',
-                fontWeight: '600',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                backdropFilter: 'blur(8px)'
-              }}
-            >
-              <span>WhatsApp Technical Desk</span>
+            </a>
+            <a href="#design-inputs" className="btn-hero-outline">
+              <FileSearch size={16} />
+              <span>Review Typical Design Inputs</span>
             </a>
           </div>
 
+          {/* Quick Metrics Bar */}
+          <div className="eng-metrics-bar">
+            <div className="eng-metric-item">
+              <span className="eng-metric-val">&lt; 10 mg/Nm³</span>
+              <span className="eng-metric-lbl">Guaranteed Outlet Emission</span>
+            </div>
+            <div className="eng-metric-div" />
+            <div className="eng-metric-item">
+              <span className="eng-metric-val">17 Services</span>
+              <span className="eng-metric-lbl">End-to-End Engineering Depth</span>
+            </div>
+            <div className="eng-metric-div" />
+            <div className="eng-metric-item">
+              <span className="eng-metric-val">Up to 260°C</span>
+              <span className="eng-metric-lbl">High-Temperature Thermal Sizing</span>
+            </div>
+            <div className="eng-metric-div" />
+            <div className="eng-metric-item">
+              <span className="eng-metric-val">Full GA &amp; BOM</span>
+              <span className="eng-metric-lbl">Manufacturing Drawings</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 6-Step In-Depth Process Breakdown with Animated Graphic Background */}
+      {/* 2. 17 ENGINEERING & DESIGN SERVICES GRID */}
+      <section id="engineering-services" className="eng-services-section">
+        <div className="container">
+          <div className="eng-section-header text-center">
+            <div className="eng-section-tag">COMPREHENSIVE ENGINEERING CAPABILITIES</div>
+            <h2 className="eng-section-title">
+              Engineering &amp; <span style={{ color: '#38bdf8' }}>Design Services</span>
+            </h2>
+            <p className="eng-section-subtitle">
+              Our background is rooted in bag-filter design and manufacturing. Here is how our technical engineering outperforms competitors across every stage of the project:
+            </p>
+          </div>
+
+          <div className="eng-services-grid">
+            {engineeringServices.map((srv, idx) => {
+              const IconComp = srv.icon;
+              return (
+                <div key={srv.id} className="eng-service-card">
+                  <div className="service-card-top">
+                    <div className="service-icon-box" style={{ background: `${srv.color}18`, borderColor: `${srv.color}45` }}>
+                      <IconComp size={20} style={{ color: srv.color }} />
+                    </div>
+                    <span className="service-idx">{(idx + 1).toString().padStart(2, '0')}</span>
+                  </div>
+
+                  <h3 className="service-card-title">{srv.title}</h3>
+                  <div className="service-card-lead" style={{ color: srv.color }}>{srv.lead}</div>
+                  <p className="service-card-desc">{srv.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. TYPICAL DESIGN INPUTS CHECKLIST */}
+      <section id="design-inputs" className="eng-inputs-section">
+        <div className="container">
+          <div className="eng-section-header text-center">
+            <div className="eng-section-tag">TECHNICAL SIZING PARAMETERS</div>
+            <h2 className="eng-section-title">
+              Typical Design Inputs <span style={{ color: '#38bdf8' }}>Required for Bag Filter Engineering</span>
+            </h2>
+            <p className="eng-section-subtitle">
+              Proper dust collector selection requires real process parameters. Here is the engineering data we evaluate when sizing your system:
+            </p>
+          </div>
+
+          <div className="eng-inputs-categories-grid">
+            {typicalDesignInputs.map((cat, cIdx) => (
+              <div key={cIdx} className="input-category-card">
+                <div className="input-cat-header">
+                  <span className="input-cat-num">0{cIdx + 1}</span>
+                  <h3 className="input-cat-title">{cat.category}</h3>
+                </div>
+
+                <div className="input-items-list">
+                  {cat.inputs.map((inp, iIdx) => (
+                    <div key={iIdx} className="input-item-row">
+                      <div className="input-item-main">
+                        <strong className="input-name">{inp.name}</strong>
+                        <span className="input-unit">({inp.unit})</span>
+                      </div>
+                      <p className="input-desc">{inp.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Consultation CTA */}
+          <div className="eng-inputs-callout">
+            <div className="callout-left">
+              <Calculator size={28} style={{ color: '#38bdf8' }} />
+              <div>
+                <h4>Have your process data ready? Or need on-site flow measurement?</h4>
+                <p>Our engineers perform site airflow testing, duct static pressure surveys, and dust particle characterization.</p>
+              </div>
+            </div>
+            <div className="callout-right">
+              <Link to="/contact" className="btn-callout-action">
+                <span>Submit Process Sizing Data</span>
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. 6-STEP IN-DEPTH EXECUTION LIFECYCLE */}
       <section className="engineering-process-section">
         <AnimatedEngineeringBg />
 
         <div className="container" style={{ maxWidth: '1040px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
-          <div className="engineering-section-header">
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              fontSize: '0.76rem',
-              fontWeight: '800',
-              color: '#38bdf8',
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
-              background: 'rgba(56, 189, 248, 0.12)',
-              border: '1px solid rgba(56, 189, 248, 0.3)',
-              padding: '5px 16px',
-              borderRadius: '999px',
-              marginBottom: '12px',
-              boxShadow: '0 0 15px rgba(56, 189, 248, 0.2)'
-            }}>
-              <Sparkles size={13} /> END-TO-END EXECUTION LIFECYCLE
-            </div>
+          <div className="engineering-section-header text-center">
+            <div className="eng-section-tag">END-TO-END EXECUTION LIFECYCLE</div>
             <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.7rem)', fontWeight: '800', color: '#ffffff', letterSpacing: '-0.02em' }}>
               Our 6-Step <span style={{ color: '#38bdf8' }}>Engineering Approach</span>
             </h2>
+            <p className="eng-section-subtitle" style={{ maxWidth: '720px', margin: '0.75rem auto 0' }}>
+              From initial process diagnostics to final CPCB statutory performance verification on site.
+            </p>
           </div>
 
           <div className="engineering-steps-container">
@@ -253,7 +468,6 @@ const EngineeringPage = () => {
                   className="engineering-step-card"
                   style={{ '--card-border-color': theme.border }}
                 >
-                  {/* Number Badge */}
                   <div 
                     className="step-number-box"
                     style={{
@@ -265,7 +479,6 @@ const EngineeringPage = () => {
                     {step.step}
                   </div>
 
-                  {/* Content */}
                   <div>
                     <h3 className="step-card-title">
                       {step.title}
@@ -291,52 +504,8 @@ const EngineeringPage = () => {
         </div>
       </section>
 
-      {/* Engineering Parameters Philosophy */}
-      <section style={{ padding: '5rem 0', background: '#0a1628', borderTop: '1px solid rgba(56, 189, 248, 0.12)' }}>
-        <div className="container" style={{ maxWidth: '960px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
-          
-          <div style={{
-            background: '#0f2040',
-            border: '1px solid rgba(56, 189, 248, 0.22)',
-            borderRadius: '20px',
-            padding: '40px 36px',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.35)'
-          }}>
-            <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#ffffff', marginBottom: '16px' }}>
-              Why Process Conditions Dictate System Sizing
-            </h3>
-
-            <p style={{ fontSize: '1.02rem', lineHeight: '1.75', color: '#cbd5e1', marginBottom: '20px' }}>
-              Two installations handling identical 50,000 m³/hr air volume will require completely different baghouses if one operates on dry cement dust at 70°C and the other operates on moisture-laden coal boiler flue gas at 180°C.
-            </p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '18px', marginBottom: '28px' }}>
-              <div style={{ background: '#0a1628', padding: '18px', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.16)', borderTop: '3px solid #38bdf8' }}>
-                <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Air-to-Cloth Ratio</div>
-                <div style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.55' }}>Conservative filtration velocity prevents fine dust from embedding permanently into fabric pores.</div>
-              </div>
-
-              <div style={{ background: '#0a1628', padding: '18px', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.16)', borderTop: '3px solid #60a5fa' }}>
-                <div style={{ color: '#60a5fa', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Can Velocity Distribution</div>
-                <div style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.55' }}>Controlled upward gas speed inside the housing ensures pulsed dust drops straight into hoppers.</div>
-              </div>
-
-              <div style={{ background: '#0a1628', padding: '18px', borderRadius: '12px', border: '1px solid rgba(56, 189, 248, 0.16)', borderTop: '3px solid #38bdf8' }}>
-                <div style={{ color: '#38bdf8', fontWeight: '700', fontSize: '0.95rem', marginBottom: '4px' }}>Dew Point Margin</div>
-                <div style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.55' }}>Thermal insulation and hopper heating prevent acid condensation and caked bag blindness.</div>
-              </div>
-            </div>
-
-            <div style={{ textAlign: 'center' }}>
-              <Link to="/contact" className="btn-amber" style={{ padding: '12px 32px', display: 'inline-flex', alignItems: 'center', gap: '8px', borderRadius: '10px', textDecoration: 'none' }}>
-                <span>Consult Our Engineers on Your Application</span>
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-          </div>
-
-        </div>
-      </section>
+      {/* 5. QUALITY ASSURANCE & DOCUMENTATION INTEGRATION */}
+      <QualityInspectionSection />
 
     </div>
   );

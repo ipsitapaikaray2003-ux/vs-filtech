@@ -1,13 +1,13 @@
 import pulseJetImg from '../assets/factory_bagfilter_plant_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
-import pleatedImg from '../assets/pleated_filter_bag.jpeg';
-import cycloneImg from '../assets/cyclone_dust_collector.webp';
+import pleatedImg from '../assets/pleated_cartridge_hd.jpg';
+import cycloneImg from '../assets/cyclone_separator_hd.jpg';
 import idFanImg from '../assets/id_fan_hd.jpg';
 import filterBagImg from '../assets/filter_bag_hd.jpg';
 import cageImg from '../assets/filter_cage_hd.jpg';
-import venturiImg from '../assets/metal_venturi.jpg';
+import venturiImg from '../assets/venturi_nozzle_hd.jpg';
 import solenoidImg from '../assets/solenoid_valve_hd.jpg';
-import ralImg from '../assets/rotary_air_lock.webp';
+import ralImg from '../assets/rotary_airlock_hd.jpg';
 import siloImg from '../assets/silo_filter_product.jpg';
 import conveyorImg from '../assets/screw_conveyor_product.jpg';
 import dpSwitchImg from '../assets/dp_transmitter_product.jpg';
@@ -17,6 +17,7 @@ import hopperVibratorImg from '../assets/hopper_vibrator_product.jpg';
 import explosionVentImg from '../assets/explosion_vent_product.jpg';
 import vfdPlcImg from '../assets/vfd_plc_panel_product.jpg';
 import controlPanelImg from '../assets/control_panel_mcc_product.jpg';
+import cartridgeCollectorUnitImg from '../assets/cartridge_collector_unit_hd.jpg';
 
 import peHtPanel from '../assets/pe_htpanel.jpg';
 import peLtPanel from '../assets/pe_ltpanel.jpg';
@@ -30,41 +31,132 @@ import peHero3 from '../assets/pe_hero3.jpg';
 import peHero4 from '../assets/pe_hero4.jpg';
 
 import ductingImg from '../assets/indoor_ducting.jpg';
+import snapBandsImg from '../assets/snap_bands_cuff_hd.jpg';
+
+
+export const PRODUCT_CATEGORIES = [
+  {
+    id: 'dust-collection',
+    name: 'Dust Collection Equipment',
+    shortName: 'Dust Collection',
+    desc: 'Heavy-duty continuous industrial baghouses, cartridge collectors, offline/online filters and cyclone pre-separators.',
+    badge: 'Core Systems'
+  },
+  {
+    id: 'filter-components',
+    name: 'Filter Components',
+    shortName: 'Filter Components',
+    desc: 'Precision filtration media, support cages, supersonic venturis, snap bands, pulse valves and differential instrumentation.',
+    badge: 'OEM Spares'
+  },
+  {
+    id: 'mechanical-equipment',
+    name: 'Mechanical Equipment',
+    shortName: 'Mechanical Equipment',
+    desc: 'Airtight rotary airlock valves, screw conveyors, induced draft fans, hopper vibrators, and heavy-duty gas dampers.',
+    badge: 'Dust Handling'
+  },
+  {
+    id: 'electrical-automation',
+    name: 'Electrical & Automation',
+    shortName: 'Electrical & Automation',
+    desc: 'Turnkey sequential pulse timers, PLC panels, energy-saving ID fan VFD drive panels, and DP monitoring systems.',
+    badge: 'Process Automation'
+  }
+];
 
 export const allProductsData = [
   {
     id: 'dust-collector-system',
-    slugs: ['dust-collector-system', 'pulse-jet-bag-filters', 'pulse-jet-dust-collector'],
-    title: 'Industrial Pulse Jet Dust Collector System',
-    shortTitle: 'Dust Collector System',
+    slugs: [
+      'dust-collectors', 
+      'dust-collector', 
+      'dust-collector-system', 
+      'industrial-dust-collectors', 
+      'industrial-dust-collector', 
+      'pulse-jet-dust-collector', 
+      'turnkey-dust-collector',
+      'dust-collection-equipment'
+    ],
+    title: 'Industrial Dust Collector Systems (Turnkey Baghouses & Centralized Extraction)',
+    shortTitle: 'Industrial Dust Collectors',
     category: 'Turnkey Filtration Systems',
-    tag: 'Flagship Equipment',
+    mainCategory: 'Dust Collection Equipment',
+    tag: 'Flagship Heavy-Duty Dust Extraction',
     image: pulseJetImg,
     heroImage: baghouseImg,
-    shortDesc: 'Continuous online automated reverse-pulse jet baghouse dust collection systems engineered for heavy process manufacturing plants across India.',
-    overview: 'VS Filtech designs, manufactures, and commissions heavy-duty industrial pulse jet baghouse dust collectors. Engineered for continuous 24/7 operation under extreme particulate loadings, our baghouses feature laser-cut tube sheets, aerodynamic downward can velocity distribution baffles, and automated microprocessor reverse-pulse cleaning. Every unit is customized to the client’s exact CFM airflow, gas chemistry, moisture profile, and operating temperature to guarantee statutory outlet emission compliance (< 10 mg/Nm³).',
+    shortDesc: 'Continuous online automated reverse-pulse jet baghouse dust collection systems custom-engineered for heavy manufacturing plants across India with guaranteed < 10 mg/Nm³ emissions.',
+    overview: 'VS Filtech designs, manufactures, erects, and commissions heavy-duty industrial dust collector systems tailored to your specific process parameters. Engineered for continuous 24/7 operation under heavy dust loadings, our baghouse dust collectors integrate CNC laser-cut tubesheets, aerodynamic downward can-velocity inlet diffusers, and microprocessor-controlled sequential reverse-pulse jet cleaning. From modular bin vents to high-volume centralized baghouses, our systems capture 99.9%+ of sub-micron particulates, ensuring 100% statutory CPCB and State Pollution Control Board compliance.',
     features: [
-      { title: 'Reverse Pulse-Jet Cleaning', desc: 'Online row-by-row high-pressure compressed air purging ensures uninterrupted continuous plant draft.' },
+      { title: 'Reverse Pulse-Jet Cleaning', desc: 'Online row-by-row high-pressure compressed air purging ensures uninterrupted continuous plant draft without shutdown.' },
       { title: 'Downward Can Velocity', desc: 'Aerodynamic inlet baffles prevent dislodged dust from re-entraining back onto adjacent filter bags.' },
-      { title: 'Top-Access Clean Air Plenum', desc: 'Toolless snap-band bag and cage changeout safely conducted from the clean-air roof plenum.' },
-      { title: 'Guaranteed CPCB Compliance', desc: 'Engineered particulate capture efficiency exceeding 99.9% meeting strict pollution control board limits.' }
+      { title: 'Top-Access Clean Air Plenum', desc: 'Toolless snap-band bag and cage changeout safely conducted from the weather-tight roof plenum.' },
+      { title: 'Guaranteed CPCB Compliance', desc: 'Engineered particulate capture efficiency exceeding 99.9% delivering outlet emission levels below 10 mg/Nm³.' },
+      { title: 'Heavy Gauge Construction', desc: 'Fabricated from 4mm to 6mm IS 2062 mild steel or stainless steel plates with structural stiffeners designed for ±5000 Pa static pressure.' },
+      { title: 'Automated Dust Discharge', desc: 'Equipped with heavy-duty rotary airlock valves, motorized screw conveyors, and hopper vibrators for continuous dust evacuation.' }
     ],
     specs: [
-      { parameter: 'Airflow Capacity', value: '1,000 to 1,50,000+ CFM (custom modular sizing)' },
-      { parameter: 'Particulate Collection Efficiency', value: '> 99.9% sub-micron capture (< 10 mg/Nm³ outlet emission)' },
-      { parameter: 'Material of Construction (MOC)', value: '4mm - 6mm IS 2062 Mild Steel / Corten / SS 304 / SS 316' },
-      { parameter: 'Cleaning Mechanism', value: 'Reverse pulse jet via supersonic venturi and sequential timer' },
-      { parameter: 'Compressed Air Requirement', value: '5.0 to 6.5 bar clean, dry, oil-free compressed air' },
-      { parameter: 'Operating Temperature', value: 'Ambient up to 260°C continuous service' },
-      { parameter: 'Tubesheet Fabrication', value: 'CNC laser-cut with calibrated snap-band seal holes' },
-      { parameter: 'Discharge Equipment', value: 'Heavy-duty rotary airlock valve (RAL) & manual slide gate' }
+      { parameter: 'Airflow Capacity', value: '1,000 CFM to 250,000+ CFM (custom modular plant sizing)' },
+      { parameter: 'Filtration Efficiency', value: '> 99.9% sub-micron capture (< 10 mg/Nm³ guaranteed outlet emission)' },
+      { parameter: 'Material of Construction (MOC)', value: '4mm - 8mm IS 2062 Mild Steel / Corten Steel / SS 304 / SS 316' },
+      { parameter: 'Cleaning Mechanism', value: 'High-energy reverse pulse jet via supersonic venturis (5.0 - 6.5 bar clean dry air)' },
+      { parameter: 'Filter Bag Configuration', value: 'Standard Dia 120mm - 160mm, lengths up to 6.5m in woven/needlefelt fabrics' },
+      { parameter: 'Operating Temperature', value: 'Ambient up to 260°C continuous service (with Nomex/PTFE media)' },
+      { parameter: 'Tubesheet Design', value: 'CNC laser-cut tubesheet with calibrated snap-ring apertures' },
+      { parameter: 'Discharge Equipment', value: 'Heavy-duty rotary airlock valve (RAL), motorized screw conveyor & slide gate' },
+      { parameter: 'Control System', value: 'Microprocessor sequential pulse timer with digital DP display & Modbus telemetry' },
+      { parameter: 'Safety Systems', value: 'Explosion relief vents, spark detection, and emergency cold air dilution dampers' }
     ],
-    principle: 'Dust-laden air enters through engineered intake baffles, dropping coarse particulates immediately into the collection hopper by inertial gravity. Fine particulates travel upward and are captured on the outer surface of high-efficiency needlefelt filter bags. Clean air passes through the interior into the clean-air plenum and is drawn out by the ID fan. At programmed intervals, the sequential controller fires pulse solenoid valves, releasing short supersonic compressed air shockwaves down through venturi nozzles to dislodge dust cakes directly into the hopper.',
+    principle: 'Dust-laden process air is drawn into the dust collector through aerodynamic inlet baffles. Heavy particles drop directly into the collection hopper by gravitational inertia, while fine dust rises toward the vertical filter bags. Sub-micron particulates form a permeable dust cake on the exterior of the bags while clean air passes through the interior into the clean-air plenum and is drawn out by the ID fan. A sequential electronic timer activates pulse valves, sending supersonic compressed air shockwaves down through venturi nozzles to dislodge accumulated dust cakes into the collection hopper without halting plant draft.',
     applications: [
-      'Cement & Clinker Plants', 'Steel & Induction Furnaces', 'Thermal Power Boilers', 
-      'Carbon Black & Chemical', 'Non-Ferrous Smelters', 'Foundries & Sand Plants'
+      'Cement & Clinker Grinding Plants', 'Steel & Induction Melting Furnaces', 'Thermal Power Plant Boilers', 
+      'Carbon Black & Chemical Processing', 'Non-Ferrous Smelters & Foundries', 'Woodworking, Grain & Food Processing',
+      'Shot Blasting & Plasma/Laser Cutting', 'Bulk Silo Storage & Truck Loading Terminals'
     ],
     relatedIds: ['filter-bag', 'filter-cages', 'solenoid-valve', 'id-fans', 'rotary-air-lock']
+  },
+  {
+    id: 'cartridge-filters',
+    slugs: [
+      'cartridge-filters', 
+      'cartridge-filter', 
+      'pleated-cartridge-filter', 
+      'cartridge-dust-collector', 
+      'pleated-cartridge-dust-collector'
+    ],
+    title: 'Pleated Cartridge Dust Collectors (Compact Sub-Micron Filtration)',
+    shortTitle: 'Cartridge Dust Collectors',
+    category: 'Turnkey Filtration Systems',
+    mainCategory: 'Dust Collection Equipment',
+    tag: 'Compact High-Efficiency Fume Extraction',
+    image: pleatedImg,
+    heroImage: cartridgeCollectorUnitImg,
+    shortDesc: 'Ultra-compact reverse pulse-jet pleated cartridge dust collectors delivering 3x higher filtration surface area for sub-micron fumes, welding smoke, and fine powders.',
+    overview: 'VS Filtech manufactures high-efficiency Pleated Cartridge Dust Collectors engineered for industrial applications requiring maximum filtration surface area in a compact physical footprint. Utilizing spunbonded polyester, PTFE membranes, and nanofiber media, our cartridge units capture ultra-fine fumes and powders with 99.99% efficiency down to 0.3 micron while consuming 50% less floor space than conventional baghouses.',
+    features: [
+      { title: '300% Higher Filtration Area', desc: 'Pleated cylindrical geometry provides triple the filtration area compared to fabric bags of identical length.' },
+      { title: 'Sub-Micron Fume Capture', desc: 'Nanofiber and expanded PTFE membrane media trap particulates as fine as 0.3 micron with 99.99% efficiency.' },
+      { title: 'Compact Factory Footprint', desc: 'Ideal for indoor factory installations, CNC laser cutting machines, and localized work cell extraction.' },
+      { title: 'Toolless Quick-Release Cartridges', desc: 'Cam-lock or twist-lock cartridge mounting allows rapid maintenance without specialized tools.' },
+      { title: 'Downward Cross-Flow Design', desc: 'Inlet airflow moves downward parallel to cartridges, ensuring dislodged dust falls straight into the collection bin.' },
+      { title: 'Integrated Spark Arrestor', desc: 'Built-in drop-out baffle and perforated spark arrestor screen protect filter media from hot embers.' }
+    ],
+    specs: [
+      { parameter: 'Airflow Capacity', value: '500 CFM to 50,000 CFM (modular scalable units)' },
+      { parameter: 'Filtration Efficiency', value: '99.99% at 0.3 micron (HEPA grade secondary filter options available)' },
+      { parameter: 'Cartridge Media', value: 'Spunbonded Polyester, Cellulose Blend, PTFE Membrane, Antistatic Aluminized' },
+      { parameter: 'Cleaning Mechanism', value: 'Downward reverse pulse-jet compressed air purging (4.0 to 6.0 bar)' },
+      { parameter: 'Cartridge Orientation', value: 'Vertical hanging or horizontal slide-in cartridge arrangements' },
+      { parameter: 'Material of Construction (MOC)', value: '3mm - 4.5mm IS 2062 Mild Steel powder-coated / SS 304 / SS 316' },
+      { parameter: 'Dust Discharge', value: 'Quick-release clamp dust collection drawer or continuous rotary airlock valve' },
+      { parameter: 'Control Instrumentation', value: 'Digital sequential pulse timer with DP differential pressure gauge' }
+    ],
+    principle: 'Dust and fumes enter the collector, flowing downward through pleated filter elements. The media pleats trap fine particulates on the outer surface while purified air exits through the cartridge core into the exhaust plenum. High-speed pulse valves periodically fire reverse blasts of compressed air inside each cartridge, flexing the pleats and ejecting cake directly into the collection drawer.',
+    applications: [
+      'Laser & CNC Plasma Cutting Fumes', 'Robotic Welding Smoke Extraction', 'Pharmaceutical Powder Processing',
+      'Powder Coating Spray Booths', 'Battery Cell Manufacturing', 'Sand Blasting & Metal Grinding'
+    ],
+    relatedIds: ['dust-collector-system', 'solenoid-valve', 'rotary-air-lock', 'differential-pressure-switch']
   },
   {
     id: 'id-fans',
@@ -72,6 +164,7 @@ export const allProductsData = [
     title: 'ID Fans (Induced Draft Centrifugal Fans)',
     shortTitle: 'ID Fans',
     category: 'Airflow & Draft Equipment',
+    mainCategory: 'Mechanical Equipment',
     tag: 'Heavy-Duty Blower',
     image: idFanImg,
     heroImage: ductingImg,
@@ -102,7 +195,13 @@ export const allProductsData = [
   },
   {
     id: 'cyclone-dust-collector',
-    slugs: ['cyclone-dust-collector', 'cyclone-filters', 'centrifugal-separator'],
+    slugs: [
+      'cyclone-dust-collector', 
+      'cyclone-separators', 
+      'cyclone-separator', 
+      'cyclone-filters', 
+      'centrifugal-separator'
+    ],
     title: 'Cyclone Dust Collector & Pre-Separator',
     shortTitle: 'Cyclone Dust Collector',
     category: 'Mechanical Pre-Separators',
@@ -127,10 +226,10 @@ export const allProductsData = [
       { parameter: 'Operating Temperature', value: 'Ambient up to 450°C continuous service' },
       { parameter: 'Paint & Finish', value: 'Heat-resistant aluminum / epoxy primer with polyurethane enamel' }
     ],
-    principle: 'Dust-laden air enters tangentially at high velocity into the cylindrical upper body, setting up a downward helical vortex. Centrifugal force drives dense dust particles against the outer walls, where they decelerate and slide down into the conical hopper. Clean gas reaches the bottom of the cone and reverses upward in an inner vortex to exit through the central vortex finder tube.',
+    principle: 'Dust-laden air enters tangentially into the cylindrical cyclone casing at high velocity, creating a downward spiral vortex. Centrifugal force drives dense dust particles against the outer walls where they slide down into the conical hopper. Near the bottom, clean gas reverses direction, ascending through the central vortex finder tube into the exhaust duct.',
     applications: [
-      'Woodworking & Sawmills', 'Grain Elevators & Flour Mills', 'Sand Blasting & Shot Peening', 
-      'Biomass & Coal Boilers', 'Primary Crusher Pre-Filtration', 'Sparks Mitigation'
+      'Woodworking & Planer Shavings', 'Foundry Sand Reclaim Plants', 'Grain Elevators & Flour Mills', 
+      'Coal Crushing & Screening', 'Biomass Boiler Fly Ash', 'Shot Blasting Units'
     ],
     relatedIds: ['dust-collector-system', 'rotary-air-lock', 'id-fans']
   },
@@ -140,6 +239,7 @@ export const allProductsData = [
     title: 'Industrial Filter Bags (Woven & Needlefelt)',
     shortTitle: 'Filter Bags',
     category: 'Filtration Media',
+    mainCategory: 'Filter Components',
     tag: 'OEM Media',
     image: filterBagImg,
     heroImage: pleatedImg,
@@ -204,13 +304,13 @@ export const allProductsData = [
   },
   {
     id: 'filter-cages',
-    slugs: ['filter-cages', 'cages-with-venturi', 'support-cages'],
-    title: 'Filter Cages (Support Cages With Venturi)',
+    slugs: ['filter-cages', 'support-cages', 'bag-cages', 'dust-collector-cages', 'cages-with-venturi'],
+    title: 'Filter Cages (6 to 24-Wire Support Cages)',
     shortTitle: 'Filter Cages',
-    category: 'Structural Support',
-    tag: 'Structural Support',
+    category: 'Baghouse Structural Hardware',
+    tag: 'Structural Wire Framework',
     image: cageImg,
-    heroImage: venturiImg,
+    heroImage: cageImg,
     shortDesc: 'Rigid longitudinal wire support cages fabricated on automated robotic CNC welding machines with zero burrs.',
     overview: 'VS Filtech manufactures precision wire support cages engineered to hold filter bags open against high inward vacuum draft. Fabricated on automated CNC multi-spot welding machines, our cages feature smooth longitudinal wires with zero burrs or weld spatter that could abrade or pierce filter fabrics, ensuring maximum bag operational lifespan.',
     features: [
@@ -234,44 +334,45 @@ export const allProductsData = [
       'Pulse Jet Baghouses', 'Reverse Air Baghouses', 'High-Moisture Flue Gas Scrubbers', 
       'High-Temperature Boiler Filtration', 'Cement Clinker Collectors', 'Chemical Processing'
     ],
-    relatedIds: ['filter-bag', 'filter-cage-venturi', 'dust-collector-system']
+    relatedIds: ['filter-bag', 'filter-cage-venturi', 'snap-bands', 'solenoid-valve']
   },
   {
     id: 'filter-cage-venturi',
-    slugs: ['filter-cage-venturi', 'venturi-nozzle', 'pulse-jet-venturi'],
-    title: 'Filter Cage Venturi (Supersonic Jet Nozzles)',
-    shortTitle: 'Cage Venturi',
-    category: 'Pulse Jet Cleaning Components',
-    tag: 'Pulse Component',
+    slugs: ['filter-cage-venturi', 'venturis', 'venturi', 'venturi-nozzle', 'venturi-nozzles', 'pulse-jet-venturi'],
+    title: 'Supersonic Venturis (Cast Aluminum & Spun Steel Nozzles)',
+    shortTitle: 'Venturis (Alu & Steel)',
+    category: 'Pulse-Jet Aerodynamic Nozzles',
+    tag: 'Sonic Jet Induction',
     image: venturiImg,
-    heroImage: cageImg,
-    shortDesc: 'Aerodynamically profiled supersonic nozzles atop filter cages that induce secondary clean air for deep bag pulse cleaning.',
-    overview: 'VS Filtech manufactures aerodynamically contoured supersonic venturi nozzles designed to be integrated directly atop filter support cages. By exploiting the Bernoulli effect, our venturies induce a secondary volume of ambient clean air up to 4 times the primary compressed air pulse, amplifying cleaning shockwaves to clean long filter bags (up to 8 meters) from top to bottom.',
+    heroImage: venturiImg,
+    shortDesc: 'Aerodynamically contoured supersonic Bellmouth nozzles inducing up to 400% secondary clean air volume for deep reverse-pulse cleaning.',
+    overview: 'VS Filtech manufactures aerodynamically contoured supersonic venturi nozzles engineered for reverse pulse-jet dust collectors. By exploiting the Bernoulli effect, our venturis convert high-pressure primary compressed air pulses into a supersonic kinetic core, drawing a secondary volume of ambient clean air up to 4 times the primary blast. This multiplies cleaning shockwave energy to shatter dust cakes across bags up to 8 meters long.',
     features: [
-      { title: '4x Secondary Air Induction', desc: 'Draws secondary ambient air to multiply the cleaning pulse air volume by up to 400%.' },
-      { title: 'Tuned Converging-Diverging Profile', desc: 'Bellmouth nozzle geometry converts compressed air pressure into high-velocity kinetic shockwaves.' },
-      { title: 'Smooth Aerodynamic Finish', desc: 'Precision-machined inner surfaces minimize turbulence and static pressure loss during pulsing.' },
-      { title: 'Universal Mounting', desc: 'Available spot-welded directly to cage collars, or as drop-in cast flange inserts for tube sheets.' }
+      { title: '4x Secondary Air Induction', desc: 'Induces surrounding clean ambient air to multiply cleaning pulse volume by up to 400%.' },
+      { title: 'Tuned Converging-Diverging Profile', desc: 'Bellmouth nozzle geometry converts compressed air pressure into supersonic kinetic shockwaves.' },
+      { title: 'Dual Metallurgy Options', desc: 'Precision die-cast aluminum alloy (LM6/ADC12), deep-drawn spun steel, and acid-resistant SS 304/SS 316.' },
+      { title: 'Universal Mounting Methods', desc: 'Available drop-in tubesheet flanged models or spot-welded directly atop filter support cage collars.' }
     ],
     specs: [
-      { parameter: 'Materials of Construction', value: 'Die-cast aluminum alloy, deep-drawn galvanized steel, SS 304, SS 316' },
-      { parameter: 'Nozzle Profiles', value: 'Aerodynamic bellmouth converging-diverging geometry' },
-      { parameter: 'Tuned Lengths', value: '150mm, 200mm, 250mm, 300mm length options' },
-      { parameter: 'Collar Attachment', value: 'Integral resistance spot-welded to cage, or drop-in cast flange' },
-      { parameter: 'Amplification Factor', value: '3.5x to 4.5x induced secondary clean air volume' },
+      { parameter: 'Materials of Construction', value: 'Die-cast aluminum alloy (LM6), Deep-drawn spun mild steel, SS 304, SS 316' },
+      { parameter: 'Nozzle Profiles', value: 'Aerodynamic bellmouth converging-diverging profile (CFD optimized)' },
+      { parameter: 'Throat Diameters', value: 'Ø28mm, Ø32mm, Ø36mm, Ø40mm, Ø45mm tuned to blowpipe orifice sizing' },
+      { parameter: 'Tuned Lengths', value: '150mm, 200mm, 250mm, 300mm length options for 2m to 8m bags' },
+      { parameter: 'Mounting Style', value: 'Drop-in cast tubesheet flange or integral resistance spot-welded to cage' },
+      { parameter: 'Air Amplification Factor', value: '3.5x to 4.5x induced secondary clean air volume' },
       { parameter: 'Pulse Pressure Rating', value: 'Optimized for 4.0 bar to 7.0 bar compressed air pulses' },
-      { parameter: 'Finish', value: 'Smooth cast deburred finish, passivated stainless, or zinc plated' }
+      { parameter: 'Finish', value: 'Vibratory deburred smooth surface, passivated stainless, or zinc plated' }
     ],
     principle: 'When the pulse solenoid valve fires, high-velocity compressed air shoots down through the blowpipe orifice directly into the venturi throat. The sudden pressure drop in the throat draws a substantial volume of surrounding clean air from the plenum into the stream. This combined air mass expands as a supersonic shockwave that travels down the entire filter bag, snapping the fabric outward to shatter the dust cake.',
     applications: [
       'High-Velocity Pulse Jet Baghouses', 'Long Bags (> 4m up to 8m length)', 'Dense Sticky Dust Cakes', 
       'Fly Ash Filtration', 'Cement Kiln Exhausts', 'Furnace Metallurgy Baghouses'
     ],
-    relatedIds: ['filter-cages', 'solenoid-valve', 'filter-bag']
+    relatedIds: ['filter-cages', 'solenoid-valve', 'filter-bag', 'snap-bands']
   },
   {
     id: 'solenoid-valve',
-    slugs: ['solenoid-valve', 'solenoid-valves', 'pulse-valve'],
+    slugs: ['solenoid-valve', 'solenoid-valves', 'pulse-valve', 'pulse-valves', 'pulse-solenoid-valve'],
     title: 'Pulse Jet Solenoid Valve (Pilot Diaphragm)',
     shortTitle: 'Solenoid Valve',
     category: 'Pulse Automation & Valves',
@@ -305,7 +406,7 @@ export const allProductsData = [
   },
   {
     id: 'rotary-air-lock',
-    slugs: ['rotary-air-lock', 'rotary-air-lock-valve', 'ral-valve'],
+    slugs: ['rotary-air-lock', 'rotary-air-locks', 'rotary-air-lock-valve', 'ral-valve', 'rotary-airlock'],
     title: 'Rotary Air Lock Valve (RAL - Dust Discharge Feeder)',
     shortTitle: 'Rotary Air Lock',
     category: 'Airtight Dust Discharge',
@@ -373,7 +474,16 @@ export const allProductsData = [
   },
   {
     id: 'differential-pressure-switch',
-    slugs: ['differential-pressure-switch', 'dp-transmitter', 'differential-pressure-transmitter'],
+    slugs: [
+      'differential-pressure-switch', 
+      'dp-switches', 
+      'dp-switch', 
+      'dp-transmitter', 
+      'differential-pressure-transmitter', 
+      'differential-pressure-monitoring',
+      'pressure-transmitters',
+      'pressure-transmitter'
+    ],
     title: 'Differential Pressure Switch & Transmitter (DP Gauge)',
     shortTitle: 'DP Transmitter',
     category: 'Instrumentation & Process Monitoring',
@@ -443,6 +553,7 @@ export const allProductsData = [
     title: 'Hopper Level Sensors (Rotary Paddle & RF Capacitive)',
     shortTitle: 'Level Sensor',
     category: 'Instrumentation & Spill Prevention',
+    mainCategory: 'Electrical & Automation',
     tag: 'Spill Prevention',
     image: levelSensorImg,
     heroImage: ralImg,
@@ -840,11 +951,192 @@ export const allProductsData = [
       'Multi-Story Industrial Buildings', 'Steel, Cement & Petrochemical Plants', 'Continuous Process Manufacturing Facilities'
     ],
     relatedIds: ['pcc-panel', 'ht-panel', 'lt-panel', 'mcc-panel', 'control-panels']
+  },
+  {
+    id: 'reverse-air-bag-filters',
+    slugs: ['reverse-air-bag-filters', 'reverse-air-filter', 'offline-bag-filters', 'offline-bag-filter'],
+    title: 'Reverse Air Bag Filters (Offline Multi-Compartment Baghouse)',
+    shortTitle: 'Reverse Air Bag Filters',
+    category: 'Turnkey Filtration Systems',
+    mainCategory: 'Dust Collection Equipment',
+    tag: 'Heavy Duty Thermal Gas Cleaning',
+    image: baghouseImg,
+    heroImage: pulseJetImg,
+    shortDesc: 'Multi-compartment offline cleaning fabric filter baghouses engineered for high-volume, high-temperature furnace and kiln exhaust gases.',
+    overview: 'VS Filtech designs and manufactures Reverse Air Bag Filters and Offline Compartment Baghouses engineered for utility boilers, cement kilns, and metallurgical smelters. Each compartment is pneumatically isolated using poppet dampers before gentle reverse air flow collapses the filter bags to discharge accumulated dust cakes without high-pressure mechanical shock, dramatically extending bag life in high-temperature service.',
+    features: [
+      { title: 'Offline Compartment Isolation', desc: 'Fast-acting pneumatic poppet dampers isolate each section for zero-flow quiescent cleaning and online maintenance.' },
+      { title: 'Gentle Reverse Air Cleaning', desc: 'Low-velocity reverse gas flow collapses woven fiberglass or PTFE bags gently without abrasive fiber fatigue.' },
+      { title: 'High-Temperature Endurance', desc: 'Rated for continuous gas temperatures up to 260°C with thermal casing expansion joints and rockwool insulation.' },
+      { title: 'Internal Anti-Collapse Rings', desc: 'Filter bags equipped with sewn-in stainless steel anti-collapse rings to ensure uniform gas permeability.' }
+    ],
+    specs: [
+      { parameter: 'Airflow Capacity', value: '25,000 to 500,000+ CFM custom compartment configurations' },
+      { parameter: 'Gas Operating Temperature', value: '120°C to 280°C continuous service' },
+      { parameter: 'Compartments', value: '4 to 16 isolated compartments with bypass & isolation poppet dampers' },
+      { parameter: 'Filter Bag Length', value: 'Up to 10 meters (Dia 200mm - 300mm with anti-collapse rings)' },
+      { parameter: 'Filtration Velocity', value: '0.45 to 0.75 m/min (Air-to-Cloth ratio 1.5:1 to 2.5:1)' },
+      { parameter: 'Casing Construction', value: '5mm - 8mm structural steel plate with stiffeners and walk-in plenums' }
+    ],
+    principle: 'Flue gas enters the hopper and rises inside the tubular bags. Dust collects on the inside surface while clean gas exits through the exterior into the outlet manifold. For cleaning, an automated damper isolates the compartment and reverse air fan gently back-purges the bags, causing the dust cake to crack and drop into the collection hopper.',
+    applications: [
+      'Cement Rotary Kiln Exhaust', 'Coal-Fired Power Station Boilers', 'Ferro-Alloy & Submerged Arc Furnaces',
+      'Waste-to-Energy Incineration Plants', 'Copper & Zinc Smelters', 'Carbon Black Primary Gas Streams'
+    ],
+    relatedIds: ['dust-collector-system', 'filter-bag', 'id-fans', 'rotary-air-lock', 'control-panels']
+  },
+  {
+    id: 'dampers',
+    slugs: ['dampers', 'isolation-dampers', 'poppet-dampers', 'butterfly-dampers', 'multilouver-dampers'],
+    title: 'Industrial Dampers & Airflow Isolation Valves',
+    shortTitle: 'Dampers & Airflow Controls',
+    category: 'Mechanical Dust Handling',
+    mainCategory: 'Mechanical Equipment',
+    tag: 'Airtight Gas Balancing',
+    image: ductingImg,
+    heroImage: baghouseImg,
+    shortDesc: 'Pneumatically and motorized multi-louver, butterfly, and zero-leakage poppet isolation dampers engineered for baghouse gas balancing.',
+    overview: 'VS Filtech manufactures heavy-duty industrial dampers engineered for precise airflow modulation and 100% gastight isolation in dust extraction networks and baghouse compartments. Available in Poppet, Multi-Louver, Butterfly, and Guillotine slide configurations with pneumatic cylinder or electric actuator operation.',
+    features: [
+      { title: 'Zero Leakage Sealing', desc: 'Metallic or resilient Viton/silicone elastomeric perimeter seals deliver up to 99.9% seal tightness.' },
+      { title: 'High-Temperature Construction', desc: 'Rated for flue gas temperatures up to 450°C with thermal expansion clearances and outboard bearings.' },
+      { title: 'Actuator Compatibility', desc: 'Supplied with double-acting pneumatic cylinders with NAMUR solenoid valves, limit switches, or modulating electric actuators.' },
+      { title: 'Aerodynamic Blade Profile', desc: 'Streamlined airfoil blades minimize static pressure drop across duct runs during full-open flow.' }
+    ],
+    specs: [
+      { parameter: 'Types Available', value: 'Poppet Dampers, Multi-Louver, Butterfly Dampers, Guillotine Isolation Gates' },
+      { parameter: 'Operating Temperature', value: 'Ambient up to 450°C continuous service' },
+      { parameter: 'Duct Diameter / Size', value: 'Round Ø200mm to Ø2500mm | Rectangular 300x300mm to 3000x3000mm' },
+      { parameter: 'Material of Construction (MOC)', value: 'IS 2062 Mild Steel, Corten Steel, SS 304, SS 316, Hardox liners' },
+      { parameter: 'Drive Options', value: 'Pneumatic cylinder (with air accumulator), Electric motorized rotary actuator, Manual handwheel' },
+      { parameter: 'Seal Tightness', value: 'Class II to Class IV (99.0% to 99.95% volumetric shutoff with air seal purge)' }
+    ],
+    principle: 'Dampers modulate airflow resistance across branching duct networks to balance capture velocities at extraction hoods. Poppet dampers at baghouse compartment inlets and outlets actuate within 3 seconds to seal off sections completely during cleaning or maintenance without stopping the process fan.',
+    applications: [
+      'Baghouse Offline Compartment Isolation', 'ID Fan Inlet Vane Control & Draft Modulation', 'Furnace Canopy Hood Balancing',
+      'Boiler Flue Gas Recirculation', 'Emergency Fresh Air Dilution Dampers', 'Cement Clinker Cooler Exhaust Balancing'
+    ],
+    relatedIds: ['dust-collector-system', 'id-fans', 'control-panels', 'screw-conveyor']
+  },
+  {
+    id: 'snap-bands',
+    slugs: ['snap-bands', 'snap-band-collars', 'filter-bag-cuff', 'tube-sheet-seals', 'clamps'],
+    title: 'Snap Bands & Clamps (Tubesheet Cuff Seals & Retaining Rings)',
+    shortTitle: 'Snap Bands & Clamps',
+    category: 'Tubesheet Sealing Hardware',
+    mainCategory: 'Filter Components',
+    tag: 'Airtight Tubesheet Seal',
+    image: snapBandsImg,
+    heroImage: snapBandsImg,
+    shortDesc: 'Calibrated tempered spring steel snap ring bands wrapped in double-beaded needlefelt gaskets for toolless airtight tubesheet locking.',
+    overview: 'VS Filtech manufactures precision snap band cuffs and stainless steel retaining clamps engineered to lock filter bags airtight into CNC laser-cut baghouse tubesheet cell plates. Wrapped in dense multi-layered needlefelt with calibrated spring steel cores, our snap bands seat firmly with an audible "snap", guaranteeing zero dust bypass (<10 mg/Nm³ statutory emission integrity) without tools.',
+    features: [
+      { title: 'Audible Snap-Fit Verification', desc: 'Locks securely into tubesheet cell plate grooves, preventing bag drop under heavy dust load or pulsing recoil.' },
+      { title: 'Zero Particle Bypass', desc: 'Double-beaded felt gasket compresses against hole edges to guarantee statutory <10 mg/Nm³ emission integrity.' },
+      { title: 'Toolless Installation & Removal', desc: 'Allows operators to replace filter bags quickly and safely from the clean-air plenum roof.' },
+      { title: 'Corrosion-Resistant Metallurgy', desc: 'High-fatigue spring steel retainers available in tempered high-carbon steel, SS 301, and SS 304.' }
+    ],
+    specs: [
+      { parameter: 'Tubesheet Hole Diameters', value: 'Ø100mm, Ø120mm, Ø130mm, Ø150mm, Ø160mm, Ø180mm (toleranced to ±0.2mm)' },
+      { parameter: 'Spring Band Core Material', value: 'Tempered high-carbon spring steel, Grade 301 / 304 Stainless Steel' },
+      { parameter: 'Sealing Gasket Media', value: 'High-density Polyester needlefelt, Nomex, PTFE, EPDM, Silicone' },
+      { parameter: 'Cuff & Clamp Styles', value: 'Double-beaded snap band, single-beaded ring, worm-drive SS clamp, quick-release band' },
+      { parameter: 'Operating Temperature', value: 'Ambient up to 260°C continuous service (300°C peak)' },
+      { parameter: 'Emission Standard Compliance', value: 'Guarantees particulate leak tightness <10 mg/Nm³ CPCB statutory limits' }
+    ],
+    principle: 'When compressed inward by hand into a heart shape, the snap band is placed through the tubesheet hole. Releasing it allows the spring steel to snap outward into the calibrated groove, compressing the felt bead firmly against both the top and bottom edges of the plate for a mechanical hermetic seal.',
+    applications: [
+      'Pulse Jet Baghouse Tubesheets', 'Top-Removal Dust Collectors', 'Silo Top Venting Filters',
+      'Food & Pharmaceutical Powder Collectors', 'Extreme Vacuum Industrial Baghouses'
+    ],
+    relatedIds: ['filter-bag', 'filter-cages', 'filter-cage-venturi']
+  },
+  {
+    id: 'sequential-pulse-controllers',
+    slugs: ['sequential-pulse-controllers', 'pulse-timer-panel', 'pulse-jet-controller', 'sequential-timer'],
+    title: 'Sequential Pulse Controllers & DP Cleaning Panels',
+    shortTitle: 'Sequential Pulse Controllers',
+    category: 'Electrical & Automation Panels',
+    mainCategory: 'Electrical & Automation',
+    tag: 'Microprocessor Pulse Timing',
+    image: controlPanelImg,
+    heroImage: vfdPlcImg,
+    shortDesc: 'Solid-state microprocessor sequential timers with integrated differential pressure monitoring for demand-based compressed air cleaning.',
+    overview: 'VS Filtech engineers advanced microprocessor Sequential Pulse Controllers designed to automate reverse pulse-jet cleaning cycles. Operating either on timed intervals or intelligent Differential Pressure (DP) on-demand mode, our controllers trigger pulse solenoid valves in exact sequence, minimizing compressed air consumption and prolonging filter bag lifecycle.',
+    features: [
+      { title: 'Demand-Based DP Cleaning', desc: 'Fires pulse valves only when baghouse differential pressure exceeds the preset high limit, saving 35%+ plant air.' },
+      { title: 'Solid-State Triac Outputs', desc: 'Fast, arc-free solid-state switching rated for millions of operations driving 24V DC, 110V AC, or 230V AC solenoids.' },
+      { title: 'Digital LED / HMI Display', desc: 'Displays active pulse channel, pulse duration (milliseconds), interval time (seconds), and live DP (mm WG).' },
+      { title: 'RS485 Modbus / SCADA Telemetry', desc: 'Optional communication interface linking pulse diagnostics and baghouse pressure directly to the plant DCS.' }
+    ],
+    specs: [
+      { parameter: 'Output Channels', value: '4, 8, 12, 16, 24, 32, 48, 64, 128 channels (modular expandability)' },
+      { parameter: 'Pulse On-Time Duration', value: '20 ms to 1000 ms adjustable (typical setting 50ms - 100ms)' },
+      { parameter: 'Pulse Off-Time Interval', value: '1 sec to 999 sec adjustable' },
+      { parameter: 'Input Supply Voltage', value: '230V AC ±10%, 50/60 Hz or 110V AC / 24V DC options' },
+      { parameter: 'Output Valve Drive Rating', value: 'Solid-state Triac / Optoisolated FET rated 2.0A per channel' },
+      { parameter: 'Enclosure Rating', value: 'IP65 Weatherproof CRCA powder coated / Polycarbonate enclosure' }
+    ],
+    principle: 'The controller energizes solenoid coils one row at a time. The pilot solenoid vents compressed air from above the valve diaphragm, allowing reservoir header pressure to pop the diaphragm wide open in milliseconds. A supersonic acoustic shockwave travels down the blowpipe through the venturi, flexing the filter bag outward and discharging the cake.',
+    applications: [
+      'Pulse Jet Fabric Baghouses', 'Pleated Cartridge Dust Collectors', 'Silo Venting Systems',
+      'Pneumatic Conveying Receivers', 'Combustion Flue Gas Cleaning Units'
+    ],
+    relatedIds: ['solenoid-valve', 'differential-pressure-switch', 'control-panels', 'vfd-panel']
+  },
+  {
+    id: 'temperature-instruments',
+    slugs: ['temperature-instruments', 'thermocouple-flue-gas', 'rtd-sensor', 'temp-transmitter'],
+    title: 'Industrial Temperature Instruments & Flue Gas Thermal Monitoring',
+    shortTitle: 'Temperature Instruments',
+    category: 'Instrumentation & Safety',
+    mainCategory: 'Electrical & Automation',
+    tag: 'Thermal Protection Interlock',
+    image: dpSwitchImg,
+    heroImage: controlPanelImg,
+    shortDesc: 'Duplex thermocouples, RTD Pt100 sensors, and 4-20mA smart transmitters protecting filter bags from thermal degradation and acid condensation.',
+    overview: 'VS Filtech supplies industrial temperature sensing instruments and head-mounted transmitters engineered for baghouse inlet and outlet duct monitoring. Providing continuous thermal feedback to the plant PLC, these sensors trigger emergency fresh-air dilution dampers when process gas spikes, protecting expensive filter bags from thermal burn-out and preventing acid dewpoint corrosion.',
+    features: [
+      { title: 'High-Temperature Duplex Sensing', desc: 'Duplex Type K / Type N thermocouples and RTD Pt100 elements provide dual redundancy for safety interlocks.' },
+      { title: 'High-Velocity Thermowells', desc: 'Precision-machined bar stock thermowells in SS 316, Inconel, and ceramic coatings withstand particulate abrasion.' },
+      { title: 'HART / 4-20mA Output', desc: 'Head-mounted digital transmitters provide isolated 4-20mA signal transmission resistant to electrical noise.' },
+      { title: 'Cold-Junction & Acid Dewpoint Interlocks', desc: 'Integrated with baghouse PLC to alarm on low gas temperatures near the acid dew point to prevent bag clogging.' }
+    ],
+    specs: [
+      { parameter: 'Element Types', value: 'Thermocouple Type K, N, J, R, S or Simplex/Duplex RTD Pt100 (Class A)' },
+      { parameter: 'Temperature Range', value: '-50°C to 1200°C (-58°F to 2192°F)' },
+      { parameter: 'Thermowell MOC', value: 'SS 316L, SS 310, Inconel 600, Hastelloy C-276, Ceramic' },
+      { parameter: 'Output Signal', value: '4-20 mA with HART protocol / Fieldbus / Modbus RS485' },
+      { parameter: 'Enclosure Rating', value: 'IP66 / IP68 Flameproof / Explosion-Proof (ATEX / PESO / IECEx certified)' }
+    ],
+    principle: 'Positioned at the dirty gas inlet manifold, the sensor continuously monitors incoming flue gas temperature. If temperatures exceed the bag media limit (e.g. 130°C for Polyester or 200°C for Nomex), the PLC instantly actuates cold air dilution dampers or shifts the system into safety bypass mode.',
+    applications: [
+      'Baghouse Inlet Flue Gas Monitoring', 'Furnace & Boiler Exhaust Gas Lines', 'Thermal Oxidizer & Incinerator Outlets',
+      'Rotary Kiln Clinker Cooler Exhaust', 'Asphalt Plant Dryers & Smelters'
+    ],
+    relatedIds: ['differential-pressure-switch', 'control-panels', 'filter-bag', 'dampers']
   }
+
 ];
 
 export const getProductByIdOrSlug = (idOrSlug) => {
   if (!idOrSlug) return null;
-  const clean = idOrSlug.toLowerCase().trim();
-  return allProductsData.find(p => p.id === clean || (p.slugs && p.slugs.includes(clean))) || null;
+  let clean = '';
+  try {
+    clean = decodeURIComponent(idOrSlug).toLowerCase().trim();
+  } catch (e) {
+    clean = idOrSlug.toLowerCase().trim();
+  }
+
+  const normalized = clean.replace(/[\s_]+/g, '-');
+  const singular = normalized.endsWith('s') ? normalized.slice(0, -1) : normalized;
+  const plural = normalized.endsWith('s') ? normalized : normalized + 's';
+
+  const candidates = [clean, normalized, singular, plural];
+
+  return allProductsData.find(p => {
+    if (candidates.includes(p.id)) return true;
+    if (p.slugs && p.slugs.some(s => candidates.includes(s))) return true;
+    return false;
+  }) || null;
 };

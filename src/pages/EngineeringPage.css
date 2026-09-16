@@ -1,8 +1,414 @@
 /* ==========================================================
    ENGINEERING PAGE - HIGH TECH STYLES & GLASSMORPHISM
-   VS Filtech
+   VS Filtech - Bag Filter Design & Engineering Services
    ========================================================== */
 
+/* 1. HERO SECTION */
+.eng-hero-section {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 6.5rem 0 5rem;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  overflow: hidden;
+}
+
+.eng-hero-bg-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.eng-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.08) contrast(1.06) saturate(1.1);
+}
+
+.eng-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 14, 26, 0.65) 0%, rgba(7, 14, 26, 0.5) 50%, rgba(7, 14, 26, 0.85) 100%);
+  pointer-events: none;
+}
+
+.eng-hero-container {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.eng-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 22, 40, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  padding: 6px 20px;
+  border-radius: 999px;
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 14px rgba(14, 165, 233, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.eng-hero-title {
+  font-size: clamp(2.3rem, 4.2vw, 3.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.95);
+}
+
+.eng-hero-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #f1f5f9;
+  max-width: 820px;
+  margin: 0 auto 2.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.eng-hero-cta-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
+}
+
+.btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 22, 40, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #38bdf8;
+  font-weight: 600;
+  padding: 13px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.btn-hero-outline:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+}
+
+.eng-metrics-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(10, 22, 40, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.eng-metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eng-metric-val {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #38bdf8;
+}
+
+.eng-metric-lbl {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.eng-metric-div {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 2. 17 SERVICES GRID */
+.eng-services-section {
+  padding: 6rem 0;
+  background: #081222;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.eng-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 5px 16px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.eng-section-title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.eng-section-subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  line-height: 1.65;
+}
+
+.eng-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.eng-service-card {
+  background: #0c1a2e;
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.eng-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-idx {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #475569;
+  letter-spacing: 0.05em;
+}
+
+.service-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.service-card-lead {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.service-card-desc {
+  font-size: 0.86rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* 3. TYPICAL DESIGN INPUTS SECTION */
+.eng-inputs-section {
+  padding: 6rem 0;
+  background: #060e1a;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.eng-inputs-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.input-category-card {
+  background: #0a1628;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.input-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.input-cat-num {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.input-cat-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.input-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-item-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-item-main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.input-name {
+  font-size: 0.94rem;
+  color: #e2e8f0;
+}
+
+.input-unit {
+  font-size: 0.78rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.input-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.eng-inputs-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 16px;
+  padding: 26px 32px;
+}
+
+.callout-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.callout-left h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.callout-left p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.btn-callout-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0284c7;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-callout-action:hover {
+  background: #0369a1;
+  transform: translateY(-2px);
+}
+
+/* 4. 6-STEP PROCESS */
 .engineering-process-section {
   position: relative;
   padding: 6rem 0 6.5rem;
@@ -27,7 +433,6 @@
   z-index: 2;
 }
 
-/* Glassmorphic Step Card */
 .engineering-step-card {
   background: rgba(12, 28, 54, 0.82);
   backdrop-filter: blur(16px);
@@ -68,7 +473,6 @@
   width: 6px;
 }
 
-/* Step Number Box */
 .step-number-box {
   width: 66px;
   height: 66px;
@@ -120,17 +524,32 @@
   margin-top: 4px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .eng-metrics-bar {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .eng-metric-div {
+    display: none;
+  }
+  .eng-inputs-callout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .callout-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
   .engineering-step-card {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 24px 20px;
+    gap: 16px;
   }
-
   .step-number-box {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     font-size: 1.25rem;
   }
 }

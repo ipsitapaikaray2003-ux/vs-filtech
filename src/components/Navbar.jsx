@@ -1,6 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Flame, Droplets, Layers, ArrowRight, Cpu } from 'lucide-react';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Wind, 
+  Layers, 
+  Settings, 
+  Cpu, 
+  ArrowRight, 
+  Sparkles,
+  ChevronRight
+} from 'lucide-react';
 import logoColor from '../assets/logo_transparent.png';
 import logoDark from '../assets/logo_dark_theme.png';
 import './Navbar.css';
@@ -59,7 +70,6 @@ const Navbar = () => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
     }
-    // 300ms grace period so cursor can transition smoothly across any gap without disappearing
     dropdownTimeoutRef.current = setTimeout(() => {
       setDropdownOpen(false);
     }, 300);
@@ -130,81 +140,180 @@ const Navbar = () => {
             </button>
             
             <div 
-              className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}
+              className={`dropdown-menu mega-menu ${dropdownOpen ? 'show' : ''}`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <Link to="/products/pulse-jet-filter" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-flame">
-                  <Flame size={18} />
+              <div className="mega-menu-grid">
+                {/* Column 1: Dust Collection Equipment */}
+                <div className="mega-menu-col">
+                  <div className="mega-col-header header-dust">
+                    <div className="mega-col-icon">
+                      <Wind size={16} />
+                    </div>
+                    <div>
+                      <span className="mega-col-title">Dust Collection</span>
+                      <span className="mega-col-subtitle">Systems & Equipment</span>
+                    </div>
+                  </div>
+                  <ul className="mega-col-links">
+                    <li>
+                      <Link to="/products/pulse-jet-bag-filters" onClick={closeMobileMenu}>
+                        Pulse Jet Bag Filters
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/reverse-air-bag-filters" onClick={closeMobileMenu}>
+                        Reverse Air Bag Filters
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/dust-collectors" onClick={closeMobileMenu}>
+                        Dust Collectors (Turnkey)
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/cartridge-filters" onClick={closeMobileMenu}>
+                        Cartridge Dust Collectors
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/cyclone-separators" onClick={closeMobileMenu}>
+                        Cyclone Separators
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Pulse Jet Bag Filters</span>
-                  <span className="dropdown-item-subtitle">Online & offline baghouses</span>
-                </div>
-              </Link>
 
-              <Link to="/products/dust-collector-system" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-layers">
-                  <Layers size={18} />
+                {/* Column 2: Filter Components */}
+                <div className="mega-menu-col">
+                  <div className="mega-col-header header-components">
+                    <div className="mega-col-icon">
+                      <Layers size={16} />
+                    </div>
+                    <div>
+                      <span className="mega-col-title">Filter Components</span>
+                      <span className="mega-col-subtitle">Media & Spares</span>
+                    </div>
+                  </div>
+                  <ul className="mega-col-links">
+                    <li>
+                      <Link to="/products/filter-bag" onClick={closeMobileMenu} className="highlighted-link">
+                        <span>Filter Bags</span>
+                        <span className="badge-flagship">Flagship</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/filter-cages" onClick={closeMobileMenu} className="highlighted-link">
+                        <span>Filter Cages</span>
+                        <span className="badge-flagship">Flagship</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/venturis" onClick={closeMobileMenu}>
+                        Venturis (Alu &amp; Steel)
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/snap-bands" onClick={closeMobileMenu}>
+                        Snap Bands &amp; Clamps
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/pulse-valves" onClick={closeMobileMenu}>
+                        Pulse &amp; Solenoid Valves
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Dust Collection Systems</span>
-                  <span className="dropdown-item-subtitle">Complete turnkey installations</span>
-                </div>
-              </Link>
 
-              <Link to="/products/filter-bags-cages" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-layers">
-                  <Layers size={18} />
+                {/* Column 3: Mechanical Equipment */}
+                <div className="mega-menu-col">
+                  <div className="mega-col-header header-mechanical">
+                    <div className="mega-col-icon">
+                      <Settings size={16} />
+                    </div>
+                    <div>
+                      <span className="mega-col-title">Mechanical</span>
+                      <span className="mega-col-subtitle">Discharge & Air Handling</span>
+                    </div>
+                  </div>
+                  <ul className="mega-col-links">
+                    <li>
+                      <Link to="/products/rotary-air-locks" onClick={closeMobileMenu}>
+                        Rotary Air Lock Valves
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/screw-conveyors" onClick={closeMobileMenu}>
+                        Screw Conveyors
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/id-fans" onClick={closeMobileMenu}>
+                        Heavy-Duty ID Fans
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/hopper-vibrators" onClick={closeMobileMenu}>
+                        Hopper Bin Vibrators
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/dampers" onClick={closeMobileMenu}>
+                        Butterfly &amp; Poppet Dampers
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Filter Bags & Cages</span>
-                  <span className="dropdown-item-subtitle">Replacement media & support cages</span>
-                </div>
-              </Link>
 
-              <Link to="/products/pleated-filter-bag" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-layers">
-                  <Layers size={18} />
+                {/* Column 4: Electrical & Automation */}
+                <div className="mega-menu-col">
+                  <div className="mega-col-header header-electrical">
+                    <div className="mega-col-icon">
+                      <Cpu size={16} />
+                    </div>
+                    <div>
+                      <span className="mega-col-title">Electrical &amp; Auto</span>
+                      <span className="mega-col-subtitle">Panels &amp; Instrumentation</span>
+                    </div>
+                  </div>
+                  <ul className="mega-col-links">
+                    <li>
+                      <Link to="/products/control-panels" onClick={closeMobileMenu}>
+                        Bag Filter Control Panels
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/control-panels" onClick={closeMobileMenu}>
+                        PLC &amp; VFD Automation Panels
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/sequential-pulse-controllers" onClick={closeMobileMenu}>
+                        Sequential Pulse Controllers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/dp-switches" onClick={closeMobileMenu}>
+                        DP Switches &amp; Transmitters
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Cartridge Filters</span>
-                  <span className="dropdown-item-subtitle">Compact high surface area solutions</span>
-                </div>
-              </Link>
+              </div>
 
-              <Link to="/products/cyclone-dust-collector" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-droplets">
-                  <Droplets size={18} />
-                </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Dampers & Accessories</span>
-                  <span className="dropdown-item-subtitle">Valves, airlocks & duct accessories</span>
-                </div>
-              </Link>
-
-              <Link to="/products/control-panels" className="dropdown-item" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-cpu">
-                  <Cpu size={18} />
-                </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">Control Panels & Electrical</span>
-                  <span className="dropdown-item-subtitle">HT, LT, MCC, VFD &amp; APFC Panels</span>
-                </div>
-              </Link>
-
-              <div className="dropdown-divider"></div>
-
-              <Link to="/products" className="dropdown-item dropdown-item-sub" onClick={closeMobileMenu}>
-                <div className="dropdown-item-icon icon-layers">
-                  <Layers size={16} />
-                </div>
-                <div className="dropdown-item-info">
-                  <span className="dropdown-item-title">All Products & Systems</span>
-                  <span className="dropdown-item-subtitle">View complete equipment catalog</span>
-                </div>
-              </Link>
+              {/* Bottom Mega Menu Action Bar */}
+              <div className="mega-menu-footer">
+                <Link to="/products" className="mega-footer-link" onClick={closeMobileMenu}>
+                  <span>Explore Complete Equipment Catalog (19+ Solutions)</span>
+                  <ChevronRight size={15} />
+                </Link>
+                <Link to="/engineering" className="mega-footer-eng" onClick={closeMobileMenu}>
+                  <Sparkles size={14} />
+                  <span>Engineering Sizing &amp; Design</span>
+                </Link>
+              </div>
             </div>
           </div>
 

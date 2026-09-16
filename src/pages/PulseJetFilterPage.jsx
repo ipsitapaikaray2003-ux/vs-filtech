@@ -168,35 +168,14 @@ const PulseJetFilterPage = () => {
       {/* Hero Section */}
       <section style={{ 
         position: 'relative',
-        minHeight: '520px',
+        minHeight: '480px',
         display: 'flex',
         alignItems: 'center',
-        padding: '120px 0 70px',
+        padding: '50px 0 70px',
         borderBottom: '1px solid #e2e8f0',
+        background: 'radial-gradient(1200px circle at 85% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 60%), radial-gradient(800px circle at 10% 80%, rgba(56, 189, 248, 0.06) 0%, transparent 50%), linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%)',
         overflow: 'hidden'
       }}>
-        {/* Full-bleed background image */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, overflow: 'hidden' }}>
-          <img 
-            src={heroImg} 
-            alt="Pulse Jet Bag Filters Background" 
-            style={{ 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover', 
-              objectPosition: 'center right',
-              filter: 'brightness(1.06) contrast(1.05) saturate(1.15)' 
-            }} 
-          />
-          {/* Subtle soft white scrim so the photo is clearly visible while keeping dark text readable */}
-          <div style={{ 
-            position: 'absolute', 
-            inset: 0, 
-            background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.5) 45%, rgba(255, 255, 255, 0.28) 100%)', 
-            pointerEvents: 'none' 
-          }} />
-        </div>
-
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '50px', alignItems: 'center' }}>
             <div style={{ flex: '1 1 540px' }}>
@@ -225,8 +204,7 @@ const PulseJetFilterPage = () => {
                 fontWeight: '800',
                 color: '#0f172a',
                 lineHeight: '1.15',
-                marginBottom: '20px',
-                textShadow: '0 2px 16px rgba(255, 255, 255, 0.95), 0 1px 4px #ffffff'
+                marginBottom: '20px'
               }}>
                 Pulse Jet <span style={{ color: '#0284c7' }}>Bag Filters</span>
               </h1>
@@ -234,10 +212,9 @@ const PulseJetFilterPage = () => {
               <p style={{
                 fontSize: '1.15rem',
                 lineHeight: '1.7',
-                color: '#1e293b',
+                color: '#334155',
                 marginBottom: '32px',
-                fontWeight: '500',
-                textShadow: '0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px #ffffff'
+                fontWeight: '450'
               }}>
                 VS Filtech designs, manufactures, erects, and commissions heavy-duty industrial Pulse Jet Bag Filters engineered for continuous 24/7 dust extraction. Built with aerodynamic gas distribution, top-access clean-air plenum, and guaranteed emission levels below &lt;10 mg/Nm³.
               </p>

@@ -1,112 +1,91 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowRight, 
+  Linkedin, 
+  Twitter, 
+  Facebook,
+  ExternalLink,
+  ShieldCheck
+} from 'lucide-react';
 import logoImg from '../assets/logo_dark_theme.png';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer style={{ background: 'var(--navy-900, #0a1628)', color: '#ffffff' }}>
+    <footer className="footer-root">
+      {/* Top Accent Gradient Line */}
+      <div className="footer-glow-line" />
 
       {/* Top CTA Band */}
-      <div style={{
-        borderBottom: '1px solid rgba(255,255,255,0.07)',
-        padding: '40px 0'
-      }}>
-        <div className="container" style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          gap: '24px',
-          flexWrap: 'wrap'
-        }}>
-          <div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: '800', fontFamily: 'var(--font-heading)', marginBottom: '6px' }}>
+      <div className="footer-cta-band">
+        <div className="container footer-cta-container">
+          <div className="footer-cta-text">
+            <h3 className="footer-cta-title">
               Ready to discuss your dust collection requirement?
             </h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.95rem' }}>
-              Get a technical quote — share your airflow, dust type, and temperature.
+            <p className="footer-cta-subtitle">
+              Get a technical quote — share your airflow, dust type, and temperature with our engineering team.
             </p>
           </div>
-          <Link to="/contact" style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            padding: '0.85rem 2rem',
-            background: 'var(--accent-gradient)',
-            color: '#fff',
-            fontFamily: 'var(--font-heading)',
-            fontWeight: '700',
-            fontSize: '0.95rem',
-            borderRadius: '999px',
-            textDecoration: 'none',
-            boxShadow: '0 8px 30px rgba(37,99,235,0.5)',
-            transition: 'all 0.3s ease',
-            whiteSpace: 'nowrap',
-            flexShrink: 0
-          }}>
-            Contact Us <ArrowRight size={17} />
+          <Link to="/contact" className="footer-cta-btn" aria-label="Contact VS Filtech">
+            <span>Contact Us</span>
+            <ArrowRight size={18} />
           </Link>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="container" style={{ padding: '60px 2rem 40px' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '2fr 1fr 1fr 1.4fr',
-          gap: '48px',
-          marginBottom: '48px'
-        }}>
+      {/* Main Footer Content */}
+      <div className="container footer-main-container" style={{ paddingTop: '55px', paddingBottom: '35px' }}>
+        <div className="footer-grid">
 
-          {/* Brand */}
-          <div>
-            <Link to="/" style={{ display: 'inline-block', marginBottom: '20px' }}>
-              <img src={logoImg} alt="VS Filtech - Engineering A Cleaner Tomorrow" style={{ height: '54px', width: 'auto', objectFit: 'contain' }} />
+          {/* Column 1: Brand Information */}
+          <div className="footer-brand-col">
+            <Link to="/" className="footer-logo-link" aria-label="VS Filtech Home">
+              <img 
+                src={logoImg} 
+                alt="VS Filtech - Engineering A Cleaner Tomorrow" 
+                className="footer-logo-image" 
+              />
             </Link>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>
-              Design and manufacturer of industrial bag filters, dust collectors, and complete air filtration systems. Trusted across cement, steel, food, and chemical industries.
+            <p className="footer-brand-desc">
+              Turnkey design and manufacturer of industrial pulse jet bag filters, dust collectors, cages, filter bags, and automated control systems. Trusted across cement, steel, power, and chemical industries.
             </p>
-            <div style={{ display: 'flex', gap: '10px' }}>
-              {[Facebook, Linkedin, Twitter].map((Icon, idx) => (
-                <div key={idx} style={{
-                  width: '36px', height: '36px',
-                  borderRadius: '8px',
-                  background: 'rgba(255,255,255,0.07)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  color: 'rgba(255,255,255,0.6)'
-                }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(37,99,235,0.3)'; e.currentTarget.style.color = '#60a5fa'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.color = 'rgba(255,255,255,0.6)'; }}
+            <div className="footer-social-row">
+              {[
+                { Icon: Facebook, label: 'Facebook', href: '#' },
+                { Icon: Linkedin, label: 'LinkedIn', href: '#' },
+                { Icon: Twitter, label: 'Twitter', href: '#' }
+              ].map(({ Icon, label, href }, idx) => (
+                <a 
+                  key={idx} 
+                  href={href} 
+                  aria-label={label}
+                  className="footer-social-icon"
                 >
-                  <Icon size={16} />
-                </div>
+                  <Icon size={18} />
+                </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 style={{ fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '16px' }}>
-              Quick Links
-            </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {/* Column 2: Quick Links */}
+          <div className="footer-col">
+            <h4 className="footer-col-title">Quick Links</h4>
+            <ul className="footer-col-list">
               {[
                 { label: 'Home', to: '/' },
                 { label: 'About Us', to: '/about' },
-                { label: 'Services', to: '/services' },
-                { label: 'Gallery', to: '/gallery' },
-                { label: 'Contact', to: '/contact' }
+                { label: 'Technical Engineering', to: '/engineering' },
+                { label: 'Retrofit & Upgrades', to: '/retrofit' },
+                { label: 'Industries Served', to: '/industries' },
+                { label: 'Project Gallery', to: '/projects' },
+                { label: 'Contact & RFQ', to: '/contact' }
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.to} style={{
-                    color: 'rgba(255,255,255,0.6)',
-                    fontSize: '0.9rem',
-                    textDecoration: 'none',
-                    transition: 'color 0.2s ease'
-                  }}
-                    onMouseEnter={e => e.currentTarget.style.color = '#60a5fa'}
-                    onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
-                  >
+                  <Link to={link.to} className="footer-nav-link">
                     {link.label}
                   </Link>
                 </li>
@@ -114,28 +93,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Products */}
-          <div>
-            <h4 style={{ fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '16px' }}>
-              Products
-            </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {/* Column 3: Equipment & Products */}
+          <div className="footer-col">
+            <h4 className="footer-col-title">Products</h4>
+            <ul className="footer-col-list">
               {[
-                { label: 'Pulse Jet Bag Filters', to: '/products/pulse-jet-filter' },
-                { label: 'Filter Bags', to: '/products/filter-bags-cages' },
-                { label: 'Cages & Venturis', to: '/products/filter-bags-cages' },
-                { label: 'Control Panels', to: '/products/control-panels' },
-                { label: 'All Products', to: '/products' }
+                { label: 'Pulse Jet Bag Filters', to: '/products/pulse-jet-bag-filters' },
+                { label: 'Filter Bags (Flagship)', to: '/products/filter-bag', isSpecial: true },
+                { label: 'Filter Cages (Flagship)', to: '/products/filter-cages', isSpecial: true },
+                { label: 'Dust Collectors', to: '/products/dust-collectors' },
+                { label: 'Cartridge Collectors', to: '/products/cartridge-filters' },
+                { label: 'Control & VFD Panels', to: '/products/control-panels' },
+                { label: 'All Equipment Catalog', to: '/products' }
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.to} style={{
-                    color: 'rgba(255,255,255,0.6)',
-                    fontSize: '0.9rem',
-                    textDecoration: 'none',
-                    transition: 'color 0.2s ease'
-                  }}
-                    onMouseEnter={e => e.currentTarget.style.color = '#60a5fa'}
-                    onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+                  <Link 
+                    to={link.to} 
+                    className={`footer-nav-link ${link.isSpecial ? 'footer-special-link' : ''}`}
                   >
                     {link.label}
                   </Link>
@@ -144,62 +118,59 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 style={{ fontSize: '0.78rem', fontWeight: '700', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '16px' }}>
-              Contact
-            </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                <MapPin size={15} style={{ color: '#60a5fa', flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', lineHeight: '1.5' }}>
-                  Ghaziabad, Uttar Pradesh, India
+          {/* Column 4: Contact Information */}
+          <div className="footer-col footer-contact-col">
+            <h4 className="footer-col-title">Contact</h4>
+            <ul className="footer-contact-list">
+              <li className="footer-contact-item">
+                <MapPin size={18} className="footer-item-icon" />
+                <span className="footer-item-text">
+                  Pawan Puri Industrial Area, Muradnagar, Ghaziabad, Uttar Pradesh — 201206, India
                 </span>
               </li>
-              <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                <Phone size={15} style={{ color: '#60a5fa', flexShrink: 0 }} />
-                <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', textDecoration: 'none' }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#60a5fa'}
-                  onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+              <li className="footer-contact-item">
+                <Phone size={18} className="footer-item-icon" />
+                <a 
+                  href="https://wa.me/911234567890" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="footer-item-link"
                 >
                   Call / WhatsApp Support
                 </a>
               </li>
-              <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                <Mail size={15} style={{ color: '#60a5fa', flexShrink: 0 }} />
-                <a href="mailto:sales@vsfiltech.com" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem', textDecoration: 'none' }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#60a5fa'}
-                  onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+              <li className="footer-contact-item">
+                <Mail size={18} className="footer-item-icon" />
+                <a 
+                  href="mailto:sales@vsfiltech.com" 
+                  className="footer-item-link"
                 >
                   sales@vsfiltech.com
                 </a>
               </li>
             </ul>
           </div>
+
         </div>
 
-        {/* Divider */}
-        <div style={{ height: '1px', background: 'rgba(255,255,255,0.07)', marginBottom: '28px' }} />
-
-        {/* Bottom */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '16px',
-          flexWrap: 'wrap'
-        }}>
-          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.83rem' }}>
-            © {new Date().getFullYear()} VS Filtech — Industrial Bag Filter Manufacturers. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="footer-bottom-bar">
+          <p className="footer-copyright">
+            © {new Date().getFullYear()} VS Filtech — Industrial Dust Collection Systems &amp; Bag Filter Manufacturers. All rights reserved.
           </p>
-          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.83rem' }}>
+          <p className="footer-credits">
             Designed by{' '}
-            <a href="https://www.qubnixtechnology.com/" target="_blank" rel="noopener noreferrer"
-              style={{ color: '#60a5fa', textDecoration: 'none' }}>
+            <a 
+              href="https://www.qubnixtechnology.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="footer-credits-link"
+            >
               Qubnix Technology
             </a>
           </p>
         </div>
+
       </div>
     </footer>
   );

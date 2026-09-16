@@ -175,11 +175,19 @@
   grid-template-columns: 1.15fr 1fr;
   gap: 3.5rem;
   align-items: center;
+  min-width: 0;
+}
+
+.ht-split-grid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .ht-media-col {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* View Switcher */
@@ -194,7 +202,15 @@
   border: 1px solid rgba(255, 152, 0, 0.2);
   backdrop-filter: blur(14px);
   width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ht-view-toggle-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .ht-toggle-btn {
@@ -335,6 +351,12 @@
   align-items: center;
   gap: 1rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.ht-image-overlay-card > div {
+  min-width: 0;
+  flex: 1;
 }
 
 .ht-overlay-icon {
@@ -347,12 +369,16 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 0.15rem;
+  line-height: 1.25;
 }
 
 .ht-image-overlay-card p {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 /* Interactive Thumbnails Row */
@@ -1135,10 +1161,92 @@
   }
 
   .ht-featured-img {
-    height: 380px;
+    height: 340px;
+  }
+
+  .ht-view-toggle-bar {
+    width: 100%;
+    overflow-x: auto;
+    gap: 0.35rem;
+    padding: 0.3rem;
+  }
+
+  .ht-toggle-btn {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .ht-image-overlay-card {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 0.75rem 0.85rem;
+    gap: 0.65rem;
+    border-radius: 12px;
+  }
+
+  .ht-overlay-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ht-image-overlay-card h4 {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .ht-image-overlay-card p {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .ht-thumbnails-row {
+    gap: 0.45rem;
+  }
+
+  .ht-thumb-item {
+    padding: 0.35rem 0.45rem;
+    gap: 0.4rem;
+  }
+
+  .ht-thumb-item img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ht-thumb-item span {
+    font-size: 0.72rem;
   }
 
   .ht-rfq-card {
     padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ht-featured-img {
+    height: 280px;
+  }
+
+  .ht-image-overlay-card {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .ht-overlay-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ht-image-overlay-card h4 {
+    font-size: 0.8rem;
+  }
+
+  .ht-image-overlay-card p {
+    font-size: 0.68rem;
   }
 }

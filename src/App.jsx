@@ -20,6 +20,8 @@ import ProjectsPage from './pages/ProjectsPage';
 import ProductPoly from './pages/ProductPoly';
 import ProductHighTemp from './pages/ProductHighTemp';
 import FilterBagPage from './pages/FilterBagPage';
+import FilterCagesPage from './pages/FilterCagesPage';
+import VenturiPage from './pages/VenturiPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
@@ -49,9 +51,24 @@ function App() {
             <Route path="/products/filter-bags-cages" element={<FilterBagsCagesPage />} />
             <Route path="/products/control-panels" element={<ControlPanelsPage />} />
             
+            {/* Dedicated Flagship Filter Bags Page */}
             <Route path="/products/filter-bag" element={<FilterBagPage />} />
+            <Route path="/products/filter-bags" element={<FilterBagPage />} />
             <Route path="/products/bag-filter" element={<FilterBagPage />} />
             <Route path="/products/filter-bag-manufacturers" element={<FilterBagPage />} />
+
+            {/* Dedicated Flagship Filter Cages Page */}
+            <Route path="/products/filter-cages" element={<FilterCagesPage />} />
+            <Route path="/products/filter-cage" element={<FilterCagesPage />} />
+            <Route path="/products/dust-collector-filter-cages" element={<FilterCagesPage />} />
+
+            {/* Dedicated Flagship Supersonic Venturis Page */}
+            <Route path="/products/venturis" element={<VenturiPage />} />
+            <Route path="/products/venturi" element={<VenturiPage />} />
+            <Route path="/products/filter-cage-venturi" element={<VenturiPage />} />
+            <Route path="/products/venturi-nozzles" element={<VenturiPage />} />
+            <Route path="/products/venturi-nozzle" element={<VenturiPage />} />
+            
             <Route path="/products/polypropylene" element={<ProductPoly />} />
             <Route path="/products/polypropylene-filter-bag" element={<ProductPoly />} />
             <Route path="/polypropylene-filter-bag" element={<ProductPoly />} />

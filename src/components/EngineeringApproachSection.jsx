@@ -77,14 +77,39 @@ const EngineeringApproachSection = () => {
       style={{
         position: 'relative',
         padding: '4.5rem 0',
-        backgroundImage: `url(${crystalClearPlantBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 38%',
-        backgroundRepeat: 'no-repeat',
         borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
         overflow: 'hidden'
       }}
     >
+      {/* Blurred Industrial Background Layer */}
+      <div 
+        style={{
+          position: 'absolute',
+          top: '-15px',
+          left: '-15px',
+          right: '-15px',
+          bottom: '-15px',
+          backgroundImage: `url(${crystalClearPlantBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 38%',
+          backgroundRepeat: 'no-repeat',
+          filter: 'blur(5px)',
+          transform: 'scale(1.03)',
+          zIndex: 1
+        }}
+      />
+
+      {/* Subtle Light Contrast Overlay */}
+      <div 
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'rgba(255, 255, 255, 0.10)',
+          zIndex: 1,
+          pointerEvents: 'none'
+        }}
+      />
+
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
         {/* Section Header - Compact Sleek Box */}

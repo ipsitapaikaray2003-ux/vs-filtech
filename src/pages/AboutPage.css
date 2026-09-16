@@ -860,7 +860,7 @@
 
 .tech-modes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 26px;
   margin-bottom: 35px;
 }
@@ -954,6 +954,11 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.gas-distribution-card .gas-dist-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .gas-distribution-card .gas-dist-content h3 {
@@ -1453,18 +1458,67 @@
   .stats-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .gas-distribution-card-light {
+  .gas-distribution-card {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    padding: 28px 24px;
+    gap: 20px;
   }
-  .gas-dist-badge {
-    align-self: center;
+  .gas-distribution-card .gas-dist-content {
+    width: 100%;
+  }
+  .gas-distribution-card .gas-dist-badge {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
   }
 }
 
 @media (max-width: 640px) {
   .stats-cards-grid {
     grid-template-columns: 1fr;
+  }
+  .gas-distribution-card {
+    padding: 22px 18px;
+    gap: 16px;
+    border-radius: 16px;
+  }
+  .gas-distribution-card .gas-dist-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+  }
+  .gas-distribution-card .gas-dist-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .gas-distribution-card .gas-dist-content h3 {
+    font-size: 1.18rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+  .gas-distribution-card .gas-dist-content p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .gas-distribution-card .gas-dist-badge {
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .tech-modes-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .luxury-tech-mode-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+  .luxury-tech-mode-card .tech-mode-title {
+    font-size: 1.25rem;
   }
   .about-hero-plant-img {
     height: 280px;

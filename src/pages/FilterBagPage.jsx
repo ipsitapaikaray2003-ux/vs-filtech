@@ -20,19 +20,19 @@ import {
 } from 'lucide-react';
 import './FilterBagPage.css';
 
-// Product images downloaded from AKJ page & HD industrial assets
-import filterBagMainImg from '../assets/filter_bag_main.jpg';
+// Product images - Crystal Clear HD Industrial Assets
+import filterBagMainImg from '../assets/filter_bag_hd.jpg';
 import filterBagHdImg from '../assets/filter_bag_hd.jpg';
 import pageBgImg from '../assets/filter_bag_page_bg.jpg';
 import plantStitchingImg from '../assets/slide_new_4.jpg';
-import dustCollectorImg from '../assets/dust_collector_system.webp';
-import idFanImg from '../assets/id_fan.jpg';
-import cycloneImg from '../assets/cyclone_dust_collector.webp';
-import pleatedBagImg from '../assets/pleated_filter_bag.jpeg';
-import filterCageImg from '../assets/filter_cage.webp';
-import venturiImg from '../assets/metal_venturi.jpg';
-import solenoidValveImg from '../assets/solenoid_valve.webp';
-import rotaryAirLockImg from '../assets/rotary_air_lock.webp';
+import dustCollectorImg from '../assets/factory_bagfilter_plant_hd.jpg';
+import idFanImg from '../assets/id_fan_hd.jpg';
+import cycloneImg from '../assets/cyclone_separator_hd.jpg';
+import pleatedBagImg from '../assets/pleated_cartridge_hd.jpg';
+import filterCageImg from '../assets/filter_cage_hd.jpg';
+import venturiImg from '../assets/venturi_nozzle_hd.jpg';
+import solenoidValveImg from '../assets/solenoid_valve_hd.jpg';
+import rotaryAirLockImg from '../assets/rotary_airlock_hd.jpg';
 
 // Features from AKJ page
 const keyFeatures = [
@@ -43,6 +43,147 @@ const keyFeatures = [
   'Easy snap-band installation and tubesheet replacement',
   'Long service life and significantly reduced maintenance costs',
   'Suitable for both gas emission control and liquid clarification'
+];
+
+// Material Comparison Table (Requested by User)
+const materialComparisonData = [
+  {
+    material: 'Polyester',
+    application: 'General dust collection',
+    temp: '130°C - 150°C',
+    features: 'High mechanical strength, cost-effective, singed/glazed/antistatic/OWR finishes',
+    badge: 'badge-cyan'
+  },
+  {
+    material: 'PPS (Polyphenylene Sulfide)',
+    application: 'High-temperature / chemical applications',
+    temp: '190°C continuous',
+    features: 'Exceptional acid resistance, coal-fired boiler flue gas, SOx chemical resistance',
+    badge: 'badge-blue'
+  },
+  {
+    material: 'Aramid (Nomex)',
+    application: 'High-temperature applications',
+    temp: '200°C - 220°C',
+    features: 'Superior thermal endurance, flame retardant, asphalt plants & metallurgical foundries',
+    badge: 'badge-amber'
+  },
+  {
+    material: 'PTFE (Teflon)',
+    application: 'Aggressive chemical applications',
+    temp: '240°C - 260°C',
+    features: 'Universal pH 0-14 chemical inertness, municipal incinerators, chemical reactor off-gas',
+    badge: 'badge-rose'
+  },
+  {
+    material: 'Fiberglass',
+    application: 'High-temperature applications',
+    temp: '260°C continuous',
+    features: 'Woven filament with acid-resistant silicone/PTFE finish, zero stretch, cement kilns',
+    badge: 'badge-purple'
+  },
+  {
+    material: 'ePTFE membrane',
+    application: 'Low-emission applications',
+    temp: 'Base media rating',
+    features: 'Surface filtration stopping sub-micron dust, ultra-low emissions (< 5 mg/Nm³)',
+    badge: 'badge-emerald'
+  },
+  {
+    material: 'Other Media',
+    application: 'Other application-specific media',
+    temp: 'Custom',
+    features: 'Polypropylene (moisture/alkali), P84 Polyimide (tri-lobal high surface area), Acrylic',
+    badge: 'badge-cyan'
+  }
+];
+
+// Available Configurations (Requested by User)
+const availableConfigurations = [
+  {
+    parameter: 'Diameter',
+    value: '100 / 120 / 130 / 150 / 160 / 180 mm and customized',
+    description: 'Precision sized to OEM tubesheet cell plates with strict ±0.2mm tolerance.'
+  },
+  {
+    parameter: 'Length',
+    value: 'As per equipment requirement (1.0m to 10.0m+)',
+    description: 'Custom engineered lengths for pulse jet, shaker, and reverse air baghouses.'
+  },
+  {
+    parameter: 'Finish',
+    value: 'Singed / Glazed / Calendared / Heat-Set',
+    description: 'Thermal surface singeing prevents fiber shedding and optimizes dust cake release.'
+  },
+  {
+    parameter: 'Construction',
+    value: 'Needle felt / Scrim supported / Woven filament',
+    description: 'Reinforced with high-denier woven scrims preventing elongation and bag collapse.'
+  },
+  {
+    parameter: 'Membrane',
+    value: 'ePTFE membrane laminated available',
+    description: 'Microporous fluoropolymer surface stopping PM2.5 and sticky sub-micron dust.'
+  },
+  {
+    parameter: 'Top Cuff Fitting',
+    value: 'Spring steel snap band, raw top, cord collar, ring top',
+    description: 'Toolless, airtight mechanical seal verifying zero particle bypass.'
+  }
+];
+
+// Filter Bag Applications (10 Core Industries Requested by User)
+const filterBagApplications = [
+  {
+    name: 'Cement',
+    desc: 'Kiln exhaust, raw mill, coal mill, clinker cooler, and bulk storage silo venting.',
+    media: 'Fiberglass with PTFE, Nomex, PTFE Membrane'
+  },
+  {
+    name: 'Steel',
+    desc: 'Blast furnace, induction furnaces, secondary fume extraction, sintering, and rolling mills.',
+    media: 'Polyester Needlefelt with OWR, Nomex'
+  },
+  {
+    name: 'Foundry',
+    desc: 'Return sand reclamation, shakeout lines, shot blasting, and cupola furnace melting.',
+    media: 'High-Density Polyester, Nomex'
+  },
+  {
+    name: 'EAF',
+    desc: 'Electric Arc Furnace 4th-hole direct evacuation, canopy hood extraction, and ladle refining.',
+    media: 'High-Temp Nomex, Woven Fiberglass, PTFE'
+  },
+  {
+    name: 'Aluminium',
+    desc: 'Potline fluoride dry scrubbers, dross recycling, holding furnaces, and anode baking.',
+    media: 'Polyester Needlefelt, PTFE Membrane'
+  },
+  {
+    name: 'Power',
+    desc: 'Pulverized coal boilers, biomass boilers, stoker furnaces, and fly ash pneumatic conveying.',
+    media: 'PPS (Ryton), P84 Polyimide, PTFE Membrane'
+  },
+  {
+    name: 'Rice Mills',
+    desc: 'Paddy husk-fired boilers, grain elevators, rice hulling, cleaning, and bran polishing.',
+    media: 'Glazed Polyester, Antistatic Conductive'
+  },
+  {
+    name: 'Chemical',
+    desc: 'Pigment dryers, acid reactor off-gases, fertilizer granulation, and powder handling.',
+    media: '100% PTFE, Polypropylene, PPS'
+  },
+  {
+    name: 'Minerals',
+    desc: 'Lime kilns, gypsum calcining, clay drying, silica grinding, and aggregate processing.',
+    media: 'Polyester Needlefelt, Acrylic, Nomex'
+  },
+  {
+    name: 'Food Processing',
+    desc: 'Milk powder spray dryers, starch, flour handling, sugar processing, and cereal silos.',
+    media: 'Certified Food-Grade Polyester with ePTFE'
+  }
 ];
 
 // Specifications table from AKJ page
@@ -138,6 +279,8 @@ const promoProducts = [
   {
     id: 'dust-collector-system',
     title: 'Dust Collector System',
+    category: 'Dust Collection Equipment',
+    isStudio: false,
     img: dustCollectorImg,
     shortDesc: 'Implementing advanced dust collector systems to enhance workplace safety and environmental responsibility.',
     fullDesc: 'VS Filtech designs, manufactures, and commissions industrial pulse-jet dust collector systems. Engineered to handle large volumetric gas flows with continuous automated cleaning, heavy-duty tubesheets, and modular casing for seamless plant expansion.',
@@ -147,6 +290,8 @@ const promoProducts = [
   {
     id: 'id-fans',
     title: 'ID Fans (Induced Draft Fans)',
+    category: 'Mechanical Equipment',
+    isStudio: true,
     img: idFanImg,
     shortDesc: 'Deploying efficient ID fans for optimal ventilation and process control in industrial operations.',
     fullDesc: 'High-efficiency heavy-duty industrial Induced Draft (ID) fans precision balanced to ISO 1940 standards. Designed to sustain negative draft across complex duct networks, cyclones, and baghouse compartments under extreme dust loading.',
@@ -156,6 +301,8 @@ const promoProducts = [
   {
     id: 'cyclone-dust-collector',
     title: 'Cyclone Dust Collector',
+    category: 'Dust Collection Equipment',
+    isStudio: true,
     img: cycloneImg,
     shortDesc: 'Utilizing cyclone dust collectors for effective particulate separation and cleaner air in industrial environments.',
     fullDesc: 'Mechanical centrifugal separators installed as effective pre-cleaners upstream of baghouses. Captures abrasive and coarse particles (above 10 microns), significantly decreasing dust loading on fabric filter bags and extending bag lifecycle by up to 2.5x.',
@@ -165,6 +312,8 @@ const promoProducts = [
   {
     id: 'filter-bag',
     title: 'Industrial Filter Bags',
+    category: 'Filter Components',
+    isStudio: true,
     img: filterBagMainImg,
     shortDesc: 'Enhancing air quality with high-performance filter bags in industrial filtration systems.',
     fullDesc: 'Fabricated using automated multi-needle chain stitching with virgin non-woven needlefelts and woven scrim reinforcements. Engineered with thermal surface singeing and heat-setting to guarantee zero fiber shedding and high particulate release during pulse cycles.',
@@ -174,6 +323,8 @@ const promoProducts = [
   {
     id: 'pleated-filter-bag',
     title: 'Pleated Filter Bag',
+    category: 'Filter Components',
+    isStudio: true,
     img: pleatedBagImg,
     shortDesc: 'Improving filtration efficiency with pleated filter bags for enhanced air quality in industrial applications.',
     fullDesc: 'Molded pleated cartridges that retrofit directly into existing tubesheets without modifying the collector cage layout. Increases available filtration area by 200% to 300%, cutting can velocity in half and resolving severe capacity bottlenecks instantly.',
@@ -183,6 +334,8 @@ const promoProducts = [
   {
     id: 'filter-cages',
     title: 'Filter Cages (Support Cages)',
+    category: 'Filter Components',
+    isStudio: true,
     img: filterCageImg,
     shortDesc: 'Supporting filter bag stability and performance with durable filter cages in industrial filtration systems.',
     fullDesc: 'Precision-welded 8, 10, 12, 16, 20, and 24-wire support cages that keep filter bags open against inward gas pressure. Constructed on automated robotic cage welding machines with zero burrs or sharp points that could abrade or puncture the filter fabric.',
@@ -192,6 +345,8 @@ const promoProducts = [
   {
     id: 'filter-cage-venturi',
     title: 'Filter Cage Venturi',
+    category: 'Filter Components',
+    isStudio: true,
     img: venturiImg,
     shortDesc: 'Utilizing Filter Cage Venturi for efficient air movement and ventilation in industrial applications.',
     fullDesc: 'Aerodynamically profiled cast aluminum and spun steel venturies integrated at the top of filter cages. Induces a secondary volume of clean air up to 4x the primary compressed air pulse, maximizing shockwave propagation down the entire length of the bag.',
@@ -201,6 +356,8 @@ const promoProducts = [
   {
     id: 'solenoid-valve',
     title: 'Pulse Jet Solenoid Valve',
+    category: 'Filter Components',
+    isStudio: true,
     img: solenoidValveImg,
     shortDesc: 'Controlling fluid or gas flow with precision using solenoid valves in industrial systems.',
     fullDesc: 'High-speed diaphragm pulse valves delivering millisecond opening times for rapid compressed air releases into the blowpipes. Designed with molded Buna/Viton diaphragms rated for over 1 million pulsing cycles without pressure leakage.',
@@ -210,6 +367,8 @@ const promoProducts = [
   {
     id: 'rotary-air-lock',
     title: 'Rotary Air Lock Valve',
+    category: 'Mechanical Equipment',
+    isStudio: true,
     img: rotaryAirLockImg,
     shortDesc: 'Ensuring efficient material handling and airlock sealing with rotary air locks in industrial processes.',
     fullDesc: 'Precision-machined rotary valves installed beneath dust collector hoppers. Discharges collected particulate continuously into bins or conveyors while preventing ambient air from entering the negative pressure baghouse casing.',
@@ -292,11 +451,11 @@ _Sent via vsfiltech.com_`;
           </div>
 
           <h1 className="fb-hero-title">
-            Filter Bag Manufacturers, Suppliers | <span className="text-gradient">Bag Filter Manufacturers in India</span>
+            Industrial Filter Bags | <span className="text-gradient">Engineered for Reliable Dust Collection &amp; Long Service Life</span>
           </h1>
 
           <p className="fb-hero-subtitle">
-            VS Filtech is one of the trusted filter bags manufacturers, known for providing durable and high-performance industrial filtration and dust extraction systems for industrial applications across India.
+            Filter bags engineered for reliable dust collection and long service life. Available in Polyester Needle Felt, PPS, Aramid, Fiberglass, PTFE, ePTFE membrane laminated fabrics, and other application-specific media.
           </p>
 
           <div className="fb-hero-cta-row">
@@ -486,6 +645,112 @@ _Sent via vsfiltech.com_`;
         </div>
       </section>
 
+      {/* 2B. AVAILABLE CONFIGURATIONS SHOWCASE */}
+      <section className="fb-config-section">
+        <div className="container">
+          <div className="fb-section-header text-center">
+            <div className="fb-section-tag">ENGINEERED FABRICATION</div>
+            <h2 className="fb-section-title">Available Filter Bag Configurations</h2>
+            <p className="fb-section-subtitle">
+              Manufactured with precise tolerances matching OEM cell plates across global baghouse designs.
+            </p>
+          </div>
+
+          <div className="fb-config-grid">
+            {availableConfigurations.map((cfg, idx) => (
+              <div key={idx} className="fb-config-card">
+                <span className="fb-config-label">{cfg.parameter}</span>
+                <h3 className="fb-config-val">{cfg.value}</h3>
+                <p className="fb-config-desc">{cfg.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2C. MATERIAL VS. TYPICAL APPLICATION COMPARISON TABLE */}
+      <section className="fb-material-table-section">
+        <div className="container">
+          <div className="fb-section-header text-center">
+            <div className="fb-section-tag">MEDIA SELECTION GUIDE</div>
+            <h2 className="fb-section-title">Filter Bag Media vs. Typical Applications</h2>
+            <p className="fb-section-subtitle">
+              Select the optimal filtration media based on process gas chemistry, operating temperature, and emission targets.
+            </p>
+          </div>
+
+          <div className="fb-table-responsive">
+            <table className="fb-material-table">
+              <thead>
+                <tr>
+                  <th style={{ width: '22%' }}>Material</th>
+                  <th style={{ width: '28%' }}>Typical Application</th>
+                  <th style={{ width: '18%' }}>Max Continuous Temp</th>
+                  <th style={{ width: '32%' }}>Engineering &amp; Chemical Properties</th>
+                </tr>
+              </thead>
+              <tbody>
+                {materialComparisonData.map((row, idx) => (
+                  <tr key={idx}>
+                    <td className="mat-col-name">
+                      <strong>{row.material}</strong>
+                    </td>
+                    <td className="mat-col-app">{row.application}</td>
+                    <td className="mat-col-temp">
+                      <span className="temp-badge">{row.temp}</span>
+                    </td>
+                    <td className="mat-col-desc">{row.features}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="fb-table-callout">
+            <div className="callout-icon">
+              <ShieldCheck size={22} style={{ color: '#38bdf8' }} />
+            </div>
+            <div className="callout-text">
+              <strong>Need application-specific fabric matching or baghouse retrofits?</strong>
+              <span>Our filtration engineers evaluate your particulate bulk density, moisture levels, acid dew points, and gas velocities to determine the optimum air-to-cloth ratio and media selection.</span>
+            </div>
+            <a href="#filter-bag-rfq" className="btn-table-cta">
+              <span>Consult Engineering Desk</span>
+              <ArrowRight size={15} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 2D. FILTER BAG APPLICATIONS (10 CORE INDUSTRIES) */}
+      <section className="fb-applications-section">
+        <div className="container">
+          <div className="fb-section-header text-center">
+            <div className="fb-section-tag">CORE INDUSTRY EXPERTISE</div>
+            <h2 className="fb-section-title">Filter Bag Applications</h2>
+            <p className="fb-section-subtitle">
+              Engineered fabric media customized for severe thermal, abrasive, and corrosive operating environments across India.
+            </p>
+          </div>
+
+          <div className="fb-apps-grid">
+            {filterBagApplications.map((app, idx) => (
+              <div key={idx} className="fb-app-card">
+                <div className="fb-app-card-header">
+                  <span className="app-card-idx">{(idx + 1).toString().padStart(2, '0')}</span>
+                  <h3 className="app-card-title">{app.name}</h3>
+                </div>
+                <p className="app-card-desc">{app.desc}</p>
+                <div className="app-card-media-rec">
+                  <span className="rec-lbl">Recommended Media:</span>
+                  <strong className="rec-val">{app.media}</strong>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 3. FILTER BAG VARIETIES */}
       <section className="fb-varieties-section">
         <div className="container">
@@ -559,9 +824,17 @@ _Sent via vsfiltech.com_`;
           <div className="promo-cards-grid">
             {promoProducts.map((prod) => (
               <div key={prod.id} className="promo-card">
-                <Link to={`/products/${prod.id}`} className="promo-img-wrapper" style={{ display: 'block', textDecoration: 'none' }}>
-                  <img src={prod.img} alt={prod.title} className="promo-img" />
-                  <div className="promo-overlay-badge">Industrial Spares</div>
+                <Link 
+                  to={`/products/${prod.id}`} 
+                  className={`promo-img-wrapper ${prod.isStudio ? 'promo-img-studio' : ''}`} 
+                  style={{ display: 'block', textDecoration: 'none' }}
+                >
+                  <img 
+                    src={prod.img} 
+                    alt={prod.title} 
+                    className={`promo-img ${prod.isStudio ? 'promo-img-contain' : ''}`} 
+                  />
+                  <div className="promo-overlay-badge">{prod.category || 'Industrial Equipment'}</div>
                 </Link>
 
                 <div className="promo-body">

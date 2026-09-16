@@ -27,7 +27,14 @@ import {
 } from 'lucide-react';
 import { getProductByIdOrSlug, allProductsData } from '../data/productsData';
 import PowerEngineersPanelDetail from '../components/PowerEngineersPanelDetail';
+import DustCollectorDetail from '../components/DustCollectorDetail';
+import VenturiPage from './VenturiPage';
+import FilterCagesPage from './FilterCagesPage';
 import dustCollectorHeroBg from '../assets/dust_collector_hero_bg.jpg';
+import plantHdImg from '../assets/factory_bagfilter_plant_hd.jpg';
+import turnkeyHdImg from '../assets/service_turnkey_hd.jpg';
+import fabricationHdImg from '../assets/service_fabrication_hd.jpg';
+import ductingHdImg from '../assets/indoor_ducting.jpg';
 
 const cleaningModes = [
   {
@@ -52,6 +59,33 @@ const cleaningModes = [
       'Zero-velocity cleaning eliminates dust re-entrainment on neighboring bags',
       'Allows online inspection & bag replacement of individual chambers during plant operation',
       'Up to 35% higher cleaning efficiency for ultra-fine, abrasive, or sticky dust'
+    ]
+  }
+];
+
+const cartridgeTechModes = [
+  {
+    mode: 'Nanofiber Pleated Surface Filtration',
+    badge: '99.99% Sub-Micron Efficiency',
+    highlight: 'Advanced spunbond media with nanofiber web stops dust on the outer surface.',
+    desc: 'Unlike conventional felt bags where fine dust penetrates deep into the fabric pores (causing blinding and high pressure drop), pleated cartridges capture particulates purely on the outer surface. Reverse pulses shed the entire dust cake instantly with 40% less compressed air demand.',
+    features: [
+      '300% greater filtration area within a 50% smaller machine footprint',
+      'Certified 99.99% particulate capture down to 0.3 micron (HEPA grade available)',
+      'Substantially lower operating differential pressure (ΔP) saving ID fan electricity',
+      'Ideal for laser & plasma CNC cutting, robotic welding cells, and powder coating'
+    ]
+  },
+  {
+    mode: 'Downward Cross-Flow Aerodynamics',
+    badge: 'Zero Dust Re-Entrainment',
+    highlight: 'Engineered downward velocity matches gravity to purge dislodged dust directly into hoppers.',
+    desc: 'In traditional baghouses, upward can-velocity causes dust dislodged during pulsing to re-deposit on neighboring bags. Our cartridge collectors direct incoming air downward across the pleats, ensuring dislodged cake drops straight down without re-entrainment.',
+    features: [
+      'Downward airflow trajectory completely prevents cake re-entrainment on pleats',
+      'Quick-release toolless cam-lock / twist-lock cartridge changeout from service doors',
+      'Integrated spark arrestor baffles extinguish hot incandescent embers safely',
+      'Modular scalable architecture designed for compact indoor factory installations'
     ]
   }
 ];
@@ -144,6 +178,29 @@ const ProductDetailPage = ({ defaultSlug }) => {
     return <PowerEngineersPanelDetail product={product} />;
   }
 
+  if (
+    product.id === 'dust-collector-system' ||
+    ['dust-collectors', 'dust-collector', 'industrial-dust-collectors', 'turnkey-dust-collector', 'dust-collection-equipment'].includes(activeSlug) ||
+    (product.slugs && product.slugs.includes('dust-collectors'))
+  ) {
+    return <DustCollectorDetail product={product} />;
+  }
+
+  if (
+    product.id === 'filter-cage-venturi' ||
+    ['venturis', 'venturi', 'filter-cage-venturi', 'venturi-nozzle', 'venturi-nozzles', 'pulse-jet-venturi'].includes(activeSlug) ||
+    (product.slugs && product.slugs.includes('venturis'))
+  ) {
+    return <VenturiPage />;
+  }
+
+  if (
+    product.id === 'filter-cages' ||
+    ['filter-cages', 'filter-cage', 'support-cages', 'dust-collector-filter-cages', 'cages-with-venturi'].includes(activeSlug)
+  ) {
+    return <FilterCagesPage />;
+  }
+
   // Related products
   const relatedProducts = (product.relatedIds || [])
     .map(relId => getProductByIdOrSlug(relId))
@@ -189,37 +246,37 @@ _Sent from vsfiltech.com/products/${product.id}_`;
         </div>
       </div>
 
-      {/* 2. HERO SECTION WITH DUST COLLECTOR BACKGROUND */}
+      {/* 2. HERO SECTION WITH INDUSTRIAL DUST COLLECTOR BACKGROUND (TRANSPARENT BG IMAGE) */}
       <section className="pd-hero-container">
-        {/* Authentic Industrial Dust Collector System Background */}
+        {/* Authentic Product Background */}
         <div 
           className="pd-hero-bg"
           style={{
-            backgroundImage: `url(${dustCollectorHeroBg})`
+            backgroundImage: `url(${product.heroImage || product.image || dustCollectorHeroBg})`
           }}
         />
         {/* Soft Multi-Stop Gradient Scrim Overlay for Crystal-Clear Text Legibility */}
         <div className="pd-hero-scrim" />
 
-        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
-          <div style={{ maxWidth: '860px' }}>
+        <div className="container" style={{ maxWidth: '1180px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
+          <div className="pd-hero-card">
             
             {/* Tag Badge */}
             <div style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              background: 'rgba(240, 249, 255, 0.95)',
-              border: '1px solid #bae6fd',
+              background: 'rgba(56, 189, 248, 0.15)',
+              border: '1px solid rgba(56, 189, 248, 0.4)',
               padding: '6px 14px',
               borderRadius: '999px',
-              color: '#0284c7',
+              color: '#38bdf8',
               fontSize: '0.8rem',
               fontWeight: '700',
               letterSpacing: '0.06em',
               textTransform: 'uppercase',
               marginBottom: '1.25rem',
-              boxShadow: '0 2px 10px rgba(2, 132, 199, 0.12)',
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
               backdropFilter: 'blur(8px)'
             }}>
               <Sparkles size={14} />
@@ -230,11 +287,11 @@ _Sent from vsfiltech.com/products/${product.id}_`;
             <h1 style={{
               fontSize: 'clamp(2.2rem, 4.5vw, 3.4rem)',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#ffffff',
               lineHeight: '1.18',
               marginBottom: '1.25rem',
               letterSpacing: '-0.02em',
-              textShadow: '0 2px 16px rgba(255, 255, 255, 0.95), 0 1px 4px #ffffff'
+              textShadow: '0 2px 10px rgba(0, 0, 0, 0.7)'
             }}>
               {product.title}
             </h1>
@@ -243,11 +300,11 @@ _Sent from vsfiltech.com/products/${product.id}_`;
             <p style={{
               fontSize: '1.15rem',
               lineHeight: '1.65',
-              color: '#1e293b',
+              color: '#cbd5e1',
               fontWeight: '500',
               marginBottom: '2rem',
-              maxWidth: '780px',
-              textShadow: '0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px #ffffff'
+              maxWidth: '740px',
+              textShadow: '0 1px 4px rgba(0, 0, 0, 0.6)'
             }}>
               {product.shortDesc}
             </p>
@@ -268,7 +325,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   background: 'linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%)',
                   color: '#ffffff',
                   border: '1px solid rgba(56, 189, 248, 0.5)',
-                  boxShadow: '0 4px 15px rgba(2, 132, 199, 0.3)',
+                  boxShadow: '0 4px 15px rgba(2, 132, 199, 0.4)',
                   textDecoration: 'none'
                 }}
               >
@@ -292,7 +349,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   fontWeight: '700',
                   borderRadius: '10px',
                   textDecoration: 'none',
-                  boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)'
+                  boxShadow: '0 4px 15px rgba(37, 211, 102, 0.35)'
                 }}
               >
                 <MessageCircle size={18} />
@@ -310,59 +367,55 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                   fontSize: '0.95rem',
                   fontWeight: '600',
                   borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  border: '1.5px solid #cbd5e1',
-                  color: '#0f172a',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1.5px solid rgba(255, 255, 255, 0.35)',
+                  color: '#ffffff',
                   textDecoration: 'none',
                   backdropFilter: 'blur(8px)'
                 }}
               >
-                <PhoneCall size={17} style={{ color: '#0284c7' }} />
+                <PhoneCall size={17} style={{ color: '#38bdf8' }} />
                 <span>Call Now</span>
               </a>
             </div>
 
-            {/* Quick Metrics Bar */}
+            {/* Quick Metrics Bar - 100% Transparent Dark Aesthetic */}
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
               gap: '16px',
-              padding: '18px 22px',
-              background: 'rgba(255, 255, 255, 0.94)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(2, 132, 199, 0.25)',
-              borderRadius: '16px',
-              boxShadow: '0 8px 30px rgba(0, 0, 0, 0.06)'
+              padding: '16px 0 0',
+              borderTop: '1px solid rgba(56, 189, 248, 0.25)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <ShieldCheck size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
+                <ShieldCheck size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Quality Standard</div>
-                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>100% OEM Precision</div>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: '700' }}>Quality Standard</div>
+                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '800', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>100% OEM Precision</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Factory size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
+                <Factory size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Manufacturing Hub</div>
-                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>Ghaziabad, UP, India</div>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: '700' }}>Manufacturing Hub</div>
+                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '800', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>Ghaziabad, UP, India</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Clock size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
+                <Clock size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Dispatch &amp; Supply</div>
-                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>Pan-India Delivery</div>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: '700' }}>Dispatch &amp; Supply</div>
+                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '800', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>Pan-India Delivery</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Award size={24} style={{ color: '#0284c7', flexShrink: 0 }} />
+                <Award size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Pollution Compliance</div>
-                  <div style={{ fontSize: '0.92rem', color: '#0f172a', fontWeight: '700' }}>CPCB &amp; State Norms</div>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: '700' }}>Pollution Compliance</div>
+                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '800', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>CPCB &amp; State Norms</div>
                 </div>
               </div>
             </div>
@@ -371,121 +424,120 @@ _Sent from vsfiltech.com/products/${product.id}_`;
         </div>
       </section>
 
-      {/* 2.5 PULSE-JET CLEANING MODES: ONLINE VS OFFLINE - BLUE THEME */}
-      <section className="pd-section-blue" style={{ padding: '5.5rem 0' }}>
-        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
-          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 45px' }}>
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              background: 'rgba(56, 189, 248, 0.12)',
-              border: '1px solid rgba(56, 189, 248, 0.28)',
-              padding: '4px 14px',
-              borderRadius: '999px',
-              color: '#38bdf8',
-              fontSize: '0.8rem',
-              fontWeight: '700',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              marginBottom: '10px'
-            }}>
-              <Sparkles size={13} /> CLEANING TECHNOLOGY
-            </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '14px' }}>
-              Pulse-Jet Cleaning: <span style={{ color: '#38bdf8' }}>Online vs Offline Modes</span>
-            </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
-              Depending on your plant's particulate loading, gas temperature, and operating cycle, VS Filtech designs baghouses in both Online and Offline reverse-pulse configurations:
-            </p>
-          </div>
+      {/* 2.5 TAILORED TECHNOLOGY COMPARISON - BLUE THEME */}
+      {(() => {
+        const isCartridge = product.id === 'cartridge-filters' || (product.slugs && product.slugs.includes('cartridge-filters'));
+        const isBagFilter = ['pulse-jet-bag-filters', 'pulse-jet-filter', 'bag-filter', 'filter-bag'].includes(product.id) || 
+                            (product.category === 'Turnkey Filtration Systems' && !isCartridge);
 
-          <div className="pd-grid-2col">
-            {cleaningModes.map((item, idx) => (
-              <div 
-                key={idx}
-                className="pd-dark-card"
-                style={{ borderTop: '4px solid #38bdf8' }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                  <span style={{
-                    background: 'rgba(56, 189, 248, 0.15)',
-                    border: '1px solid rgba(56, 189, 248, 0.35)',
-                    color: '#38bdf8',
-                    padding: '4px 12px',
-                    borderRadius: '999px',
-                    fontSize: '0.75rem',
-                    fontWeight: '700',
-                    textTransform: 'uppercase'
-                  }}>
-                    {item.badge}
-                  </span>
-                  <Wind size={20} style={{ color: '#38bdf8' }} />
+        if (!isCartridge && !isBagFilter) return null;
+
+        const currentModes = isCartridge ? cartridgeTechModes : cleaningModes;
+        const sectionBadge = isCartridge ? 'CARTRIDGE MEDIA TECHNOLOGY' : 'CLEANING TECHNOLOGY';
+        const sectionTitle = isCartridge 
+          ? <>Pleated Cartridge Technology: <span style={{ color: '#38bdf8' }}>Surface vs Depth Media</span></>
+          : <>Pulse-Jet Cleaning: <span style={{ color: '#38bdf8' }}>Online vs Offline Modes</span></>;
+        const sectionDesc = isCartridge
+          ? "Engineered for high surface area and sub-micron particulate containment with minimal factory floor footprint:"
+          : "Depending on your plant's particulate loading, gas temperature, and operating cycle, VS Filtech designs baghouses in both Online and Offline reverse-pulse configurations:";
+
+        return (
+          <section className="pd-section-blue">
+            <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 45px' }}>
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'rgba(56, 189, 248, 0.12)',
+                  border: '1px solid rgba(56, 189, 248, 0.28)',
+                  padding: '4px 14px',
+                  borderRadius: '999px',
+                  color: '#38bdf8',
+                  fontSize: '0.8rem',
+                  fontWeight: '700',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  marginBottom: '10px'
+                }}>
+                  <Sparkles size={13} /> {sectionBadge}
                 </div>
-
-                <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#ffffff', marginBottom: '8px' }}>
-                  {item.mode}
-                </h3>
-
-                <div style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: '600', marginBottom: '14px' }}>
-                  {item.highlight}
-                </div>
-
-                <p style={{ color: '#cbd5e1', fontSize: '0.92rem', lineHeight: '1.65', marginBottom: '22px', flex: 1 }}>
-                  {item.desc}
+                <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: '800', color: '#ffffff', marginBottom: '14px' }}>
+                  {sectionTitle}
+                </h2>
+                <p style={{ color: '#94a3b8', fontSize: '1.05rem', lineHeight: '1.65' }}>
+                  {sectionDesc}
                 </p>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderTop: '1px solid rgba(56, 189, 248, 0.15)', paddingTop: '18px' }}>
-                  {item.features.map((feat, fIdx) => (
-                    <div key={fIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                      <CheckCircle2 size={16} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '3px' }} />
-                      <span style={{ color: '#e2e8f0', fontSize: '0.88rem', lineHeight: '1.5' }}>{feat}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
+              <div className="pd-grid-2col">
+                {currentModes.map((item, idx) => (
+                  <div 
+                    key={idx}
+                    className="pd-dark-card"
+                    style={{ borderTop: '4px solid #38bdf8' }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                      <span style={{
+                        background: 'rgba(56, 189, 248, 0.15)',
+                        border: '1px solid rgba(56, 189, 248, 0.35)',
+                        color: '#38bdf8',
+                        padding: '4px 12px',
+                        borderRadius: '999px',
+                        fontSize: '0.75rem',
+                        fontWeight: '700',
+                        textTransform: 'uppercase'
+                      }}>
+                        {item.badge}
+                      </span>
+                      <Wind size={20} style={{ color: '#38bdf8' }} />
+                    </div>
+
+                    <h3 style={{ fontSize: '1.45rem', fontWeight: '800', color: '#ffffff', marginBottom: '8px' }}>
+                      {item.mode}
+                    </h3>
+
+                    <div style={{ color: '#38bdf8', fontSize: '0.9rem', fontWeight: '600', marginBottom: '14px' }}>
+                      {item.highlight}
+                    </div>
+
+                    <p style={{ color: '#cbd5e1', fontSize: '0.92rem', lineHeight: '1.65', marginBottom: '22px', flex: 1 }}>
+                      {item.desc}
+                    </p>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', borderTop: '1px solid rgba(56, 189, 248, 0.15)', paddingTop: '18px' }}>
+                      {item.features.map((feat, fIdx) => (
+                        <div key={fIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                          <CheckCircle2 size={16} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '3px' }} />
+                          <span style={{ color: '#e2e8f0', fontSize: '0.88rem', lineHeight: '1.5' }}>{feat}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* 3. PRODUCT OVERVIEW & PHOTOGRAPHY SPLIT - WHITE THEME */}
       <section 
         className="pd-section-white"
-        style={{ padding: '5.5rem 0 4.5rem' }}
       >
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(320px, 460px) 1fr',
-            gap: '3rem',
-            alignItems: 'start'
-          }}>
+          <div className="pd-overview-layout">
             
             {/* Left: Product Photo with High-Res Frame */}
             <div>
               <div 
-                style={{
-                  position: 'relative',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  background: '#f8fafc',
-                  border: '1px solid #bae6fd',
-                  boxShadow: '0 12px 30px rgba(2, 132, 199, 0.08)',
-                  cursor: 'pointer'
-                }}
+                className="pd-overview-img-card"
                 onClick={() => setLightboxOpen(true)}
               >
                 <img 
                   src={product.image} 
                   alt={product.title} 
-                  style={{
-                    width: '100%',
-                    height: '380px',
-                    objectFit: 'cover',
-                    display: 'block',
-                    transition: 'transform 0.4s ease'
-                  }}
+                  className="pd-overview-img"
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.04)'}
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                 />
@@ -535,13 +587,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               </div>
 
               {/* Quick Specs Snapshot */}
-              <div style={{
-                marginTop: '1.5rem',
-                background: '#f8fafc',
-                border: '1px solid #e2e8f0',
-                borderRadius: '14px',
-                padding: '18px 20px'
-              }}>
+              <div className="pd-specs-snapshot-card">
                 <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#0284c7', textTransform: 'uppercase', marginBottom: '10px' }}>
                   Engineering Assurance
                 </div>
@@ -622,46 +668,12 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 </div>
               )}
 
-                {/* Key Features List - 2-2 Line Mai */}
-                <div style={{ marginTop: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', marginBottom: '1rem' }}>
-                    Distinguishing Engineering Advantages:
-                  </h3>
-                  <div className="pd-grid-2col" style={{ gap: '14px' }}>
-                  {product.features.map((feat, idx) => (
-                    <div 
-                      key={idx} 
-                      style={{
-                        background: '#ffffff',
-                        border: '1px solid #e2e8f0',
-                        borderRadius: '12px',
-                        padding: '16px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '6px',
-                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.03)'
-                      }}
-                    >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#0284c7', fontWeight: '700', fontSize: '0.92rem' }}>
-                        <CheckCircle2 size={16} style={{ flexShrink: 0 }} />
-                        <span>{feat.title}</span>
-                      </div>
-                      <p style={{ fontSize: '0.85rem', color: '#475569', lineHeight: '1.5', margin: 0 }}>
-                        {feat.desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               {/* Engineering Overview Quick Action Bar */}
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: '12px',
                 marginTop: '1.8rem',
-                paddingTop: '1.5rem',
-                borderTop: '1px solid #e2e8f0',
                 flexWrap: 'wrap'
               }}>
                 <a 
@@ -716,11 +728,115 @@ _Sent from vsfiltech.com/products/${product.id}_`;
             </div>
 
           </div>
+
+          {/* 3-3 KARKE 2 LINE MAI - CENTERED KEY FEATURES SECTION */}
+          {product.features && product.features.length > 0 && (
+            <div className="pd-features-divider">
+              <div className="pd-features-header">
+                <div style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: '#e0f2fe',
+                  border: '1px solid #bae6fd',
+                  padding: '4px 14px',
+                  borderRadius: '999px',
+                  color: '#0284c7',
+                  fontSize: '0.8rem',
+                  fontWeight: '700',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  marginBottom: '10px'
+                }}>
+                  <Sparkles size={14} /> ENGINEERING ADVANTAGES
+                </div>
+                <h3 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '10px' }}>
+                  Distinguishing Engineering Advantages:
+                </h3>
+                <p style={{ color: '#64748b', fontSize: '1rem', lineHeight: '1.6' }}>
+                  Key technical capabilities and aerodynamic design advantages built into our {product.shortTitle || product.title}:
+                </p>
+              </div>
+
+              {/* 3-3 karke 2 line mai (3 columns desktop, 2 rows) */}
+              <div className="pd-grid-3col">
+                {product.features.map((feat, idx) => (
+                  <div key={idx} className="pd-feature-card">
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: '#0284c7', fontWeight: '700', fontSize: '0.98rem', marginBottom: '8px' }}>
+                      <CheckCircle2 size={18} style={{ flexShrink: 0, marginTop: '2px', color: '#0284c7' }} />
+                      <span>{feat.title}</span>
+                    </div>
+                    <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6', margin: 0 }}>
+                      {feat.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Centered Inquiry Action Bar */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '14px',
+                marginTop: '2.5rem',
+                flexWrap: 'wrap'
+              }}>
+                <a 
+                  href={`https://wa.me/911234567890?text=${encodeURIComponent(`Hi VS Filtech, I am interested in ${product.title}. Please provide engineering sizing and quotation.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '12px 24px',
+                    borderRadius: '10px',
+                    background: '#25D366',
+                    color: '#ffffff',
+                    fontWeight: '700',
+                    fontSize: '0.95rem',
+                    textDecoration: 'none',
+                    boxShadow: '0 4px 14px rgba(37, 211, 102, 0.3)',
+                    transition: 'transform 0.2s ease, background 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = '#1ebc59'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = '#25D366'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                >
+                  <MessageCircle size={18} />
+                  <span>WhatsApp Technical Inquiry</span>
+                </a>
+
+                <a 
+                  href="tel:+911234567890" 
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '12px 22px',
+                    borderRadius: '10px',
+                    background: '#ffffff',
+                    border: '1.5px solid #cbd5e1',
+                    color: '#0f172a',
+                    fontWeight: '700',
+                    fontSize: '0.95rem',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#0284c7'; e.currentTarget.style.color = '#0284c7'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#cbd5e1'; e.currentTarget.style.color = '#0f172a'; }}
+                >
+                  <PhoneCall size={17} style={{ color: '#0284c7' }} />
+                  <span>Call Now</span>
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
       {/* 4. COMPREHENSIVE SPECIFICATIONS TABLE - BLUE THEME */}
-      <section className="pd-section-blue" style={{ padding: '5.5rem 0' }}>
+      <section className="pd-section-blue">
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
           <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 3rem' }}>
@@ -755,7 +871,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
             WebkitBackdropFilter: 'blur(14px)',
             border: '1px solid rgba(56, 189, 248, 0.22)',
             borderRadius: '18px',
-            overflow: 'hidden',
+            overflowX: 'auto',
             boxShadow: '0 12px 36px rgba(0, 0, 0, 0.45)'
           }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
@@ -794,7 +910,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
       </section>
 
       {/* 5. PROCESS & INDUSTRIAL APPLICATIONS - WHITE THEME */}
-      <section className="pd-section-white" style={{ padding: '5rem 0' }}>
+      <section className="pd-section-white">
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
           
           <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 2.5rem' }}>
@@ -846,19 +962,204 @@ _Sent from vsfiltech.com/products/${product.id}_`;
         </div>
       </section>
 
+      {/* 5.5 AUTHENTIC INDUSTRIAL PLANT & FABRICATION GALLERY */}
+      <section className="pd-gallery-section">
+        <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 3rem' }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              background: '#e0f2fe',
+              border: '1px solid #bae6fd',
+              padding: '4px 14px',
+              borderRadius: '999px',
+              color: '#0284c7',
+              fontSize: '0.8rem',
+              fontWeight: '700',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '10px'
+            }}>
+              <Sparkles size={13} /> REAL PLANT FABRICATION &amp; FIELD INSTALLATIONS
+            </div>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
+              Precision Engineering in Action
+            </h2>
+            <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6' }}>
+              Every VS Filtech dust collector and filtration system is designed, CNC laser-fabricated, and erected to withstand severe industrial duty:
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '24px'
+          }}>
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              border: '1px solid #cbd5e1',
+              boxShadow: '0 8px 24px rgba(15, 23, 42, 0.06)',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+            }}>
+              <div style={{ height: '210px', overflow: 'hidden', position: 'relative' }}>
+                <img 
+                  src={plantHdImg} 
+                  alt="Industrial Turnkey Dust Collector Plant" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '12px',
+                  left: '12px',
+                  background: 'rgba(15, 23, 42, 0.85)',
+                  color: '#38bdf8',
+                  padding: '4px 10px',
+                  borderRadius: '6px',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  backdropFilter: 'blur(6px)'
+                }}>
+                  Field Plant Installation
+                </div>
+              </div>
+              <div style={{ padding: '18px 20px' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: '800', color: '#0f172a', marginBottom: '6px' }}>
+                  Centralized Baghouse Plants
+                </h4>
+                <p style={{ fontSize: '0.84rem', color: '#64748b', lineHeight: '1.5', margin: 0 }}>
+                  Continuous online reverse-pulse dust extraction with walk-in roof plenums and multi-hopper rotary discharge.
+                </p>
+              </div>
+            </div>
+
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              border: '1px solid #cbd5e1',
+              boxShadow: '0 8px 24px rgba(15, 23, 42, 0.06)',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+            }}>
+              <div style={{ height: '210px', overflow: 'hidden', position: 'relative' }}>
+                <img 
+                  src={fabricationHdImg} 
+                  alt="Factory Heavy Plate Fabrication" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '12px',
+                  left: '12px',
+                  background: 'rgba(15, 23, 42, 0.85)',
+                  color: '#38bdf8',
+                  padding: '4px 10px',
+                  borderRadius: '6px',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  backdropFilter: 'blur(6px)'
+                }}>
+                  Workshop Fabrication
+                </div>
+              </div>
+              <div style={{ padding: '18px 20px' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: '800', color: '#0f172a', marginBottom: '6px' }}>
+                  Laser-Cut Cell Plates &amp; Casing
+                </h4>
+                <p style={{ fontSize: '0.84rem', color: '#64748b', lineHeight: '1.5', margin: 0 }}>
+                  CNC fiber-laser tube sheet apertures calibrated to 0.05mm tolerances for leak-proof snap-ring seals.
+                </p>
+              </div>
+            </div>
+
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              border: '1px solid #cbd5e1',
+              boxShadow: '0 8px 24px rgba(15, 23, 42, 0.06)',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+            }}>
+              <div style={{ height: '210px', overflow: 'hidden', position: 'relative' }}>
+                <img 
+                  src={ductingHdImg} 
+                  alt="Industrial Aerodynamic Ducting Network" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '12px',
+                  left: '12px',
+                  background: 'rgba(15, 23, 42, 0.85)',
+                  color: '#38bdf8',
+                  padding: '4px 10px',
+                  borderRadius: '6px',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  backdropFilter: 'blur(6px)'
+                }}>
+                  Ventilation Ductwork
+                </div>
+              </div>
+              <div style={{ padding: '18px 20px' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: '800', color: '#0f172a', marginBottom: '6px' }}>
+                  Can-Velocity Extraction Ducts
+                </h4>
+                <p style={{ fontSize: '0.84rem', color: '#64748b', lineHeight: '1.5', margin: 0 }}>
+                  Aerodynamically balanced intake hooding and duct branches engineered for uniform capture velocity.
+                </p>
+              </div>
+            </div>
+
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              border: '1px solid #cbd5e1',
+              boxShadow: '0 8px 24px rgba(15, 23, 42, 0.06)',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+            }}>
+              <div style={{ height: '210px', overflow: 'hidden', position: 'relative' }}>
+                <img 
+                  src={turnkeyHdImg} 
+                  alt="Turnkey Commissioning &amp; Pollution Testing" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '12px',
+                  left: '12px',
+                  background: 'rgba(15, 23, 42, 0.85)',
+                  color: '#38bdf8',
+                  padding: '4px 10px',
+                  borderRadius: '6px',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  backdropFilter: 'blur(6px)'
+                }}>
+                  CPCB Commissioning
+                </div>
+              </div>
+              <div style={{ padding: '18px 20px' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: '800', color: '#0f172a', marginBottom: '6px' }}>
+                  Erection &amp; Statutory Testing
+                </h4>
+                <p style={{ fontSize: '0.84rem', color: '#64748b', lineHeight: '1.5', margin: 0 }}>
+                  On-site stack isokinetic testing, airflow calibration, and certified &lt; 10 mg/Nm³ emission validation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. TECHNICAL RFQ & DRAWINGS INQUIRY FORM - BLUE THEME */}
-      <section id="rfq-form" className="pd-section-blue" style={{ padding: '5.5rem 0' }}>
+      <section id="rfq-form" className="pd-section-blue">
         <div className="container" style={{ maxWidth: '840px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
-          <div style={{
-            background: 'rgba(15, 32, 64, 0.92)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
-            border: '1.5px solid rgba(56, 189, 248, 0.32)',
-            borderRadius: '24px',
-            padding: '3rem 2.5rem',
-            boxShadow: '0 20px 50px rgba(0, 0, 0, 0.45)'
-          }}>
+          <div className="pd-rfq-card">
             
             <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
               <div style={{
@@ -1042,7 +1343,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
 
       {/* 7. RELATED INDUSTRIAL SPARES & EQUIPMENT - WHITE THEME */}
       {relatedProducts.length > 0 && (
-        <section className="pd-section-white" style={{ padding: '5rem 0 5.5rem' }}>
+        <section className="pd-section-white">
           <div className="container" style={{ maxWidth: '1140px', margin: '0 auto' }}>
             
             <div style={{

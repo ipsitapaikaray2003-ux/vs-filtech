@@ -15,13 +15,13 @@ import {
 
 import pulseJetImg from '../assets/factory_bagfilter_plant_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
-import pleatedImg from '../assets/pleated_filter_bag.jpeg';
-import cycloneImg from '../assets/cyclone_dust_collector.webp';
-import idFanImg from '../assets/id_fan.jpg';
+import pleatedImg from '../assets/pleated_cartridge_hd.jpg';
+import cycloneImg from '../assets/cyclone_separator_hd.jpg';
+import idFanImg from '../assets/id_fan_hd.jpg';
 import filterBagImg from '../assets/filter_bag_hd.jpg';
-import cageImg from '../assets/filter_cage.webp';
-import solenoidImg from '../assets/solenoid_valve.webp';
-import ralImg from '../assets/rotary_air_lock.webp';
+import cageImg from '../assets/filter_cage_hd.jpg';
+import solenoidImg from '../assets/solenoid_valve_hd.jpg';
+import ralImg from '../assets/rotary_airlock_hd.jpg';
 import siloImg from '../assets/silo_filter_product.jpg';
 import conveyorImg from '../assets/screw_conveyor_product.jpg';
 import dpSwitchImg from '../assets/dp_transmitter_product.jpg';
@@ -37,259 +37,295 @@ import peApfcPanel from '../assets/pe_apfcpanel.png';
 import peBusDuct from '../assets/pe_busduct.jpg';
 import vfdPlcImg from '../assets/vfd_plc_panel_product.jpg';
 
+import venturiImg from '../assets/venturi_nozzle_hd.jpg';
+import ductingImg from '../assets/indoor_ducting.jpg';
+
 const products = [
+  // 1. Dust Collection Equipment
   {
     id: 'pulse-jet-bag-filters',
     title: 'Pulse Jet Bag Filters',
-    category: 'Filtration Systems',
+    category: 'Dust Collection Equipment',
     img: pulseJetImg,
-    badge: 'Flagship Equipment',
-    brief: 'Continuous online compressed-air automated pulse cleaning dust collectors. Engineered for heavy industrial continuous operations handling high air volumes and sub-micron particulate loads with <10 mg/Nm³ emissions.',
-    specs: ['Airflow: 1,000 to 1,50,000+ CFM', 'Cleaning: Automatic pulse jet timer / DP mode', 'Efficiency: 99.9% particulate separation', 'Compliance: CPCB & State Pollution Board certified'],
-    link: '/products/dust-collector-system'
+    badge: 'Online Continuous Cleaning',
+    brief: 'Continuous online compressed-air automated pulse cleaning dust collectors. Engineered for heavy industrial operations handling high air volumes and sub-micron particulate loads with <10 mg/Nm³ emissions.',
+    specs: ['Airflow: 1,000 to 150,000+ CFM', 'Cleaning: Automatic pulse jet timer / DP mode', 'Efficiency: 99.9% particulate separation', 'Compliance: CPCB & State Pollution Board certified'],
+    link: '/products/pulse-jet-filter'
   },
   {
-    id: 'pleated-cartridge-bag-filter',
-    title: 'Pleated Cartridge Bag Filter',
-    category: 'Filtration Systems',
-    img: pleatedImg,
-    badge: 'Pleated Media',
-    brief: 'Compact high-efficiency dust collector cartridges offering 2.5x to 3x greater filtration surface area than conventional tubular bags. Dramatically reduces baghouse footprint while handling high dust loads.',
-    specs: ['Surface Area: 2.5x - 3x conventional bags', 'Cleaning: Reverse pulse-jet cleaning', 'Efficiency: 99.9%+ sub-micron capture', 'Installation: Direct retrofit into existing cell plates'],
-    link: '/products/pleated-filter-bag'
+    id: 'reverse-air-bag-filters',
+    title: 'Reverse Air Bag Filters',
+    category: 'Dust Collection Equipment',
+    img: baghouseImg,
+    badge: 'Offline Multi-Compartment',
+    brief: 'Multi-compartment offline cleaning baghouses with gentle back-purge flow engineered for high-temperature furnace and kiln flue gases up to 260°C.',
+    specs: ['Airflow: 25,000 to 500,000+ CFM', 'Isolation: Fast pneumatic poppet dampers', 'Temperature: Up to 260°C continuous service', 'Media: Anti-collapse ring supported woven bags'],
+    link: '/products/reverse-air-bag-filters'
   },
   {
     id: 'dust-collector-baghouse-cyclone',
-    title: 'Dust Collector (Baghouse / Cyclone)',
-    category: 'Filtration Systems',
+    title: 'Dust Collector Systems (Baghouse & Turnkey Systems)',
+    category: 'Dust Collection Equipment',
     img: baghouseImg,
-    badge: 'Baghouse & Cyclone',
-    brief: 'Integrated two-stage dust extraction system combining aerodynamic cyclone centrifugal pre-separation with a high-capacity multi-hopper fabric baghouse for extreme dust loads.',
+    badge: 'Turnkey Installation',
+    brief: 'Complete engineered dust extraction systems combining aerodynamic capture hoods, duct networks, multi-hopper baghouse, rotary airlock, and exhaust blower.',
     specs: ['Pre-Separation: 80%+ coarse particle removal', 'Casing: Heavy-duty 5mm/6mm IS 2062 plate', 'Hopper: Multi-trough with rotary airlock', 'Access: Clean-air plenum top walk-in doors'],
     link: '/products/dust-collector-system'
   },
   {
-    id: 'silo-filters',
-    title: 'Silo Filters (Venting Dust Collectors)',
-    category: 'Filtration Systems',
-    img: siloImg,
-    badge: 'Pneumatic Venting',
-    brief: 'Top-mounted venting dust collector designed specifically for powder storage silos, cement bins, and pneumatic conveying receivers. Safely vents displaced air while capturing fine particles.',
-    specs: ['Mounting: Direct circular / flanged silo top', 'Weatherproof: Heavy gauge outdoor casing', 'Cleaning: Integrated pulse-jet reverse air', 'Applications: Cement, Fly Ash, Lime, Flour'],
-    link: '/products/silo-filters'
+    id: 'pleated-cartridge-bag-filter',
+    title: 'Cartridge Filters (Pleated Cartridge Bag Filters)',
+    category: 'Dust Collection Equipment',
+    img: pleatedImg,
+    badge: '3x Filtration Area',
+    brief: 'Compact high-efficiency dust collector cartridges offering 2.5x to 3x greater filtration surface area than conventional tubular bags, cutting baghouse footprint in half.',
+    specs: ['Surface Area: 2.5x - 3x conventional bags', 'Cleaning: Reverse pulse-jet cleaning', 'Efficiency: 99.9%+ sub-micron capture', 'Installation: Direct retrofit into existing cell plates'],
+    link: '/products/pleated-filter-bag'
   },
   {
     id: 'cyclone-filters',
-    title: 'Cyclone Filters & Dust Collectors',
-    category: 'Pre-Separators',
+    title: 'Cyclone Separators & Pre-Collectors',
+    category: 'Dust Collection Equipment',
     img: cycloneImg,
     badge: 'Pre-Separator',
-    brief: 'High-efficiency aerodynamic centrifugal separators that extract heavy, coarse, and abrasive dust particles before the airstream enters the fabric baghouse, greatly extending filter bag service life.',
+    brief: 'High-efficiency aerodynamic centrifugal separators that extract heavy, coarse, and abrasive dust particles before the airstream enters the fabric baghouse, extending bag life 2.5x.',
     specs: ['Design: High efficiency & high throughput cyclone profiles', 'Pressure Drop: Low static resistance (75-120 mm WG)', 'Particle Size: 10µm and larger coarse separation', 'Maintenance: Zero moving parts, high abrasion resistance'],
     link: '/products/cyclone-dust-collector'
   },
   {
-    id: 'id-fans',
-    title: 'ID Fans (Induced Draft Centrifugal Fans)',
-    category: 'Airflow Equipment',
-    img: idFanImg,
-    badge: 'Heavy-Duty Blower',
-    brief: 'Industrial heavy-duty centrifugal fans designed to draw flue gases and dust-laden air through ductwork and filter media, discharging clean air through the exhaust stack into the atmosphere.',
-    specs: ['Capacity: Custom CFM matched to system static drop', 'Impeller: Backward curved / radial bladed with wear liners', 'Drive: Direct coupled or V-belt driven with vibration dampers', 'Temperature: Ambient up to 350°C continuous rating'],
-    link: '/products/id-fans'
+    id: 'silo-filters',
+    title: 'Silo Venting Dust Collectors',
+    category: 'Dust Collection Equipment',
+    img: siloImg,
+    badge: 'Pneumatic Venting',
+    brief: 'Top-mounted circular and flanged venting dust collectors designed specifically for powder storage silos, cement bins, and pneumatic conveying receivers.',
+    specs: ['Mounting: Direct circular / flanged silo top', 'Weatherproof: Heavy gauge outdoor casing', 'Cleaning: Integrated pulse-jet reverse air', 'Applications: Cement, Fly Ash, Lime, Flour'],
+    link: '/products/silo-filters'
   },
+
+  // 2. Filter Components
   {
     id: 'filter-bags',
-    title: 'Filter Bags (Woven & Non-Woven)',
-    category: 'Filtration Media',
+    title: 'Industrial Filter Bags',
+    category: 'Filter Components',
     img: filterBagImg,
-    badge: 'OEM Filter Media',
-    brief: 'Custom-manufactured filter bags in woven and non-woven needlefelt media. Available in Polyester, Nomex (Aramid), PPS (Ryton), PTFE (Teflon), Fiberglass, and Polypropylene with anti-adhesive ePTFE membranes.',
-    specs: ['Treatments: Water & Oil Repellent, PTFE Membrane, Antistatic', 'Temperature Range: Up to 260°C continuous service', 'Configurations: Snap band, raw top, ring top, cord bottom', 'Pore Size: Sub-micron particle retention capability'],
+    badge: 'Flagship Media Fabrication',
+    brief: 'Custom-manufactured industrial filter bags in non-woven needlefelt and woven media. Available in Polyester, Nomex, PPS, PTFE, Fiberglass, and ePTFE membrane with custom snap-bands.',
+    specs: ['Diameters: 100, 120, 130, 150, 160, 180 mm & custom', 'Finishes: Singed, glazed, calendared, antistatic', 'Construction: Needle felt / scrim supported', 'Efficiency: >99.5% (Up to 99.9% with ePTFE)'],
     link: '/products/filter-bag'
   },
   {
     id: 'cages-with-venturi',
-    title: 'Cages with Venturi',
-    category: 'Structural Support',
+    title: 'Dust Collector Filter Cages',
+    category: 'Filter Components',
     img: cageImg,
-    badge: 'Structural Support',
-    brief: 'Precision wire-mesh structural support cages fabricated from MS, GI, SS 304, or SS 316 wire. Equipped with integral cast aluminum or spun metal venturi to amplify cleaning sonic shockwaves.',
-    specs: ['Wire Configuration: 8, 10, 12, 16, 20, or 24 longitudinal wires', 'Finish: Zinc electroplated, galvanized, silicone epoxy coated', 'Venturi: Cast aluminum / pressed steel for supersonic jet expansion', 'Fit: Close tolerance for bag fit without chafing'],
+    badge: '6 to 20-Wire Construction',
+    brief: 'Precision robotic-welded 6, 8, 10, 12, 16, and 20-wire structural support cages fabricated in GI mild steel, SS 304, and SS 316. Available in single-piece or twist-lock split designs.',
+    specs: ['Wire Configuration: 6, 8, 10, 12, 16, or 20 longitudinal wires', 'Finish: Electro-galvanized (GI), epoxy coated, or passivated', 'Venturi: Cast aluminum or spun steel supersonic bellmouth', 'Split Cages: Bayonet twist-lock couplings for low-ceiling rooms'],
     link: '/products/filter-cages'
   },
   {
+    id: 'venturis',
+    title: 'Supersonic Venturis (Cast Aluminum & Spun Steel)',
+    category: 'Filter Components',
+    img: venturiImg,
+    badge: 'Sonic Jet Expansion',
+    brief: 'Aerodynamically tuned Bellmouth venturis integrated at the top of filter cages to induce 4x secondary clean air volume down the full length of the filter bag during pulse cleaning.',
+    specs: ['MOC: Graded Cast Aluminum alloy or deep-drawn spun steel', 'Profile: Aerodynamic converging-diverging Bellmouth nozzle', 'Mounting: Welded, snap-in collar, or drop-in cast flange', 'Length: 150mm to 300mm tuned profile for bag lengths up to 8m'],
+    link: '/products/filter-cage-venturi'
+  },
+  {
+    id: 'snap-bands',
+    title: 'Snap Bands & Tubesheet Cuff Seals',
+    category: 'Filter Components',
+    img: filterBagImg,
+    badge: 'Airtight Mechanical Seal',
+    brief: 'Calibrated spring steel snap bands wrapped in multi-layered felt gaskets ensuring toolless, leak-free locking inside CNC laser-cut baghouse tubesheet cell plates.',
+    specs: ['Diameters: 100mm, 120mm, 130mm, 150mm, 160mm, 180mm', 'Spring Steel: High-carbon tempered spring steel / SS 301 / SS 304', 'Installation: Toolless snap-in from clean-air top plenum', 'Fit: Zero particle bypass guaranteeing <10 mg/Nm³ emissions'],
+    link: '/products/snap-bands'
+  },
+  {
     id: 'solenoid-valves',
-    title: 'Solenoid Pulse Valves',
-    category: 'Pulse Cleaning',
+    title: 'Solenoid Valves (Pilot Actuation)',
+    category: 'Filter Components',
     img: solenoidImg,
-    badge: 'Fast Response',
-    brief: 'High-speed pilot and integral diaphragm pulse jet valves engineered to discharge supersonic compressed air bursts in milliseconds, shocking filter bags clean while minimizing compressed air consumption.',
-    specs: ['Port Sizes: 3/4", 1", 1.5", 2", 2.5", 3" BSP / Threaded / Dresser nut', 'Operating Pressure: 3 to 8 bar (45 to 115 psi)', 'Diaphragm: Durable molded Buna-N or Viton (high temp)', 'Control: Direct pilot solenoid or remote pneumatic pilot'],
+    badge: 'Fast Millisecond Response',
+    brief: 'High-speed pilot solenoid valves triggering rapid compressed air purging down blowpipes to shock filter bags clean while minimizing air consumption.',
+    specs: ['Response Time: <30 milliseconds opening time', 'Operating Pressure: 3 to 8.5 bar (45 to 125 psi)', 'Voltage: 24V DC, 110V AC, 230V AC coils', 'Enclosure: IP65 weatherproof die-cast aluminum'],
     link: '/products/solenoid-valve'
   },
   {
+    id: 'pulse-valves',
+    title: 'Pulse Valves / Diaphragm Valves',
+    category: 'Filter Components',
+    img: solenoidImg,
+    badge: 'High Peak Pressure Burst',
+    brief: 'Heavy-duty angle body and dresser nut reverse pulse jet diaphragm valves engineered for over 1 million pulsing cycles in heavy dust baghouses.',
+    specs: ['Port Sizes: 3/4", 1", 1.5", 2", 2.5", 3" BSP / Threaded / Dresser nut', 'Diaphragm: Durable molded Buna-N or Viton (rated up to 180°C)', 'Peak Pressure: Instantaneous high-thrust shockwave release', 'Mounting: Integral pilot or remote pneumatic pilot headers'],
+    link: '/products/solenoid-valve'
+  },
+  {
+    id: 'differential-pressure-switch',
+    title: 'DP Switches (Differential Pressure Switches)',
+    category: 'Filter Components',
+    img: dpSwitchImg,
+    badge: 'Smart Cleaning Interlock',
+    brief: 'High-precision differential pressure switches measuring static resistance across dirty and clean plenum tube sheets to automate on-demand pulse cleaning.',
+    specs: ['Range: 0 - 250 mm WG / 0 - 500 mm WG (0 - 5 kPa)', 'Output: Adjustable SPDT relay contacts for automatic timer trigger', 'Enclosure: IP65 weatherproof die-cast aluminum housing', 'Display: Dual scale local dial indicator with high-DP warning flag'],
+    link: '/products/differential-pressure-switch'
+  },
+  {
+    id: 'pressure-switch',
+    title: 'Pressure Transmitters & Header Switches',
+    category: 'Filter Components',
+    img: pressureSwitchImg,
+    badge: 'Air Header Safety',
+    brief: 'Compressed air header reservoir pressure monitoring switches and continuous transmitters interlocking with the pulse controller to prevent pulsing under low pressure.',
+    specs: ['Pressure Range: 1 to 10 bar adjustable setting', 'Signal: 4-20 mA analog output + SPDT alarm contacts', 'Connection: 1/4" or 1/2" NPT / BSP brass or SS connector', 'Protection: Weatherproof and flameproof enclosure options'],
+    link: '/products/pressure-switch'
+  },
+  {
+    id: 'explosion-vents',
+    title: 'Explosion Vents (ATEX Burst Panels)',
+    category: 'Filter Components',
+    img: explosionVentImg,
+    badge: 'Safety Relief',
+    brief: 'Certified rupture membrane relief panels designed to vent combustible dust deflagrations safely away from plant personnel, protecting baghouses from overpressure.',
+    specs: ['Certification: ATEX compliant combustible dust explosion relief', 'Burst Pressure: Precision calibrated (typically 0.1 bar / 1.5 psi)', 'Construction: Stainless steel composite with fluoropolymer seal', 'Accessories: Weather hoods, burst sensors, and rupture indicators'],
+    link: '/products/explosion-vents'
+  },
+
+  // 3. Mechanical Equipment
+  {
     id: 'rotary-air-lock',
-    title: 'RAL - Rotary Air Lock Valve',
-    category: 'Dust Handling',
+    title: 'Rotary Air Lock Valves (RAL)',
+    category: 'Mechanical Equipment',
     img: ralImg,
-    badge: 'Airtight Discharge',
-    brief: 'Precision-machined continuous rotary feeder valves installed beneath baghouse hoppers. Discharges accumulated dust continuously into collection bins while maintaining an airtight pressure barrier.',
+    badge: 'Airtight Hopper Discharge',
+    brief: 'Precision-machined continuous rotary feeder valves installed beneath baghouse hoppers. Discharges accumulated dust continuously while maintaining an airtight pressure barrier.',
     specs: ['Casing: Graded Cast Iron / Fabricated MS / SS 304', 'Rotor: 6 to 8 vane closed or open ended with replaceable tips', 'Drive: Geared motor with chain sprocket / direct drive', 'Pressure Seal: Holds vacuum up to ±500 mm WG without leakage'],
     link: '/products/rotary-air-lock'
   },
   {
     id: 'screw-conveyor',
-    title: 'Screw Conveyor Systems',
-    category: 'Dust Handling',
+    title: 'Screw Conveyors',
+    category: 'Mechanical Equipment',
     img: conveyorImg,
-    badge: 'Mechanical Handling',
-    brief: 'Heavy-duty enclosed tubular and U-trough screw conveyors designed to transport collected fly ash and dust from multiple hopper collection troughs to a centralized discharge airlock or storage bin.',
+    badge: 'Continuous Dust Transport',
+    brief: 'Heavy-duty enclosed tubular and U-trough screw conveyors transporting collected dust from multiple hopper collection troughs to a centralized discharge airlock.',
     specs: ['Trough: Heavy gauge MS / SS with dust-tight gasketed covers', 'Flight: Continuous sectional spiral screw flights with hardfacing', 'Bearings: Dust-sealed external hanger and outboard end bearings', 'Length & Dia: Custom designed to baghouse footprint'],
     link: '/products/screw-conveyor'
   },
   {
-    id: 'differential-pressure-switch',
-    title: 'Differential Pressure Switch & Transmitter',
-    category: 'Instrumentation',
-    img: dpSwitchImg,
-    badge: 'Smart Cleaning',
-    brief: 'High-precision differential pressure instruments that measure resistance across clean and dirty plenum tube sheets. Triggers pulse cleaning cycles only when required, saving up to 40% compressed air.',
-    specs: ['Range: 0 - 250 mm WG / 0 - 500 mm WG (0 - 5 kPa)', 'Output: 4-20mA analog signal + adjustable SPDT relay contacts', 'Enclosure: IP65 weatherproof die-cast aluminum housing', 'Display: Dual scale local dial or bright digital LED indicator'],
-    link: '/products/differential-pressure-switch'
-  },
-  {
-    id: 'pressure-switch',
-    title: 'Pressure Switch (Header Monitoring)',
-    category: 'Instrumentation',
-    img: pressureSwitchImg,
-    badge: 'Safety Interlock',
-    brief: 'Critical safety switch monitoring compressed air header reservoir pressure. Interlocks with the PLC/sequential timer to alert operators if plant air pressure drops below effective pulse cleaning thresholds.',
-    specs: ['Pressure Range: 1 to 10 bar adjustable setting', 'Electrical Rating: Heavy-duty snap action micro-switch', 'Connection: 1/4" or 1/2" NPT / BSP brass or SS connector', 'Protection: Explosion-proof and weatherproof options'],
-    link: '/products/pressure-switch'
-  },
-  {
-    id: 'level-sensor',
-    title: 'Hopper Level Sensors',
-    category: 'Instrumentation',
-    img: levelSensorImg,
-    badge: 'Spill Prevention',
-    brief: 'Rotary paddle, RF capacitance, and vibrating fork level switches installed on hopper cones. Detects high dust levels to prevent hopper backup that can submerge filter bags and cause bag failure.',
-    specs: ['Sensing Mechanism: Rotary paddle, RF admittance, vibrating rod', 'Temperature: High temperature options up to 250°C', 'Output: DPDT potential free relay contacts for alarm & shutdown', 'Housing: Cast aluminum IP66 dust-tight enclosure'],
-    link: '/products/level-sensor'
+    id: 'id-fans',
+    title: 'ID Fans (Induced Draft Centrifugal Fans)',
+    category: 'Mechanical Equipment',
+    img: idFanImg,
+    badge: 'Heavy-Duty Process Blower',
+    brief: 'Industrial heavy-duty centrifugal fans designed to draw flue gases and dust-laden air through ductwork and filter media, discharging clean air through the exhaust stack.',
+    specs: ['Capacity: Custom CFM matched to system static drop', 'Impeller: Backward curved / radial bladed with wear liners', 'Drive: Direct coupled or V-belt driven with vibration dampers', 'Temperature: Ambient up to 350°C continuous rating'],
+    link: '/products/id-fans'
   },
   {
     id: 'hopper-vibrator',
-    title: 'Hopper Vibrator (Electric & Pneumatic)',
-    category: 'Dust Handling',
+    title: 'Hopper Vibrators (Electric & Pneumatic)',
+    category: 'Mechanical Equipment',
     img: hopperVibratorImg,
-    badge: 'Bridging Prevention',
-    brief: 'Pneumatic piston and electric rotary vibrators installed on hopper sloped walls. Breaks material bridges, eliminates rat-holing, and ensures smooth free-flowing dust gravity discharge into rotary valves.',
+    badge: 'Anti-Bridging Equipment',
+    brief: 'Pneumatic piston and electric rotary vibrators installed on hopper sloped walls to eliminate material rat-holing, bridging, and ensure smooth gravity discharge.',
     specs: ['Types: Electric unbalance motor or pneumatic ball/piston', 'Force: Adjustable centrifugal force from 50 kg to 2,000 kg', 'Mounting: Reinforced channel-mount mounting bracket', 'Control: Automatic pulse cycling via cleaning sequential timer'],
     link: '/products/hopper-vibrator'
   },
   {
-    id: 'explosion-vents',
-    title: 'Explosion Vents (ATEX Burst Panels)',
-    category: 'Safety Devices',
-    img: explosionVentImg,
-    badge: 'Safety Relief',
-    brief: 'Certified rupture membrane relief panels designed to vent combustible dust deflagrations safely away from plant personnel, protecting the bag filter structural casing from catastrophic overpressure.',
-    specs: ['Certification: ATEX compliant combustible dust explosion relief', 'Burst Pressure: Precision calibrated (typically 0.1 bar / 1.5 psi)', 'Construction: Stainless steel composite with fluoropolymer seal', 'Accessories: Weather hoods, burst sensors, and rupture indicators'],
-    link: '/products/explosion-vents'
+    id: 'dampers',
+    title: 'Industrial Dampers & Airflow Controls',
+    category: 'Mechanical Equipment',
+    img: ductingImg,
+    badge: 'Gastight Isolation',
+    brief: 'Multi-louver, butterfly, and fast-acting pneumatic poppet dampers engineered for baghouse gas balancing, fresh-air dilution, and offline compartment isolation.',
+    specs: ['Types: Poppet Dampers, Multi-Louver, Butterfly, Guillotine Gates', 'Operating Temp: Ambient up to 450°C continuous rating', 'Seal Tightness: 99.0% to 99.95% volumetric shutoff', 'Actuation: Pneumatic cylinder, electric motorized, or manual'],
+    link: '/products/dampers'
+  },
+
+  // 4. Electrical & Automation
+  {
+    id: 'control-panels-seq',
+    title: 'Bag Filter Control Panels',
+    category: 'Electrical & Automation',
+    img: peMccPanel,
+    badge: 'Centralized Plant Control',
+    brief: 'Custom-engineered Motor Control Center (MCC) and automation panels managing baghouse fan interlocks, rotary airlock sequencing, and safety trips.',
+    specs: ['Operating Voltage: 415V AC, 3-Phase, 50 Hz', 'Interlocks: Fail-safe conveyor/airlock start before ID fan', 'Starters: DOL, Automatic Star-Delta, Soft Starters', 'Enclosure: IP55 / IP65 double-door CRCA powder-coated'],
+    link: '/products/control-panels'
+  },
+  {
+    id: 'plc-panels',
+    title: 'PLC Panels & Touchscreen HMI',
+    category: 'Electrical & Automation',
+    img: vfdPlcImg,
+    badge: 'SCADA & Automation',
+    brief: 'Microprocessor PLC automation panels equipped with color touchscreen HMIs and RS485 Modbus/Ethernet links for automated dust collection control.',
+    specs: ['PLCs: Siemens, Schneider, Allen-Bradley, Delta', 'HMI: 7.0" to 15.0" high-resolution color touchscreen', 'Telemetry: Real-time DP logging, fan RPM, and alarm history', 'Safety: Emergency trip interlocks and automatic bypass routing'],
+    link: '/products/control-panels'
   },
   {
     id: 'vfd-panel',
-    title: 'VFD Drive Panels (Variable Frequency Drive for ID Fans)',
-    category: 'Electrical & Automation Panels',
+    title: 'VFD Panels (Variable Frequency Drive for ID Fans)',
+    category: 'Electrical & Automation',
     img: vfdPlcImg,
-    badge: 'Airflow & Energy Saving',
-    brief: 'High-efficiency Variable Frequency Drive (VFD) panels designed for bag filter ID fans. Dynamically modulates fan RPM based on duct static pressure, delivering 25% to 40% electrical power savings.',
+    badge: '25-40% Energy Savings',
+    brief: 'High-efficiency VFD panels dynamically modulating baghouse ID fan speed based on duct static pressure, slashing electrical power consumption by up to 40%.',
     specs: ['Ratings: 5.5 kW to 350+ kW (7.5 - 500 HP)', 'Brands: Danfoss, Siemens, Schneider, ABB, Delta', 'Control: Closed-loop PID on 4-20mA DP feedback', 'Protection: Built-in line chokes & dV/dt filters'],
     link: '/products/vfd-panel'
   },
   {
+    id: 'dp-monitoring',
+    title: 'Differential Pressure Monitoring Systems',
+    category: 'Electrical & Automation',
+    img: dpSwitchImg,
+    badge: 'Continuous 4-20mA Telemetry',
+    brief: 'Digital electronic differential pressure transmitters providing continuous 4-20mA signals to the plant DCS/SCADA to prevent bag blinding and overpressure.',
+    specs: ['Accuracy: ±0.5% of calibrated span', 'Range: 0 - 250 mm WG / 0 - 500 mm WG / 0 - 5 kPa', 'Output: 4-20 mA with HART protocol / Modbus RS485', 'Enclosure: IP66 / IP68 die-cast weatherproof housing'],
+    link: '/products/differential-pressure-switch'
+  },
+  {
+    id: 'sequential-pulse-controllers',
+    title: 'Sequential Pulse Controllers',
+    category: 'Electrical & Automation',
+    img: peMccPanel,
+    badge: 'Pulse Automation',
+    brief: 'Solid-state microprocessor sequential timers with digital differential pressure transmitters and solid-state triac outputs for automated reverse pulse cleaning.',
+    specs: ['Channels: 4, 8, 16, 24, 32, 64, 128 channels', 'Outputs: 24V DC / 110V AC / 230V AC solid-state triacs', 'Cleaning Mode: Continuous cycle or on-demand DP mode', 'Enclosure: IP65 double-door weatherproof CRCA'],
+    link: '/products/control-panels'
+  },
+  {
     id: 'mcc-panel',
-    title: 'MCC Panels (Motor Control Centre for Bag Filters)',
-    category: 'Electrical & Automation Panels',
+    title: 'MCC Panels (Motor Control Centre)',
+    category: 'Electrical & Automation',
     img: peMccPanel,
     badge: 'Motor Control Center',
-    brief: 'Centralized Motor Control Center (MCC) panels housing DOL, Star-Delta, and Soft Starters with fail-safe interlocks ensuring dust discharge valves start before the bag filter ID fan.',
+    brief: 'Centralized Motor Control Center (MCC) panels housing DOL, Star-Delta, and Soft Starters with fail-safe interlocks for dust collection systems.',
     specs: ['Operating Voltage: 415 V AC, 3-Phase, 50 Hz', 'Busbar Capacity: Up to 3200 A Copper/Aluminium', 'Starters: DOL, Automatic Star-Delta, Soft Starters', 'Separation: Form 3b / Form 4b (IEC 61439)'],
     link: '/products/mcc-panel'
   },
   {
-    id: 'ht-panel',
-    title: 'HT Panels (High Tension 11kV / 22kV / 33kV Switchgear)',
-    category: 'Electrical & Automation Panels',
-    img: peHtPanel,
-    badge: 'Up to 33 kV Switchgear',
-    brief: 'High Tension (HT) switchgear panels with Vacuum Circuit Breakers (VCB) or SF6 breakers and numerical protection relays, engineered for primary plant substations and large dust collection plants.',
-    specs: ['Voltage Rating: 11 kV, 22 kV, 33 kV (50 Hz)', 'Current Rating: 630 A to 2500 A', 'Breaking Capacity: Up to 31.5 kA for 3 seconds', 'Standard: IEC 62271-200 / IS 3427'],
-    link: '/products/ht-panel'
-  },
-  {
-    id: 'lt-panel',
-    title: 'LT Panels (Low Tension 415V Power Distribution)',
-    category: 'Electrical & Automation Panels',
-    img: peLtPanel,
-    badge: '415V Power Distribution',
-    brief: 'Industrial Low Tension (LT) distribution switchboards with Air Circuit Breakers (ACB), MCCBs, and digital multifunction power meters for safe, uninterrupted power management.',
-    specs: ['Operating Voltage: 415 V AC, 3-Phase, 50 Hz', 'Continuous Current: Up to 4000 A rating', 'Fault Level: 35 kA / 50 kA for 1 second', 'Enclosure: IP42 / IP54 / IP65 powder-coated CRCA'],
-    link: '/products/lt-panel'
-  },
-  {
-    id: 'pcc-panel',
-    title: 'PCC Panels (Power Control Centre up to 6300A)',
-    category: 'Electrical & Automation Panels',
-    img: pePccPanel,
-    badge: 'Main Power Backbone',
-    brief: 'High-capacity Power Control Centre (PCC) switchboards with motorized draw-out ACBs and automatic generator source transfer (AMF/ATS) handling continuous currents up to 6300A.',
-    specs: ['Current Rating: 800 A to 6300 A continuous', 'Short Circuit Withstand: 50 kA / 65 kA for 1 sec', 'Busbars: High-purity Electrolytic Copper / Aluminium', 'Form of Separation: Form 4b compartmentalization'],
-    link: '/products/pcc-panel'
-  },
-  {
     id: 'apfc-panel',
     title: 'APFC Panels (Automatic Power Factor Control)',
-    category: 'Electrical & Automation Panels',
+    category: 'Electrical & Automation',
     img: peApfcPanel,
     badge: 'Target 0.99 PF',
-    brief: 'Microprocessor-controlled capacitor banks with 7%/14% detuned harmonic filter reactors. Automatically maintains power factor at 0.99 lag to eliminate electricity board penalty surcharges.',
+    brief: 'Microprocessor-controlled capacitor banks with 7%/14% detuned harmonic filter reactors maintaining power factor at 0.99 lag to eliminate utility penalty charges.',
     specs: ['Capacity Range: 50 kVAR to 1200+ kVAR modular', 'Target PF: 0.98 to 0.999 lag automatically maintained', 'Reactors: 7% (189 Hz) / 14% (134 Hz) detuned', 'Capacitors: Self-healing MPP with internal disconnectors'],
     link: '/products/apfc-panel'
-  },
-  {
-    id: 'control-panels-seq',
-    title: 'Baghouse PLC & Sequential Pulse Timer Panels',
-    category: 'Electrical & Automation Panels',
-    img: peMccPanel,
-    badge: 'Pulse Automation',
-    brief: 'Microprocessor sequential pulse timers with digital differential pressure transmitters and solid-state triac outputs for automated, on-demand reverse pulse-jet bag cleaning.',
-    specs: ['Channels: 4, 8, 16, 24, 32, 64, 128 channels', 'Outputs: 24V DC / 110V AC / 230V AC triacs', 'Interface: Digital LED / 7.0" color touchscreen HMI', 'Enclosure: IP65 double-door weatherproof CRCA'],
-    link: '/products/control-panels'
-  },
-  {
-    id: 'bus-duct',
-    title: 'Bus Duct Systems (Modular Sandwich Power Transmission)',
-    category: 'Electrical & Automation Panels',
-    img: peBusDuct,
-    badge: 'High Amperage Feeder',
-    brief: 'Prefabricated compact sandwich-type copper and aluminum busbar trunking systems rated up to 6300A, connecting transformers to PCC and heavy baghouse ID fan MCCs with low voltage drop.',
-    specs: ['Voltage Rating: Up to 690 V / 1000 V AC', 'Current Capacity: 100 A to 6300 A continuous', 'Conductors: 99.9% Electrolytic Copper / Aluminium', 'Protection: IP54 / IP55 / IP65 / IP67 rating'],
-    link: '/products/bus-duct'
   }
 ];
 
 const categories = [
   'All Equipment',
-  'Electrical & Automation Panels',
-  'Filtration Systems',
-  'Filtration Media',
-  'Structural Support',
-  'Pulse Cleaning',
-  'Dust Handling',
-  'Instrumentation',
-  'Safety Devices'
+  'Dust Collection Equipment',
+  'Filter Components',
+  'Mechanical Equipment',
+  'Electrical & Automation'
 ];
 
 const ProductsPage = () => {
