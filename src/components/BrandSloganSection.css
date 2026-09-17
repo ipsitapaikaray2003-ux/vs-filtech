@@ -9,7 +9,7 @@
   background: radial-gradient(ellipse at 50% 20%, #0c1a30 0%, #070e1c 65%, #050a14 100%);
   border-top: 1px solid rgba(56, 189, 248, 0.2);
   border-bottom: 1px solid rgba(56, 189, 248, 0.18);
-  padding: 6.5rem 0 6rem;
+  padding: 3.6rem 0 3.2rem;
   overflow: hidden;
   color: #ffffff;
 }
@@ -183,7 +183,7 @@
 .slogan-hero-content {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 4.5rem;
+  margin: 0 auto 2.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,20 +193,20 @@
 .slogan-eyebrow-pill {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 22px;
+  gap: 8px;
+  padding: 5px 16px;
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.85);
   border: 1.5px solid rgba(56, 189, 248, 0.45);
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
+  box-shadow: 0 0 18px rgba(14, 165, 233, 0.22);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   color: #38bdf8;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
 
@@ -281,7 +281,7 @@
 .brand-main-title {
   position: relative;
   z-index: 2;
-  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   font-weight: 900;
   letter-spacing: 0.08em;
   color: #ffffff;
@@ -301,7 +301,7 @@
 /* ── Slogan Statement Banner with Shimmering Light ── */
 .slogan-statement-banner {
   position: relative;
-  margin: 1.25rem 0 1.8rem;
+  margin: 0.6rem 0 1rem;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -315,14 +315,14 @@
 
 .slogan-quote {
   font-family: Georgia, serif;
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
   color: #38bdf8;
   line-height: 0.8;
   opacity: 0.85;
 }
 
 .slogan-dynamic-text {
-  font-size: clamp(1.8rem, 4.4vw, 3.4rem);
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 1.25;
@@ -353,12 +353,12 @@
 /* Underline Laser Beam */
 .slogan-underline-beam {
   width: 100%;
-  max-width: 480px;
-  height: 3px;
-  margin-top: 10px;
+  max-width: 360px;
+  height: 2.5px;
+  margin-top: 8px;
   background: linear-gradient(90deg, transparent 0%, #38bdf8 25%, #34d399 50%, #38bdf8 75%, transparent 100%);
   border-radius: 999px;
-  box-shadow: 0 0 16px 2px rgba(56, 189, 248, 0.65), 0 0 30px rgba(52, 211, 153, 0.4);
+  box-shadow: 0 0 14px 2px rgba(56, 189, 248, 0.65), 0 0 24px rgba(52, 211, 153, 0.4);
   animation: beamPulse 3s ease-in-out infinite alternate;
 }
 
@@ -370,10 +370,10 @@
 /* Narrative Paragraph */
 .slogan-narrative {
   color: #cbd5e1;
-  font-size: clamp(1.02rem, 1.8vw, 1.15rem);
-  line-height: 1.75;
-  max-width: 780px;
-  margin: 0 auto 2.2rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 1.4rem;
 }
 
 .slogan-narrative strong {
@@ -386,30 +386,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .slogan-btn-explore {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 13px 28px;
-  border-radius: 12px;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 10px;
   background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   border: 1px solid rgba(56, 189, 248, 0.5);
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   letter-spacing: 0.02em;
   text-decoration: none;
-  box-shadow: 0 6px 22px rgba(2, 132, 199, 0.45);
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.4);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slogan-btn-explore:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.65);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.6);
   border-color: #38bdf8;
   color: #ffffff;
 }
@@ -417,14 +417,14 @@
 .slogan-btn-quote {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 13px 26px;
-  border-radius: 12px;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #f8fafc;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   text-decoration: none;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
@@ -434,28 +434,28 @@
   background: rgba(56, 189, 248, 0.15);
   border-color: #38bdf8;
   color: #38bdf8;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 /* ── 4 Premium Animated Clean Air Pillar Cards ── */
 .slogan-pillars-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 16px;
 }
 
 .slogan-pillar-card {
   position: relative;
   background: linear-gradient(165deg, rgba(15, 28, 52, 0.75) 0%, rgba(9, 18, 35, 0.92) 100%);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 20px;
-  padding: 28px 24px;
+  border-radius: 14px;
+  padding: 16px 15px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
@@ -465,27 +465,27 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2.5px;
   background: var(--pillar-accent, #38bdf8);
   opacity: 0.8;
-  box-shadow: 0 0 14px var(--pillar-accent, #38bdf8);
+  box-shadow: 0 0 12px var(--pillar-accent, #38bdf8);
   transition: opacity 0.3s ease;
 }
 
 .pillar-card-border-glow {
   position: absolute;
   inset: 0;
-  border-radius: 20px;
+  border-radius: 14px;
   pointer-events: none;
   opacity: 0;
-  box-shadow: inset 0 0 24px var(--pillar-glow, rgba(56, 189, 248, 0.25));
+  box-shadow: inset 0 0 20px var(--pillar-glow, rgba(56, 189, 248, 0.25));
   transition: opacity 0.4s ease;
 }
 
 .slogan-pillar-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   border-color: var(--pillar-accent, #38bdf8);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px var(--pillar-glow, rgba(56, 189, 248, 0.25));
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 20px var(--pillar-glow, rgba(56, 189, 248, 0.25));
 }
 
 .slogan-pillar-card:hover .pillar-card-border-glow {
@@ -496,47 +496,47 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .pillar-icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid var(--pillar-accent, #38bdf8);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--pillar-accent, #38bdf8);
-  box-shadow: 0 0 16px var(--pillar-glow, rgba(56, 189, 248, 0.2));
+  box-shadow: 0 0 12px var(--pillar-glow, rgba(56, 189, 248, 0.2));
   transition: transform 0.3s ease;
 }
 
 .slogan-pillar-card:hover .pillar-icon-box {
-  transform: scale(1.1) rotate(4deg);
+  transform: scale(1.08) rotate(3deg);
 }
 
 .pillar-badge {
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--pillar-accent, #38bdf8);
   background: rgba(15, 23, 42, 0.7);
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 2px 7px;
+  border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .pillar-metric-row {
   display: flex;
   align-items: baseline;
-  gap: 6px;
-  margin-bottom: 12px;
+  gap: 4px;
+  margin-bottom: 6px;
 }
 
 .pillar-metric-val {
-  font-size: 2.2rem;
+  font-size: 1.55rem;
   font-weight: 900;
   color: #ffffff;
   line-height: 1;
@@ -545,37 +545,37 @@
 }
 
 .pillar-metric-unit {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--pillar-accent, #38bdf8);
   letter-spacing: 0.02em;
 }
 
 .pillar-title {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: #f8fafc;
-  margin: 0 0 10px;
+  margin: 0 0 4px;
   line-height: 1.3;
 }
 
 .pillar-desc {
-  font-size: 0.88rem;
+  font-size: 0.79rem;
   color: #94a3b8;
-  line-height: 1.6;
-  margin: 0 0 20px;
+  line-height: 1.45;
+  margin: 0 0 10px;
   flex: 1;
 }
 
 .pillar-card-footer {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.78rem;
+  gap: 6px;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #38bdf8;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 14px;
+  padding-top: 8px;
 }
 
 .pillar-check {
@@ -586,22 +586,22 @@
 @media (max-width: 1080px) {
   .slogan-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 14px;
   }
 }
 
 @media (max-width: 680px) {
   .brand-slogan-section {
-    padding: 4.5rem 0 4rem;
+    padding: 2.8rem 0 2.5rem;
   }
 
   .slogan-hero-content {
-    margin-bottom: 3rem;
+    margin-bottom: 1.8rem;
   }
 
   .slogan-pillars-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 12px;
   }
 
   .slogan-action-bar {

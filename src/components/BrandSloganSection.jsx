@@ -19,7 +19,7 @@ const pillars = [
     metric: '< 10',
     unit: 'mg/Nm³',
     title: 'CPCB Clean Air Emission',
-    desc: 'Guaranteed stack emission limits strictly complying with Central & State Pollution Control Board environmental norms.',
+    desc: 'Guaranteed stack emission limits strictly complying with CPCB and State environmental norms.',
     accent: '#38bdf8',
     glow: 'rgba(56, 189, 248, 0.25)'
   },
@@ -29,7 +29,7 @@ const pillars = [
     metric: '99.9',
     unit: '%',
     title: 'High-Purity Air Filtration',
-    desc: 'Precision needle-felt and membrane media trapping sub-micron hazardous particulates, silica, and metallurgical fumes.',
+    desc: 'Precision needle-felt and membrane media trapping sub-micron particulates & process fumes.',
     accent: '#10b981',
     glow: 'rgba(16, 185, 129, 0.25)'
   },
@@ -39,7 +39,7 @@ const pillars = [
     metric: 'Low ΔP',
     unit: 'Steady Flow',
     title: 'Smart Differential Pressure',
-    desc: 'Low resistance aerodynamic gas paths and demand-based pulse cleaning for reduced compressed air and ID fan power.',
+    desc: 'Aerodynamic airflow paths and demand-based pulsing for reduced compressed air demand.',
     accent: '#f59e0b',
     glow: 'rgba(245, 158, 11, 0.25)'
   },
@@ -49,7 +49,7 @@ const pillars = [
     metric: '100',
     unit: '% Eco',
     title: 'Zero-Leakage Integrity',
-    desc: 'Laser-cut tube sheets, precision venturis, and seamless snap-band cuffs eliminating fugitive emissions completely.',
+    desc: 'Laser-cut tube sheets, precision venturis, and snap-band cuffs eliminating fugitive emissions.',
     accent: '#a78bfa',
     glow: 'rgba(167, 139, 250, 0.25)'
   }
@@ -160,7 +160,7 @@ const BrandSloganSection = () => {
                 
                 <div className="pillar-header">
                   <div className="pillar-icon-box">
-                    <Icon size={22} strokeWidth={2.2} />
+                    <Icon size={18} strokeWidth={2.2} />
                   </div>
                   <span className="pillar-badge">{item.badge}</span>
                 </div>
@@ -174,7 +174,7 @@ const BrandSloganSection = () => {
                 <p className="pillar-desc">{item.desc}</p>
 
                 <div className="pillar-card-footer">
-                  <CheckCircle2 size={15} className="pillar-check" />
+                  <CheckCircle2 size={13} className="pillar-check" />
                   <span>Engineered Performance</span>
                 </div>
               </div>
