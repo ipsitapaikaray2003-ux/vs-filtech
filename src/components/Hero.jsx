@@ -11,7 +11,7 @@ import slide4 from '../assets/slide_new_4.jpg';
 
 const slides = [
   {
-    badge: 'ENGINEERED AIR FILTRATION & DUST EXTRACTION',
+    badge: 'WE CARE FOR CLEAN AIR — INDUSTRIAL AIR FILTRATION',
     titleLine1: 'Industrial Dust Collection',
     titleHighlight: '& Filtration',
     titleLine2: 'Solutions',

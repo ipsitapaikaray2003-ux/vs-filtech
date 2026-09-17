@@ -101,7 +101,7 @@ const Navbar = () => {
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu} aria-label="VS Filtech Home">
           <img 
             src={currentLogo} 
-            alt="VS Filtech - Engineering A Cleaner Tomorrow" 
+            alt="VS Filtech - We Care for Clean Air" 
             className="navbar-logo-img" 
           />
         </Link>

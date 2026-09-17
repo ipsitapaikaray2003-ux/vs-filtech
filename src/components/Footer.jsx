@@ -46,10 +46,21 @@ const Footer = () => {
             <Link to="/" className="footer-logo-link" aria-label="VS Filtech Home">
               <img 
                 src={logoImg} 
-                alt="VS Filtech - Engineering A Cleaner Tomorrow" 
+                alt="VS Filtech - We Care for Clean Air" 
                 className="footer-logo-image" 
               />
             </Link>
+            <div style={{
+              fontSize: '0.82rem',
+              fontWeight: '700',
+              color: '#38bdf8',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginTop: '8px',
+              marginBottom: '10px'
+            }}>
+              &ldquo;We Care for Clean Air&rdquo;
+            </div>
             <p className="footer-brand-desc">
               Turnkey design and manufacturer of industrial pulse jet bag filters, dust collectors, cages, filter bags, and automated control systems. Trusted across cement, steel, power, and chemical industries.
             </p>
