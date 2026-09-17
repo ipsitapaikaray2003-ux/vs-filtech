@@ -15,6 +15,7 @@ import {
   Layers,
   Wrench
 } from 'lucide-react';
+import './QualityInspectionSection.css';
 
 const qualityStages = [
   {
@@ -348,36 +349,14 @@ const QualityInspectionSection = () => {
             </p>
           </div>
 
-          {/* 8 Deliverables Grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '18px'
-          }}>
+          {/* 8 Deliverables Grid (3 + 3 + 2 centered) */}
+          <div className="deliverables-grid">
             {authenticDeliverables.map((item) => {
               const ItemIcon = item.icon;
               return (
                 <div 
                   key={item.id}
-                  style={{
-                    background: 'rgba(10, 22, 40, 0.7)',
-                    border: '1px solid rgba(56, 189, 248, 0.16)',
-                    borderRadius: '14px',
-                    padding: '20px 18px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    transition: 'all 0.25s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#38bdf8';
-                    e.currentTarget.style.background = 'rgba(15, 32, 64, 0.9)';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.16)';
-                    e.currentTarget.style.background = 'rgba(10, 22, 40, 0.7)';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
+                  className="deliverable-card"
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
                     <div style={{

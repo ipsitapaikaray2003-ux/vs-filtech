@@ -1,0 +1,47 @@
+/* ============================================================
+   QUALITY INSPECTION SECTION STYLES
+   ============================================================ */
+
+.deliverables-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.deliverable-card {
+  flex: 0 0 calc(33.333% - 12px);
+  width: calc(33.333% - 12px);
+  max-width: calc(33.333% - 12px);
+  background: rgba(10, 22, 40, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 14px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.deliverable-card:hover {
+  border-color: #38bdf8;
+  background: rgba(15, 32, 64, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.2);
+}
+
+@media (max-width: 960px) {
+  .deliverable-card {
+    flex: 0 0 calc(50% - 9px);
+    width: calc(50% - 9px);
+    max-width: calc(50% - 9px);
+  }
+}
+
+@media (max-width: 600px) {
+  .deliverable-card {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+}
