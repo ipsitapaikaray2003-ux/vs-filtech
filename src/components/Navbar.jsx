@@ -342,11 +342,11 @@ const Navbar = () => {
           </Link>
 
           <Link 
-            to="/projects" 
-            className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`} 
+            to="/applications" 
+            className={`nav-link ${location.pathname === '/applications' || location.pathname === '/projects' ? 'active' : ''}`} 
             onClick={closeMobileMenu}
           >
-            Projects
+            Applications
           </Link>
 
           <Link 

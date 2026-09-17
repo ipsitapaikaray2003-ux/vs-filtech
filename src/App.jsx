@@ -14,6 +14,7 @@ import ControlPanelsPage from './pages/ControlPanelsPage';
 import EngineeringPage from './pages/EngineeringPage';
 import RetrofitPage from './pages/RetrofitPage';
 import IndustriesPage from './pages/IndustriesPage';
+import ApplicationsPage from './pages/ApplicationsPage';
 import ProjectsPage from './pages/ProjectsPage';
 
 // Old routes for backwards compatibility
@@ -36,12 +37,13 @@ function App() {
             <Route path="/engineering" element={<EngineeringPage />} />
             <Route path="/retrofit" element={<RetrofitPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/applications" element={<ApplicationsPage />} />
+            <Route path="/projects" element={<ApplicationsPage />} />
             <Route path="/contact" element={<Contact />} />
             
             {/* Services & Gallery backwards compatibility */}
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/gallery" element={<ProjectsPage />} />
+            <Route path="/gallery" element={<ApplicationsPage />} />
 
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/pulse-jet-filter" element={<PulseJetFilterPage />} />

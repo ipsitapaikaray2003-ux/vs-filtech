@@ -81,7 +81,7 @@ const Footer = () => {
                 { label: 'Technical Engineering', to: '/engineering' },
                 { label: 'Retrofit & Upgrades', to: '/retrofit' },
                 { label: 'Industries Served', to: '/industries' },
-                { label: 'Project Gallery', to: '/projects' },
+                { label: 'Applications', to: '/applications' },
                 { label: 'Contact & RFQ', to: '/contact' }
               ].map((link, idx) => (
                 <li key={idx}>

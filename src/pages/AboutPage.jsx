@@ -242,9 +242,9 @@ const AboutPage = () => {
               </h1>
 
               <p className="premium-hero-animate executive-lead">
-                VS Filtech is an engineering-oriented company focused on industrial dust collection, filtration and control solutions. We provide customised solutions for industrial applications, with a focus on practical engineering, fabrication quality, inspection and dependable system performance.
+                <strong>VS Filtech</strong> — Established to provide industrial air filtration, dust collection and control-panel solutions.
                 <br /><br />
-                Our approach is based on understanding the process requirement first and then developing the appropriate filtration and dust collection solution.
+                With extensive experience in industrial dust collection and bag filter applications, our technical team understands the requirements involved in filter selection, system design, fabrication, filter bags, cages, pulse-cleaning systems and associated equipment.
               </p>
 
               {/* 4 Core Focus Pillars */}
@@ -327,16 +327,16 @@ const AboutPage = () => {
         <div className="container">
           <div className="tab-grid-split">
             <div className="tab-text-side">
-              <div className="luxury-eyebrow">PREMIER OEM IN INDIA</div>
+              <div className="luxury-eyebrow">COMPANY PROFILE &amp; TECHNICAL EXPERIENCE</div>
               <h2 className="tab-heading">
-                Design &amp; Manufacturer of <br />
-                <span className="luxury-gradient-text">Bag Filters &amp; Dust Collectors</span>
+                Industrial Air Filtration &amp; <br />
+                <span className="luxury-gradient-text">Dust Collection Solutions</span>
               </h2>
               <p className="tab-paragraph">
-                <strong>VS Filtech</strong> is one of the premier Design and Manufacturers of Bag Filters and Dust Collectors in India. We introduce ourselves as a full-scale Manufacturer and Supplier of Air Filtration Equipments, Accessories &amp; Spares — including Pulse Jet Bag Filters, Dust Collectors, Manual Dust Collectors, Centrifugal ID Fans, Pulse Jet Filter Bags, Pleated Filter Bags, Support Cages with Aerodynamic Venturis, Solenoid Pulse Valves, Sequential Timers, Rotary Air Locks (RAL), Vibrosieves, Screw Conveyors, Differential Pressure Transmitters, Pressure Switches, Hopper Level Sensors, and associated dust handling systems.
+                <strong>VS Filtech</strong> — Established to provide industrial air filtration, dust collection and control-panel solutions. We specialize in application-oriented systems, turnkey pulse jet bag filters, dust collectors, cages, filter bags, and automated control panels.
               </p>
               <p className="tab-paragraph">
-                Our precision fabrics and filter articles help our clients to get true value for money with maximum filtration quality in minimum time. Total satisfaction of our customers is the key to the growth of VS FILTECH in the field of industrial fabrics and filtration accessories.
+                <strong>Our Technical Experience:</strong> With extensive experience in industrial dust collection and bag filter applications, our technical team understands the requirements involved in filter selection, system design, fabrication, filter bags, cages, pulse-cleaning systems and associated equipment.
               </p>
 
               <div className="tab-feature-checks">
