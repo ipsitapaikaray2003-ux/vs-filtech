@@ -2,58 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Wind, 
-  Sparkles, 
-  ShieldCheck, 
-  Leaf, 
   ArrowRight, 
-  Activity, 
-  Gauge, 
-  CheckCircle2 
+  Activity 
 } from 'lucide-react';
 import './BrandSloganSection.css';
-
-const pillars = [
-  {
-    icon: ShieldCheck,
-    badge: 'STATUTORY COMPLIANCE',
-    metric: '< 10',
-    unit: 'mg/Nm³',
-    title: 'CPCB Clean Air Emission',
-    desc: 'Guaranteed stack emission limits strictly complying with CPCB and State environmental norms.',
-    accent: '#38bdf8',
-    glow: 'rgba(56, 189, 248, 0.25)'
-  },
-  {
-    icon: Wind,
-    badge: 'ULTRA-FINE RECOVERY',
-    metric: '99.9',
-    unit: '%',
-    title: 'High-Purity Air Filtration',
-    desc: 'Precision needle-felt and membrane media trapping sub-micron particulates & process fumes.',
-    accent: '#10b981',
-    glow: 'rgba(16, 185, 129, 0.25)'
-  },
-  {
-    icon: Gauge,
-    badge: 'OPTIMIZED ENERGY',
-    metric: 'Low ΔP',
-    unit: 'Steady Flow',
-    title: 'Smart Differential Pressure',
-    desc: 'Aerodynamic airflow paths and demand-based pulsing for reduced compressed air demand.',
-    accent: '#f59e0b',
-    glow: 'rgba(245, 158, 11, 0.25)'
-  },
-  {
-    icon: Leaf,
-    badge: 'GREEN INDUSTRY',
-    metric: '100',
-    unit: '% Eco',
-    title: 'Zero-Leakage Integrity',
-    desc: 'Laser-cut tube sheets, precision venturis, and snap-band cuffs eliminating fugitive emissions.',
-    accent: '#a78bfa',
-    glow: 'rgba(167, 139, 250, 0.25)'
-  }
-];
 
 const BrandSloganSection = () => {
   return (
@@ -144,42 +96,6 @@ const BrandSloganSection = () => {
               <span>Request Emission Sizing</span>
             </Link>
           </div>
-        </div>
-
-        {/* ── 4 Premium Animated Clean Air Pillar Cards ── */}
-        <div className="slogan-pillars-grid">
-          {pillars.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div 
-                key={idx} 
-                className="slogan-pillar-card"
-                style={{ '--pillar-accent': item.accent, '--pillar-glow': item.glow }}
-              >
-                <div className="pillar-card-border-glow" />
-                
-                <div className="pillar-header">
-                  <div className="pillar-icon-box">
-                    <Icon size={18} strokeWidth={2.2} />
-                  </div>
-                  <span className="pillar-badge">{item.badge}</span>
-                </div>
-
-                <div className="pillar-metric-row">
-                  <span className="pillar-metric-val">{item.metric}</span>
-                  <span className="pillar-metric-unit">{item.unit}</span>
-                </div>
-
-                <h4 className="pillar-title">{item.title}</h4>
-                <p className="pillar-desc">{item.desc}</p>
-
-                <div className="pillar-card-footer">
-                  <CheckCircle2 size={13} className="pillar-check" />
-                  <span>Engineered Performance</span>
-                </div>
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@
   background: radial-gradient(ellipse at 50% 20%, #0c1a30 0%, #070e1c 65%, #050a14 100%);
   border-top: 1px solid rgba(56, 189, 248, 0.2);
   border-bottom: 1px solid rgba(56, 189, 248, 0.18);
-  padding: 3.6rem 0 3.2rem;
+  padding: 4.2rem 0;
   overflow: hidden;
   color: #ffffff;
 }
@@ -183,7 +183,7 @@
 .slogan-hero-content {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 2.2rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
