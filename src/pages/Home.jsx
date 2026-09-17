@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
+import BrandSloganSection from '../components/BrandSloganSection';
 import ProcessCapabilityBanner from '../components/ProcessCapabilityBanner';
 import Products from '../components/Products';
 import EngineeringApproachSection from '../components/EngineeringApproachSection';
@@ -31,6 +32,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <BrandSloganSection />
       <ProcessCapabilityBanner />
       <Products />
       <EngineeringApproachSection />

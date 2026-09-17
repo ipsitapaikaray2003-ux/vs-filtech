@@ -11,7 +11,7 @@ import slide4 from '../assets/slide_new_4.jpg';
 
 const slides = [
   {
-    badge: 'WE CARE FOR CLEAN AIR — INDUSTRIAL AIR FILTRATION',
+    badge: 'INDUSTRIAL DUST COLLECTION & AIR FILTRATION',
     titleLine1: 'Industrial Dust Collection',
     titleHighlight: '& Filtration',
     titleLine2: 'Solutions',
@@ -83,6 +83,13 @@ const Hero = () => {
           {idx === current && (
             <div className="container hero-container">
               <div key={current} className="hero-inner">
+                {/* Brand & Animated Slogan Pill */}
+                <div className="hero-brand-slogan-pill">
+                  <span className="hero-brand-pill-title">VS FILTECH</span>
+                  <span className="hero-brand-pill-separator">✦</span>
+                  <span className="hero-brand-pill-slogan">“We Care for Clean Air”</span>
+                </div>
+
                 <div className="hero-badge">
                   <Sparkles size={13} className="hero-badge-sparkle" />
                   <span>{slide.badge}</span>

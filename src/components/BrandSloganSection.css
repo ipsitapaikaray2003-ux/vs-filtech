@@ -1,0 +1,617 @@
+/* ==========================================================================
+   BRAND SLOGAN SECTION — VS FILTECH
+   "We Care for Clean Air"
+   Luxury Dark Industrial Aesthetic | Fluid Airflow Streams | Ambient Glows
+   ========================================================================== */
+
+.brand-slogan-section {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 20%, #0c1a30 0%, #070e1c 65%, #050a14 100%);
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+  padding: 6.5rem 0 6rem;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* ── Background Airflow Canvas & Ambient Orbs ── */
+.slogan-bg-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.slogan-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(56, 189, 248, 0.18) 1px, transparent 0);
+  background-size: 36px 36px;
+  background-position: 0 0;
+  opacity: 0.45;
+  mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
+}
+
+/* Glowing Ambient Orbs */
+.slogan-ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.orb-cyan {
+  top: 10%;
+  left: 20%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #0284c7 0%, #0ea5e9 40%, transparent 70%);
+  animation: orbDriftA 16s ease-in-out infinite alternate;
+}
+
+.orb-emerald {
+  bottom: 15%;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #10b981 0%, #059669 40%, transparent 70%);
+  animation: orbDriftB 18s ease-in-out infinite alternate;
+}
+
+.orb-purple {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 380px;
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+  opacity: 0.16;
+}
+
+@keyframes orbDriftA {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(60px, -40px) scale(1.12); }
+}
+
+@keyframes orbDriftB {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-50px, 30px) scale(1.08); }
+}
+
+/* Flowing SVG Airflow Wave Paths */
+.slogan-airflow-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.airflow-stream {
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 20 280;
+  animation: airflowFlow 12s linear infinite;
+}
+
+.stream-1 {
+  stroke: url(#cyanGrad);
+  stroke: rgba(56, 189, 248, 0.7);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.8));
+  animation-duration: 10s;
+}
+
+.stream-2 {
+  stroke: rgba(16, 185, 129, 0.65);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.7));
+  animation-duration: 14s;
+  animation-delay: -3s;
+}
+
+.stream-3 {
+  stroke: rgba(167, 139, 250, 0.6);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px rgba(167, 139, 250, 0.6));
+  animation-duration: 16s;
+  animation-delay: -7s;
+}
+
+@keyframes airflowFlow {
+  0% { stroke-dashoffset: 600; }
+  100% { stroke-dashoffset: -600; }
+}
+
+/* Floating Luminous Micro-Particles */
+.clean-air-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.air-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8, 0 0 20px rgba(56, 189, 248, 0.8);
+  animation: floatParticle 8s ease-in-out infinite;
+  opacity: 0;
+}
+
+.p1 { top: 20%; left: 15%; width: 4px; height: 4px; animation-delay: 0s; animation-duration: 7s; }
+.p2 { top: 40%; left: 82%; width: 5px; height: 5px; background: #34d399; box-shadow: 0 0 10px #34d399; animation-delay: 1.5s; animation-duration: 9s; }
+.p3 { top: 75%; left: 28%; width: 3px; height: 3px; animation-delay: 3s; animation-duration: 6.5s; }
+.p4 { top: 30%; left: 65%; width: 4px; height: 4px; animation-delay: 2s; animation-duration: 8s; }
+.p5 { top: 60%; left: 10%; width: 3px; height: 3px; background: #a78bfa; box-shadow: 0 0 10px #a78bfa; animation-delay: 4.5s; animation-duration: 10s; }
+.p6 { top: 85%; left: 70%; width: 5px; height: 5px; animation-delay: 0.8s; animation-duration: 7.5s; }
+.p7 { top: 15%; left: 45%; width: 3px; height: 3px; animation-delay: 3.2s; animation-duration: 8.5s; }
+.p8 { top: 50%; left: 92%; width: 4px; height: 4px; background: #38bdf8; animation-delay: 2.2s; animation-duration: 9.5s; }
+
+@keyframes floatParticle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.6);
+  }
+  30% {
+    opacity: 0.85;
+    transform: translateY(-15px) scale(1.1);
+  }
+  70% {
+    opacity: 0.85;
+    transform: translateY(-45px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-75px) scale(0.5);
+  }
+}
+
+/* ── Container Layout ── */
+.slogan-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Central Hero Content ── */
+.slogan-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow Pill */
+.slogan-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 22px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #38bdf8;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.slogan-eyebrow-pill:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+}
+
+.slogan-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.slogan-wind-icon {
+  color: #38bdf8;
+  animation: windSway 3s ease-in-out infinite;
+}
+
+@keyframes windSway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+.slogan-sparkle-icon {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  animation: spinSlow 6s linear infinite;
+}
+
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Brand Name Typography & Back Glow ── */
+.brand-name-wrapper {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.brand-back-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(3.2rem, 8vw, 6.2rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(56, 189, 248, 0.35);
+  filter: blur(12px);
+  pointer-events: none;
+  z-index: 1;
+  animation: brandGlowPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes brandGlowPulse {
+  0% { opacity: 0.4; filter: blur(12px); }
+  100% { opacity: 0.9; filter: blur(18px); text-shadow: 0 0 35px rgba(56, 189, 248, 0.6); }
+}
+
+.brand-main-title {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.brand-title-accent {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.5));
+}
+
+/* ── Slogan Statement Banner with Shimmering Light ── */
+.slogan-statement-banner {
+  position: relative;
+  margin: 1.25rem 0 1.8rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slogan-shimmer-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.slogan-quote {
+  font-family: Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  color: #38bdf8;
+  line-height: 0.8;
+  opacity: 0.85;
+}
+
+.slogan-dynamic-text {
+  font-size: clamp(1.8rem, 4.4vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0;
+  /* Shimmer gradient traveling across text */
+  background: linear-gradient(
+    90deg, 
+    #ffffff 0%, 
+    #38bdf8 25%, 
+    #f8fafc 48%, 
+    #34d399 72%, 
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sloganTextShimmer 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 16px rgba(14, 165, 233, 0.35));
+}
+
+@keyframes sloganTextShimmer {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Underline Laser Beam */
+.slogan-underline-beam {
+  width: 100%;
+  max-width: 480px;
+  height: 3px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, transparent 0%, #38bdf8 25%, #34d399 50%, #38bdf8 75%, transparent 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 16px 2px rgba(56, 189, 248, 0.65), 0 0 30px rgba(52, 211, 153, 0.4);
+  animation: beamPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes beamPulse {
+  0% { transform: scaleX(0.85); opacity: 0.75; }
+  100% { transform: scaleX(1.08); opacity: 1; }
+}
+
+/* Narrative Paragraph */
+.slogan-narrative {
+  color: #cbd5e1;
+  font-size: clamp(1.02rem, 1.8vw, 1.15rem);
+  line-height: 1.75;
+  max-width: 780px;
+  margin: 0 auto 2.2rem;
+}
+
+.slogan-narrative strong {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+/* Action Buttons */
+.slogan-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.slogan-btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 6px 22px rgba(2, 132, 199, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slogan-btn-explore:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.65);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+.slogan-btn-quote {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.slogan-btn-quote:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* ── 4 Premium Animated Clean Air Pillar Cards ── */
+.slogan-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.slogan-pillar-card {
+  position: relative;
+  background: linear-gradient(165deg, rgba(15, 28, 52, 0.75) 0%, rgba(9, 18, 35, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.slogan-pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--pillar-accent, #38bdf8);
+  opacity: 0.8;
+  box-shadow: 0 0 14px var(--pillar-accent, #38bdf8);
+  transition: opacity 0.3s ease;
+}
+
+.pillar-card-border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: inset 0 0 24px var(--pillar-glow, rgba(56, 189, 248, 0.25));
+  transition: opacity 0.4s ease;
+}
+
+.slogan-pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--pillar-accent, #38bdf8);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px var(--pillar-glow, rgba(56, 189, 248, 0.25));
+}
+
+.slogan-pillar-card:hover .pillar-card-border-glow {
+  opacity: 1;
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pillar-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--pillar-accent, #38bdf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pillar-accent, #38bdf8);
+  box-shadow: 0 0 16px var(--pillar-glow, rgba(56, 189, 248, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.slogan-pillar-card:hover .pillar-icon-box {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.pillar-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--pillar-accent, #38bdf8);
+  background: rgba(15, 23, 42, 0.7);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pillar-metric-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pillar-metric-val {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  font-family: inherit;
+  letter-spacing: -0.02em;
+}
+
+.pillar-metric-unit {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--pillar-accent, #38bdf8);
+  letter-spacing: 0.02em;
+}
+
+.pillar-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.pillar-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #38bdf8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 14px;
+}
+
+.pillar-check {
+  color: var(--pillar-accent, #38bdf8);
+}
+
+/* ── Responsive Breakpoints ── */
+@media (max-width: 1080px) {
+  .slogan-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .brand-slogan-section {
+    padding: 4.5rem 0 4rem;
+  }
+
+  .slogan-hero-content {
+    margin-bottom: 3rem;
+  }
+
+  .slogan-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .slogan-action-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .slogan-btn-explore,
+  .slogan-btn-quote {
+    width: 100%;
+    justify-content: center;
+  }
+}
