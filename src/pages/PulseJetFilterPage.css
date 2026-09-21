@@ -105,6 +105,14 @@
   border-bottom: 1px solid rgba(56, 189, 248, 0.16);
 }
 
+.pj-support-blue .support-eyebrow {
+  color: #38bdf8;
+}
+
+.pj-support-blue .support-eyebrow-dot {
+  background-color: #34d399;
+}
+
 .pj-support-blue .support-main-title {
   color: #ffffff;
 }
@@ -136,7 +144,41 @@
 }
 
 .pj-support-blue .support-icon-box {
-  background: rgba(234, 88, 12, 0.15);
-  border-color: rgba(234, 88, 12, 0.35);
-  color: #fb923c;
+  background: rgba(2, 132, 199, 0.15);
+  border-color: rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+}
+
+.pj-support-blue .support-callout-card {
+  background: rgba(15, 32, 64, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.pj-support-blue .support-callout-title {
+  color: #ffffff;
+}
+
+.pj-support-blue .support-callout-desc {
+  color: #cbd5e1;
+}
+
+.pj-support-blue .btn-call-outline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+}
+
+.pj-support-blue .btn-call-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+.pj-support-blue .btn-whatsapp-peach {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #4ade80 !important;
+}
+
+.pj-support-blue .btn-whatsapp-peach:hover {
+  background: rgba(34, 197, 94, 0.25);
+  border-color: #4ade80;
 }

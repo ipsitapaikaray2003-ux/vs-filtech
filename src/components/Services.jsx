@@ -13,18 +13,21 @@ import {
   Wind,
   ShieldCheck,
   Activity,
-  Sliders
+  Sliders,
+  ClipboardCheck,
+  Search
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Services.css';
 
 // Ultra-High-Definition Commercial Industrial Photography (Accurately Matched to Bag Filter Capabilities)
 import turnkeyImg from '../assets/service_turnkey_hd.jpg';
+import auditImg from '../assets/service_audit_hd.jpg';
 import retrofitImg from '../assets/service_retrofit_hd.jpg';
 import fabricationImg from '../assets/service_fabrication_hd.jpg';
 import sparesImg from '../assets/service_spares_hd.jpg';
 
-// 4 Primary Client Capabilities
+// 5 Primary Client Capabilities
 const clientServices = [
   {
     id: 'turnkey-erection',
@@ -47,15 +50,36 @@ const clientServices = [
     link: '/contact?service=turnkey-commissioning'
   },
   {
-    id: 'retrofitting-upgradation',
+    id: 'audit-existing-bag-filter',
     tagline: 'SERVICE CAPABILITY 02',
+    title: 'Audit of Existing Bag Filter',
+    lead: 'We perform comprehensive on-site technical audits of existing bag filters to evaluate performance, locate differential pressure bottlenecks, and eliminate dust emissions.',
+    photo: auditImg,
+    badge: 'On-Site Diagnostic Health Audit',
+    badgeClass: 'badge-emerald',
+    icon: ClipboardCheck,
+    iconColor: '#059669',
+    desc: 'In-depth diagnostic evaluation of operating baghouse systems. Our engineering team measures actual CFM airflow volume, static pressure gradients, differential pressure (DP) across plenums, and performs fluorescent tracer dye testing to pinpoint torn or blinded bags, delivering an actionable audit report with optimization recommendations.',
+    bullets: [
+      'Chamber-by-chamber Differential Pressure (DP) & resistance profile analysis',
+      'Fluorescent tracer dye leak detection identifying torn bags or tube sheet bypass',
+      'Inlet airflow (CFM) measurement, duct velocity balancing & ID fan draft audit',
+      'Pulse cleaning audit: header pressure, pulse valves, diaphragm wear & timer sequencing',
+      'Actionable Audit Report with CPCB compliance roadmap (<10 mg/Nm³) and ROI recommendations'
+    ],
+    metric: 'Audit: Full Diagnostic Report',
+    link: '/contact?service=bag-filter-audit'
+  },
+  {
+    id: 'retrofitting-upgradation',
+    tagline: 'SERVICE CAPABILITY 03',
     title: 'Retrofit & Upgradation of Existing Bag Filters',
     lead: 'We do retrofit and modernization of existing bag filters to increase air capacity, lower differential pressure, and achieve strict emission norms.',
     photo: retrofitImg,
     badge: '<10 mg/Nm³ Emission Guarantee',
     badgeClass: 'badge-emerald',
     icon: RefreshCw,
-    iconColor: '#059669',
+    iconColor: '#0284c7',
     desc: 'Modernizing older, inefficient, or undersized dust collectors to meet stringent pollution board norms (<10 mg/Nm³) without the capital cost of total unit replacement. Optimize airflow and slash compressed air costs.',
     bullets: [
       'Bag-to-Pleated Bag conversions (expanding filtration area by 200%-300%)',
@@ -68,7 +92,7 @@ const clientServices = [
   },
   {
     id: 'custom-fabrication',
-    tagline: 'SERVICE CAPABILITY 03',
+    tagline: 'SERVICE CAPABILITY 04',
     title: 'Fabrication of Bag Filter Items',
     lead: 'We do in-house custom fabrication of all critical bag filter items to precise CAD drawings and strict industrial tolerances.',
     photo: fabricationImg,
@@ -88,14 +112,14 @@ const clientServices = [
   },
   {
     id: 'spares-supply',
-    tagline: 'SERVICE CAPABILITY 04',
+    tagline: 'SERVICE CAPABILITY 05',
     title: 'Supply of All Spares Related to Bag Filters',
     lead: 'We supply all genuine spares related to bag filters under one roof with high ready inventory for pan-India rapid dispatch.',
     photo: sparesImg,
     badge: 'Pan-India Ready Dispatch',
-    badgeClass: 'badge-amber',
+    badgeClass: 'badge-blue',
     icon: Package,
-    iconColor: '#d97706',
+    iconColor: '#0284c7',
     desc: 'Single-source inventory for all pulse jet bag filter spares, hardware, and instrumentation across India under one roof, guaranteeing uninterrupted plant operation and zero downtime.',
     bullets: [
       'Pulse jet filter bags: Nomex (240°C), Ryton, PTFE Membrane, Polypropylene & Epitropic',
@@ -122,8 +146,8 @@ const additionalServices = [
   },
   {
     icon: Activity,
-    title: 'Technical Audits & <10 mg/Nm³ Testing',
-    desc: 'On-site system diagnostics: inlet CFM airflow measurements, duct velocity balancing, fan performance curve matching, and fluorescent tracer dye leak detection testing.'
+    title: 'Fluorescent Tracer Dye Leak Testing',
+    desc: 'Injecting UV-reactive fluorescent powder into dirty gas streams and using blacklight optical inspection to immediately detect micro-pinholes, seam failures, and tube sheet bypass.'
   },
   {
     icon: Sliders,
@@ -177,13 +201,13 @@ const Services = () => {
           </h2>
 
           <p className="services-main-desc">
-            We at <strong>VS Filtech</strong> specialize in the design, manufacturing, erection & commissioning of bag filters, 
-            retrofitting & upgradation of existing systems to &lt;10 mg/Nm³ emission levels, in-house custom fabrication of all bag filter items, 
-            and supply of all related spares under one roof across India.
+            We at <strong>VS Filtech</strong> specialize in the design, manufacturing, erection &amp; commissioning of bag filters, 
+            <strong>on-site technical audit of existing bag filters</strong>, retrofitting &amp; upgradation of existing systems to &lt;10 mg/Nm³ emission levels, 
+            in-house custom fabrication of all bag filter items, and supply of all related spares under one roof across India.
           </p>
         </div>
 
-        {/* ── 4 Core Capabilities Grid (2x2 Grid) ── */}
+        {/* ── 5 Core Capabilities Grid ── */}
         <div className="services-cards-grid">
           {clientServices.map((svc) => {
             const Icon = svc.icon;

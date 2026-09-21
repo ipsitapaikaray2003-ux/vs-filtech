@@ -17,26 +17,43 @@
   --blue-300: #60a5fa;
   --blue-accent: #0ea5e9;
 
+  /* ── Brand Theme Tokens (Derived from New Logo) ── */
+  --brand-blue: #0284c7;
+  --brand-blue-dark: #035ea4;
+  --brand-cyan: #0ea5e9;
+  --brand-cyan-light: #38bdf8;
+  --brand-green: #16a34a;
+  --brand-green-light: #22c55e;
+  --brand-green-glow: #4ade80;
+  --brand-copper: #0ea5e9;
+  --brand-copper-light: #38bdf8;
+  --brand-charcoal: #1e293b;
+
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
   --bg-glass: rgba(255, 255, 255, 0.92);
 
   --text-primary: #0a1628;
-  --text-secondary: #374151;
-  --text-muted: #6b7280;
-  --text-light: #9ca3af;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
 
-  --border-color: #e5e7eb;
-  --border-light: #f3f4f6;
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
 
-  --accent-primary: #1e3a8a;
-  --accent-secondary: #2563eb;
-  --accent-light: #eff6ff;
-  --accent-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #0ea5e9 100%);
-  --accent-gradient-hover: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 60%, #38bdf8 100%);
+  --accent-primary: #0284c7;
+  --accent-secondary: #16a34a;
+  --accent-tertiary: #0ea5e9;
+  --accent-light: #f0fdf4;
+  --accent-blue-light: #f0f9ff;
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
+  --accent-gradient-blue: linear-gradient(135deg, #035ea4 0%, #0284c7 60%, #0ea5e9 100%);
+  --accent-gradient-green: linear-gradient(135deg, #15803d 0%, #16a34a 60%, #22c55e 100%);
+  --accent-gradient-copper: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #22c55e 100%);
 
-  --success: #10b981;
+  --success: #16a34a;
   --warning: #f59e0b;
   --danger: #ef4444;
 
@@ -60,11 +77,11 @@
   --teal-400: #2dd4bf;
 
   /* ── Vibrant Gradients ── */
-  --gradient-amber: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  --gradient-amber: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #16a34a 100%);
   --gradient-emerald: linear-gradient(135deg, #10b981 0%, #059669 100%);
   --gradient-violet: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  --gradient-gold-cyan: linear-gradient(135deg, #fbbf24 0%, #f59e0b 42%, #38bdf8 100%);
-  --gradient-amber-glow: 0 8px 30px rgba(245, 158, 11, 0.45);
+  --gradient-gold-cyan: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #22c55e 100%);
+  --gradient-amber-glow: 0 8px 30px rgba(2, 132, 199, 0.4);
   --gradient-emerald-glow: 0 8px 30px rgba(16, 185, 129, 0.35);
 
   /* ── Typography ── */
@@ -89,8 +106,10 @@
   --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
   --shadow-lg: 0 10px 40px rgba(0,0,0,0.1);
   --shadow-xl: 0 20px 60px rgba(0,0,0,0.12);
-  --shadow-blue: 0 8px 30px rgba(37, 99, 235, 0.25);
-  --shadow-navy: 0 8px 30px rgba(30, 58, 138, 0.3);
+  --shadow-blue: 0 8px 30px rgba(2, 132, 199, 0.28);
+  --shadow-green: 0 8px 30px rgba(22, 163, 74, 0.25);
+  --shadow-brand: 0 8px 30px rgba(2, 132, 199, 0.28), 0 4px 15px rgba(22, 163, 74, 0.2);
+  --shadow-navy: 0 8px 30px rgba(10, 22, 40, 0.3);
 
   /* ── Transitions ── */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -165,7 +184,10 @@ section {
 
 /* ── Gradient Text ── */
 .text-gradient {
-  color: #38bdf8;
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   display: inline;
 }
 
@@ -178,7 +200,7 @@ section {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
   margin-bottom: 1rem;
 }
 
@@ -186,7 +208,7 @@ section {
   content: '';
   display: block;
   width: 28px;
-  height: 2px;
+  height: 2.5px;
   background: var(--accent-gradient);
   border-radius: 2px;
 }
@@ -231,13 +253,13 @@ section {
 .btn-primary {
   background: var(--accent-gradient);
   color: #ffffff;
-  box-shadow: var(--shadow-blue);
+  box-shadow: var(--shadow-brand);
 }
 
 .btn-primary:hover {
   background: var(--accent-gradient-hover);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 12px 40px rgba(2, 132, 199, 0.4), 0 4px 20px rgba(22, 163, 74, 0.35);
 }
 
 .btn-primary:active { transform: translateY(0); }
@@ -251,20 +273,22 @@ section {
 .btn-outline:hover {
   background: var(--accent-primary);
   color: #ffffff;
+  border-color: var(--accent-primary);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-navy);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.35);
 }
 
 .btn-ghost {
   background: var(--accent-light);
   color: var(--accent-secondary);
-  border: 1px solid transparent;
+  border: 1px solid rgba(22, 163, 74, 0.2);
 }
 
 .btn-ghost:hover {
   background: var(--accent-secondary);
   color: #ffffff;
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(22, 163, 74, 0.35);
 }
 
 .btn-white {
@@ -437,17 +461,17 @@ section {
 
 /* Multi-Color Buttons */
 .btn-amber {
-  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%) !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%) !important;
   color: #ffffff !important;
-  border: 1px solid rgba(251, 191, 36, 0.5) !important;
-  box-shadow: 0 6px 25px rgba(245, 158, 11, 0.45) !important;
+  border: 1px solid rgba(56, 189, 248, 0.5) !important;
+  box-shadow: 0 6px 25px rgba(2, 132, 199, 0.45) !important;
   font-weight: 700;
   transition: all 0.3s ease;
 }
 .btn-amber:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 35px rgba(245, 158, 11, 0.6) !important;
-  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%) !important;
+  box-shadow: 0 10px 35px rgba(2, 132, 199, 0.6) !important;
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%) !important;
 }
 
 .btn-emerald {
@@ -464,9 +488,9 @@ section {
 
 /* Multi-Color Badge Highlights */
 .badge-gold-amber {
-  background: rgba(245, 158, 11, 0.14) !important;
-  border: 1px solid rgba(245, 158, 11, 0.4) !important;
-  color: #fbbf24 !important;
+  background: rgba(2, 132, 199, 0.14) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #38bdf8 !important;
 }
 .badge-emerald-green {
   background: rgba(16, 185, 129, 0.14) !important;
@@ -474,9 +498,9 @@ section {
   color: #34d399 !important;
 }
 .badge-coral-orange {
-  background: rgba(249, 115, 22, 0.14) !important;
-  border: 1px solid rgba(249, 115, 22, 0.4) !important;
-  color: #fb923c !important;
+  background: rgba(2, 132, 199, 0.14) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #38bdf8 !important;
 }
 .badge-violet-purple {
   background: rgba(139, 92, 246, 0.14) !important;

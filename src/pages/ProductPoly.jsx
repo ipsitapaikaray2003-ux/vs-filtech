@@ -558,7 +558,7 @@ _Sent from VS Filtech Official Portal_`;
                 <div style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '0.35rem' }}>
                   Direct Factory Desk:
                 </div>
-                <div style={{ fontSize: '1.25rem', fontWeight: '800', color: '#00e5ff' }}>
+                <div style={{ fontSize: '1.25rem', fontWeight: '800', color: '#38bdf8' }}>
                   Available on WhatsApp
                 </div>
               </div>

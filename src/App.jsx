@@ -49,6 +49,8 @@ function App() {
             <Route path="/products/pulse-jet-filter" element={<PulseJetFilterPage />} />
             <Route path="/products/pulse_jet_filter" element={<PulseJetFilterPage />} />
             <Route path="/products/pulse-jet-bag-filters" element={<PulseJetFilterPage />} />
+            <Route path="/products/pulse jet bag filters" element={<PulseJetFilterPage />} />
+            <Route path="/products/pulse%20jet%20bag%20filters" element={<PulseJetFilterPage />} />
             <Route path="/products/pulse-jet-dust-collector" element={<PulseJetFilterPage />} />
             <Route path="/products/filter-bags-cages" element={<FilterBagsCagesPage />} />
             <Route path="/products/control-panels" element={<ControlPanelsPage />} />

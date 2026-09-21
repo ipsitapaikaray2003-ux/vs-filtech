@@ -251,16 +251,17 @@ _Sent via vsfiltech.com/contact_`;
                       value={formData.industry}
                       onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
                     >
-                      <option value="Cement & Building Materials">Cement & Building Materials</option>
-                      <option value="Steel & Foundry">Steel & Foundry</option>
-                      <option value="Aluminium & Non-Ferrous Industries">Aluminium & Non-Ferrous Industries</option>
-                      <option value="Rice & Food Processing">Rice & Food Processing</option>
-                      <option value="Minerals & Minerals Processing">Minerals & Minerals Processing</option>
+                      <option value="Cement & Building Materials">Cement &amp; Building Materials</option>
+                      <option value="Foundries & Casting">Foundries &amp; Casting</option>
+                      <option value="Steel & Induction Furnaces">Steel &amp; Induction Furnaces</option>
+                      <option value="Aluminium & Non-Ferrous Industries">Aluminium &amp; Non-Ferrous Industries</option>
+                      <option value="Rice & Food Processing">Rice &amp; Food Processing</option>
+                      <option value="Minerals & Minerals Processing">Minerals &amp; Minerals Processing</option>
                       <option value="Chemical Industries">Chemical Industries</option>
                       <option value="Pharmaceutical Industries">Pharmaceutical Industries</option>
                       <option value="Fertilizer Industries">Fertilizer Industries</option>
-                      <option value="Power & Energy">Power & Energy</option>
-                      <option value="Wood & Biomass">Wood & Biomass</option>
+                      <option value="Power & Energy">Power &amp; Energy</option>
+                      <option value="Wood & Biomass">Wood &amp; Biomass</option>
                       <option value="General Manufacturing">General Manufacturing</option>
                     </select>
                   </div>

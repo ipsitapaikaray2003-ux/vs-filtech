@@ -177,7 +177,7 @@
   right: 12%;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.22) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 70%);
 }
 
 .hero-ambient-emerald {
@@ -322,24 +322,24 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.85rem 2.15rem;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #ffffff;
   font-family: var(--font-heading, sans-serif);
   font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0.03em;
   border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   text-decoration: none;
-  box-shadow: 0 8px 30px rgba(2, 132, 199, 0.45), 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 30px rgba(2, 132, 199, 0.45), 0 4px 15px rgba(22, 163, 74, 0.35);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .hero-btn-primary:hover {
   transform: translateY(-2.5px);
-  box-shadow: 0 14px 40px rgba(2, 132, 199, 0.65);
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  box-shadow: 0 14px 40px rgba(2, 132, 199, 0.6), 0 6px 20px rgba(22, 163, 74, 0.45);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
 }
 
 .hero-btn-secondary {
@@ -392,8 +392,8 @@
 }
 
 .hero-arrow:hover {
-  background: rgba(37, 99, 235, 0.6);
-  border-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.8) 0%, rgba(22, 163, 74, 0.8) 100%);
+  border-color: #38bdf8;
   transform: translateY(-50%) scale(1.08);
 }
 
@@ -411,7 +411,8 @@
   background: rgba(7, 16, 32, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(96, 165, 250, 0.15);
+  border-top: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
   padding: 0.75rem 0;
 }
 
@@ -439,7 +440,10 @@
   font-family: var(--font-heading, sans-serif);
   font-size: 1.45rem;
   font-weight: 800;
-  color: #60a5fa;
+  background: linear-gradient(135deg, #38bdf8 0%, #34d399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   line-height: 1;
 }
 

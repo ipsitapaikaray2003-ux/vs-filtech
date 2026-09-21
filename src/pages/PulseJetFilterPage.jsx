@@ -537,7 +537,7 @@ const PulseJetFilterPage = () => {
       <section className="light-graphic-blueprint" style={{ padding: '80px 0', background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 45px' }}>
-            <div style={{ color: '#ea580c', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
               INDUSTRIES SERVED
             </div>
             <h2 style={{ fontSize: 'clamp(2.1rem, 4vw, 3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px', letterSpacing: '-0.02em' }}>

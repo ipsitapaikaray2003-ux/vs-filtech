@@ -67,7 +67,7 @@
   font-weight: 400;
 }
 
-/* ── 4 Core Capabilities Grid (2x2 Grid) ── */
+/* ── 5 Core Capabilities Grid ── */
 .services-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -75,6 +75,15 @@
   position: relative;
   z-index: 2;
   margin-bottom: 4.5rem;
+}
+
+@media (min-width: 992px) {
+  .services-cards-grid > .premium-service-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 620px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 /* ── Individual Service Card ── */
@@ -171,9 +180,9 @@
 }
 
 .badge-amber {
-  background: rgba(217, 119, 6, 0.94);
+  background: rgba(2, 132, 199, 0.94);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.4);
 }
 
 /* Floating Icon Box over photo boundary */

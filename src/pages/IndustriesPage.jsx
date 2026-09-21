@@ -89,7 +89,7 @@ const industriesList = [
     id: 'chemical-industries',
     name: 'Chemical Industries',
     icon: FlaskConical,
-    lead: 'Pigment manufacturing, carbon black, synthetic resins, and specialty chemical batch processing.',
+    lead: 'Pigment manufacturing, inorganic catalysts, synthetic resins, and specialty chemical batch processing.',
     challenges: 'Corrosive acidic or basic vapours, ultrafine sub-micron particles, and toxic containment requirements.',
     solutions: 'SS304 / SS316 stainless steel housings, Ryton (PPS) or PTFE needlefelts, and zero-leakage snap-band tube sheets.',
     image: carbonImg
@@ -225,7 +225,7 @@ const IndustriesPage = () => {
             VS Filtech designs, manufactures, and retrofits dust collection systems tailored to the exact operating conditions, moisture levels, temperatures, and statutory emission requirements of core manufacturing sectors.
           </p>
 
-          <Link to="/contact" className="btn-amber" style={{ padding: '12px 28px', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', boxShadow: '0 4px 15px rgba(245, 158, 11, 0.35)' }}>
+          <Link to="/contact" className="btn-amber" style={{ padding: '12px 28px', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', boxShadow: '0 4px 15px rgba(2, 132, 199, 0.35)' }}>
             <span>Request Application Sizing</span>
             <ArrowRight size={16} />
           </Link>
@@ -237,7 +237,7 @@ const IndustriesPage = () => {
       <section style={{ padding: '60px 0', backgroundColor: '#ffffff', borderBottom: '1px solid #e2e8f0', color: '#0f172a' }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 40px' }}>
-            <div style={{ color: '#ea580c', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <div style={{ color: '#0284c7', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
               INDUSTRIES SERVED
             </div>
             <h2 style={{ fontSize: 'clamp(2.1rem, 4vw, 3rem)', fontWeight: '800', color: '#0f172a', marginBottom: '16px', letterSpacing: '-0.02em' }}>
@@ -366,7 +366,7 @@ const IndustriesPage = () => {
                     </p>
 
                     <div style={{ marginBottom: '14px' }}>
-                      <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#f59e0b', textTransform: 'uppercase', marginBottom: '4px', letterSpacing: '0.04em' }}>
+                      <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#38bdf8', textTransform: 'uppercase', marginBottom: '4px', letterSpacing: '0.04em' }}>
                         Process Challenge:
                       </div>
                       <div style={{ fontSize: '0.86rem', color: '#cbd5e1', lineHeight: '1.5' }}>

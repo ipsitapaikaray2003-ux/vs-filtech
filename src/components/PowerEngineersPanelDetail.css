@@ -259,7 +259,7 @@
 .pe-product-content span.pe-pill {
   color: #ffffff;
   letter-spacing: 1.5px;
-  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   border-radius: 50px;
   padding: 8px 20px;
   font-size: 12px;
@@ -272,9 +272,9 @@
 }
 
 .pe-secondary-pill {
-  color: #2563eb;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
+  color: #0284c7;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
   border-radius: 50px;
   padding: 7px 16px;
   font-size: 12px;
@@ -328,8 +328,8 @@
 }
 
 .pe-highlight-check {
-  color: #2563eb;
-  background: #eff6ff;
+  color: #16a34a;
+  background: #f0fdf4;
   border-radius: 50%;
   padding: 2px;
   flex-shrink: 0;
@@ -344,7 +344,7 @@
 }
 
 .pe-btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #ffffff;
   border: none;
   padding: 14px 28px;
@@ -355,14 +355,14 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.35), 0 4px 12px rgba(22, 163, 74, 0.25);
   transition: all 0.35s ease;
 }
 
 .pe-btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.45);
-  background: linear-gradient(135deg, #1d4ed8 0%, #0369a1 100%);
+  box-shadow: 0 16px 35px rgba(2, 132, 199, 0.45), 0 6px 16px rgba(22, 163, 74, 0.35);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
 }
 
 .pe-btn-outline {
@@ -396,9 +396,9 @@
 }
 
 .pe-section-tag {
-  color: #2563eb;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
+  color: #0284c7;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -465,7 +465,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #0284c7 0%, #2563eb 50%, #4f46e5 100%);
+  background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 50%, #16a34a 100%);
   transition: height 0.3s ease;
 }
 
@@ -630,7 +630,7 @@
 
 /* === CARD HOVER STATE === */
 .pe-application-box:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 55%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #16a34a 100%);
   border-color: #2563eb;
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 45px rgba(37, 99, 235, 0.32);
@@ -700,7 +700,7 @@
 }
 
 .pe-spec-table tr:hover {
-  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  background: linear-gradient(90deg, #0284c7 0%, #16a34a 100%);
 }
 
 .pe-spec-table td {
@@ -791,7 +791,7 @@
 
 .pe-quote-now {
   color: #ffffff;
-  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   border-radius: 50px;
   padding: 18px 45px;
   font-size: 16px;
@@ -906,7 +906,7 @@
 
 .pe-related-card:hover {
   color: #ffffff;
-  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 60%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #16a34a 100%);
   border-color: #2563eb;
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 45px rgba(37, 99, 235, 0.28);

@@ -46,7 +46,7 @@ const Footer = () => {
             <Link to="/" className="footer-logo-link" aria-label="VS Filtech Home">
               <img 
                 src={logoImg} 
-                alt="VS Filtech - We Care for Clean Air" 
+                alt="VS Filtech - Engineering a Cleaner Tomorrow" 
                 className="footer-logo-image" 
               />
             </Link>
@@ -89,6 +89,7 @@ const Footer = () => {
               {[
                 { label: 'Home', to: '/' },
                 { label: 'About Us', to: '/about' },
+                { label: 'Services & Bag Filter Audit', to: '/services' },
                 { label: 'Technical Engineering', to: '/engineering' },
                 { label: 'Retrofit & Upgrades', to: '/retrofit' },
                 { label: 'Industries Served', to: '/industries' },

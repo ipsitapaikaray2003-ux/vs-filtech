@@ -37,7 +37,7 @@ import industryCementImg from '../assets/industry_cement.jpg';
 import industryPowerImg from '../assets/industry_power.jpg';
 import industrySteelImg from '../assets/industry_steel.jpg';
 import industryMetalsImg from '../assets/industry_metals.jpg';
-import industryCarbonBlackImg from '../assets/industry_carbon_black.jpg';
+import industryFoundryCastingImg from '../assets/industry_foundry_casting.jpg';
 
 import CountUpStat from '../components/CountUpStat';
 
@@ -174,20 +174,20 @@ const coreIndustries = [
     icon: Factory
   },
   {
-    name: 'Metals',
-    headline: 'Foundries & Smelters',
-    desc: 'Induction furnace swing hoods, return sand reclamation, and non-ferrous smelter scrubbers.',
+    name: 'Metals & Smelters',
+    headline: 'Non-Ferrous & Refining Furnaces',
+    desc: 'Secondary Aluminium, Copper & Lead smelting rotary furnaces, dross cooling hoods, and inline spark arrestor chambers.',
     image: industryMetalsImg,
-    badge: 'SMELTING & CASTING',
+    badge: 'NON-FERROUS & SMELTING',
     icon: Hammer
   },
   {
-    name: 'Carbon Black',
-    headline: 'Sub-Micron Recovery',
-    desc: 'Sub-micron black recovery with conductive antistatic felts and microporous ePTFE membranes.',
-    image: industryCarbonBlackImg,
-    badge: 'SUB-MICRON RECOVERY',
-    icon: Droplets
+    name: 'Foundries & Casting',
+    headline: 'Induction Furnaces & Sand Plants',
+    desc: 'Induction melting close-capture swing hoods, automated pouring line capture, cupola spark arrestors, and sand plant baghouses.',
+    image: industryFoundryCastingImg,
+    badge: 'FOUNDRY & CASTING',
+    icon: Flame
   }
 ];
 

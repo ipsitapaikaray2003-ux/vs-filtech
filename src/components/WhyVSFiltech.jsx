@@ -24,9 +24,9 @@ const blocks = [
     icon: Layers,
     title: 'Customised Engineering',
     desc: 'Equipment configured to suit individual project requirements, plant headroom, and maintenance access.',
-    color: '#0369a1',
-    bg: '#eff6ff',
-    border: '#bfdbfe'
+    color: '#16a34a',
+    bg: '#f0fdf4',
+    border: '#bbf7d0'
   },
   {
     icon: ShieldCheck,
@@ -40,25 +40,25 @@ const blocks = [
     icon: CheckCircle2,
     title: 'Complete Solutions',
     desc: 'From primary pulse jet filtration, ducting, and ID fans to replacement filter bags, cages, and control panels.',
-    color: '#2563eb',
-    bg: '#eff6ff',
-    border: '#bfdbfe'
+    color: '#0ea5e9',
+    bg: '#f0f9ff',
+    border: '#bae6fd'
   },
   {
     icon: RefreshCw,
     title: 'Retrofit Capability',
     desc: 'Modification, capacity enhancement, baghouse upgrades, and turnkey replacement for existing installations.',
-    color: '#0284c7',
-    bg: '#f0f9ff',
-    border: '#bae6fd'
+    color: '#15803d',
+    bg: '#f0fdf4',
+    border: '#bbf7d0'
   },
   {
     icon: Headphones,
     title: 'Technical Support',
     desc: 'Dedicated engineering assistance and technical guidance from initial CFM sizing through on-site execution.',
-    color: '#0369a1',
-    bg: '#eff6ff',
-    border: '#bfdbfe'
+    color: '#0284c7',
+    bg: '#f0f9ff',
+    border: '#bae6fd'
   }
 ];
 
@@ -119,7 +119,7 @@ const WhyVSFiltech = () => {
           }}>
             Why{' '}
             <span style={{ 
-              background: 'linear-gradient(135deg, #0284c7 0%, #2563eb 100%)',
+              background: 'linear-gradient(135deg, #0284c7 0%, #16a34a 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>

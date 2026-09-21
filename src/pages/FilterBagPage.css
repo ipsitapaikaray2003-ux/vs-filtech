@@ -65,7 +65,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--accent-primary, #00e5ff);
+  color: var(--accent-primary, #0284c7);
   background: rgba(0, 229, 255, 0.1);
   border: 1px solid rgba(0, 229, 255, 0.3);
   padding: 0.4rem 1.1rem;
@@ -75,7 +75,7 @@
 }
 
 .badge-sparkle {
-  color: #00e5ff;
+  color: #38bdf8;
 }
 
 .fb-hero-title {
@@ -133,7 +133,7 @@
 .metric-val {
   font-size: 1.65rem;
   font-weight: 800;
-  color: #00e5ff;
+  color: #38bdf8;
   letter-spacing: -0.01em;
 }
 
@@ -222,7 +222,7 @@
 
 .fb-toggle-btn.active {
   background: linear-gradient(135deg, rgba(0, 229, 255, 0.25) 0%, rgba(0, 229, 255, 0.1) 100%);
-  color: #00e5ff;
+  color: #38bdf8;
   border: 1px solid rgba(0, 229, 255, 0.45);
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.25);
 }
@@ -286,8 +286,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #00e5ff;
-  box-shadow: 0 0 10px #00e5ff;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
   animation: pulseCyan 2s infinite;
 }
 
@@ -321,8 +321,8 @@
 
 .fb-zoom-trigger:hover {
   background: rgba(0, 229, 255, 0.22);
-  border-color: #00e5ff;
-  color: #00e5ff;
+  border-color: #38bdf8;
+  color: #38bdf8;
 }
 
 /* Image Bottom Overlay Card */
@@ -350,7 +350,7 @@
 }
 
 .overlay-icon {
-  color: #00e5ff;
+  color: #38bdf8;
   flex-shrink: 0;
 }
 
@@ -417,13 +417,13 @@
 }
 
 .fb-thumb-item.active {
-  border-color: #00e5ff;
+  border-color: #38bdf8;
   background: rgba(0, 229, 255, 0.12);
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
 }
 
 .fb-thumb-item.active span {
-  color: #00e5ff;
+  color: #38bdf8;
 }
 
 /* Text Column */
@@ -433,7 +433,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #00e5ff;
+  color: #38bdf8;
   margin-bottom: 0.75rem;
 }
 
@@ -478,7 +478,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #00e5ff;
+  background: #38bdf8;
 }
 
 .fb-features-list {
@@ -564,7 +564,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #00e5ff;
+  color: #38bdf8;
   background: rgba(0, 229, 255, 0.1);
   border: 1px solid rgba(0, 229, 255, 0.25);
   padding: 0.25rem 0.7rem;
@@ -609,7 +609,7 @@
 
 .spec-table th {
   background: rgba(6, 12, 24, 0.9);
-  color: #00e5ff;
+  color: #38bdf8;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -727,7 +727,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #00e5ff;
+  color: #38bdf8;
   padding: 0.25rem 0.75rem;
   border-radius: 50px;
 }
@@ -761,7 +761,7 @@
   gap: 0.5rem;
   font-size: 0.88rem;
   font-weight: 700;
-  color: #00e5ff;
+  color: #38bdf8;
   background: rgba(0, 229, 255, 0.08);
   border: 1px solid rgba(0, 229, 255, 0.25);
   padding: 0.6rem 1.15rem;
@@ -773,9 +773,9 @@
 }
 
 .btn-read-more:hover {
-  background: #00e5ff;
+  background: #38bdf8;
   color: #060a12;
-  border-color: #00e5ff;
+  border-color: #38bdf8;
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.35);
 }
 
@@ -876,7 +876,7 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(0, 229, 255, 0.3);
-  color: #00e5ff;
+  color: #38bdf8;
   font-size: 0.78rem;
   font-weight: 600;
   padding: 0.4rem 0.9rem;
@@ -897,7 +897,7 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #00e5ff;
+  color: #38bdf8;
   margin-bottom: 0.4rem;
 }
 
@@ -946,7 +946,7 @@
 }
 
 .modal-spec-check {
-  color: #00e5ff;
+  color: #38bdf8;
   flex-shrink: 0;
 }
 
@@ -1040,7 +1040,7 @@
 }
 
 .rfq-subtitle strong {
-  color: #00e5ff;
+  color: #38bdf8;
 }
 
 .rfq-form {
@@ -1091,7 +1091,7 @@
 .field-select:focus,
 .field-textarea:focus {
   outline: none;
-  border-color: #00e5ff;
+  border-color: #38bdf8;
   background: rgba(10, 20, 40, 0.95);
   box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.2);
 }
@@ -1241,7 +1241,7 @@
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: #00e5ff;
+  color: #38bdf8;
   margin-bottom: 0.4rem;
 }
 
@@ -1286,8 +1286,8 @@
 
 .btn-lightbox-switch.active {
   background: rgba(0, 229, 255, 0.2);
-  border-color: #00e5ff;
-  color: #00e5ff;
+  border-color: #38bdf8;
+  color: #38bdf8;
   box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
 }
 
@@ -1592,9 +1592,9 @@
 
 .temp-badge {
   display: inline-block;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  color: #fbbf24;
+  background: rgba(2, 132, 199, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 0.8rem;

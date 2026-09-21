@@ -533,7 +533,7 @@
 }
 
 .comparison-table th {
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #ffffff;
   font-weight: 700;
   padding: 1.2rem 1.25rem;
@@ -808,7 +808,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #ea580c;
+  color: #0284c7;
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -821,7 +821,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #ea580c;
+  background-color: #16a34a;
 }
 
 .support-main-title {
@@ -862,8 +862,8 @@
 
 .support-feature-card:hover {
   transform: translateY(-3px);
-  border-color: #cbd5e1;
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+  border-color: #bae6fd;
+  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.08);
 }
 
 .support-icon-box {
@@ -871,9 +871,9 @@
   height: 54px;
   flex-shrink: 0;
   border-radius: 14px;
-  background: #ffedd5;
-  border: 1px solid #fed7aa;
-  color: #ea580c;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -938,7 +938,7 @@
 }
 
 .btn-quote-orange {
-  background: #ea580c;
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #ffffff !important;
   font-weight: 700;
   font-size: 0.98rem;
@@ -947,22 +947,21 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 16px rgba(234, 88, 12, 0.3);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
+  transition: all 0.25s ease;
   text-decoration: none;
-  border: none;
 }
 
 .btn-quote-orange:hover {
-  background: #c2410c;
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(234, 88, 12, 0.4);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5), 0 3px 12px rgba(22, 163, 74, 0.35);
 }
 
 .btn-call-outline {
-  background: #ffffff;
+  background: transparent;
   border: 1.5px solid #cbd5e1;
-  color: #0f172a !important;
+  color: #1e293b !important;
   font-weight: 700;
   font-size: 0.98rem;
   padding: 12px 24px;
@@ -981,9 +980,9 @@
 }
 
 .btn-whatsapp-peach {
-  background: #fff7ed;
-  border: 1.5px solid #fed7aa;
-  color: #ea580c !important;
+  background: #f0fdf4;
+  border: 1.5px solid #bbf7d0;
+  color: #16a34a !important;
   font-weight: 700;
   font-size: 0.98rem;
   padding: 12px 24px;
@@ -996,8 +995,8 @@
 }
 
 .btn-whatsapp-peach:hover {
-  background: #ffedd5;
-  border-color: #fdba74;
+  background: #dcfce7;
+  border-color: #86efac;
   transform: translateY(-2px);
 }
 
@@ -1075,7 +1074,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #0284c7 20%, #38bdf8 50%, #2563eb 80%, transparent);
+  background: linear-gradient(90deg, transparent, #0284c7 15%, #0ea5e9 40%, #16a34a 65%, #22c55e 85%, transparent);
 }
 
 .pd-hero-container-2col {
@@ -1143,7 +1142,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   border-radius: 10px;
-  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
@@ -1604,7 +1603,7 @@
 }
 
 .pd-app-card:hover .pd-app-icon-box {
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #ffffff;
   border-color: #0284c7;
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);

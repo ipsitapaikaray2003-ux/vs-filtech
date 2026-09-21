@@ -131,7 +131,7 @@ const Hero = () => {
         <div className="container">
           <div className="hero-stats-inner">
             {stats.map((s, idx) => {
-              const statColors = ['#10b981', '#f59e0b', '#38bdf8', '#a78bfa'];
+              const statColors = ['#22c55e', '#0284c7', '#38bdf8', '#34d399'];
               return (
                 <div key={idx} className="hero-stat-col">
                   <span className="hero-stat-val" style={{ color: statColors[idx] }}>

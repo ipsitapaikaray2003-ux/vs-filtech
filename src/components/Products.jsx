@@ -43,7 +43,7 @@ import industryCementImg from '../assets/industry_cement.jpg';
 import industryPowerImg from '../assets/industry_power.jpg';
 import industrySteelImg from '../assets/industry_steel.jpg';
 import industryMetalsImg from '../assets/industry_metals.jpg';
-import industryCarbonBlackImg from '../assets/industry_carbon_black.jpg';
+import industryFoundryCastingImg from '../assets/industry_foundry_casting.jpg';
 
 import './Products.css';
 
@@ -462,33 +462,33 @@ const industriesWeServe = [
   },
   {
     id: 'metals',
-    name: 'Metals',
-    headline: 'Foundries & Smelters',
+    name: 'Metals & Smelters',
+    headline: 'Secondary Smelting & Non-Ferrous Refining',
     image: industryMetalsImg,
-    badge: 'SMELTING & CASTING',
+    badge: 'NON-FERROUS & SMELTING',
     solutions: [
-      'Induction melting furnace swing hoods with automatic damper control',
-      'Foundry return sand reclamation, shakeout, and shot-blasting filtration',
-      'Secondary Aluminium, Copper, Zinc & Lead refining baghouses',
-      'Inline spark arrestor chambers preventing burning embers from entering bags'
+      'Secondary Aluminium, Copper, Zinc & Lead rotary refining furnaces',
+      'Continuous ingot casting, dross cooling, and extrusion press extraction',
+      'Inline spark arrestor chambers preventing burning embers from entering bags',
+      'Corrosive flux & fluoride off-gas dry injection treatment systems'
     ],
     emissionNorm: 'Zero Fugitive Emission Capture',
     mediaRecommendation: 'High-Density Needlefelt with Spark Arrestor Protection'
   },
   {
-    id: 'carbon-black',
-    name: 'Carbon Black',
-    headline: 'Sub-Micron Particulate Recovery',
-    image: industryCarbonBlackImg,
-    badge: 'SUB-MICRON RECOVERY',
+    id: 'foundries-casting',
+    name: 'Foundries & Casting',
+    headline: 'Induction Furnaces, Pouring & Sand Reclamation',
+    image: industryFoundryCastingImg,
+    badge: 'FOUNDRY & CASTING',
     solutions: [
-      'High-temperature reactor process baghouses for valuable product recovery',
-      'Sub-micron particulate capture with ePTFE micro-pore surface filtration',
-      'Pelletizer dryer exhaust cleaning and pneumatic transfer receiver collectors',
-      'Epitropic antistatic conductive cages and certified explosion relief panels'
+      'Induction melting furnace close-capture swing hoods with automatic motorized dampers',
+      'Foundry sand reclamation, sand mullers, shakeout tables, and shot blasting baghouses',
+      'Cupola furnace exhaust gas cleaning with inline multi-cyclone spark arrestor chambers',
+      'Die casting, pouring line emissions, and core shop binder fume containment'
     ],
-    emissionNorm: '99.99% Sub-Micron Product Capture',
-    mediaRecommendation: 'Conductive Antistatic Needlefelt with Microporous ePTFE'
+    emissionNorm: '< 10 mg/Nm³ (CPCB Compliant Clean Air)',
+    mediaRecommendation: 'Flame-Retardant Singed Polyester Needlefelt / High-Temp Aramid Nomex'
   }
 ];
 

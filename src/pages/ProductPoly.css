@@ -74,7 +74,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #00e5ff;
+  color: #38bdf8;
   background: rgba(0, 229, 255, 0.12);
   border: 1px solid rgba(0, 229, 255, 0.35);
   padding: 0.45rem 1.25rem;
@@ -87,14 +87,14 @@
 }
 
 .pp-badge-icon {
-  color: #00e5ff;
+  color: #38bdf8;
   flex-shrink: 0;
   animation: pulseDroplet 2s infinite ease-in-out;
 }
 
 @keyframes pulseDroplet {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.85; filter: drop-shadow(0 0 6px #00e5ff); }
+  50% { transform: scale(1.2); opacity: 0.85; filter: drop-shadow(0 0 6px #38bdf8); }
 }
 
 .pp-hero-title {
@@ -148,15 +148,15 @@
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  background: linear-gradient(135deg, #00e5ff 0%, #0088ff 100%);
-  color: #030712;
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
+  color: #ffffff;
   font-weight: 700;
   padding: 0.95rem 2.2rem;
   border-radius: 50px;
   font-size: 1rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 6px 25px rgba(0, 229, 255, 0.45);
+  box-shadow: 0 6px 25px rgba(2, 132, 199, 0.45), 0 3px 12px rgba(22, 163, 74, 0.35);
   box-sizing: border-box;
 }
 
@@ -186,8 +186,8 @@
 }
 
 .pp-btn-specs:hover {
-  border-color: #00e5ff;
-  color: #00e5ff;
+  border-color: #38bdf8;
+  color: #38bdf8;
   background: rgba(0, 229, 255, 0.12);
   transform: translateY(-3px);
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
@@ -225,7 +225,7 @@
 .pp-metric-val {
   font-size: 1.7rem;
   font-weight: 800;
-  color: #00e5ff;
+  color: #38bdf8;
   margin-bottom: 0.25rem;
   font-family: var(--font-heading);
 }
@@ -294,7 +294,7 @@
   right: 1.25rem;
   background: rgba(5, 10, 20, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #00e5ff;
+  color: #38bdf8;
   padding: 0.45rem 0.95rem;
   border-radius: 50px;
   font-size: 0.78rem;
@@ -308,9 +308,9 @@
 }
 
 .pp-img-wrapper:hover .pp-zoom-hint {
-  background: #00e5ff;
+  background: #38bdf8;
   color: #030712;
-  border-color: #00e5ff;
+  border-color: #38bdf8;
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
 }
 
@@ -331,7 +331,7 @@
   text-transform: uppercase;
   letter-spacing: 1.8px;
   font-weight: 700;
-  color: #00e5ff;
+  color: #38bdf8;
   background: rgba(0, 229, 255, 0.1);
   border: 1px solid rgba(0, 229, 255, 0.3);
   padding: 0.35rem 0.95rem;
@@ -371,7 +371,7 @@
 }
 
 .pp-check-icon {
-  color: #00e5ff;
+  color: #38bdf8;
   flex-shrink: 0;
   margin-top: 3px;
 }
@@ -404,7 +404,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #00e5ff;
+  color: #38bdf8;
   margin-bottom: 0.75rem;
 }
 
@@ -454,7 +454,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #00e5ff, transparent);
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -476,7 +476,7 @@
   border-radius: 14px;
   background: rgba(0, 229, 255, 0.12);
   border: 1px solid rgba(0, 229, 255, 0.25);
-  color: #00e5ff;
+  color: #38bdf8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,7 +485,7 @@
 }
 
 .pp-feature-card:hover .pp-feature-icon {
-  background: #00e5ff;
+  background: #38bdf8;
   color: #030712;
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
   transform: scale(1.05);
@@ -537,7 +537,7 @@
 .pp-media-tag {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #00e5ff;
+  color: #38bdf8;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 0.5rem;
@@ -568,7 +568,7 @@
 }
 
 .pp-media-specs-row span:last-child {
-  color: #00e5ff;
+  color: #38bdf8;
   font-weight: 600;
   text-align: right;
 }
@@ -577,7 +577,7 @@
 .pp-table-scroll-hint {
   display: none;
   font-size: 0.75rem;
-  color: #00e5ff;
+  color: #38bdf8;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-bottom: 0.75rem;
@@ -609,7 +609,7 @@
 
 .pp-table th {
   background: rgba(0, 229, 255, 0.1);
-  color: #00e5ff;
+  color: #38bdf8;
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -636,7 +636,7 @@
   padding: 0.25rem 0.65rem;
   background: rgba(0, 229, 255, 0.15);
   border: 1px solid rgba(0, 229, 255, 0.3);
-  color: #00e5ff;
+  color: #38bdf8;
   border-radius: 6px;
   font-size: 0.82rem;
   font-weight: 700;
@@ -730,11 +730,11 @@
 }
 
 .pp-accordion-header:hover {
-  color: #00e5ff;
+  color: #38bdf8;
 }
 
 .pp-accordion-icon {
-  color: #00e5ff;
+  color: #38bdf8;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -840,7 +840,7 @@
 .pp-form-input:focus,
 .pp-form-select:focus,
 .pp-form-textarea:focus {
-  border-color: #00e5ff;
+  border-color: #38bdf8;
   background: rgba(0, 229, 255, 0.08);
   box-shadow: 0 0 15px rgba(0, 229, 255, 0.25);
 }
@@ -855,7 +855,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  background: linear-gradient(135deg, #00e5ff 0%, #0088ff 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #030712;
   font-weight: 700;
   font-size: 1.05rem;
@@ -864,7 +864,7 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 6px 25px rgba(0, 229, 255, 0.45);
+  box-shadow: 0 6px 25px rgba(2, 132, 199, 0.45), 0 3px 12px rgba(22, 163, 74, 0.35);
   margin-top: 0.5rem;
   width: 100%;
   max-width: 100%;
@@ -940,9 +940,9 @@
 }
 
 .pp-modal-close:hover {
-  background: #00e5ff;
+  background: #38bdf8;
   color: #030712;
-  border-color: #00e5ff;
+  border-color: #38bdf8;
 }
 
 /* ==========================================================

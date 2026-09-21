@@ -16,9 +16,9 @@ const parameters = [
     step: 'Parameter 02',
     title: 'Dust Characteristics',
     desc: 'Particle size distribution, bulk density, abrasiveness & flowability.',
-    color: '#d97706',
-    bg: '#fffbeb',
-    border: '#fde68a',
+    color: '#16a34a',
+    bg: '#f0fdf4',
+    border: '#bbf7d0',
     icon: Sliders
   },
   {
@@ -184,25 +184,25 @@ const ProcessCapabilityBanner = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                color: '#b45309',
+                color: '#0284c7',
                 fontSize: '0.96rem',
                 fontWeight: '700',
                 textDecoration: 'none',
                 padding: '10px 24px',
                 borderRadius: '999px',
-                background: '#fffbeb',
-                border: '1px solid #fde68a',
+                background: '#f0f9ff',
+                border: '1px solid #bae6fd',
                 transition: 'all 0.25s ease',
-                boxShadow: '0 2px 10px rgba(245, 158, 11, 0.1)'
+                boxShadow: '0 2px 10px rgba(2, 132, 199, 0.12)'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#fef3c7';
-                e.currentTarget.style.borderColor = '#f59e0b';
+                e.currentTarget.style.background = '#e0f2fe';
+                e.currentTarget.style.borderColor = '#0284c7';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#fffbeb';
-                e.currentTarget.style.borderColor = '#fde68a';
+                e.currentTarget.style.background = '#f0f9ff';
+                e.currentTarget.style.borderColor = '#bae6fd';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >

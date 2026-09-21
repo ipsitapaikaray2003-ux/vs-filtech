@@ -21,16 +21,16 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--accent-primary, #00e5ff);
-  background: rgba(0, 229, 255, 0.08);
-  border: 1px solid rgba(0, 229, 255, 0.22);
+  color: #38bdf8;
+  background: rgba(2, 132, 199, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   padding: 0.35rem 0.95rem;
   border-radius: 50px;
   margin-bottom: 1rem;
 }
 
 .products-eyebrow-icon {
-  color: var(--accent-primary, #00e5ff);
+  color: #34d399;
 }
 
 .products-title {
@@ -76,9 +76,9 @@
 
 .product-card-compact:hover {
   transform: translateY(-5px);
-  border-color: rgba(0, 229, 255, 0.4);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 229, 255, 0.15);
-  background: rgba(15, 26, 46, 0.8);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(2, 132, 199, 0.25), 0 0 15px rgba(22, 163, 74, 0.2);
+  background: rgba(15, 26, 46, 0.85);
 }
 
 /* Card Image Section */
@@ -127,17 +127,17 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #ffffff;
-  background: rgba(6, 11, 20, 0.82);
+  background: rgba(6, 11, 20, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 229, 255, 0.35);
+  border: 1px solid rgba(56, 189, 248, 0.45);
   padding: 0.35rem 0.85rem;
   border-radius: 50px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .badge-icon {
-  color: var(--accent-primary, #00e5ff);
+  color: #38bdf8;
 }
 
 /* Card Body */
@@ -153,7 +153,7 @@
   font-weight: 700;
   letter-spacing: 1.8px;
   text-transform: uppercase;
-  color: var(--accent-primary, #00e5ff);
+  color: #38bdf8;
   margin-bottom: 0.45rem;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .product-card-compact:hover .product-card-title {
-  color: var(--accent-primary, #00e5ff);
+  color: #38bdf8;
 }
 
 .product-card-desc {
@@ -203,7 +203,7 @@
 }
 
 .spec-check {
-  color: var(--accent-primary, #00e5ff);
+  color: #22c55e;
 }
 
 /* Card Actions */
@@ -216,8 +216,8 @@
 
 .product-btn-main {
   flex-grow: 1;
-  background: linear-gradient(135deg, #00e5ff 0%, #0055ff 100%);
-  color: #030712;
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
+  color: #ffffff;
   font-weight: 700;
   border: none;
   padding: 0.75rem 1.25rem;
@@ -229,13 +229,14 @@
   gap: 0.4rem;
   transition: all 0.25s ease;
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
 }
 
 .product-btn-main:hover {
-  background: #ffffff;
-  color: #030712;
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5), 0 3px 12px rgba(22, 163, 74, 0.35);
 }
 
 .product-btn-quote {
@@ -251,9 +252,9 @@
 }
 
 .product-btn-quote:hover {
-  border-color: var(--accent-primary, #00e5ff);
-  background: rgba(0, 229, 255, 0.12);
-  color: var(--accent-primary, #00e5ff);
+  border-color: #38bdf8;
+  background: rgba(2, 132, 199, 0.15);
+  color: #38bdf8;
 }
 
 /* Bottom Bar */
@@ -395,15 +396,21 @@
   margin: 0 auto;
 }
 
-/* ── 1. Umiya-Inspired Product Cards Grid ── */
+/* ── 1. Umiya-Inspired Product Cards Grid (Centered Row Layout) ── */
 .umiya-product-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
   margin-bottom: 75px;
 }
 
 .umiya-product-card {
+  position: relative;
+  flex: 0 0 calc((100% - 56px) / 3);
+  max-width: calc((100% - 56px) / 3);
+  width: calc((100% - 56px) / 3);
+  box-sizing: border-box;
   background: #0f2040;
   border: 1px solid rgba(56, 189, 248, 0.16);
   border-radius: 20px;
@@ -412,7 +419,6 @@
   flex-direction: column;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  position: relative;
 }
 
 .umiya-product-card:hover {
@@ -480,10 +486,10 @@
 }
 
 .umiya-card-tag.badge-amber {
-  border-color: rgba(245, 158, 11, 0.6);
-  color: #fbbf24;
-  background: rgba(30, 22, 10, 0.94);
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #38bdf8;
+  background: rgba(7, 19, 36, 0.94);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
 }
 
 .umiya-card-tag.badge-emerald {
@@ -501,10 +507,10 @@
 }
 
 .umiya-card-tag.badge-orange {
-  border-color: rgba(249, 115, 22, 0.6);
-  color: #fb923c;
-  background: rgba(34, 18, 10, 0.94);
-  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  background: rgba(7, 19, 36, 0.94);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
 }
 
 .umiya-card-body {
@@ -1033,6 +1039,11 @@
 }
 
 @media (max-width: 1024px) {
+  .umiya-product-card {
+    flex: 0 0 calc((100% - 28px) / 2);
+    max-width: calc((100% - 28px) / 2);
+    width: calc((100% - 28px) / 2);
+  }
   .thermax-industry-card {
     flex: 0 0 calc((100% - 24px) / 2);
     max-width: calc((100% - 24px) / 2);
@@ -1041,6 +1052,11 @@
 }
 
 @media (max-width: 768px) {
+  .umiya-product-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
   .thermax-industry-card {
     flex: 0 0 100%;
     max-width: 100%;
@@ -1061,9 +1077,6 @@
 }
 
 @media (max-width: 640px) {
-  .umiya-product-cards-grid {
-    grid-template-columns: 1fr;
-  }
   .umiya-card-media {
     height: 200px;
   }

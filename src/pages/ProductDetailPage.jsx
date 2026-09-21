@@ -103,7 +103,7 @@ const industryDetails = {
     icon: Zap,
     desc: 'Stoker boilers, pulverized coal flue gas cleaning & ESP-to-baghouse conversions.'
   },
-  'Carbon Black & Chemical': {
+  'Chemical & Specialty Process': {
     icon: FlaskConical,
     desc: 'Sub-micron particle collection, synthetic resins & pneumatic transfer systems.'
   },

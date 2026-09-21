@@ -62,14 +62,15 @@
   animation: orbDriftB 18s ease-in-out infinite alternate;
 }
 
-.orb-purple {
+.orb-purple,
+.orb-copper {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 520px;
   height: 380px;
-  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
-  opacity: 0.16;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.22) 0%, transparent 70%);
+  opacity: 0.2;
 }
 
 @keyframes orbDriftA {
@@ -99,8 +100,7 @@
 }
 
 .stream-1 {
-  stroke: url(#cyanGrad);
-  stroke: rgba(56, 189, 248, 0.7);
+  stroke: rgba(56, 189, 248, 0.8);
   stroke-width: 2.5;
   filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.8));
   animation-duration: 10s;
@@ -115,9 +115,9 @@
 }
 
 .stream-3 {
-  stroke: rgba(167, 139, 250, 0.6);
+  stroke: rgba(2, 132, 199, 0.75);
   stroke-width: 2;
-  filter: drop-shadow(0 0 6px rgba(167, 139, 250, 0.6));
+  filter: drop-shadow(0 0 8px rgba(2, 132, 199, 0.8));
   animation-duration: 16s;
   animation-delay: -7s;
 }
@@ -241,7 +241,7 @@
 }
 
 .slogan-sparkle-icon {
-  color: #f59e0b;
+  color: #38bdf8;
   font-size: 0.85rem;
   animation: spinSlow 6s linear infinite;
 }
@@ -251,97 +251,76 @@
   100% { transform: rotate(360deg); }
 }
 
-/* ── Brand Name Typography & Back Glow ── */
-.brand-name-wrapper {
+.slogan-brand-logo-wrapper {
   position: relative;
-  margin-bottom: 0.5rem;
-}
-
-.brand-back-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(3.2rem, 8vw, 6.2rem);
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(56, 189, 248, 0.35);
-  filter: blur(12px);
-  pointer-events: none;
-  z-index: 1;
-  animation: brandGlowPulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes brandGlowPulse {
-  0% { opacity: 0.4; filter: blur(12px); }
-  100% { opacity: 0.9; filter: blur(18px); text-shadow: 0 0 35px rgba(56, 189, 248, 0.6); }
-}
-
-.brand-main-title {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem 0 0.8rem;
   z-index: 2;
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.1;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
-.brand-title-accent {
-  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #60a5fa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.5));
+.slogan-brand-logo-img {
+  height: clamp(150px, 20vw, 230px);
+  width: auto;
+  max-width: 92vw;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  filter: drop-shadow(0 12px 35px rgba(2, 132, 199, 0.28));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slogan-brand-logo-img:hover {
+  transform: translateY(-2px) scale(1.02);
 }
 
 /* ── Slogan Statement Banner with Shimmering Light ── */
 .slogan-statement-banner {
   position: relative;
-  margin: 0.6rem 0 1rem;
+  margin: 0.4rem 0 1.2rem;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 
 .slogan-shimmer-box {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .slogan-quote {
   font-family: Georgia, serif;
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   color: #38bdf8;
   line-height: 0.8;
-  opacity: 0.85;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.6));
 }
 
 .slogan-dynamic-text {
-  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 1.25;
   margin: 0;
-  /* Shimmer gradient traveling across text */
+  color: #ffffff;
   background: linear-gradient(
     90deg, 
     #ffffff 0%, 
-    #38bdf8 25%, 
-    #f8fafc 48%, 
-    #34d399 72%, 
+    #7dd3fc 30%, 
+    #38bdf8 55%, 
+    #4ade80 85%, 
     #ffffff 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
   animation: sloganTextShimmer 4s ease-in-out infinite;
-  filter: drop-shadow(0 4px 16px rgba(14, 165, 233, 0.35));
+  filter: drop-shadow(0 4px 18px rgba(56, 189, 248, 0.5));
 }
 
 @keyframes sloganTextShimmer {
@@ -353,12 +332,12 @@
 /* Underline Laser Beam */
 .slogan-underline-beam {
   width: 100%;
-  max-width: 360px;
-  height: 2.5px;
-  margin-top: 8px;
-  background: linear-gradient(90deg, transparent 0%, #38bdf8 25%, #34d399 50%, #38bdf8 75%, transparent 100%);
+  max-width: 420px;
+  height: 2px;
+  margin: 0.8rem auto 1.6rem;
+  background: linear-gradient(90deg, transparent 0%, #38bdf8 30%, #22c55e 70%, transparent 100%);
   border-radius: 999px;
-  box-shadow: 0 0 14px 2px rgba(56, 189, 248, 0.65), 0 0 24px rgba(52, 211, 153, 0.4);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.6), 0 0 10px rgba(34, 197, 94, 0.5);
   animation: beamPulse 3s ease-in-out infinite alternate;
 }
 

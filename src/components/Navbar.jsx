@@ -14,6 +14,8 @@ import {
 } from 'lucide-react';
 import logoColor from '../assets/logo_transparent.png';
 import logoDark from '../assets/logo_dark_theme.png';
+import logoHeaderColor from '../assets/logo_header.png';
+import logoHeaderDark from '../assets/logo_header_dark.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -93,7 +95,7 @@ const Navbar = () => {
 
   const isHomePage = location.pathname === '/';
   const isTransparent = isHomePage && !scrolled;
-  const currentLogo = isTransparent ? logoDark : logoColor;
+  const currentLogo = isTransparent ? logoHeaderDark : logoHeaderColor;
 
   return (
     <header className={`navbar ${isTransparent ? 'navbar-transparent' : (scrolled ? 'navbar-scrolled' : 'navbar-solid')}`}>
@@ -101,9 +103,14 @@ const Navbar = () => {
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu} aria-label="VS Filtech Home">
           <img 
             src={currentLogo} 
-            alt="VS Filtech - We Care for Clean Air" 
+            alt="VS Filtech" 
             className="navbar-logo-img" 
           />
+          <span className="navbar-logo-tagline">
+            <span className="navbar-tagline-line line-blue" />
+            <span className="navbar-tagline-text">We Care for Clean Air</span>
+            <span className="navbar-tagline-line line-green" />
+          </span>
         </Link>
 
         <nav className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
@@ -309,13 +316,21 @@ const Navbar = () => {
                   <span>Explore Complete Equipment Catalog (19+ Solutions)</span>
                   <ChevronRight size={15} />
                 </Link>
-                <Link to="/engineering" className="mega-footer-eng" onClick={closeMobileMenu}>
+                <Link to="/services" className="mega-footer-eng" onClick={closeMobileMenu}>
                   <Sparkles size={14} />
-                  <span>Engineering Sizing &amp; Design</span>
+                  <span>Turnkey Services &amp; Bag Filter Audits</span>
                 </Link>
               </div>
             </div>
           </div>
+
+          <Link 
+            to="/services" 
+            className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} 
+            onClick={closeMobileMenu}
+          >
+            Services
+          </Link>
 
           <Link 
             to="/engineering" 

@@ -7,11 +7,17 @@ import {
   FileText, 
   ArrowRight, 
   Phone, 
-  MessageCircle 
+  MessageCircle,
+  ClipboardCheck
 } from 'lucide-react';
 import '../pages/ProductDetails.css';
 
 const supportServicesData = [
+  {
+    title: 'Audit of Existing Bag Filters',
+    icon: ClipboardCheck,
+    desc: 'On-site technical evaluation of your operating dust collector—differential pressure analysis, dye leak detection, airflow profiling, and emission audit.'
+  },
   {
     title: 'Preventive Maintenance',
     icon: Wrench,
@@ -28,7 +34,7 @@ const supportServicesData = [
     desc: 'Genuine spare parts readily available—filter bags, cages, solenoid valves, timers, and all critical components.'
   },
   {
-    title: 'System Upgrades',
+    title: 'System Upgrades & Retrofits',
     icon: FileText,
     desc: 'Upgrade existing systems with latest technology for improved efficiency, compliance, and reduced operating costs.'
   }

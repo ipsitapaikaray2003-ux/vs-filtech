@@ -28,3 +28,4 @@ vite.config.js.timestamp*
 
 # Local backup
 src/assets/logo_backup/
+src/assets/logo_backup_v2/

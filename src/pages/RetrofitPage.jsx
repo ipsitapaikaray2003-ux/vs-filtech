@@ -7,13 +7,16 @@ import {
   CheckCircle2, 
   ArrowRight, 
   MessageCircle, 
-  Sparkles,
-  Layers,
-  Settings,
-  ShieldCheck,
-  PhoneCall
+  Sparkles, 
+  Layers, 
+  Settings, 
+  ShieldCheck, 
+  PhoneCall,
+  ClipboardCheck,
+  Search
 } from 'lucide-react';
 import retrofitBg from '../assets/service_retrofit_hd.jpg';
+import auditImg from '../assets/service_audit_hd.jpg';
 import baghouseImg from '../assets/hero_baghouse.jpg';
 import pleatedImg from '../assets/pleated_filter_bag.jpeg';
 
@@ -63,8 +66,8 @@ const retrofitServices = [
     desc: 'Converting conventional tubular bags to pleated cartridges to increase surface area by 2.5x to 3x within existing casing.'
   },
   {
-    title: 'Existing Bag-Filter Inspection & Audit',
-    desc: 'On-site technical evaluation of can velocity, pressure drop, leak detection, air consumption, and fan draft performance.'
+    title: 'Audit of Existing Bag Filter',
+    desc: 'Comprehensive on-site technical diagnostic audit: differential pressure profiling, fluorescent tracer dye leak testing, duct velocity balancing, and CPCB emission validation.'
   }
 ];
 
@@ -83,7 +86,7 @@ const RetrofitPage = () => {
         left: '20%',
         width: '500px',
         height: '400px',
-        background: 'radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, transparent 70%)',
         filter: 'blur(80px)',
         pointerEvents: 'none'
       }} />
@@ -179,7 +182,7 @@ const RetrofitPage = () => {
                 alignItems: 'center',
                 gap: '10px',
                 textDecoration: 'none',
-                boxShadow: '0 4px 15px rgba(245, 158, 11, 0.35)'
+                boxShadow: '0 4px 15px rgba(2, 132, 199, 0.35)'
               }}
             >
               <FileUp size={18} />
@@ -219,7 +222,7 @@ const RetrofitPage = () => {
         <div className="container" style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
           
           <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 3.5rem' }}>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#d97706', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#0284c7', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
               OUR RETROFIT CAPABILITIES
             </div>
             <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.6rem)', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>
@@ -236,7 +239,7 @@ const RetrofitPage = () => {
             gap: '24px'
           }}>
             {retrofitServices.map((service, idx) => {
-              const accentColors = ['#0284c7', '#d97706', '#059669', '#7c3aed', '#ea580c', '#0d9488'];
+              const accentColors = ['#0284c7', '#16a34a', '#0ea5e9', '#059669', '#2563eb', '#10b981'];
               const cardAccent = accentColors[idx % accentColors.length];
 
               return (
@@ -337,6 +340,137 @@ const RetrofitPage = () => {
                 <span>Inquire About Pleated Retrofits</span>
                 <ArrowRight size={15} />
               </Link>
+            </div>
+          </div>
+
+          {/* Dedicated Spotlight: Audit of Existing Bag Filter */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr minmax(300px, 440px)',
+            gap: '3rem',
+            alignItems: 'center',
+            background: 'linear-gradient(135deg, #071022 0%, #0c1b33 100%)',
+            border: '1px solid rgba(56, 189, 248, 0.3)',
+            borderRadius: '24px',
+            padding: '38px',
+            marginTop: '3.5rem',
+            boxShadow: '0 15px 35px rgba(0, 0, 0, 0.25)',
+            overflow: 'hidden',
+            color: '#ffffff'
+          }}>
+            <div>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'rgba(5, 150, 105, 0.18)',
+                border: '1px solid rgba(34, 197, 94, 0.4)',
+                padding: '4px 14px',
+                borderRadius: '999px',
+                color: '#4ade80',
+                fontSize: '0.78rem',
+                fontWeight: '700',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                marginBottom: '10px'
+              }}>
+                <ClipboardCheck size={14} /> ON-SITE DIAGNOSTIC SERVICE
+              </div>
+
+              <h3 style={{ fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)', fontWeight: '800', color: '#ffffff', marginBottom: '12px' }}>
+                Technical Audit of Existing Bag Filters
+              </h3>
+
+              <p style={{ color: '#cbd5e1', fontSize: '1rem', lineHeight: '1.7', marginBottom: '20px' }}>
+                Is your dust collector experiencing high differential pressure (DP), bag blinding, high compressed air consumption, or stack leakage? Our specialized engineering audit pinpoints hidden root causes and gives you an actionable retrofit roadmap.
+              </p>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px', marginBottom: '24px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e2e8f0', fontSize: '0.88rem' }}>
+                  <CheckCircle2 size={16} style={{ color: '#22c55e', flexShrink: 0 }} />
+                  <span>Differential pressure (DP) profile</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e2e8f0', fontSize: '0.88rem' }}>
+                  <CheckCircle2 size={16} style={{ color: '#22c55e', flexShrink: 0 }} />
+                  <span>Fluorescent dye leak detection</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e2e8f0', fontSize: '0.88rem' }}>
+                  <CheckCircle2 size={16} style={{ color: '#22c55e', flexShrink: 0 }} />
+                  <span>Inlet CFM &amp; can velocity audit</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e2e8f0', fontSize: '0.88rem' }}>
+                  <CheckCircle2 size={16} style={{ color: '#22c55e', flexShrink: 0 }} />
+                  <span>Pulse valve &amp; compressed air test</span>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+                <Link 
+                  to="/contact?service=bag-filter-audit" 
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '12px 24px',
+                    borderRadius: '10px',
+                    background: '#16a34a',
+                    color: '#ffffff',
+                    fontWeight: '700',
+                    fontSize: '0.94rem',
+                    textDecoration: 'none',
+                    boxShadow: '0 4px 14px rgba(22, 163, 74, 0.4)'
+                  }}
+                >
+                  <ClipboardCheck size={16} />
+                  <span>Book On-Site Baghouse Audit</span>
+                  <ArrowRight size={15} />
+                </Link>
+
+                <a 
+                  href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20we%20want%20to%20schedule%20an%20on-site%20Technical%20Audit%20for%20our%20existing%20bag%20filter."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '12px 20px',
+                    borderRadius: '10px',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    border: '1px solid rgba(255, 255, 255, 0.25)',
+                    color: '#ffffff',
+                    fontWeight: '600',
+                    fontSize: '0.94rem',
+                    textDecoration: 'none'
+                  }}
+                >
+                  <MessageCircle size={16} />
+                  <span>WhatsApp Engineering Desk</span>
+                </a>
+              </div>
+            </div>
+
+            <div style={{ borderRadius: '18px', overflow: 'hidden', height: '340px', background: '#020617', border: '1px solid rgba(56, 189, 248, 0.3)', position: 'relative' }}>
+              <img 
+                src={auditImg} 
+                alt="On-Site Bag Filter Technical Audit and Inspection" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: 0,
+                insetInline: 0,
+                background: 'linear-gradient(to top, rgba(7, 16, 34, 0.95) 0%, transparent 100%)',
+                padding: '20px 18px 14px',
+                color: '#ffffff'
+              }}>
+                <span style={{ fontSize: '0.74rem', color: '#4ade80', fontWeight: '700', textTransform: 'uppercase' }}>
+                  Field Diagnostics
+                </span>
+                <div style={{ fontSize: '0.92rem', fontWeight: '600' }}>
+                  Certified CPCB &lt;10 mg/Nm³ Audit Protocols
+                </div>
+              </div>
             </div>
           </div>
 

@@ -47,7 +47,7 @@ const mediaPortfolio = [
     acidRating: 'Excellent',
     alkaliRating: 'Fair',
     desc: 'Highest tensile strength and non-combustible media. Equipped with expanded PTFE membrane for ultra-low emission capture in heavy cement kilns and coal boilers.',
-    bestFor: 'Cement Kilns, Power Boilers, Carbon Black'
+    bestFor: 'Cement Kilns, Power Boilers, Foundry Cupolas & Furnaces'
   },
   {
     name: 'Nomex (Aramid) Filter Bags',

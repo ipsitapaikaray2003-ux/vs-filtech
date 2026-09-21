@@ -5,6 +5,7 @@ import {
   ArrowRight, 
   Activity 
 } from 'lucide-react';
+import logoDark from '../assets/logo_dark_theme.png';
 import './BrandSloganSection.css';
 
 const BrandSloganSection = () => {
@@ -59,23 +60,17 @@ const BrandSloganSection = () => {
             <span className="slogan-sparkle-icon">✦</span>
           </div>
 
-          {/* Majestic Brand Name with Back-Glow */}
-          <div className="brand-name-wrapper">
-            <span className="brand-back-glow" aria-hidden="true">VS FILTECH</span>
-            <h2 className="brand-main-title">
-              VS <span className="brand-title-accent">FILTECH</span>
-            </h2>
+          {/* Official Brand Logo with 'We Care for Clean Air' Slogan */}
+          <div className="slogan-brand-logo-wrapper">
+            <img 
+              src={logoDark} 
+              alt="VS Filtech - We Care for Clean Air" 
+              className="slogan-brand-logo-img" 
+            />
           </div>
 
-          {/* Animated Slogan with Sweeping Light Shimmer */}
-          <div className="slogan-statement-banner">
-            <div className="slogan-shimmer-box">
-              <span className="slogan-quote quote-left">“</span>
-              <h3 className="slogan-dynamic-text">We Care for Clean Air</h3>
-              <span className="slogan-quote quote-right">”</span>
-            </div>
-            <div className="slogan-underline-beam" />
-          </div>
+          {/* Clean Air Glow Beam Divider */}
+          <div className="slogan-underline-beam" />
 
           {/* Narrative Text */}
           <p className="slogan-narrative">

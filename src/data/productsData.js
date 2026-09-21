@@ -110,7 +110,7 @@ export const allProductsData = [
     principle: 'Dust-laden process air is drawn into the dust collector through aerodynamic inlet baffles. Heavy particles drop directly into the collection hopper by gravitational inertia, while fine dust rises toward the vertical filter bags. Sub-micron particulates form a permeable dust cake on the exterior of the bags while clean air passes through the interior into the clean-air plenum and is drawn out by the ID fan. A sequential electronic timer activates pulse valves, sending supersonic compressed air shockwaves down through venturi nozzles to dislodge accumulated dust cakes into the collection hopper without halting plant draft.',
     applications: [
       'Cement & Clinker Grinding Plants', 'Steel & Induction Melting Furnaces', 'Thermal Power Plant Boilers', 
-      'Carbon Black & Chemical Processing', 'Non-Ferrous Smelters & Foundries', 'Woodworking, Grain & Food Processing',
+      'Foundries & Casting Plants', 'Non-Ferrous Smelters & Refining', 'Woodworking, Grain & Food Processing',
       'Shot Blasting & Plasma/Laser Cutting', 'Bulk Silo Storage & Truck Loading Terminals'
     ],
     relatedIds: ['filter-bag', 'filter-cages', 'solenoid-valve', 'id-fans', 'rotary-air-lock']
@@ -264,7 +264,7 @@ export const allProductsData = [
     principle: 'Dust-laden air passes from outside to inside of the fabric bag. The needlefelt fibers trap microscopic particulates on the outer surface cake, while clean filtered gas flows through the porous matrix into the clean-air plenum. During cleaning, reverse compressed air pulses expand the bag rapidly away from the cage, fracturing and dropping the dust cake.',
     applications: [
       'Cement Kilns & Raw Mills', 'Thermal Power Boilers', 'Steel Arc Furnaces & LRF', 
-      'Metals & Secondary Smelting', 'Carbon Black Chemical Plants', 'Grain & Flour Milling'
+      'Metals & Secondary Smelting', 'Foundries & Casting Plants', 'Grain & Flour Milling'
     ],
     relatedIds: ['filter-cages', 'pleated-filter-bag', 'solenoid-valve', 'filter-cage-venturi']
   },
@@ -981,7 +981,7 @@ export const allProductsData = [
     principle: 'Flue gas enters the hopper and rises inside the tubular bags. Dust collects on the inside surface while clean gas exits through the exterior into the outlet manifold. For cleaning, an automated damper isolates the compartment and reverse air fan gently back-purges the bags, causing the dust cake to crack and drop into the collection hopper.',
     applications: [
       'Cement Rotary Kiln Exhaust', 'Coal-Fired Power Station Boilers', 'Ferro-Alloy & Submerged Arc Furnaces',
-      'Waste-to-Energy Incineration Plants', 'Copper & Zinc Smelters', 'Carbon Black Primary Gas Streams'
+      'Waste-to-Energy Incineration Plants', 'Copper & Zinc Smelters', 'Foundry Cupola & Induction Off-Gas Streams'
     ],
     relatedIds: ['dust-collector-system', 'filter-bag', 'id-fans', 'rotary-air-lock', 'control-panels']
   },

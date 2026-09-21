@@ -29,27 +29,27 @@ const steps = [
     title: 'Filtration Design',
     desc: 'Filtration area, air-to-cloth (velocity) ratio, bag dimensions, can velocity, and module layout.',
     icon: Layers,
-    color: '#7c3aed',
-    bg: '#f5f3ff',
-    border: '#ddd6fe'
+    color: '#0ea5e9',
+    bg: '#f0f9ff',
+    border: '#bae6fd'
   },
   {
     number: '03',
     title: 'Equipment Design',
     desc: 'Structural casing, 60° hopper angles, laser-cut tube sheet, cages, baffles, and pulse cleaning.',
     icon: Compass,
-    color: '#d97706',
-    bg: '#fffbeb',
-    border: '#fde68a'
+    color: '#16a34a',
+    bg: '#f0fdf4',
+    border: '#bbf7d0'
   },
   {
     number: '04',
     title: 'Manufacturing',
     desc: 'Precision plate shearing, CNC bending, automated seam welding, and dimensional jig control.',
     icon: Hammer,
-    color: '#ea580c',
-    bg: '#fff7ed',
-    border: '#fed7aa'
+    color: '#0284c7',
+    bg: '#f0f9ff',
+    border: '#bae6fd'
   },
   {
     number: '05',

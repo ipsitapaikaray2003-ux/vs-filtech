@@ -206,7 +206,7 @@
   gap: 10px;
   padding: 13px 26px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   border: 1px solid rgba(56, 189, 248, 0.5);
   color: #ffffff;
   font-size: 0.95rem;
@@ -1215,16 +1215,16 @@
   font-size: 0.74rem;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   padding: 8px 18px;
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
 }
 
 .about-thermax-card:hover .about-thermax-link {
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
   transform: translateY(-2px);
 }
 
@@ -1299,16 +1299,16 @@
   font-size: 0.74rem;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   padding: 8px 18px;
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
 }
 
 .about-thermax-card:hover .about-thermax-link {
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
   transform: translateY(-2px);
 }
 
@@ -1320,7 +1320,7 @@
 
 .luxury-cta-box {
   position: relative;
-  background: linear-gradient(135deg, #0f2040 0%, #1e3a8a 100%);
+  background: linear-gradient(135deg, #071529 0%, #0c2b42 55%, #063d27 100%);
   border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 28px;
   padding: 60px 40px;
@@ -1391,7 +1391,7 @@
   gap: 10px;
   padding: 14px 28px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 42%, #16a34a 100%);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 800;
@@ -1403,7 +1403,7 @@
 .btn-cta-white:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 35px rgba(2, 132, 199, 0.5);
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
 }
 
 .btn-cta-translucent {
@@ -1429,7 +1429,7 @@
 }
 
 .about-thermax-card-light:hover .about-thermax-link {
-  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 38%, #15803d 100%);
   transform: translateY(-2px);
 }
 
