@@ -145,9 +145,9 @@ const additionalServices = [
     desc: 'Scheduled preventive maintenance agreements, periodic pulse valve overhauls, bag alignment, and full emergency breakdown re-bagging support for zero plant downtime.'
   },
   {
-    icon: Activity,
-    title: 'Fluorescent Tracer Dye Leak Testing',
-    desc: 'Injecting UV-reactive fluorescent powder into dirty gas streams and using blacklight optical inspection to immediately detect micro-pinholes, seam failures, and tube sheet bypass.'
+    icon: Package,
+    title: 'Complete Spare Parts Supply',
+    desc: 'Specialized in supplying all genuine bag filter spares under one roof, ensuring immediate availability and minimum downtime for your operations.'
   },
   {
     icon: Sliders,
