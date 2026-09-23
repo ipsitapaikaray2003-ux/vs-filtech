@@ -11,7 +11,7 @@ const MobileActionBar = () => {
         <div className="mobile-action-bar-inner">
           {/* Call Now */}
           <a 
-            href="tel:+911234567890" 
+            href="tel:+918496978456" 
             className="mob-action-btn mob-btn-call"
             aria-label="Call VS Filtech"
           >
@@ -31,7 +31,7 @@ const MobileActionBar = () => {
 
           {/* WhatsApp Chat */}
           <a 
-            href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20industrial%20bag%20filter%20products." 
+            href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20industrial%20bag%20filter%20products." 
             target="_blank" 
             rel="noopener noreferrer"
             className="mob-action-btn mob-btn-whatsapp"
@@ -46,7 +46,7 @@ const MobileActionBar = () => {
       {/* Desktop Viewport Floating Quick Contact Dock - Upar Ek Uske Neche */}
       <div className="desktop-action-dock" aria-label="Quick Contact Actions">
         <a 
-          href="tel:+911234567890" 
+          href="tel:+918496978456" 
           className="desktop-dock-btn desktop-dock-call"
           aria-label="Call VS Filtech"
           title="Call Now"
@@ -55,7 +55,7 @@ const MobileActionBar = () => {
         </a>
 
         <a 
-          href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20industrial%20dust%20collection%20products." 
+          href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20industrial%20dust%20collection%20products." 
           target="_blank" 
           rel="noopener noreferrer"
           className="desktop-dock-btn desktop-dock-whatsapp"

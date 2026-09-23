@@ -54,7 +54,7 @@ const ContactSection = () => {
 _Sent via vsfiltech.com/contact_`;
 
     const encoded = encodeURIComponent(waText);
-    const whatsappUrl = `https://wa.me/911234567890?text=${encoded}`;
+    const whatsappUrl = `https://wa.me/918496978456?text=${encoded}`;
 
     window.open(whatsappUrl, '_blank');
     setSubmitted(true);
@@ -96,7 +96,7 @@ _Sent via vsfiltech.com/contact_`;
                 </div>
                 <div className="detail-text-box">
                   <span className="detail-label">WhatsApp Technical Desk</span>
-                  <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" className="detail-link wa-link">
+                  <a href="https://wa.me/918496978456" target="_blank" rel="noopener noreferrer" className="detail-link wa-link">
                     Chat on WhatsApp
                   </a>
                   <span className="detail-hint">Direct engineering assistance & drawing review</span>
@@ -123,10 +123,10 @@ _Sent via vsfiltech.com/contact_`;
                   <MapPin size={22} />
                 </div>
                 <div className="detail-text-box">
-                  <span className="detail-label">Ghaziabad Works & Facility</span>
+                  <span className="detail-label">Bengaluru Office & Facility</span>
                   <p className="detail-address">
-                    Pawan Puri Industrial Area, Muradnagar,<br />
-                    Ghaziabad, Uttar Pradesh — 201206, India
+                    No 134, SMV Layout, 4th Block,<br />
+                    Kanakasri Layout 8th Cross, Bengaluru 560056
                   </p>
                   <span className="detail-hint">Plant inspection & client visits by appointment</span>
                 </div>
@@ -138,10 +138,10 @@ _Sent via vsfiltech.com/contact_`;
               <div className="map-header-bar">
                 <div className="map-title-row">
                   <MapPin size={16} className="map-pin-icon" />
-                  <span>VS Filtech Manufacturing Facility (Ghaziabad, UP)</span>
+                  <span>VS Filtech Facility (Bengaluru)</span>
                 </div>
                 <a 
-                  href="https://maps.google.com/?q=Ghaziabad+Uttar+Pradesh+India" 
+                  href="https://maps.google.com/?q=Bengaluru+560056+India" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="map-ext-link"
@@ -151,8 +151,8 @@ _Sent via vsfiltech.com/contact_`;
               </div>
               <div className="map-iframe-wrapper">
                 <iframe
-                  title="VS Filtech Manufacturing Facility Ghaziabad"
-                  src="https://maps.google.com/maps?q=Muradnagar%20Ghaziabad%20Uttar%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  title="VS Filtech Facility Bengaluru"
+                  src="https://maps.google.com/maps?q=Bengaluru%20560056&t=&z=13&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="260"
                   style={{ border: 0, minHeight: '260px' }}
@@ -354,7 +354,7 @@ _Sent via vsfiltech.com/contact_`;
               <div className="direct-wa-bar">
                 <span>Direct technical WhatsApp line:</span>
                 <a 
-                  href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20have%20an%20inquiry%20regarding%20industrial%20dust%20collection." 
+                  href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20have%20an%20inquiry%20regarding%20industrial%20dust%20collection." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="direct-wa-link"

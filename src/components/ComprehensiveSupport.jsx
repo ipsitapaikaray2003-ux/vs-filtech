@@ -86,12 +86,12 @@ const ComprehensiveSupport = () => {
               <span>Get a Quote</span>
               <ArrowRight size={17} />
             </Link>
-            <a href="tel:+911234567890" className="btn-call-outline">
+            <a href="tel:+918496978456" className="btn-call-outline">
               <Phone size={17} />
               <span>Call Now</span>
             </a>
             <a 
-              href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20need%20support%20for%20my%20dust%20collection%20system." 
+              href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20need%20support%20for%20my%20dust%20collection%20system." 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn-whatsapp-peach"

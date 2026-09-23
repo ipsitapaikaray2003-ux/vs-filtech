@@ -194,7 +194,7 @@ const FilterBagsCagesPage = () => {
                   <ArrowRight size={18} />
                 </Link>
                 <a 
-                  href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20need%20a%20quotation%20for%20Filter%20Bags%20and%20Cages."
+                  href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20need%20a%20quotation%20for%20Filter%20Bags%20and%20Cages."
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn-lg"
@@ -476,7 +476,7 @@ const FilterBagsCagesPage = () => {
                 <ArrowRight size={16} />
               </Link>
               <a 
-                href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20have%20a%20drawing/sample%20for%20filter%20bags%20and%20cages."
+                href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20have%20a%20drawing/sample%20for%20filter%20bags%20and%20cages."
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-lg" 

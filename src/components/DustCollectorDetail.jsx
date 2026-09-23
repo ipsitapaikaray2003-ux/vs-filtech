@@ -179,7 +179,7 @@ export default function DustCollectorDetail({ product }) {
 ----------------------------------------
 _Sent from vsfiltech.com/products/dust-collectors_`;
 
-    window.open(`https://wa.me/911234567890?text=${encodeURIComponent(waText)}`, '_blank');
+    window.open(`https://wa.me/918496978456?text=${encodeURIComponent(waText)}`, '_blank');
     setSubmitted(true);
   };
 
@@ -244,7 +244,7 @@ _Sent from vsfiltech.com/products/dust-collectors_`;
               </a>
 
               <a 
-                href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20Industrial%20Dust%20Collector%20Systems.%20Please%20share%20engineering%20drawings%20and%20quotation."
+                href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20Industrial%20Dust%20Collector%20Systems.%20Please%20share%20engineering%20drawings%20and%20quotation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
@@ -267,7 +267,7 @@ _Sent from vsfiltech.com/products/dust-collectors_`;
               </a>
 
               <a 
-                href="tel:+911234567890" 
+                href="tel:+918496978456" 
                 className="btn btn-outline"
                 style={{
                   display: 'inline-flex',

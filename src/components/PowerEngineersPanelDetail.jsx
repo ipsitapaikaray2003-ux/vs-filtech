@@ -372,7 +372,7 @@ const PowerEngineersPanelDetail = ({ product }) => {
 _Inquiry via Electrical Panels Portal_`;
 
     const encoded = encodeURIComponent(waText);
-    window.open(`https://wa.me/911234567890?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918496978456?text=${encoded}`, '_blank');
   };
 
   return (
@@ -589,7 +589,7 @@ _Inquiry via Electrical Panels Portal_`;
               <MessageCircle size={18} />
               <span>Get Fast Quote on WhatsApp →</span>
             </button>
-            <a href="tel:+911234567890" className="pe-cta-call-btn">
+            <a href="tel:+918496978456" className="pe-cta-call-btn">
               <PhoneCall size={17} />
               <span>Call Now</span>
             </a>

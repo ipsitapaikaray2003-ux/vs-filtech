@@ -692,7 +692,7 @@ const GalleryPage = () => {
               <span>Contact Technical Team</span>
             </Link>
             <a 
-              href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20bag%20filters%20and%20control%20panels."
+              href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20bag%20filters%20and%20control%20panels."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline btn-lg"

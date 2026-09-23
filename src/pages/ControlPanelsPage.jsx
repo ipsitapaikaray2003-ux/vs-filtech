@@ -279,7 +279,7 @@ const ControlPanelsPage = () => {
 _Sent from VS Filtech Electrical & Control Panels Portal_`;
 
     const encoded = encodeURIComponent(waText);
-    window.open(`https://wa.me/911234567890?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918496978456?text=${encoded}`, '_blank');
     setSubmitted(true);
   };
 
@@ -318,7 +318,7 @@ _Sent from VS Filtech Electrical & Control Panels Portal_`;
               <span>Request Panel Quote &amp; SLD</span>
             </button>
             <a 
-              href="https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20HT,%20LT,%20MCC,%20VFD%20and%20Bag%20Filter%20Panels." 
+              href="https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20your%20HT,%20LT,%20MCC,%20VFD%20and%20Bag%20Filter%20Panels." 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-outline"

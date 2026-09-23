@@ -162,7 +162,7 @@ const VenturiPage = () => {
 _Sent from vsfiltech.com/products/venturis_`;
 
     const encoded = encodeURIComponent(waText);
-    window.open(`https://wa.me/911234567890?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918496978456?text=${encoded}`, '_blank');
     setSubmitted(true);
   };
 
@@ -573,11 +573,11 @@ _Sent from vsfiltech.com/products/venturis_`;
               </p>
 
               <div className="vp-contact-pills">
-                <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" className="vp-pill whatsapp">
+                <a href="https://wa.me/918496978456" target="_blank" rel="noopener noreferrer" className="vp-pill whatsapp">
                   <MessageCircle size={18} />
                   <span>Direct WhatsApp Engineering Desk</span>
                 </a>
-                <a href="tel:+911234567890" className="vp-pill call">
+                <a href="tel:+918496978456" className="vp-pill call">
                   <PhoneCall size={18} />
                   <span>Call OEM Technical Team</span>
                 </a>

@@ -8,7 +8,8 @@ import {
   Twitter, 
   Facebook,
   ExternalLink,
-  ShieldCheck
+  ShieldCheck,
+  MessageCircle
 } from 'lucide-react';
 import logoImg from '../assets/logo_dark_theme.png';
 import './Footer.css';
@@ -66,9 +67,9 @@ const Footer = () => {
             </p>
             <div className="footer-social-row">
               {[
-                { Icon: Facebook, label: 'Facebook', href: '#' },
-                { Icon: Linkedin, label: 'LinkedIn', href: '#' },
-                { Icon: Twitter, label: 'Twitter', href: '#' }
+                { Icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918496978456' },
+                { Icon: MapPin, label: 'Location', href: 'https://maps.google.com/?q=Bengaluru+560056+India' },
+                { Icon: Phone, label: 'Call', href: 'tel:+918496978456' }
               ].map(({ Icon, label, href }, idx) => (
                 <a 
                   key={idx} 
@@ -137,18 +138,18 @@ const Footer = () => {
               <li className="footer-contact-item">
                 <MapPin size={18} className="footer-item-icon" />
                 <span className="footer-item-text">
-                  Pawan Puri Industrial Area, Muradnagar, Ghaziabad, Uttar Pradesh — 201206, India
+                  No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056
                 </span>
               </li>
               <li className="footer-contact-item">
                 <Phone size={18} className="footer-item-icon" />
                 <a 
-                  href="https://wa.me/911234567890" 
+                  href="https://wa.me/918496978456" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="footer-item-link"
                 >
-                  Call / WhatsApp Support
+                  +91 8496978456
                 </a>
               </li>
               <li className="footer-contact-item">

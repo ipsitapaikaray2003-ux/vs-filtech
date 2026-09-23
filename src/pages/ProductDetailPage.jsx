@@ -223,7 +223,7 @@ const ProductDetailPage = ({ defaultSlug }) => {
 _Sent from vsfiltech.com/products/${product.id}_`;
 
     const encoded = encodeURIComponent(waText);
-    window.open(`https://wa.me/911234567890?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918496978456?text=${encoded}`, '_blank');
     setSubmitted(true);
   };
 
@@ -334,7 +334,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               </a>
 
               <a 
-                href={`https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20${encodeURIComponent(product.title)}.%20Please%20share%20specifications%20and%20quotation.`}
+                href={`https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20interested%20in%20${encodeURIComponent(product.title)}.%20Please%20share%20specifications%20and%20quotation.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
@@ -357,7 +357,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               </a>
 
               <a 
-                href="tel:+911234567890" 
+                href="tel:+918496978456" 
                 className="btn btn-outline"
                 style={{
                   display: 'inline-flex',
@@ -677,7 +677,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 flexWrap: 'wrap'
               }}>
                 <a 
-                  href={`https://wa.me/911234567890?text=${encodeURIComponent(`Hi VS Filtech, I am interested in ${product.title}. Please provide engineering sizing and quotation.`)}`}
+                  href={`https://wa.me/918496978456?text=${encodeURIComponent(`Hi VS Filtech, I am interested in ${product.title}. Please provide engineering sizing and quotation.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -702,7 +702,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 </a>
 
                 <a 
-                  href="tel:+911234567890" 
+                  href="tel:+918496978456" 
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -783,7 +783,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 flexWrap: 'wrap'
               }}>
                 <a 
-                  href={`https://wa.me/911234567890?text=${encodeURIComponent(`Hi VS Filtech, I am interested in ${product.title}. Please provide engineering sizing and quotation.`)}`}
+                  href={`https://wa.me/918496978456?text=${encodeURIComponent(`Hi VS Filtech, I am interested in ${product.title}. Please provide engineering sizing and quotation.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -808,7 +808,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 </a>
 
                 <a 
-                  href="tel:+911234567890" 
+                  href="tel:+918496978456" 
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -1460,7 +1460,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                     {/* WhatsApp and Call Buttons */}
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '10px' }}>
                       <a 
-                        href={`https://wa.me/911234567890?text=${encodeURIComponent(`Hi VS Filtech, I am interested in ${rel.title}. Please share technical specifications and quotation.`)}`}
+                        href={`https://wa.me/918496978456?text=${encodeURIComponent(`Hi VS Filtech, I am interested in ${rel.title}. Please share technical specifications and quotation.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
@@ -1486,7 +1486,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                       </a>
 
                       <a 
-                        href="tel:+911234567890" 
+                        href="tel:+918496978456" 
                         style={{
                           display: 'inline-flex',
                           alignItems: 'center',
@@ -1574,7 +1574,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
                 <a 
-                  href={`https://wa.me/911234567890?text=${encodeURIComponent(`Hello VS Filtech, I need urgent pricing and delivery for Baghouse Spares (${product.title}).`)}`}
+                  href={`https://wa.me/918496978456?text=${encodeURIComponent(`Hello VS Filtech, I need urgent pricing and delivery for Baghouse Spares (${product.title}).`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -1599,7 +1599,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 </a>
 
                 <a 
-                  href="tel:+911234567890"
+                  href="tel:+918496978456"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -1706,7 +1706,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
                 VS Filtech Technical Assurance &bull; Ghaziabad, Uttar Pradesh
               </span>
               <a 
-                href={`https://wa.me/911234567890?text=Hi%20VS%20Filtech,%20I%20am%20inquiring%20about%20${encodeURIComponent(product.title)}`}
+                href={`https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20inquiring%20about%20${encodeURIComponent(product.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

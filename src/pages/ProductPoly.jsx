@@ -198,7 +198,7 @@ const ProductPoly = () => {
 ----------------------------------------
 _Sent from VS Filtech Official Portal_`;
     const encoded = encodeURIComponent(waText);
-    window.open(`https://wa.me/911234567890?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918496978456?text=${encoded}`, '_blank');
     setSubmitted(true);
   };
 
