@@ -19,7 +19,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 12%, rgba(0, 229, 255, 0.08) 0%, transparent 60%),
     radial-gradient(circle at 85% 70%, rgba(0, 180, 216, 0.05) 0%, transparent 50%),
     linear-gradient(180deg, rgba(6, 10, 18, 0.82) 0%, rgba(6, 10, 18, 0.9) 45%, rgba(6, 10, 18, 0.95) 100%),
@@ -32,7 +32,7 @@
   opacity: 0.75;
 }
 
-.filter-bag-page > * {
+.filter-bag-page>* {
   position: relative;
   z-index: 1;
 }
@@ -118,7 +118,7 @@
   border: 1px solid rgba(0, 229, 255, 0.2);
   border-radius: 20px;
   padding: 1.5rem 2.5rem;
-  max-width: 900px;
+  max-width: 1060px;
   margin: 0 auto;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 229, 255, 0.08);
 }
@@ -145,6 +145,20 @@
   letter-spacing: 1px;
 }
 
+.metric-box-materials {
+  max-width: 320px;
+  text-align: center;
+}
+
+.metric-val-materials {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #38bdf8;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
 .metric-divider {
   width: 1px;
   height: 40px;
@@ -165,7 +179,7 @@
   min-width: 0;
 }
 
-.fb-split-grid > * {
+.fb-split-grid>* {
   min-width: 0;
   max-width: 100%;
 }
@@ -292,9 +306,20 @@
 }
 
 @keyframes pulseCyan {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 7px rgba(0, 229, 255, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 229, 255, 0); }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 7px rgba(0, 229, 255, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+  }
 }
 
 /* Zoom Trigger */
@@ -344,7 +369,7 @@
   box-sizing: border-box;
 }
 
-.fb-image-overlay-card > div {
+.fb-image-overlay-card>div {
   min-width: 0;
   flex: 1;
 }
@@ -802,8 +827,13 @@
 }
 
 @keyframes fadeInModal {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-content {
@@ -820,8 +850,15 @@
 }
 
 @keyframes slideUpModal {
-  from { transform: translateY(30px) scale(0.97); opacity: 0; }
-  to { transform: translateY(0) scale(1); opacity: 1; }
+  from {
+    transform: translateY(30px) scale(0.97);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .modal-close-btn {
@@ -1296,7 +1333,7 @@
   .varieties-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .promo-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }

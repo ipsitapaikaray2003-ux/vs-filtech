@@ -34,7 +34,7 @@ import venturiImg from '../assets/venturi_nozzle_hd.jpg';
 import solenoidValveImg from '../assets/solenoid_valve_hd.jpg';
 import rotaryAirLockImg from '../assets/rotary_airlock_hd.jpg';
 
-// Features from AKJ page
+// Filter Bag Features
 const keyFeatures = [
   'High filtration efficiency with minimal pressure drop',
   'Excellent dust holding capacity for prolonged bag life',
@@ -42,7 +42,7 @@ const keyFeatures = [
   'Custom sizes, collar styles, and fabric types available',
   'Easy snap-band installation and tubesheet replacement',
   'Long service life and significantly reduced maintenance costs',
-  'Suitable for both gas emission control and liquid clarification'
+  'Engineered for industrial dust collection and gas emission control'
 ];
 
 // Material Comparison Table (Requested by User)
@@ -240,7 +240,7 @@ const specTableData = [
   }
 ];
 
-// 6 Filter Bag Varieties
+// Filter Bag Varieties
 const filterBagVarieties = [
   {
     name: 'Pleated Filter Bags',
@@ -266,11 +266,6 @@ const filterBagVarieties = [
     name: 'Anti-Static Filter Bags',
     tag: 'Explosion Proof',
     desc: 'Woven with conductive stainless steel or carbon fibers to prevent static charge buildup in explosive atmospheres.'
-  },
-  {
-    name: 'Liquid Filter Bags',
-    tag: '1 to 200 Micron',
-    desc: 'Engineered for industrial water treatment, solvents, paints, chemical processing, and beverage clarification.'
   }
 ];
 
@@ -455,7 +450,7 @@ _Sent via vsfiltech.com_`;
           </h1>
 
           <p className="fb-hero-subtitle">
-            Filter bags engineered for reliable dust collection and long service life. Available in Polyester Needle Felt, PPS, Aramid, Fiberglass, PTFE, ePTFE membrane laminated fabrics, and other application-specific media.
+            Filter bags engineered for reliable dust collection and long service life. Available in Polyester (PES), PTFE, Polypropylene (PP), Acrylic, PPS (Ryton), Aramid (Nomex), Fiberglass, ePTFE membrane laminated fabrics, and other application-specific media.
           </p>
 
           <div className="fb-hero-cta-row">
@@ -486,9 +481,11 @@ _Sent via vsfiltech.com_`;
               <span className="metric-lbl">Custom Bag Lengths</span>
             </div>
             <div className="metric-divider"></div>
-            <div className="metric-box">
-              <span className="metric-val">Ghaziabad, UP</span>
-              <span className="metric-lbl">Manufacturing Facility</span>
+            <div className="metric-box metric-box-materials">
+              <span className="metric-val metric-val-materials">
+                Polyester (PES), PTFE, Polypropylene (PP), Acrylic, PPS (Ryton), Aramid (Nomex), Fiberglass, etc.
+              </span>
+              <span className="metric-lbl">Filter Bag Materials</span>
             </div>
           </div>
         </div>
@@ -874,7 +871,7 @@ _Sent via vsfiltech.com_`;
                 <img src={selectedProduct.img} alt={selectedProduct.title} className="modal-img" />
                 <div className="modal-plant-tag">
                   <Sparkles size={14} />
-                  <span>Fabricated in Ghaziabad, UP</span>
+                  <span>OEM Precision Engineered</span>
                 </div>
               </div>
 
@@ -1003,7 +1000,7 @@ _Sent via vsfiltech.com_`;
                     <option value="Industrial Filter Bags">Industrial Filter Bags (General / Pulse Jet)</option>
                     <option value="High Temperature Filter Bags (Nomex, Fiberglass, PTFE, PPS)">High Temperature Filter Bags (Nomex, Fiberglass, PTFE, PPS)</option>
                     <option value="Pleated Filter Bags">Pleated Filter Bags (Extended Surface)</option>
-                    <option value="Polypropylene Filter Bags">Polypropylene Liquid Filter Bags</option>
+                    <option value="Polypropylene Filter Bags">Polypropylene Filter Bags (Moisture / Chemical)</option>
                     <option value="Filter Cages & Venturies">Support Filter Cages & Venturies</option>
                     <option value="Dust Collector System">Complete Dust Collector System</option>
                     <option value="ID Fans">ID Fans (Induced Draft)</option>
