@@ -215,7 +215,7 @@ _Sent from VS Filtech Official Portal_`;
 
           <h1 className="pp-hero-title">
             <span className="pp-hero-title-white">Polypropylene Filter Bag</span>
-            <span className="pp-hero-title-highlight">Manufacturers from Ghaziabad, India</span>
+            <span className="pp-hero-title-highlight">Manufacturers in Bengaluru, India</span>
           </h1>
 
           <p className="pp-hero-subtitle">
@@ -535,7 +535,7 @@ _Sent from VS Filtech Official Portal_`;
                   Request Fast Quotation for PP Filter Bags
                 </h2>
                 <p className="pp-showcase-desc" style={{ marginBottom: '2rem' }}>
-                  Connect directly with our senior filtration engineers in Ghaziabad, India. We offer rapid dispatch for standard Size 1 & Size 2 bags, custom micron testing, and contract manufacturing.
+                  Connect directly with our senior filtration engineers at No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056. We offer rapid dispatch for standard Size 1 & Size 2 bags, custom micron testing, and contract manufacturing.
                 </p>
 
                 <div className="pp-highlights-list">

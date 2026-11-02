@@ -68,7 +68,7 @@ const Footer = () => {
             <div className="footer-social-row">
               {[
                 { Icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918496978456' },
-                { Icon: MapPin, label: 'Location', href: 'https://maps.google.com/?q=Bengaluru+560056+India' },
+                { Icon: MapPin, label: 'Location', href: 'https://maps.google.com/?q=No+134+SMV+Layout+4th+Block+Kanakasri+Layout+8th+Cross+Bengaluru+560056' },
                 { Icon: Phone, label: 'Call', href: 'tel:+918496978456' }
               ].map(({ Icon, label, href }, idx) => (
                 <a 

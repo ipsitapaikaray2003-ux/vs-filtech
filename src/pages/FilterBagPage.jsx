@@ -464,6 +464,18 @@ _Sent via vsfiltech.com_`;
             </a>
           </div>
 
+          {/* Filter Bag Materials Quick Chips */}
+          <div className="fb-materials-strip">
+            <span className="fb-mat-chip">Polyester (PES)</span>
+            <span className="fb-mat-chip">PTFE</span>
+            <span className="fb-mat-chip">Polypropylene (PP)</span>
+            <span className="fb-mat-chip">Acrylic</span>
+            <span className="fb-mat-chip">PPS (Ryton)</span>
+            <span className="fb-mat-chip">Aramid (Nomex)</span>
+            <span className="fb-mat-chip">Fiberglass</span>
+            <span className="fb-mat-chip">ePTFE Membrane</span>
+          </div>
+
           {/* Quick Metrics Bar */}
           <div className="fb-metrics-ribbon">
             <div className="metric-box">
@@ -481,11 +493,11 @@ _Sent via vsfiltech.com_`;
               <span className="metric-lbl">Custom Bag Lengths</span>
             </div>
             <div className="metric-divider"></div>
-            <div className="metric-box metric-box-materials">
-              <span className="metric-val metric-val-materials">
-                Polyester (PES), PTFE, Polypropylene (PP), Acrylic, PPS (Ryton), Aramid (Nomex), Fiberglass, etc.
+            <div className="metric-box metric-box-location">
+              <span className="metric-val metric-val-location">
+                No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056
               </span>
-              <span className="metric-lbl">Filter Bag Materials</span>
+              <span className="metric-lbl">Manufacturing Facility</span>
             </div>
           </div>
         </div>
@@ -871,7 +883,7 @@ _Sent via vsfiltech.com_`;
                 <img src={selectedProduct.img} alt={selectedProduct.title} className="modal-img" />
                 <div className="modal-plant-tag">
                   <Sparkles size={14} />
-                  <span>OEM Precision Engineered</span>
+                  <span>No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056</span>
                 </div>
               </div>
 

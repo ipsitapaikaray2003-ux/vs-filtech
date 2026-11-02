@@ -398,8 +398,10 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <Factory size={24} style={{ color: '#38bdf8', flexShrink: 0 }} />
                 <div>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: '700' }}>Manufacturing Hub</div>
-                  <div style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: '800', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>Ghaziabad, UP, India</div>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: '700' }}>Manufacturing Facility</div>
+                  <div style={{ fontSize: '0.84rem', color: '#ffffff', fontWeight: '700', textShadow: '0 1px 3px rgba(0,0,0,0.5)', lineHeight: '1.35' }}>
+                    No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056
+                  </div>
                 </div>
               </div>
 
@@ -1703,7 +1705,7 @@ _Sent from vsfiltech.com/products/${product.id}_`;
               gap: '10px'
             }}>
               <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
-                VS Filtech Technical Assurance &bull; Ghaziabad, Uttar Pradesh
+                VS Filtech Technical Assurance &bull; No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056
               </span>
               <a 
                 href={`https://wa.me/918496978456?text=Hi%20VS%20Filtech,%20I%20am%20inquiring%20about%20${encodeURIComponent(product.title)}`}

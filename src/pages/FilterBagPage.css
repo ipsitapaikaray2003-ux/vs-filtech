@@ -159,6 +159,51 @@
   text-align: center;
 }
 
+.metric-box-location {
+  max-width: 320px;
+  text-align: center;
+}
+
+.metric-val-location {
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #38bdf8;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.fb-materials-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 auto 2.25rem;
+  max-width: 860px;
+}
+
+.fb-mat-chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #e0f2fe;
+  background: rgba(2, 132, 199, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 0.32rem 0.8rem;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.fb-mat-chip:hover {
+  background: rgba(2, 132, 199, 0.3);
+  border-color: #38bdf8;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .metric-divider {
   width: 1px;
   height: 40px;

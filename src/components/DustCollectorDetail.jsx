@@ -26,6 +26,7 @@ import {
   Package,
   Activity,
   Maximize,
+  MapPin,
   X
 } from 'lucide-react';
 
@@ -315,10 +316,12 @@ _Sent from vsfiltech.com/products/dust-collectors_`;
               </div>
 
               <div className="dc-metric-item">
-                <Clock size={26} className="dc-metric-icon" />
+                <MapPin size={26} className="dc-metric-icon" />
                 <div>
-                  <div className="dc-metric-label">Manufacturing Hub</div>
-                  <div className="dc-metric-val">Ghaziabad, UP (Pan-India)</div>
+                  <div className="dc-metric-label">Manufacturing Facility</div>
+                  <div className="dc-metric-val" style={{ fontSize: '0.82rem', lineHeight: '1.3' }}>
+                    No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056
+                  </div>
                 </div>
               </div>
             </div>
@@ -650,7 +653,7 @@ _Sent from vsfiltech.com/products/dust-collectors_`;
               Real Dust Collector Installations in India
             </h2>
             <p style={{ color: '#64748b', fontSize: '1.05rem', lineHeight: '1.65' }}>
-              Photographs from our Ghaziabad fabrication facility and customer manufacturing plants:
+              Photographs from our Bengaluru facility (No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056) and customer manufacturing plants:
             </p>
           </div>
 

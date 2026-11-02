@@ -141,7 +141,7 @@ _Sent via vsfiltech.com/contact_`;
                   <span>VS Filtech Facility (Bengaluru)</span>
                 </div>
                 <a 
-                  href="https://maps.google.com/?q=Bengaluru+560056+India" 
+                  href="https://maps.google.com/?q=No+134+SMV+Layout+4th+Block+Kanakasri+Layout+8th+Cross+Bengaluru+560056" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="map-ext-link"
@@ -152,7 +152,7 @@ _Sent via vsfiltech.com/contact_`;
               <div className="map-iframe-wrapper">
                 <iframe
                   title="VS Filtech Facility Bengaluru"
-                  src="https://maps.google.com/maps?q=Bengaluru%20560056&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=No%20134%20SMV%20Layout%204th%20Block%20Kanakasri%20Layout%208th%20Cross%20Bengaluru%20560056&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="260"
                   style={{ border: 0, minHeight: '260px' }}
