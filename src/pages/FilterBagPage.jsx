@@ -493,11 +493,11 @@ _Sent via vsfiltech.com_`;
               <span className="metric-lbl">Custom Bag Lengths</span>
             </div>
             <div className="metric-divider"></div>
-            <div className="metric-box metric-box-location">
-              <span className="metric-val metric-val-location">
-                No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056
+            <div className="metric-box metric-box-materials">
+              <span className="metric-val metric-val-materials">
+                Polyester (PES), PTFE, Polypropylene (PP), Acrylic, PPS (Ryton), Aramid (Nomex), Fiberglass, etc.
               </span>
-              <span className="metric-lbl">Manufacturing Facility</span>
+              <span className="metric-lbl">Filter Bag Materials</span>
             </div>
           </div>
         </div>
@@ -883,7 +883,7 @@ _Sent via vsfiltech.com_`;
                 <img src={selectedProduct.img} alt={selectedProduct.title} className="modal-img" />
                 <div className="modal-plant-tag">
                   <Sparkles size={14} />
-                  <span>No 134, SMV Layout, 4th Block, Kanakasri Layout 8th Cross, Bengaluru 560056</span>
+                  <span>OEM Precision Engineered</span>
                 </div>
               </div>
 

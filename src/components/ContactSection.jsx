@@ -123,12 +123,12 @@ _Sent via vsfiltech.com/contact_`;
                   <MapPin size={22} />
                 </div>
                 <div className="detail-text-box">
-                  <span className="detail-label">Bengaluru Office & Facility</span>
+                  <span className="detail-label">Bengaluru Office</span>
                   <p className="detail-address">
                     No 134, SMV Layout, 4th Block,<br />
                     Kanakasri Layout 8th Cross, Bengaluru 560056
                   </p>
-                  <span className="detail-hint">Plant inspection & client visits by appointment</span>
+                  <span className="detail-hint">Client visits & technical consultations by appointment</span>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ _Sent via vsfiltech.com/contact_`;
               <div className="map-header-bar">
                 <div className="map-title-row">
                   <MapPin size={16} className="map-pin-icon" />
-                  <span>VS Filtech Facility (Bengaluru)</span>
+                  <span>VS Filtech Office (Bengaluru)</span>
                 </div>
                 <a 
                   href="https://maps.google.com/?q=No+134+SMV+Layout+4th+Block+Kanakasri+Layout+8th+Cross+Bengaluru+560056" 
@@ -151,7 +151,7 @@ _Sent via vsfiltech.com/contact_`;
               </div>
               <div className="map-iframe-wrapper">
                 <iframe
-                  title="VS Filtech Facility Bengaluru"
+                  title="VS Filtech Office Bengaluru"
                   src="https://maps.google.com/maps?q=No%20134%20SMV%20Layout%204th%20Block%20Kanakasri%20Layout%208th%20Cross%20Bengaluru%20560056&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="260"
