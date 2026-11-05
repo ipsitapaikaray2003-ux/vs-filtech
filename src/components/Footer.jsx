@@ -68,6 +68,7 @@ const Footer = () => {
             <div className="footer-social-row">
               {[
                 { Icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/918496978456' },
+                { Icon: Mail, label: 'Email', href: 'mailto:info@vsfiltechcp.com' },
                 { Icon: MapPin, label: 'Location', href: 'https://maps.google.com/?q=No+134+SMV+Layout+4th+Block+Kanakasri+Layout+8th+Cross+Bengaluru+560056' },
                 { Icon: Phone, label: 'Call', href: 'tel:+918496978456' }
               ].map(({ Icon, label, href }, idx) => (
@@ -155,10 +156,10 @@ const Footer = () => {
               <li className="footer-contact-item">
                 <Mail size={18} className="footer-item-icon" />
                 <a 
-                  href="mailto:sales@vsfiltech.com" 
+                  href="mailto:info@vsfiltechcp.com" 
                   className="footer-item-link"
                 >
-                  sales@vsfiltech.com
+                  info@vsfiltechcp.com
                 </a>
               </li>
             </ul>

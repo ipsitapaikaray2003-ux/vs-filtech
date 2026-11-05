@@ -110,8 +110,8 @@ _Sent via vsfiltech.com/contact_`;
                 </div>
                 <div className="detail-text-box">
                   <span className="detail-label">Official Engineering Email</span>
-                  <a href="mailto:sales@vsfiltech.com" className="detail-link">
-                    sales@vsfiltech.com
+                  <a href="mailto:info@vsfiltechcp.com" className="detail-link">
+                    info@vsfiltechcp.com
                   </a>
                   <span className="detail-hint">Send datasheets, tender specs & CAD drawings</span>
                 </div>
